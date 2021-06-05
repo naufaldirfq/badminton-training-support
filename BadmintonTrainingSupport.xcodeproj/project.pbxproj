@@ -16,6 +16,7 @@
 		7E4FB053266B88B300D0CEE2 /* TrainingCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E4FB04F266B88B300D0CEE2 /* TrainingCollectionCell.xib */; };
 		7E4FB054266B88B300D0CEE2 /* TrainingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E4FB050266B88B300D0CEE2 /* TrainingCell.xib */; };
 		7E4FB056266BC1C200D0CEE2 /* Sizes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E4FB055266BC1C200D0CEE2 /* Sizes.swift */; };
+		7E4FB05E266BECA800D0CEE2 /* TrainingCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E4FB05D266BECA800D0CEE2 /* TrainingCategory.swift */; };
 		7EBF951C266B5B4E0035D9C8 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBF951A266B5B4E0035D9C8 /* HomeViewController.swift */; };
 		7EBF951D266B5B4E0035D9C8 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7EBF951B266B5B4E0035D9C8 /* HomeViewController.xib */; };
 		7EBF9520266B5D790035D9C8 /* NewTrainingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBF951E266B5D790035D9C8 /* NewTrainingViewController.swift */; };
@@ -53,6 +54,7 @@
 		7E4FB04F266B88B300D0CEE2 /* TrainingCollectionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TrainingCollectionCell.xib; sourceTree = "<group>"; };
 		7E4FB050266B88B300D0CEE2 /* TrainingCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TrainingCell.xib; sourceTree = "<group>"; };
 		7E4FB055266BC1C200D0CEE2 /* Sizes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sizes.swift; sourceTree = "<group>"; };
+		7E4FB05D266BECA800D0CEE2 /* TrainingCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingCategory.swift; sourceTree = "<group>"; };
 		7EBF951A266B5B4E0035D9C8 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		7EBF951B266B5B4E0035D9C8 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		7EBF951E266B5D790035D9C8 /* NewTrainingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTrainingViewController.swift; sourceTree = "<group>"; };
@@ -176,6 +178,7 @@
 			isa = PBXGroup;
 			children = (
 				7EBF9542266B74AF0035D9C8 /* Training.swift */,
+				7E4FB05D266BECA800D0CEE2 /* TrainingCategory.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -342,6 +345,7 @@
 				7E4FB051266B88B300D0CEE2 /* TrainingCollectionCell.swift in Sources */,
 				7E24D00E2668A76700195496 /* SceneDelegate.swift in Sources */,
 				7EBF951C266B5B4E0035D9C8 /* HomeViewController.swift in Sources */,
+				7E4FB05E266BECA800D0CEE2 /* TrainingCategory.swift in Sources */,
 				7E4FB052266B88B300D0CEE2 /* TrainingCell.swift in Sources */,
 				7EBF9543266B74AF0035D9C8 /* Training.swift in Sources */,
 				7EBF9530266B5E110035D9C8 /* NewMatchViewController.swift in Sources */,
