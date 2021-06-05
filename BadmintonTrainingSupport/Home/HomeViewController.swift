@@ -14,9 +14,16 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "New Training", style: .done, target: self, action: #selector(newTraining))
+        
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(TrainingCollectionCell.nib(), forCellReuseIdentifier: TrainingCollectionCell.identifier)
+    }
+    
+    @objc func newTraining() {
+        let vc = NewTrainingViewController()
+        navigationController?.pushViewController(vc, animated: true)
     }
 
 }
@@ -34,7 +41,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource, Traini
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: TrainingCollectionCell.identifier) as? TrainingCollectionCell {
-            cell.configure(name: "Physical", with: DummyData.Trainings)
+            cell.configure(name: "Recommendation", with: DummyData.Trainings)
             cell.delegate = self
             return cell
         }
