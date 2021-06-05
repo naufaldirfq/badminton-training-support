@@ -15,4 +15,3 @@ struct Identifiers {
 struct Images {
     static let defaultTraining = UIImage(systemName: "photo")!
 }
-

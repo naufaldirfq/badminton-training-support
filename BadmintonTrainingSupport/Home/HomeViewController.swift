@@ -24,11 +24,11 @@ class HomeViewController: UIViewController {
 extension HomeViewController: UITableViewDelegate, UITableViewDataSource, TrainingCollectionDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
+        return 1
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 52.5+242
+        return Sizes.TrainingCollection.Height
     }
     
     

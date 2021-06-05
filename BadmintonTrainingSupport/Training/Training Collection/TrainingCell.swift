@@ -42,7 +42,7 @@ class TrainingCell: UICollectionViewCell {
     }
     
     func initImageView() {
-        imageView.layer.cornerRadius = 10.0
+        imageView.layer.cornerRadius = Sizes.TrainingCollection.CornerRadius
         imageView.backgroundColor = .secondaryLabel
         imageView.tintColor = .systemBackground
     }

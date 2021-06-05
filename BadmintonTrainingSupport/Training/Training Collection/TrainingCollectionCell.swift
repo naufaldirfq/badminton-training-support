@@ -17,7 +17,7 @@ class TrainingCollectionCell: UITableViewCell {
     weak var delegate: TrainingCollectionDelegate?
     var name: String = "Collection Name"
     var trainings = [Training]()
-    var width: CGFloat = 280
+    var width: CGFloat = Sizes.TrainingCollection.DefaultWidth
     
     @IBOutlet var nameLabel: UILabel!
     @IBOutlet var collectionView: UICollectionView!
@@ -43,10 +43,10 @@ class TrainingCollectionCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
     }
     
-    public func configure(name: String, with trainings: [Training], width: CGFloat = 280) {
+    public func configure(name: String, with trainings: [Training], width: CGFloat? = nil) {
         self.name = name
         self.trainings.append(contentsOf: trainings)
-        self.width = width
+        self.width = width ?? self.width
         loadView()
     }
     
@@ -63,11 +63,11 @@ extension TrainingCollectionCell: UICollectionViewDelegate, UICollectionViewData
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: self.width, height: 242)
+        return CGSize(width: self.width, height: Sizes.TrainingCollection.CellHeight)
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 16)
+        return Sizes.TrainingCollection.EdgeInsets
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
