@@ -41,7 +41,7 @@
                             <constraint firstItem="iXc-gf-REk" firstAttribute="top" secondItem="hGx-Ji-f3A" secondAttribute="top" id="sjK-Jr-Vom"/>
                         </constraints>
                     </stackView>
-                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="vsj-P2-XCO">
+                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="vsj-P2-XCO">
                         <rect key="frame" x="16" y="52.5" width="371" height="200"/>
                         <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
                         <constraints>

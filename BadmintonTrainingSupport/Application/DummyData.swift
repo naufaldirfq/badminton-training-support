@@ -34,4 +34,10 @@ struct DummyData {
     static let Technical = TrainingCategory(name: "Technical", trainings: TechnicalTrainings)
     
     static let Categories = [Physical, Technical]
+    
+    struct Recent {
+        static let Trainings: [Training] = [
+            
+        ]
+    }
 }

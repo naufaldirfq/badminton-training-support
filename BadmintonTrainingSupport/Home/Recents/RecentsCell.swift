@@ -54,14 +54,19 @@ extension RecentsCell: UITableViewDelegate, UITableViewDataSource {
             emptyLabel.textAlignment = .center
             emptyLabel.textColor = .secondaryLabel
             self.tableView.backgroundView = emptyLabel
-            self.tableView.separatorStyle = .none
             return 0
         }
+        self.tableView.backgroundView = nil
         return cells.count
     }
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 60
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        let cell = cells[indexPath.row]
+        return cell
     }
     
 }

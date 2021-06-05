@@ -167,6 +167,14 @@
 			path = Recents;
 			sourceTree = "<group>";
 		};
+		7E4FB05C266BE42B00D0CEE2 /* Trainings */ = {
+			isa = PBXGroup;
+			children = (
+				7EBF9542266B74AF0035D9C8 /* Training.swift */,
+			);
+			path = Trainings;
+			sourceTree = "<group>";
+		};
 		7EBF9513266B5A7F0035D9C8 /* Application */ = {
 			isa = PBXGroup;
 			children = (
@@ -192,6 +200,7 @@
 			children = (
 				7EBF9542266B74AF0035D9C8 /* Training.swift */,
 				7E4FB05D266BECA800D0CEE2 /* TrainingCategory.swift */,
+				7E4FB05C266BE42B00D0CEE2 /* Trainings */,
 			);
 			path = Model;
 			sourceTree = "<group>";
