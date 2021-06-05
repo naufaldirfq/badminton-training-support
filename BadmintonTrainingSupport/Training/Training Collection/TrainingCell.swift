@@ -46,5 +46,5 @@ class TrainingCell: UICollectionViewCell {
         imageView.backgroundColor = .secondaryLabel
         imageView.tintColor = .systemBackground
     }
-
+    
 }

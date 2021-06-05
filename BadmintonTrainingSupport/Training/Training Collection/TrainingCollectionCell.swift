@@ -7,10 +7,17 @@
 
 import UIKit
 
+protocol TrainingCollectionDelegate: UIViewController {
+    func collectionView(trainingCell: TrainingCell, index: Int, didTappedInTableViewCell: TrainingCollectionCell)
+
+}
+
 class TrainingCollectionCell: UITableViewCell {
     
+    weak var delegate: TrainingCollectionDelegate?
     var name: String = "Collection Name"
     var trainings = [Training]()
+    var width: CGFloat = 280
     
     @IBOutlet var nameLabel: UILabel!
     @IBOutlet var collectionView: UICollectionView!
@@ -36,9 +43,10 @@ class TrainingCollectionCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
     }
     
-    public func configure(name: String, with trainings: [Training]) {
+    public func configure(name: String, with trainings: [Training], width: CGFloat = 280) {
         self.name = name
         self.trainings.append(contentsOf: trainings)
+        self.width = width
         loadView()
     }
     
@@ -55,7 +63,7 @@ extension TrainingCollectionCell: UICollectionViewDelegate, UICollectionViewData
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 280, height: 242)
+        return CGSize(width: self.width, height: 242)
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
@@ -69,5 +77,12 @@ extension TrainingCollectionCell: UICollectionViewDelegate, UICollectionViewData
         }
         return UICollectionViewCell()
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if let cell = collectionView.cellForItem(at: indexPath) as? TrainingCell {
+            self.delegate?.collectionView(trainingCell: cell, index: indexPath.item, didTappedInTableViewCell: self)
+        }
+    }
+    
     
 }
