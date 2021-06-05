@@ -15,6 +15,6 @@ struct Training {
     init(name: String, description: String, image: UIImage? = nil) {
         self.name = name
         self.description = description
-        self.image = image ?? UIImage(systemName: "photo.fill")!
+        self.image = image ?? Images.defaultTraining
     }
 }

@@ -11,11 +11,11 @@ class TrainingCell: UICollectionViewCell {
     
     var name: String = "Training Name"
     var desc: String = "Training description goes here..."
-    var image: UIImage = UIImage(systemName: "photo.fill")!
+    var image: UIImage = Images.defaultTraining
     
+    @IBOutlet var imageView: UIImageView!
     @IBOutlet var nameLabel: UILabel!
     @IBOutlet var descLabel: UILabel!
-    @IBOutlet var imageView: UIImageView!
 
     static let identifier = Identifiers.TrainingCell
     
@@ -38,6 +38,13 @@ class TrainingCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        initImageView()
+    }
+    
+    func initImageView() {
+        imageView.layer.cornerRadius = 10.0
+        imageView.backgroundColor = .secondaryLabel
+        imageView.tintColor = .systemBackground
     }
 
 }

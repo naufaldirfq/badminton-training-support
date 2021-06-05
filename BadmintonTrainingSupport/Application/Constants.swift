@@ -11,3 +11,8 @@ struct Identifiers {
     static let TrainingCollectionCell = "TrainingCollectionCell"
     static let TrainingCell = "TrainingCell"
 }
+
+struct Images {
+    static let defaultTraining = UIImage(systemName: "photo")!
+}
+

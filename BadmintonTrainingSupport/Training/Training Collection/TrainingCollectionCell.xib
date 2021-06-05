@@ -27,10 +27,10 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="7hT-nC-pAv">
-                        <rect key="frame" x="0.0" y="52.5" width="396" height="240"/>
+                        <rect key="frame" x="0.0" y="52.5" width="396" height="242"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="240" id="gaO-UH-hbi"/>
+                            <constraint firstAttribute="height" constant="242" id="gaO-UH-hbi"/>
                         </constraints>
                         <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="FVv-1H-mWb">
                             <size key="itemSize" width="128" height="128"/>
