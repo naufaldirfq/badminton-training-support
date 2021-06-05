@@ -11,6 +11,11 @@
 		7E24D00E2668A76700195496 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E24D00D2668A76700195496 /* SceneDelegate.swift */; };
 		7E24D0152668A76A00195496 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E24D0142668A76A00195496 /* Assets.xcassets */; };
 		7E24D0182668A76A00195496 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E24D0162668A76A00195496 /* LaunchScreen.storyboard */; };
+		7E4FB051266B88B300D0CEE2 /* TrainingCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E4FB04D266B88B300D0CEE2 /* TrainingCollectionCell.swift */; };
+		7E4FB052266B88B300D0CEE2 /* TrainingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E4FB04E266B88B300D0CEE2 /* TrainingCell.swift */; };
+		7E4FB053266B88B300D0CEE2 /* TrainingCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E4FB04F266B88B300D0CEE2 /* TrainingCollectionCell.xib */; };
+		7E4FB054266B88B300D0CEE2 /* TrainingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E4FB050266B88B300D0CEE2 /* TrainingCell.xib */; };
+		7E4FB056266BC1C200D0CEE2 /* Sizes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E4FB055266BC1C200D0CEE2 /* Sizes.swift */; };
 		7EBF951C266B5B4E0035D9C8 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBF951A266B5B4E0035D9C8 /* HomeViewController.swift */; };
 		7EBF951D266B5B4E0035D9C8 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7EBF951B266B5B4E0035D9C8 /* HomeViewController.xib */; };
 		7EBF9520266B5D790035D9C8 /* NewTrainingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBF951E266B5D790035D9C8 /* NewTrainingViewController.swift */; };
@@ -29,6 +34,9 @@
 		7EBF9539266B5E420035D9C8 /* MatchSummaryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7EBF9537266B5E420035D9C8 /* MatchSummaryViewController.xib */; };
 		7EBF953C266B5E530035D9C8 /* MatchHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBF953A266B5E530035D9C8 /* MatchHistoryViewController.swift */; };
 		7EBF953D266B5E530035D9C8 /* MatchHistoryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7EBF953B266B5E530035D9C8 /* MatchHistoryViewController.xib */; };
+		7EBF9543266B74AF0035D9C8 /* Training.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBF9542266B74AF0035D9C8 /* Training.swift */; };
+		7EBF9545266B78E40035D9C8 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBF9544266B78E40035D9C8 /* Constants.swift */; };
+		7EBF954F266B82850035D9C8 /* DummyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBF954E266B82850035D9C8 /* DummyData.swift */; };
 		FAE29489CC97B62A1D41D3B4 /* Pods_BadmintonTrainingSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAF697AAC488A05F9B529E0A /* Pods_BadmintonTrainingSupport.framework */; };
 /* End PBXBuildFile section */
 
@@ -40,6 +48,11 @@
 		7E24D0142668A76A00195496 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7E24D0172668A76A00195496 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7E24D0192668A76A00195496 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7E4FB04D266B88B300D0CEE2 /* TrainingCollectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrainingCollectionCell.swift; sourceTree = "<group>"; };
+		7E4FB04E266B88B300D0CEE2 /* TrainingCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrainingCell.swift; sourceTree = "<group>"; };
+		7E4FB04F266B88B300D0CEE2 /* TrainingCollectionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TrainingCollectionCell.xib; sourceTree = "<group>"; };
+		7E4FB050266B88B300D0CEE2 /* TrainingCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TrainingCell.xib; sourceTree = "<group>"; };
+		7E4FB055266BC1C200D0CEE2 /* Sizes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sizes.swift; sourceTree = "<group>"; };
 		7EBF951A266B5B4E0035D9C8 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		7EBF951B266B5B4E0035D9C8 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		7EBF951E266B5D790035D9C8 /* NewTrainingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTrainingViewController.swift; sourceTree = "<group>"; };
@@ -58,6 +71,9 @@
 		7EBF9537266B5E420035D9C8 /* MatchSummaryViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MatchSummaryViewController.xib; sourceTree = "<group>"; };
 		7EBF953A266B5E530035D9C8 /* MatchHistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchHistoryViewController.swift; sourceTree = "<group>"; };
 		7EBF953B266B5E530035D9C8 /* MatchHistoryViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MatchHistoryViewController.xib; sourceTree = "<group>"; };
+		7EBF9542266B74AF0035D9C8 /* Training.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Training.swift; sourceTree = "<group>"; };
+		7EBF9544266B78E40035D9C8 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		7EBF954E266B82850035D9C8 /* DummyData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyData.swift; sourceTree = "<group>"; };
 		A3B993DF360B7C68E59C73AF /* Pods-BadmintonTrainingSupport.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BadmintonTrainingSupport.debug.xcconfig"; path = "Target Support Files/Pods-BadmintonTrainingSupport/Pods-BadmintonTrainingSupport.debug.xcconfig"; sourceTree = "<group>"; };
 		FAF697AAC488A05F9B529E0A /* Pods_BadmintonTrainingSupport.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BadmintonTrainingSupport.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -88,7 +104,6 @@
 				A3B993DF360B7C68E59C73AF /* Pods-BadmintonTrainingSupport.debug.xcconfig */,
 				55FEF1690DBEBA70C4411FE9 /* Pods-BadmintonTrainingSupport.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -126,11 +141,25 @@
 			path = BadmintonTrainingSupport;
 			sourceTree = "<group>";
 		};
+		7E4FB04C266B88B300D0CEE2 /* Training Collection */ = {
+			isa = PBXGroup;
+			children = (
+				7E4FB04E266B88B300D0CEE2 /* TrainingCell.swift */,
+				7E4FB050266B88B300D0CEE2 /* TrainingCell.xib */,
+				7E4FB04D266B88B300D0CEE2 /* TrainingCollectionCell.swift */,
+				7E4FB04F266B88B300D0CEE2 /* TrainingCollectionCell.xib */,
+			);
+			path = "Training Collection";
+			sourceTree = "<group>";
+		};
 		7EBF9513266B5A7F0035D9C8 /* Application */ = {
 			isa = PBXGroup;
 			children = (
 				7E24D00B2668A76700195496 /* AppDelegate.swift */,
 				7E24D00D2668A76700195496 /* SceneDelegate.swift */,
+				7EBF9544266B78E40035D9C8 /* Constants.swift */,
+				7EBF954E266B82850035D9C8 /* DummyData.swift */,
+				7E4FB055266BC1C200D0CEE2 /* Sizes.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -146,6 +175,7 @@
 		7EBF9515266B5AB00035D9C8 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				7EBF9542266B74AF0035D9C8 /* Training.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -153,6 +183,7 @@
 		7EBF9516266B5ABE0035D9C8 /* Training */ = {
 			isa = PBXGroup;
 			children = (
+				7E4FB04C266B88B300D0CEE2 /* Training Collection */,
 				7EBF951E266B5D790035D9C8 /* NewTrainingViewController.swift */,
 				7EBF951F266B5D790035D9C8 /* NewTrainingViewController.xib */,
 				7EBF9522266B5DA20035D9C8 /* TrainingSessionViewController.swift */,
@@ -254,9 +285,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7E4FB054266B88B300D0CEE2 /* TrainingCell.xib in Resources */,
 				7EBF9529266B5DB40035D9C8 /* ProfileViewController.xib in Resources */,
 				7EBF9531266B5E110035D9C8 /* NewMatchViewController.xib in Resources */,
 				7EBF9525266B5DA20035D9C8 /* TrainingSessionViewController.xib in Resources */,
+				7E4FB053266B88B300D0CEE2 /* TrainingCollectionCell.xib in Resources */,
 				7E24D0182668A76A00195496 /* LaunchScreen.storyboard in Resources */,
 				7EBF9535266B5E250035D9C8 /* MatchSessionViewController.xib in Resources */,
 				7EBF9539266B5E420035D9C8 /* MatchSummaryViewController.xib in Resources */,
@@ -300,15 +333,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7EBF954F266B82850035D9C8 /* DummyData.swift in Sources */,
 				7EBF9528266B5DB40035D9C8 /* ProfileViewController.swift in Sources */,
 				7EBF953C266B5E530035D9C8 /* MatchHistoryViewController.swift in Sources */,
 				7E24D00C2668A76700195496 /* AppDelegate.swift in Sources */,
 				7EBF9538266B5E420035D9C8 /* MatchSummaryViewController.swift in Sources */,
 				7EBF9524266B5DA20035D9C8 /* TrainingSessionViewController.swift in Sources */,
+				7E4FB051266B88B300D0CEE2 /* TrainingCollectionCell.swift in Sources */,
 				7E24D00E2668A76700195496 /* SceneDelegate.swift in Sources */,
 				7EBF951C266B5B4E0035D9C8 /* HomeViewController.swift in Sources */,
+				7E4FB052266B88B300D0CEE2 /* TrainingCell.swift in Sources */,
+				7EBF9543266B74AF0035D9C8 /* Training.swift in Sources */,
 				7EBF9530266B5E110035D9C8 /* NewMatchViewController.swift in Sources */,
 				7EBF9520266B5D790035D9C8 /* NewTrainingViewController.swift in Sources */,
+				7E4FB056266BC1C200D0CEE2 /* Sizes.swift in Sources */,
+				7EBF9545266B78E40035D9C8 /* Constants.swift in Sources */,
 				7EBF9534266B5E250035D9C8 /* MatchSessionViewController.swift in Sources */,
 				7EBF952C266B5DD80035D9C8 /* TrainingHistoryViewController.swift in Sources */,
 			);
