@@ -29,9 +29,11 @@
 		7EBF9539266B5E420035D9C8 /* MatchSummaryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7EBF9537266B5E420035D9C8 /* MatchSummaryViewController.xib */; };
 		7EBF953C266B5E530035D9C8 /* MatchHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBF953A266B5E530035D9C8 /* MatchHistoryViewController.swift */; };
 		7EBF953D266B5E530035D9C8 /* MatchHistoryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7EBF953B266B5E530035D9C8 /* MatchHistoryViewController.xib */; };
+		FAE29489CC97B62A1D41D3B4 /* Pods_BadmintonTrainingSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAF697AAC488A05F9B529E0A /* Pods_BadmintonTrainingSupport.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		55FEF1690DBEBA70C4411FE9 /* Pods-BadmintonTrainingSupport.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BadmintonTrainingSupport.release.xcconfig"; path = "Target Support Files/Pods-BadmintonTrainingSupport/Pods-BadmintonTrainingSupport.release.xcconfig"; sourceTree = "<group>"; };
 		7E24D0082668A76700195496 /* BadmintonTrainingSupport.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BadmintonTrainingSupport.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E24D00B2668A76700195496 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7E24D00D2668A76700195496 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -56,6 +58,8 @@
 		7EBF9537266B5E420035D9C8 /* MatchSummaryViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MatchSummaryViewController.xib; sourceTree = "<group>"; };
 		7EBF953A266B5E530035D9C8 /* MatchHistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchHistoryViewController.swift; sourceTree = "<group>"; };
 		7EBF953B266B5E530035D9C8 /* MatchHistoryViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MatchHistoryViewController.xib; sourceTree = "<group>"; };
+		A3B993DF360B7C68E59C73AF /* Pods-BadmintonTrainingSupport.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BadmintonTrainingSupport.debug.xcconfig"; path = "Target Support Files/Pods-BadmintonTrainingSupport/Pods-BadmintonTrainingSupport.debug.xcconfig"; sourceTree = "<group>"; };
+		FAF697AAC488A05F9B529E0A /* Pods_BadmintonTrainingSupport.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BadmintonTrainingSupport.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,17 +67,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAE29489CC97B62A1D41D3B4 /* Pods_BadmintonTrainingSupport.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		48CC5065EDC3C5DCBC0D74C2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FAF697AAC488A05F9B529E0A /* Pods_BadmintonTrainingSupport.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		707AA4740D180275803328A3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A3B993DF360B7C68E59C73AF /* Pods-BadmintonTrainingSupport.debug.xcconfig */,
+				55FEF1690DBEBA70C4411FE9 /* Pods-BadmintonTrainingSupport.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		7E24CFFF2668A76700195496 = {
 			isa = PBXGroup;
 			children = (
 				7E24D00A2668A76700195496 /* BadmintonTrainingSupport */,
 				7E24D0092668A76700195496 /* Products */,
+				707AA4740D180275803328A3 /* Pods */,
+				48CC5065EDC3C5DCBC0D74C2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -178,6 +203,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7E24D01C2668A76A00195496 /* Build configuration list for PBXNativeTarget "BadmintonTrainingSupport" */;
 			buildPhases = (
+				6F3FFFA46710000B6845ECFE /* [CP] Check Pods Manifest.lock */,
 				7E24D0042668A76700195496 /* Sources */,
 				7E24D0052668A76700195496 /* Frameworks */,
 				7E24D0062668A76700195496 /* Resources */,
@@ -243,6 +269,31 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6F3FFFA46710000B6845ECFE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BadmintonTrainingSupport-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		7E24D0042668A76700195496 /* Sources */ = {
@@ -395,6 +446,7 @@
 		};
 		7E24D01D2668A76A00195496 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A3B993DF360B7C68E59C73AF /* Pods-BadmintonTrainingSupport.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -414,6 +466,7 @@
 		};
 		7E24D01E2668A76A00195496 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 55FEF1690DBEBA70C4411FE9 /* Pods-BadmintonTrainingSupport.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
