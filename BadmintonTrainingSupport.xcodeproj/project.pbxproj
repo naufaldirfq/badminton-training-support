@@ -16,9 +16,10 @@
 		7E4FB053266B88B300D0CEE2 /* TrainingCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E4FB04F266B88B300D0CEE2 /* TrainingCollectionCell.xib */; };
 		7E4FB054266B88B300D0CEE2 /* TrainingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E4FB050266B88B300D0CEE2 /* TrainingCell.xib */; };
 		7E4FB056266BC1C200D0CEE2 /* Sizes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E4FB055266BC1C200D0CEE2 /* Sizes.swift */; };
-		7E4FB05E266BECA800D0CEE2 /* TrainingCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E4FB05D266BECA800D0CEE2 /* TrainingCategory.swift */; };
 		7E4FB05A266BCD3800D0CEE2 /* RecentsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E4FB058266BCD3800D0CEE2 /* RecentsCell.swift */; };
 		7E4FB05B266BCD3800D0CEE2 /* RecentsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E4FB059266BCD3800D0CEE2 /* RecentsCell.xib */; };
+		7E4FB05E266BECA800D0CEE2 /* TrainingCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E4FB05D266BECA800D0CEE2 /* TrainingCategory.swift */; };
+		7E4FB060266BF48E00D0CEE2 /* Training.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E4FB05F266BF48E00D0CEE2 /* Training.swift */; };
 		7EBF951C266B5B4E0035D9C8 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBF951A266B5B4E0035D9C8 /* HomeViewController.swift */; };
 		7EBF951D266B5B4E0035D9C8 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7EBF951B266B5B4E0035D9C8 /* HomeViewController.xib */; };
 		7EBF9520266B5D790035D9C8 /* NewTrainingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBF951E266B5D790035D9C8 /* NewTrainingViewController.swift */; };
@@ -37,7 +38,6 @@
 		7EBF9539266B5E420035D9C8 /* MatchSummaryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7EBF9537266B5E420035D9C8 /* MatchSummaryViewController.xib */; };
 		7EBF953C266B5E530035D9C8 /* MatchHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBF953A266B5E530035D9C8 /* MatchHistoryViewController.swift */; };
 		7EBF953D266B5E530035D9C8 /* MatchHistoryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7EBF953B266B5E530035D9C8 /* MatchHistoryViewController.xib */; };
-		7EBF9543266B74AF0035D9C8 /* Training.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBF9542266B74AF0035D9C8 /* Training.swift */; };
 		7EBF9545266B78E40035D9C8 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBF9544266B78E40035D9C8 /* Constants.swift */; };
 		7EBF954F266B82850035D9C8 /* DummyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBF954E266B82850035D9C8 /* DummyData.swift */; };
 		FAE29489CC97B62A1D41D3B4 /* Pods_BadmintonTrainingSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAF697AAC488A05F9B529E0A /* Pods_BadmintonTrainingSupport.framework */; };
@@ -56,9 +56,10 @@
 		7E4FB04F266B88B300D0CEE2 /* TrainingCollectionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TrainingCollectionCell.xib; sourceTree = "<group>"; };
 		7E4FB050266B88B300D0CEE2 /* TrainingCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TrainingCell.xib; sourceTree = "<group>"; };
 		7E4FB055266BC1C200D0CEE2 /* Sizes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sizes.swift; sourceTree = "<group>"; };
-		7E4FB05D266BECA800D0CEE2 /* TrainingCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingCategory.swift; sourceTree = "<group>"; };
 		7E4FB058266BCD3800D0CEE2 /* RecentsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentsCell.swift; sourceTree = "<group>"; };
 		7E4FB059266BCD3800D0CEE2 /* RecentsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecentsCell.xib; sourceTree = "<group>"; };
+		7E4FB05D266BECA800D0CEE2 /* TrainingCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingCategory.swift; sourceTree = "<group>"; };
+		7E4FB05F266BF48E00D0CEE2 /* Training.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Training.swift; sourceTree = "<group>"; };
 		7EBF951A266B5B4E0035D9C8 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		7EBF951B266B5B4E0035D9C8 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		7EBF951E266B5D790035D9C8 /* NewTrainingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTrainingViewController.swift; sourceTree = "<group>"; };
@@ -77,7 +78,6 @@
 		7EBF9537266B5E420035D9C8 /* MatchSummaryViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MatchSummaryViewController.xib; sourceTree = "<group>"; };
 		7EBF953A266B5E530035D9C8 /* MatchHistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchHistoryViewController.swift; sourceTree = "<group>"; };
 		7EBF953B266B5E530035D9C8 /* MatchHistoryViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MatchHistoryViewController.xib; sourceTree = "<group>"; };
-		7EBF9542266B74AF0035D9C8 /* Training.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Training.swift; sourceTree = "<group>"; };
 		7EBF9544266B78E40035D9C8 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		7EBF954E266B82850035D9C8 /* DummyData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyData.swift; sourceTree = "<group>"; };
 		A3B993DF360B7C68E59C73AF /* Pods-BadmintonTrainingSupport.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BadmintonTrainingSupport.debug.xcconfig"; path = "Target Support Files/Pods-BadmintonTrainingSupport/Pods-BadmintonTrainingSupport.debug.xcconfig"; sourceTree = "<group>"; };
@@ -170,7 +170,8 @@
 		7E4FB05C266BE42B00D0CEE2 /* Trainings */ = {
 			isa = PBXGroup;
 			children = (
-				7EBF9542266B74AF0035D9C8 /* Training.swift */,
+				7E4FB05F266BF48E00D0CEE2 /* Training.swift */,
+				7E4FB05D266BECA800D0CEE2 /* TrainingCategory.swift */,
 			);
 			path = Trainings;
 			sourceTree = "<group>";
@@ -198,8 +199,6 @@
 		7EBF9515266B5AB00035D9C8 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				7EBF9542266B74AF0035D9C8 /* Training.swift */,
-				7E4FB05D266BECA800D0CEE2 /* TrainingCategory.swift */,
 				7E4FB05C266BE42B00D0CEE2 /* Trainings */,
 			);
 			path = Model;
@@ -372,8 +371,8 @@
 				7EBF951C266B5B4E0035D9C8 /* HomeViewController.swift in Sources */,
 				7E4FB05E266BECA800D0CEE2 /* TrainingCategory.swift in Sources */,
 				7E4FB052266B88B300D0CEE2 /* TrainingCell.swift in Sources */,
-				7EBF9543266B74AF0035D9C8 /* Training.swift in Sources */,
 				7EBF9530266B5E110035D9C8 /* NewMatchViewController.swift in Sources */,
+				7E4FB060266BF48E00D0CEE2 /* Training.swift in Sources */,
 				7EBF9520266B5D790035D9C8 /* NewTrainingViewController.swift in Sources */,
 				7E4FB056266BC1C200D0CEE2 /* Sizes.swift in Sources */,
 				7EBF9545266B78E40035D9C8 /* Constants.swift in Sources */,
