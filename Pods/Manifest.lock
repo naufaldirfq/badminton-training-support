@@ -1,3 +1,16 @@
-PODFILE CHECKSUM: 4a3a7bf4aff268dd674ef92de23645b3542ad21a
+PODS:
+  - StickyButton (1.1.2)
+
+DEPENDENCIES:
+  - StickyButton
+
+SPEC REPOS:
+  trunk:
+    - StickyButton
+
+SPEC CHECKSUMS:
+  StickyButton: 79c9fbf2f050ac193875faae6379e8cc38aeff6e
+
+PODFILE CHECKSUM: 6a02bf4aee593250c35f7db12dbc183a318e322d
 
 COCOAPODS: 1.10.1

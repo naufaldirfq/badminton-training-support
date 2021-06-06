@@ -1,0 +1,6 @@
+framework module StickyButton {
+  umbrella header "StickyButton-umbrella.h"
+
+  export *
+  module * { export * }
+}
