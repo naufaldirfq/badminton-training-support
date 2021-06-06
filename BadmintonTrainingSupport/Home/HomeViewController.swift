@@ -10,7 +10,7 @@ import UIKit
 class HomeViewController: UIViewController {
     
     @IBOutlet var tableView: UITableView!
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -19,36 +19,80 @@ class HomeViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(TrainingCollectionCell.nib(), forCellReuseIdentifier: TrainingCollectionCell.identifier)
+        tableView.register(RecentsCell.nib(), forCellReuseIdentifier: RecentsCell.identifier)
     }
     
     @objc func newTraining() {
         let vc = NewTrainingViewController()
         navigationController?.pushViewController(vc, animated: true)
     }
-
+    
 }
 
-extension HomeViewController: UITableViewDelegate, UITableViewDataSource, TrainingCollectionDelegate {
+extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return 3
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return Sizes.TrainingCollection.Height
+        switch indexPath.row {
+        case 0:
+            return Sizes.TrainingCollection.Height
+        case 1...2:
+            return Sizes.Recents.Height
+        default:
+            return 0
+        }
     }
     
-    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if let cell = tableView.dequeueReusableCell(withIdentifier: TrainingCollectionCell.identifier) as? TrainingCollectionCell {
-            cell.configure(name: "Recommendation", with: DummyData.Trainings)
-            cell.delegate = self
-            return cell
+        switch indexPath.row {
+        case 0:
+            if let cell = tableView.dequeueReusableCell(withIdentifier: TrainingCollectionCell.identifier) as? TrainingCollectionCell {
+                cell.configure(name: "Recommendation", with: DummyData.Trainings)
+                cell.delegate = self
+                cell.selectionStyle = .none
+                return cell
+            }
+        case 1:
+            if let cell = tableView.dequeueReusableCell(withIdentifier: RecentsCell.identifier) as? RecentsCell {
+                cell.configure(name: "Recent Trainings", with: DummyData.TrainingCell())
+                cell.delegate = self
+                cell.selectionStyle = .none
+                return cell
+            }
+        case 2:
+            if let cell = tableView.dequeueReusableCell(withIdentifier: RecentsCell.identifier) as? RecentsCell {
+                cell.configure(name: "Recent Matches", with: DummyData.TrainingCell())
+                cell.delegate = self
+                cell.selectionStyle = .none
+                return cell
+            }
+        default:
+            break
         }
         return UITableViewCell()
     }
+}
+
+extension HomeViewController: TrainingCollectionDelegate {
     
     func collectionView(trainingCell: TrainingCell, index: Int, didTappedInTableViewCell: TrainingCollectionCell) {
         print("Pressed \(trainingCell.name)!")
     }
+    
+}
+
+extension HomeViewController: RecentsDelegate {
+    
+    func recentsView(didTapViewAllIn cell: RecentsCell) {
+        print("Pressed View All on \(cell.name)!")
+    }
+    
+    func recentsView(recent: UITableViewCell, index: Int, didTapRecentIn cell: RecentsCell) {
+        print("Pressed Recent Number \(index+1) on \(cell.name)!")
+    }
+    
+    
 }

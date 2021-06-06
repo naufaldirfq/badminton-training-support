@@ -34,4 +34,19 @@ struct DummyData {
     static let Technical = TrainingCategory(name: "Technical", trainings: TechnicalTrainings)
     
     static let Categories = [Physical, Technical]
+    
+    struct Recent {
+        static let Trainings: [Training] = [
+            
+        ]
+    }
+    
+    static func TrainingCell() -> [UITableViewCell] {
+        let cells = [
+            UITableViewCell(),
+            UITableViewCell(),
+            UITableViewCell()
+        ]
+        return cells
+    }
 }

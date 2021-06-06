@@ -19,8 +19,8 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="7TI-Tx-J7v">
-                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="7TI-Tx-J7v">
+                    <rect key="frame" x="0.0" y="44" width="414" height="852"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 </tableView>
             </subviews>
@@ -28,7 +28,7 @@
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="7TI-Tx-J7v" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="1Zb-pw-HKM"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="7TI-Tx-J7v" secondAttribute="bottom" id="HaU-BF-rv6"/>
+                <constraint firstAttribute="bottom" secondItem="7TI-Tx-J7v" secondAttribute="bottom" id="HaU-BF-rv6"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="7TI-Tx-J7v" secondAttribute="trailing" id="kDs-oA-cpY"/>
                 <constraint firstItem="7TI-Tx-J7v" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="m8u-qL-Ude"/>
             </constraints>
