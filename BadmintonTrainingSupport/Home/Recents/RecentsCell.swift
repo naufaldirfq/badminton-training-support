@@ -7,8 +7,14 @@
 
 import UIKit
 
+protocol RecentsDelegate: UIViewController {
+    func recentsView(cell: RecentsCell)
+    
+}
+
 class RecentsCell: UITableViewCell {
     
+    weak var delegate: RecentsDelegate?
     var name: String = "Recents Name"
     var cells = [UITableViewCell]()
     
@@ -43,6 +49,11 @@ class RecentsCell: UITableViewCell {
         self.nameLabel.text = name
         tableView.reloadData()
     }
+    
+    @IBAction func didTapViewAll(_ sender: UIButton) {
+        delegate?.recentsView(cell: self)
+    }
+    
     
 }
 

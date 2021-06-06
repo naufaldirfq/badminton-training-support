@@ -29,7 +29,7 @@ class HomeViewController: UIViewController {
     
 }
 
-extension HomeViewController: UITableViewDelegate, UITableViewDataSource, TrainingCollectionDelegate {
+extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 3
@@ -58,12 +58,14 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource, Traini
         case 1:
             if let cell = tableView.dequeueReusableCell(withIdentifier: RecentsCell.identifier) as? RecentsCell {
                 cell.configure(name: "Recent Trainings", with: [])
+                cell.delegate = self
                 cell.selectionStyle = .none
                 return cell
             }
         case 2:
             if let cell = tableView.dequeueReusableCell(withIdentifier: RecentsCell.identifier) as? RecentsCell {
                 cell.configure(name: "Recent Matches", with: [])
+                cell.delegate = self
                 cell.selectionStyle = .none
                 return cell
             }
@@ -72,8 +74,20 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource, Traini
         }
         return UITableViewCell()
     }
+}
+
+extension HomeViewController: TrainingCollectionDelegate {
     
     func collectionView(trainingCell: TrainingCell, index: Int, didTappedInTableViewCell: TrainingCollectionCell) {
         print("Pressed \(trainingCell.name)!")
     }
+    
+}
+
+extension HomeViewController: RecentsDelegate {
+    
+    func recentsView(cell: RecentsCell) {
+        print("Pressed View All on \(cell.name)!")
+    }
+    
 }

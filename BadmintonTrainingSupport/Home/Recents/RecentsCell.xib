@@ -29,6 +29,9 @@
                             <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oMi-sT-4dm">
                                 <rect key="frame" x="131.5" y="0.0" width="239.5" height="20.5"/>
                                 <state key="normal" title="View All"/>
+                                <connections>
+                                    <action selector="didTapViewAll:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="FQx-kZ-QKX"/>
+                                </connections>
                             </button>
                         </subviews>
                         <constraints>
