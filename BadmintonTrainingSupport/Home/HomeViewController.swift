@@ -57,14 +57,14 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
             }
         case 1:
             if let cell = tableView.dequeueReusableCell(withIdentifier: RecentsCell.identifier) as? RecentsCell {
-                cell.configure(name: "Recent Trainings", with: [])
+                cell.configure(name: "Recent Trainings", with: DummyData.TrainingCell())
                 cell.delegate = self
                 cell.selectionStyle = .none
                 return cell
             }
         case 2:
             if let cell = tableView.dequeueReusableCell(withIdentifier: RecentsCell.identifier) as? RecentsCell {
-                cell.configure(name: "Recent Matches", with: [])
+                cell.configure(name: "Recent Matches", with: DummyData.TrainingCell())
                 cell.delegate = self
                 cell.selectionStyle = .none
                 return cell
@@ -86,8 +86,13 @@ extension HomeViewController: TrainingCollectionDelegate {
 
 extension HomeViewController: RecentsDelegate {
     
-    func recentsView(cell: RecentsCell) {
+    func recentsView(didTapViewAllIn cell: RecentsCell) {
         print("Pressed View All on \(cell.name)!")
     }
+    
+    func recentsView(recent: UITableViewCell, index: Int, didTapRecentIn cell: RecentsCell) {
+        print("Pressed Recent Number \(index+1) on \(cell.name)!")
+    }
+    
     
 }

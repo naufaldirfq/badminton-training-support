@@ -8,8 +8,8 @@
 import UIKit
 
 protocol RecentsDelegate: UIViewController {
-    func recentsView(cell: RecentsCell)
-    
+    func recentsView(didTapViewAllIn cell: RecentsCell)
+    func recentsView(recent: UITableViewCell, index: Int, didTapRecentIn cell: RecentsCell)
 }
 
 class RecentsCell: UITableViewCell {
@@ -41,7 +41,7 @@ class RecentsCell: UITableViewCell {
     
     public func configure(name: String, with cells: [UITableViewCell]) {
         self.name = name
-        self.cells.append(contentsOf: cells)
+        self.cells = cells
         loadView()
     }
     
@@ -51,7 +51,7 @@ class RecentsCell: UITableViewCell {
     }
     
     @IBAction func didTapViewAll(_ sender: UIButton) {
-        delegate?.recentsView(cell: self)
+        delegate?.recentsView(didTapViewAllIn: self)
     }
     
     
@@ -77,7 +77,16 @@ extension RecentsCell: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = cells[indexPath.row]
+        cell.textLabel?.text = "Test"
+        cell.backgroundColor = .clear
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if let cell = tableView.cellForRow(at: indexPath) {
+            delegate?.recentsView(recent: cell, index: indexPath.row, didTapRecentIn: self)
+        }
+        tableView.deselectRow(at: indexPath, animated: true)
     }
     
 }

@@ -40,4 +40,13 @@ struct DummyData {
             
         ]
     }
+    
+    static func TrainingCell() -> [UITableViewCell] {
+        let cells = [
+            UITableViewCell(),
+            UITableViewCell(),
+            UITableViewCell()
+        ]
+        return cells
+    }
 }
