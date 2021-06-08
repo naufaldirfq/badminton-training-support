@@ -266,11 +266,7 @@
 				7E24D0042668A76700195496 /* Sources */,
 				7E24D0052668A76700195496 /* Frameworks */,
 				7E24D0062668A76700195496 /* Resources */,
-<<<<<<< HEAD
-				EF322CAD8F2E1419576FA7AB /* [CP] Embed Pods Frameworks */,
-=======
 				2B52D7BF6ADF0350665BB4C9 /* [CP] Embed Pods Frameworks */,
->>>>>>> a955ec64552b8689d1f38ef4b7ec3b278e4a1691
 			);
 			buildRules = (
 			);
