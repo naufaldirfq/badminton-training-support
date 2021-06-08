@@ -24,4 +24,10 @@ struct Sizes {
     struct HomeProfile {
         static let Height: CGFloat = 82.0
     }
+    //MARK: Size for page "NewMatchVC"
+    struct NewMatch {
+        static let HeightTextField: CGFloat = 52.5
+        static let HeightMatchType: CGFloat = 52.5
+        static let Player: CGFloat = 52.5
+    }
 }
