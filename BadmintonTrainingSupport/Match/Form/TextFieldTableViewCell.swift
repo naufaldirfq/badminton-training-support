@@ -7,7 +7,7 @@
 
 import UIKit
 
-class TextFieldTableViewCell: UITableViewCell, UITextViewDelegate {
+class TextFieldTableViewCell: UITableViewCell, UITextFieldDelegate {
 
     @IBOutlet weak var labelField: UILabel!
     @IBOutlet weak var nwField: UITextField!
@@ -28,7 +28,7 @@ class TextFieldTableViewCell: UITableViewCell, UITextViewDelegate {
         super.awakeFromNib()
         // Initialization code
         nwField.placeholder = "Enter text..."
-        //nwField.delegate = self
+        nwField.delegate = self
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool{

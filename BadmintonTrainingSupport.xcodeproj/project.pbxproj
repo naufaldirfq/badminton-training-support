@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		70502559266F4DDA00EA49B0 /* MTSingleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70502557266F4DDA00EA49B0 /* MTSingleTableViewCell.swift */; };
+		7050255A266F4DDA00EA49B0 /* MTSingleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 70502558266F4DDA00EA49B0 /* MTSingleTableViewCell.xib */; };
 		7096EA8C266E5D0700A9D1F6 /* TextFieldTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7096EA8A266E5D0700A9D1F6 /* TextFieldTableViewCell.swift */; };
 		7096EA8D266E5D0700A9D1F6 /* TextFieldTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7096EA8B266E5D0700A9D1F6 /* TextFieldTableViewCell.xib */; };
 		7E24D00C2668A76700195496 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E24D00B2668A76700195496 /* AppDelegate.swift */; };
@@ -51,6 +53,8 @@
 
 /* Begin PBXFileReference section */
 		55FEF1690DBEBA70C4411FE9 /* Pods-BadmintonTrainingSupport.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BadmintonTrainingSupport.release.xcconfig"; path = "Target Support Files/Pods-BadmintonTrainingSupport/Pods-BadmintonTrainingSupport.release.xcconfig"; sourceTree = "<group>"; };
+		70502557266F4DDA00EA49B0 /* MTSingleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MTSingleTableViewCell.swift; sourceTree = "<group>"; };
+		70502558266F4DDA00EA49B0 /* MTSingleTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MTSingleTableViewCell.xib; sourceTree = "<group>"; };
 		7096EA8A266E5D0700A9D1F6 /* TextFieldTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldTableViewCell.swift; sourceTree = "<group>"; };
 		7096EA8B266E5D0700A9D1F6 /* TextFieldTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextFieldTableViewCell.xib; sourceTree = "<group>"; };
 		7E24D0082668A76700195496 /* BadmintonTrainingSupport.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BadmintonTrainingSupport.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -114,6 +118,23 @@
 				FAF697AAC488A05F9B529E0A /* Pods_BadmintonTrainingSupport.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		70502555266F4D3600EA49B0 /* MatchType */ = {
+			isa = PBXGroup;
+			children = (
+				70502556266F4D9600EA49B0 /* MTsingle */,
+			);
+			path = MatchType;
+			sourceTree = "<group>";
+		};
+		70502556266F4D9600EA49B0 /* MTsingle */ = {
+			isa = PBXGroup;
+			children = (
+				70502557266F4DDA00EA49B0 /* MTSingleTableViewCell.swift */,
+				70502558266F4DDA00EA49B0 /* MTSingleTableViewCell.xib */,
+			);
+			path = MTsingle;
 			sourceTree = "<group>";
 		};
 		707AA4740D180275803328A3 /* Pods */ = {
@@ -244,6 +265,7 @@
 		7EBF9517266B5AE50035D9C8 /* Match */ = {
 			isa = PBXGroup;
 			children = (
+				70502555266F4D3600EA49B0 /* MatchType */,
 				7096EA85266E590F00A9D1F6 /* Form */,
 				7EBF952E266B5E110035D9C8 /* NewMatchViewController.swift */,
 				7EBF952F266B5E110035D9C8 /* NewMatchViewController.xib */,
@@ -337,6 +359,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7050255A266F4DDA00EA49B0 /* MTSingleTableViewCell.xib in Resources */,
 				7E4FB054266B88B300D0CEE2 /* TrainingCell.xib in Resources */,
 				7EBF9529266B5DB40035D9C8 /* ProfileViewController.xib in Resources */,
 				B8F23316266E75720089B747 /* GoogleService-Info.plist in Resources */,
@@ -412,6 +435,7 @@
 				7EBF953C266B5E530035D9C8 /* MatchHistoryViewController.swift in Sources */,
 				7E24D00C2668A76700195496 /* AppDelegate.swift in Sources */,
 				7EBF9538266B5E420035D9C8 /* MatchSummaryViewController.swift in Sources */,
+				70502559266F4DDA00EA49B0 /* MTSingleTableViewCell.swift in Sources */,
 				7EBF9524266B5DA20035D9C8 /* TrainingSessionViewController.swift in Sources */,
 				7E4FB051266B88B300D0CEE2 /* TrainingCollectionCell.swift in Sources */,
 				7E24D00E2668A76700195496 /* SceneDelegate.swift in Sources */,
