@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import StickyButton
 
 class HomeViewController: UIViewController {
     
@@ -14,17 +15,47 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "New Training", style: .done, target: self, action: #selector(newTraining))
-        
+        setupTableView()
+        setupStickyButton()
+
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: animated)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        navigationController?.setNavigationBarHidden(false, animated: animated)
+    }
+    
+    func setupTableView() {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(TrainingCollectionCell.nib(), forCellReuseIdentifier: TrainingCollectionCell.identifier)
         tableView.register(RecentsCell.nib(), forCellReuseIdentifier: RecentsCell.identifier)
+        tableView.register(HomeProfileCell.nib(), forCellReuseIdentifier: HomeProfileCell.identifier)
     }
     
-    @objc func newTraining() {
-        let vc = NewTrainingViewController()
-        navigationController?.pushViewController(vc, animated: true)
+    func setupStickyButton() {
+        let stickyButton = StickyButton(size: 80)
+        view.addSubview(stickyButton)
+        stickyButton.itemIconBackground = Colors.AccentColor
+        stickyButton.itemTitleBackground = Colors.AccentColor
+        stickyButton.itemIconTintColor = .white
+        stickyButton.itemTitleTextColor = .white
+        stickyButton.buttonBackgroundColor = Colors.AccentColor
+        stickyButton.buttonImage = UIImage(systemName: "plus")
+        stickyButton.closeButtonImage = UIImage(systemName: "plus")
+        stickyButton.addItem(title: "New Training", icon: UIImage(systemName: "hare.fill")) { item in
+            let vc = NewTrainingViewController()
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
+        stickyButton.addItem(title: "New Match", icon: UIImage(systemName: "sportscourt.fill")) { item in
+            let vc = NewMatchViewController()
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
     }
     
 }
@@ -32,14 +63,16 @@ class HomeViewController: UIViewController {
 extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return 4
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         switch indexPath.row {
         case 0:
+            return Sizes.HomeProfile.Height
+        case 1:
             return Sizes.TrainingCollection.Height
-        case 1...2:
+        case 2...3:
             return Sizes.Recents.Height
         default:
             return 0
@@ -49,24 +82,26 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         switch indexPath.row {
         case 0:
-            if let cell = tableView.dequeueReusableCell(withIdentifier: TrainingCollectionCell.identifier) as? TrainingCollectionCell {
-                cell.configure(name: "Recommendation", with: DummyData.Trainings)
-                cell.delegate = self
-                cell.selectionStyle = .none
+            if let cell = tableView.dequeueReusableCell(withIdentifier: HomeProfileCell.identifier) as? HomeProfileCell {
+                cell.configure(with: DummyData.Profile)
                 return cell
             }
         case 1:
-            if let cell = tableView.dequeueReusableCell(withIdentifier: RecentsCell.identifier) as? RecentsCell {
-                cell.configure(name: "Recent Trainings", with: DummyData.TrainingCell())
+            if let cell = tableView.dequeueReusableCell(withIdentifier: TrainingCollectionCell.identifier) as? TrainingCollectionCell {
+                cell.configure(name: "Recommendation", with: DummyData.Trainings)
                 cell.delegate = self
-                cell.selectionStyle = .none
                 return cell
             }
         case 2:
             if let cell = tableView.dequeueReusableCell(withIdentifier: RecentsCell.identifier) as? RecentsCell {
+                cell.configure(name: "Recent Trainings", with: DummyData.TrainingCell())
+                cell.delegate = self
+                return cell
+            }
+        case 3:
+            if let cell = tableView.dequeueReusableCell(withIdentifier: RecentsCell.identifier) as? RecentsCell {
                 cell.configure(name: "Recent Matches", with: DummyData.TrainingCell())
                 cell.delegate = self
-                cell.selectionStyle = .none
                 return cell
             }
         default:

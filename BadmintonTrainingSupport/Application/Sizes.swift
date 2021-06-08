@@ -21,4 +21,7 @@ struct Sizes {
         static let Height: CGFloat = 52.5 + TableHeight + 16
         static let CornerRadius: CGFloat = 10.0
     }
+    struct HomeProfile {
+        static let Height: CGFloat = 82.0
+    }
 }
