@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TrainingHistoryViewController" customModule="BadmintonTrainingSupport" customModuleProvider="target">
             <connections>
+                <outlet property="trainingHistoryTableView" destination="qRm-R0-fIB" id="drZ-mr-dJZ"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -17,8 +18,20 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="qRm-R0-fIB">
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </tableView>
+            </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="qRm-R0-fIB" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="OPc-cw-zL5"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="qRm-R0-fIB" secondAttribute="bottom" id="Os4-nz-99w"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="qRm-R0-fIB" secondAttribute="trailing" id="X8k-fg-9cs"/>
+                <constraint firstItem="qRm-R0-fIB" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="yGe-3E-TDP"/>
+            </constraints>
             <point key="canvasLocation" x="90" y="109"/>
         </view>
     </objects>

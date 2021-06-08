@@ -11,7 +11,7 @@ struct Identifiers {
     static let TrainingCollectionCell = "TrainingCollectionCell"
     static let TrainingCell = "TrainingCell"
     static let RecentsCell = "RecentsCell"
-    static let TrainingHistoryCell = "TrainingHistoryrTableViewCell"
+    static let TrainingHistoryCell = "TrainingHistoryTableViewCell"
     static let MatchHistoryCell = "MatchHistoryCell"
 }
 

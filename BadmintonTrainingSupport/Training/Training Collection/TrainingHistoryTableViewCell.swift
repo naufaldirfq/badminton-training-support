@@ -9,15 +9,16 @@ import UIKit
 
 class TrainingHistoryTableViewCell: UITableViewCell {
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
+    @IBOutlet weak var trainingNameLabel: UILabel!
+    @IBOutlet weak var recentsLabel: UILabel!
+    @IBOutlet weak var measurement1Label: UILabel!
+    @IBOutlet weak var measurement2Label: UILabel!
+    @IBOutlet weak var unit1Label: UILabel!
+    @IBOutlet weak var unit2Label: UILabel!
     
+    static let identifier = Identifiers.TrainingHistoryCell
+    
+    static func nib() -> UINib {
+        return UINib(nibName: Identifiers.TrainingHistoryCell, bundle: nil)
+    }
 }
