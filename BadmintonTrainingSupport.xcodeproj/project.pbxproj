@@ -129,6 +129,13 @@
 			path = MTsingle;
 			sourceTree = "<group>";
 		};
+		7050255B266F78AF00EA49B0 /* NMHeaderImg */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = NMHeaderImg;
+			sourceTree = "<group>";
+		};
 		707AA4740D180275803328A3 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -255,6 +262,7 @@
 		7EBF9517266B5AE50035D9C8 /* Match */ = {
 			isa = PBXGroup;
 			children = (
+				7050255B266F78AF00EA49B0 /* NMHeaderImg */,
 				70502555266F4D3600EA49B0 /* MatchType */,
 				7096EA85266E590F00A9D1F6 /* Form */,
 				7EBF952E266B5E110035D9C8 /* NewMatchViewController.swift */,

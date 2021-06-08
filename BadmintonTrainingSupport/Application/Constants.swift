@@ -11,6 +11,8 @@ struct Identifiers {
     static let TrainingCollectionCell = "TrainingCollectionCell"
     static let TrainingCell = "TrainingCell"
     static let RecentsCell = "RecentsCell"
+    
+    
 }
 
 struct Images {

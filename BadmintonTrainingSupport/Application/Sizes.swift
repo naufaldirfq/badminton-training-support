@@ -21,4 +21,11 @@ struct Sizes {
         static let Height: CGFloat = 52.5 + TableHeight + 16
         static let CornerRadius: CGFloat = 10.0
     }
+    
+    //MARK: Size for page "NewMatchVC"
+    struct NewMatch {
+        static let HeightTextField: CGFloat = 52.5
+        static let HeightMatchType: CGFloat = 52.5
+        static let Player: CGFloat = 52.5 
+    }
 }
