@@ -12,11 +12,11 @@ class TrainingHistoryViewController: UIViewController {
     @IBOutlet weak var trainingHistoryTableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        initCollectionView()
+        initTableView()
         // Do any additional setup after loading the view.
         
     }
-    func initCollectionView() {
+    func initTableView() {
         trainingHistoryTableView.dataSource = self
         trainingHistoryTableView.delegate = self
         trainingHistoryTableView.register(TrainingHistoryTableViewCell.nib(), forCellReuseIdentifier:TrainingHistoryTableViewCell.identifier)
