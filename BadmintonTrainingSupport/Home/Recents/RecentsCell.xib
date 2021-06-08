@@ -10,11 +10,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="RecentsCell" rowHeight="273" id="KGk-i7-Jjw" customClass="RecentsCell" customModule="BadmintonTrainingSupport" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="403" height="273"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="RecentsCell" rowHeight="255" id="KGk-i7-Jjw" customClass="RecentsCell" customModule="BadmintonTrainingSupport" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="403" height="255"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="403" height="273"/>
+                <rect key="frame" x="0.0" y="0.0" width="403" height="255"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="hGx-Ji-f3A">
@@ -45,10 +45,10 @@
                         </constraints>
                     </stackView>
                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="vsj-P2-XCO">
-                        <rect key="frame" x="16" y="52.5" width="371" height="200"/>
+                        <rect key="frame" x="16" y="52.5" width="371" height="180"/>
                         <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="200" id="GKs-mx-kxb"/>
+                            <constraint firstAttribute="height" constant="180" id="GKs-mx-kxb"/>
                         </constraints>
                     </tableView>
                 </subviews>
@@ -68,7 +68,7 @@
                 <outlet property="tableView" destination="vsj-P2-XCO" id="pbc-30-k0c"/>
                 <outlet property="viewAllButton" destination="oMi-sT-4dm" id="zId-3K-gFN"/>
             </connections>
-            <point key="canvasLocation" x="84.782608695652186" y="114.17410714285714"/>
+            <point key="canvasLocation" x="84.782608695652186" y="108.14732142857143"/>
         </tableViewCell>
     </objects>
     <resources>
