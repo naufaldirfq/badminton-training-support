@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7096EA8C266E5D0700A9D1F6 /* TextFieldTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7096EA8A266E5D0700A9D1F6 /* TextFieldTableViewCell.swift */; };
+		7096EA8D266E5D0700A9D1F6 /* TextFieldTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7096EA8B266E5D0700A9D1F6 /* TextFieldTableViewCell.xib */; };
 		7E24D00C2668A76700195496 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E24D00B2668A76700195496 /* AppDelegate.swift */; };
 		7E24D00E2668A76700195496 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E24D00D2668A76700195496 /* SceneDelegate.swift */; };
 		7E24D0152668A76A00195496 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E24D0142668A76A00195496 /* Assets.xcassets */; };
@@ -49,6 +51,8 @@
 
 /* Begin PBXFileReference section */
 		55FEF1690DBEBA70C4411FE9 /* Pods-BadmintonTrainingSupport.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BadmintonTrainingSupport.release.xcconfig"; path = "Target Support Files/Pods-BadmintonTrainingSupport/Pods-BadmintonTrainingSupport.release.xcconfig"; sourceTree = "<group>"; };
+		7096EA8A266E5D0700A9D1F6 /* TextFieldTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldTableViewCell.swift; sourceTree = "<group>"; };
+		7096EA8B266E5D0700A9D1F6 /* TextFieldTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextFieldTableViewCell.xib; sourceTree = "<group>"; };
 		7E24D0082668A76700195496 /* BadmintonTrainingSupport.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BadmintonTrainingSupport.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E24D00B2668A76700195496 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7E24D00D2668A76700195496 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -119,6 +123,15 @@
 				55FEF1690DBEBA70C4411FE9 /* Pods-BadmintonTrainingSupport.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		7096EA85266E590F00A9D1F6 /* Form */ = {
+			isa = PBXGroup;
+			children = (
+				7096EA8A266E5D0700A9D1F6 /* TextFieldTableViewCell.swift */,
+				7096EA8B266E5D0700A9D1F6 /* TextFieldTableViewCell.xib */,
+			);
+			path = Form;
 			sourceTree = "<group>";
 		};
 		7E24CFFF2668A76700195496 = {
@@ -231,6 +244,7 @@
 		7EBF9517266B5AE50035D9C8 /* Match */ = {
 			isa = PBXGroup;
 			children = (
+				7096EA85266E590F00A9D1F6 /* Form */,
 				7EBF952E266B5E110035D9C8 /* NewMatchViewController.swift */,
 				7EBF952F266B5E110035D9C8 /* NewMatchViewController.xib */,
 				7EBF9532266B5E250035D9C8 /* MatchSessionViewController.swift */,
@@ -331,6 +345,7 @@
 				7E4FB053266B88B300D0CEE2 /* TrainingCollectionCell.xib in Resources */,
 				7E24D0182668A76A00195496 /* LaunchScreen.storyboard in Resources */,
 				7EBF9535266B5E250035D9C8 /* MatchSessionViewController.xib in Resources */,
+				7096EA8D266E5D0700A9D1F6 /* TextFieldTableViewCell.xib in Resources */,
 				7EBF9539266B5E420035D9C8 /* MatchSummaryViewController.xib in Resources */,
 				7E4FB05B266BCD3800D0CEE2 /* RecentsCell.xib in Resources */,
 				7E50B260266FD1A500BAEED1 /* HomeProfileCell.xib in Resources */,
@@ -412,6 +427,7 @@
 				7E50B25F266FD1A500BAEED1 /* HomeProfileCell.swift in Sources */,
 				7EBF952C266B5DD80035D9C8 /* TrainingHistoryViewController.swift in Sources */,
 				7E50B262266FD30100BAEED1 /* UserProfile.swift in Sources */,
+				7096EA8C266E5D0700A9D1F6 /* TextFieldTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
