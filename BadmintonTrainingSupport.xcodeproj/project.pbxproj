@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -42,6 +42,7 @@
 		7EBF953D266B5E530035D9C8 /* MatchHistoryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7EBF953B266B5E530035D9C8 /* MatchHistoryViewController.xib */; };
 		7EBF9545266B78E40035D9C8 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBF9544266B78E40035D9C8 /* Constants.swift */; };
 		7EBF954F266B82850035D9C8 /* DummyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBF954E266B82850035D9C8 /* DummyData.swift */; };
+		B8F23316266E75720089B747 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B8F23315266E75720089B747 /* GoogleService-Info.plist */; };
 		FAE29489CC97B62A1D41D3B4 /* Pods_BadmintonTrainingSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAF697AAC488A05F9B529E0A /* Pods_BadmintonTrainingSupport.framework */; };
 /* End PBXBuildFile section */
 
@@ -85,6 +86,7 @@
 		7EBF9544266B78E40035D9C8 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		7EBF954E266B82850035D9C8 /* DummyData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyData.swift; sourceTree = "<group>"; };
 		A3B993DF360B7C68E59C73AF /* Pods-BadmintonTrainingSupport.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BadmintonTrainingSupport.debug.xcconfig"; path = "Target Support Files/Pods-BadmintonTrainingSupport/Pods-BadmintonTrainingSupport.debug.xcconfig"; sourceTree = "<group>"; };
+		B8F23315266E75720089B747 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		FAF697AAC488A05F9B529E0A /* Pods_BadmintonTrainingSupport.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BadmintonTrainingSupport.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -146,6 +148,7 @@
 				7EBF9518266B5B050035D9C8 /* Profile */,
 				7EBF9513266B5A7F0035D9C8 /* Application */,
 				7E24D0162668A76A00195496 /* LaunchScreen.storyboard */,
+				B8F23315266E75720089B747 /* GoogleService-Info.plist */,
 				7E24D0192668A76A00195496 /* Info.plist */,
 			);
 			path = BadmintonTrainingSupport;
@@ -269,6 +272,7 @@
 				7E24D0042668A76700195496 /* Sources */,
 				7E24D0052668A76700195496 /* Frameworks */,
 				7E24D0062668A76700195496 /* Resources */,
+				2B52D7BF6ADF0350665BB4C9 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -318,6 +322,7 @@
 			files = (
 				7E4FB054266B88B300D0CEE2 /* TrainingCell.xib in Resources */,
 				7EBF9529266B5DB40035D9C8 /* ProfileViewController.xib in Resources */,
+				B8F23316266E75720089B747 /* GoogleService-Info.plist in Resources */,
 				7EBF9531266B5E110035D9C8 /* NewMatchViewController.xib in Resources */,
 				7EBF9525266B5DA20035D9C8 /* TrainingSessionViewController.xib in Resources */,
 				7E4FB053266B88B300D0CEE2 /* TrainingCollectionCell.xib in Resources */,
@@ -337,6 +342,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		2B52D7BF6ADF0350665BB4C9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BadmintonTrainingSupport/Pods-BadmintonTrainingSupport-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BadmintonTrainingSupport/Pods-BadmintonTrainingSupport-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BadmintonTrainingSupport/Pods-BadmintonTrainingSupport-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		6F3FFFA46710000B6845ECFE /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
