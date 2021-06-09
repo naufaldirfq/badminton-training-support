@@ -7,8 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		700DDE53266FB7C7009CD06A /* BtnStartMatchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 700DDE51266FB7C7009CD06A /* BtnStartMatchTableViewCell.swift */; };
+		700DDE54266FB7C7009CD06A /* BtnStartMatchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 700DDE52266FB7C7009CD06A /* BtnStartMatchTableViewCell.xib */; };
+		700DDE59266FBDA4009CD06A /* ChoiceTypeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 700DDE57266FBDA4009CD06A /* ChoiceTypeTableViewCell.swift */; };
+		700DDE5A266FBDA4009CD06A /* ChoiceTypeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 700DDE58266FBDA4009CD06A /* ChoiceTypeTableViewCell.xib */; };
+		704F135A266FAF0F0058E52F /* NMImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704F1358266FAF0F0058E52F /* NMImageTableViewCell.swift */; };
+		704F135B266FAF0F0058E52F /* NMImageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 704F1359266FAF0F0058E52F /* NMImageTableViewCell.xib */; };
 		70502559266F4DDA00EA49B0 /* MTSingleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70502557266F4DDA00EA49B0 /* MTSingleTableViewCell.swift */; };
 		7050255A266F4DDA00EA49B0 /* MTSingleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 70502558266F4DDA00EA49B0 /* MTSingleTableViewCell.xib */; };
+		705E267C26705C650092A80D /* MTDoubleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705E267A26705C650092A80D /* MTDoubleTableViewCell.swift */; };
+		705E267D26705C650092A80D /* MTDoubleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 705E267B26705C650092A80D /* MTDoubleTableViewCell.xib */; };
 		7096EA8C266E5D0700A9D1F6 /* TextFieldTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7096EA8A266E5D0700A9D1F6 /* TextFieldTableViewCell.swift */; };
 		7096EA8D266E5D0700A9D1F6 /* TextFieldTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7096EA8B266E5D0700A9D1F6 /* TextFieldTableViewCell.xib */; };
 		7E24D00C2668A76700195496 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E24D00B2668A76700195496 /* AppDelegate.swift */; };
@@ -53,8 +61,16 @@
 
 /* Begin PBXFileReference section */
 		55FEF1690DBEBA70C4411FE9 /* Pods-BadmintonTrainingSupport.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BadmintonTrainingSupport.release.xcconfig"; path = "Target Support Files/Pods-BadmintonTrainingSupport/Pods-BadmintonTrainingSupport.release.xcconfig"; sourceTree = "<group>"; };
+		700DDE51266FB7C7009CD06A /* BtnStartMatchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BtnStartMatchTableViewCell.swift; sourceTree = "<group>"; };
+		700DDE52266FB7C7009CD06A /* BtnStartMatchTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BtnStartMatchTableViewCell.xib; sourceTree = "<group>"; };
+		700DDE57266FBDA4009CD06A /* ChoiceTypeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoiceTypeTableViewCell.swift; sourceTree = "<group>"; };
+		700DDE58266FBDA4009CD06A /* ChoiceTypeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChoiceTypeTableViewCell.xib; sourceTree = "<group>"; };
+		704F1358266FAF0F0058E52F /* NMImageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NMImageTableViewCell.swift; sourceTree = "<group>"; };
+		704F1359266FAF0F0058E52F /* NMImageTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NMImageTableViewCell.xib; sourceTree = "<group>"; };
 		70502557266F4DDA00EA49B0 /* MTSingleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MTSingleTableViewCell.swift; sourceTree = "<group>"; };
 		70502558266F4DDA00EA49B0 /* MTSingleTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MTSingleTableViewCell.xib; sourceTree = "<group>"; };
+		705E267A26705C650092A80D /* MTDoubleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MTDoubleTableViewCell.swift; sourceTree = "<group>"; };
+		705E267B26705C650092A80D /* MTDoubleTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MTDoubleTableViewCell.xib; sourceTree = "<group>"; };
 		7096EA8A266E5D0700A9D1F6 /* TextFieldTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldTableViewCell.swift; sourceTree = "<group>"; };
 		7096EA8B266E5D0700A9D1F6 /* TextFieldTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextFieldTableViewCell.xib; sourceTree = "<group>"; };
 		7E24D0082668A76700195496 /* BadmintonTrainingSupport.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BadmintonTrainingSupport.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -120,26 +136,41 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		70502555266F4D3600EA49B0 /* MatchType */ = {
+		700DDE50266FB770009CD06A /* ButtonStartMatch */ = {
 			isa = PBXGroup;
 			children = (
-				70502556266F4D9600EA49B0 /* MTsingle */,
+				700DDE51266FB7C7009CD06A /* BtnStartMatchTableViewCell.swift */,
+				700DDE52266FB7C7009CD06A /* BtnStartMatchTableViewCell.xib */,
 			);
-			path = MatchType;
+			path = ButtonStartMatch;
 			sourceTree = "<group>";
 		};
-		70502556266F4D9600EA49B0 /* MTsingle */ = {
+		700DDE56266FBD6E009CD06A /* Choice */ = {
+			isa = PBXGroup;
+			children = (
+				700DDE57266FBDA4009CD06A /* ChoiceTypeTableViewCell.swift */,
+				700DDE58266FBDA4009CD06A /* ChoiceTypeTableViewCell.xib */,
+			);
+			path = Choice;
+			sourceTree = "<group>";
+		};
+		70502555266F4D3600EA49B0 /* MatchType */ = {
 			isa = PBXGroup;
 			children = (
 				70502557266F4DDA00EA49B0 /* MTSingleTableViewCell.swift */,
 				70502558266F4DDA00EA49B0 /* MTSingleTableViewCell.xib */,
+				705E267A26705C650092A80D /* MTDoubleTableViewCell.swift */,
+				705E267B26705C650092A80D /* MTDoubleTableViewCell.xib */,
+				700DDE56266FBD6E009CD06A /* Choice */,
 			);
-			path = MTsingle;
+			path = MatchType;
 			sourceTree = "<group>";
 		};
 		7050255B266F78AF00EA49B0 /* NMHeaderImg */ = {
 			isa = PBXGroup;
 			children = (
+				704F1358266FAF0F0058E52F /* NMImageTableViewCell.swift */,
+				704F1359266FAF0F0058E52F /* NMImageTableViewCell.xib */,
 			);
 			path = NMHeaderImg;
 			sourceTree = "<group>";
@@ -273,8 +304,9 @@
 			isa = PBXGroup;
 			children = (
 				7050255B266F78AF00EA49B0 /* NMHeaderImg */,
-				70502555266F4D3600EA49B0 /* MatchType */,
 				7096EA85266E590F00A9D1F6 /* Form */,
+				70502555266F4D3600EA49B0 /* MatchType */,
+				700DDE50266FB770009CD06A /* ButtonStartMatch */,
 				7EBF952E266B5E110035D9C8 /* NewMatchViewController.swift */,
 				7EBF952F266B5E110035D9C8 /* NewMatchViewController.xib */,
 				7EBF9532266B5E250035D9C8 /* MatchSessionViewController.swift */,
@@ -368,7 +400,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				7050255A266F4DDA00EA49B0 /* MTSingleTableViewCell.xib in Resources */,
+				700DDE5A266FBDA4009CD06A /* ChoiceTypeTableViewCell.xib in Resources */,
 				7E4FB054266B88B300D0CEE2 /* TrainingCell.xib in Resources */,
+				704F135B266FAF0F0058E52F /* NMImageTableViewCell.xib in Resources */,
 				7EBF9529266B5DB40035D9C8 /* ProfileViewController.xib in Resources */,
 				B8F23316266E75720089B747 /* GoogleService-Info.plist in Resources */,
 				7EBF9531266B5E110035D9C8 /* NewMatchViewController.xib in Resources */,
@@ -378,11 +412,13 @@
 				7EBF9535266B5E250035D9C8 /* MatchSessionViewController.xib in Resources */,
 				7096EA8D266E5D0700A9D1F6 /* TextFieldTableViewCell.xib in Resources */,
 				7EBF9539266B5E420035D9C8 /* MatchSummaryViewController.xib in Resources */,
+				700DDE54266FB7C7009CD06A /* BtnStartMatchTableViewCell.xib in Resources */,
 				7E4FB05B266BCD3800D0CEE2 /* RecentsCell.xib in Resources */,
 				7E50B260266FD1A500BAEED1 /* HomeProfileCell.xib in Resources */,
 				7E24D0152668A76A00195496 /* Assets.xcassets in Resources */,
 				7EBF953D266B5E530035D9C8 /* MatchHistoryViewController.xib in Resources */,
 				7EBF951D266B5B4E0035D9C8 /* HomeViewController.xib in Resources */,
+				705E267D26705C650092A80D /* MTDoubleTableViewCell.xib in Resources */,
 				7EBF9521266B5D790035D9C8 /* NewTrainingViewController.xib in Resources */,
 				7EBF952D266B5DD80035D9C8 /* TrainingHistoryViewController.xib in Resources */,
 			);
@@ -439,6 +475,7 @@
 			files = (
 				7EBF954F266B82850035D9C8 /* DummyData.swift in Sources */,
 				7EBF9528266B5DB40035D9C8 /* ProfileViewController.swift in Sources */,
+				705E267C26705C650092A80D /* MTDoubleTableViewCell.swift in Sources */,
 				7E4FB05A266BCD3800D0CEE2 /* RecentsCell.swift in Sources */,
 				7EBF953C266B5E530035D9C8 /* MatchHistoryViewController.swift in Sources */,
 				7E24D00C2668A76700195496 /* AppDelegate.swift in Sources */,
@@ -453,6 +490,9 @@
 				7EBF9530266B5E110035D9C8 /* NewMatchViewController.swift in Sources */,
 				7E4FB060266BF48E00D0CEE2 /* Training.swift in Sources */,
 				7EBF9520266B5D790035D9C8 /* NewTrainingViewController.swift in Sources */,
+				700DDE59266FBDA4009CD06A /* ChoiceTypeTableViewCell.swift in Sources */,
+				704F135A266FAF0F0058E52F /* NMImageTableViewCell.swift in Sources */,
+				700DDE53266FB7C7009CD06A /* BtnStartMatchTableViewCell.swift in Sources */,
 				7E4FB056266BC1C200D0CEE2 /* Sizes.swift in Sources */,
 				7EBF9545266B78E40035D9C8 /* Constants.swift in Sources */,
 				7EBF9534266B5E250035D9C8 /* MatchSessionViewController.swift in Sources */,
