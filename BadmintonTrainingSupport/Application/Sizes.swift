@@ -29,7 +29,9 @@ struct Sizes {
         static let ImageHeight: CGFloat = 140 //def: 139
         static let HeightTextField: CGFloat = 100 //def: 80
         //static let PlayerType: CGFloat = 180
+        
         static let PlayerType: CGFloat = 380
+        
         static let ButtonHeight: CGFloat = HeightTextField - 10
         static let CornerRadius: CGFloat = 10.0
     }
