@@ -20,7 +20,7 @@ class TrainingCell: UICollectionViewCell {
     static let identifier = Identifiers.TrainingCell
     
     static func nib() -> UINib {
-        return UINib(nibName: Identifiers.TrainingCell, bundle: nil)
+        return UINib(nibName: identifier, bundle: nil)
     }
     
     public func configure(with training: Training) {
