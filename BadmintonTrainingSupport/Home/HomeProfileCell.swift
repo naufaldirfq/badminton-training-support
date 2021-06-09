@@ -21,6 +21,7 @@ class HomeProfileCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        selectionStyle = .none
         
         userPhotoImageView.layer.cornerRadius = userPhotoImageView.frame.size.height/2
     }

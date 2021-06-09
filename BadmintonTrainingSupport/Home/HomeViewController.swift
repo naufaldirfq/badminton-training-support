@@ -10,6 +10,9 @@ import StickyButton
 
 class HomeViewController: UIViewController {
     
+    
+    let stickyButton = StickyButton(size: 60)
+    
     @IBOutlet var tableView: UITableView!
     
     override func viewDidLoad() {
@@ -17,11 +20,12 @@ class HomeViewController: UIViewController {
         
         setupTableView()
         setupStickyButton()
-
     }
+    
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        stickyButton.setStickySide(.right)
         navigationController?.setNavigationBarHidden(true, animated: animated)
     }
     
@@ -39,12 +43,13 @@ class HomeViewController: UIViewController {
     }
     
     func setupStickyButton() {
-        let stickyButton = StickyButton(size: 80)
         view.addSubview(stickyButton)
+        stickyButton.itemSize = 60
         stickyButton.itemIconBackground = Colors.AccentColor
         stickyButton.itemTitleBackground = Colors.AccentColor
         stickyButton.itemIconTintColor = .white
         stickyButton.itemTitleTextColor = .white
+        stickyButton.itemTitleFontSize = 17
         stickyButton.buttonBackgroundColor = Colors.AccentColor
         stickyButton.buttonImage = UIImage(systemName: "plus")
         stickyButton.closeButtonImage = UIImage(systemName: "plus")
@@ -128,6 +133,5 @@ extension HomeViewController: RecentsDelegate {
     func recentsView(recent: UITableViewCell, index: Int, didTapRecentIn cell: RecentsCell) {
         print("Pressed Recent Number \(index+1) on \(cell.name)!")
     }
-    
     
 }
