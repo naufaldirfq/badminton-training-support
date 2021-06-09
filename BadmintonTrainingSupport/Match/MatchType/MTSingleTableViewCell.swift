@@ -26,6 +26,7 @@ class MTSingleTableViewCell: UITableViewCell, UITextViewDelegate, UITextFieldDel
         // Initialization code
         mtField.delegate = self
         mtField.placeholder = "Your opponent name"
+        mtField.borderStyle = UITextField.BorderStyle.roundedRect
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {

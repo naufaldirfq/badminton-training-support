@@ -24,8 +24,11 @@ struct Sizes {
     
     //MARK: Size for page "NewMatchVC"
     struct NewMatch {
-        static let HeightTextField: CGFloat = 52.5
-        static let HeightMatchType: CGFloat = 52.5
-        static let Player: CGFloat = 52.5 
+        static let ImageHeight: CGFloat = 140 //def: 139
+        static let HeightTextField: CGFloat = 100 //def: 80
+        //static let PlayerType: CGFloat = 180
+        static let PlayerType: CGFloat = 380
+        static let ButtonHeight: CGFloat = HeightTextField - 10
+        static let CornerRadius: CGFloat = 10.0
     }
 }

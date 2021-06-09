@@ -18,17 +18,22 @@ class TextFieldTableViewCell: UITableViewCell, UITextFieldDelegate {
 //        return UINib(nibName: identifier, bundle: nil)
         return UINib(nibName: "TextFieldTableViewCell", bundle: nil)
     }
+  
     
-    public func configure(with name: String) {
+    public func configure(with name: String, placeholderTemp: String) {
         labelField.text = name
+        //nwField.placeholder = placeholderTemp
+        
+        nwField.attributedPlaceholder = NSAttributedString(string: placeholderTemp, attributes: [NSAttributedString.Key.foregroundColor: UIColor.lightGray, NSAttributedString.Key.font :UIFont(name: "Times New Roman", size: 13)!])
     }
     
 
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        nwField.placeholder = "Enter text..."
+        //nwField.placeholder = "Enter text..."
         nwField.delegate = self
+        nwField.borderStyle = UITextField.BorderStyle.roundedRect
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool{
