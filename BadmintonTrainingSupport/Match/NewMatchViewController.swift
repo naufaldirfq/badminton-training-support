@@ -64,6 +64,7 @@ extension NewMatchViewController: UITableViewDelegate, UITableViewDataSource{
 
                 fieldCell.configure(with: "Date:", placeholderTemp: currentDate)
                 //Buat validasi jika user menggunakan inputan placeholder
+                fieldCell.configureDate(with: currentDate)
 
                 fieldCell.selectionStyle = .none
                 return fieldCell

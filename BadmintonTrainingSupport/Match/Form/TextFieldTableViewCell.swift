@@ -21,9 +21,11 @@ class TextFieldTableViewCell: UITableViewCell, UITextFieldDelegate {
     
     public func configure(with name: String, placeholderTemp: String) {
         labelField.text = name
-        //nwField.placeholder = placeholderTemp
-        
         nwField.attributedPlaceholder = NSAttributedString(string: placeholderTemp, attributes: [NSAttributedString.Key.foregroundColor: UIColor.lightGray, NSAttributedString.Key.font :UIFont(name: "Helvetica", size: 13)!])
+    }
+    
+    public func configureDate(with currentDate: String){
+        nwField.text = currentDate
     }
     
     public func configureTemp(with dates: String){
@@ -31,7 +33,6 @@ class TextFieldTableViewCell: UITableViewCell, UITextFieldDelegate {
         
     }
     
-
     override func awakeFromNib() {
         super.awakeFromNib()
         nwField.delegate = self
