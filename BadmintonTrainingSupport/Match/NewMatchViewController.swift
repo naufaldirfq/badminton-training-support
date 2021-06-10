@@ -19,7 +19,8 @@ class NewMatchViewController: UIViewController {
         tableView.register(NMImageTableViewCell.nib(), forCellReuseIdentifier: NMImageTableViewCell.idetifier)
         tableView.register(TextFieldTableViewCell.nib(), forCellReuseIdentifier: TextFieldTableViewCell.identifier)
         //MARK: Choice Single/Double
-        tableView.register(ChoiceTypeTableViewCell.nib(), forCellReuseIdentifier: ChoiceTypeTableViewCell.identifier)
+/*        tableView.register(ChoiceTypeTableViewCell.nib(), forCellReuseIdentifier: ChoiceTypeTableViewCell.identifier)*/
+        tableView.register(SegmentedCtrlTableViewCell.nib(), forCellReuseIdentifier: SegmentedCtrlTableViewCell.identifier)
         //tableView.register(, forCellReuseIdentifier: ChoiceTypeTableViewCell.identifier)
         tableView.register(MTSingleTableViewCell.nib(), forCellReuseIdentifier: MTSingleTableViewCell.identifier)
         tableView.register(MTDoubleTableViewCell.nib(), forCellReuseIdentifier: MTDoubleTableViewCell.identifier)
@@ -89,6 +90,7 @@ extension NewMatchViewController: UITableViewDelegate, UITableViewDataSource{
         case 4:
             //MARK: Segmented Control (Match Type)
             //https://stackoverflow.com/questions/45713772/reloading-tableview-using-uisegmentedcontrol-in-swift
+/*
             if let choiceCell = tableView.dequeueReusableCell(withIdentifier: ChoiceTypeTableViewCell.identifier, for: indexPath) as? ChoiceTypeTableViewCell {
                 //MARK: Configure
     
@@ -96,8 +98,15 @@ extension NewMatchViewController: UITableViewDelegate, UITableViewDataSource{
                 choiceCell.selectionStyle = .none
                 return choiceCell
             }
+ */
+            if let choiceCell = tableView.dequeueReusableCell(withIdentifier: SegmentedCtrlTableViewCell.identifier, for: indexPath) as? SegmentedCtrlTableViewCell{
+                
+                choiceCell.selectionStyle = .none
+                return choiceCell
+            }
         case 5:
-
+            print("test")
+/*
             //MARK: Single
             if let mtSingleCell = tableView.dequeueReusableCell(withIdentifier: MTSingleTableViewCell.identifier, for: indexPath) as? MTSingleTableViewCell {
                 //MARK: Configure
@@ -106,7 +115,7 @@ extension NewMatchViewController: UITableViewDelegate, UITableViewDataSource{
                 mtSingleCell.selectionStyle = .none
                 return mtSingleCell
             }
-
+*/
 
 /*
             //MARK: Double
@@ -138,10 +147,13 @@ extension NewMatchViewController: UITableViewDelegate, UITableViewDataSource{
         switch indexPath.row {
         case 0:
             return Sizes.NewMatch.ImageHeight
-        case 1...4:
+        case 1...3:
             return Sizes.NewMatch.HeightTextField
+        case 4:
+            return Sizes.NewMatch.CustomSegmented
         case 5:
-            return Sizes.NewMatch.PlayerType
+            //return Sizes.NewMatch.PlayerType
+            return 0
             //need if statement for single/double
         case 6:
             return Sizes.NewMatch.ButtonHeight

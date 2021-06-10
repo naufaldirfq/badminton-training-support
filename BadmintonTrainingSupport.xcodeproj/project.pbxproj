@@ -19,6 +19,12 @@
 		705E267D26705C650092A80D /* MTDoubleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 705E267B26705C650092A80D /* MTDoubleTableViewCell.xib */; };
 		7096EA8C266E5D0700A9D1F6 /* TextFieldTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7096EA8A266E5D0700A9D1F6 /* TextFieldTableViewCell.swift */; };
 		7096EA8D266E5D0700A9D1F6 /* TextFieldTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7096EA8B266E5D0700A9D1F6 /* TextFieldTableViewCell.xib */; };
+		70E75CF42671BCA80043CD09 /* SegmentedCtrlTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E75CF22671BCA80043CD09 /* SegmentedCtrlTableViewCell.swift */; };
+		70E75CF52671BCA80043CD09 /* SegmentedCtrlTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 70E75CF32671BCA80043CD09 /* SegmentedCtrlTableViewCell.xib */; };
+		70E75CFC2671BEAA0043CD09 /* SingleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E75CFA2671BEAA0043CD09 /* SingleViewController.swift */; };
+		70E75CFD2671BEAA0043CD09 /* SingleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 70E75CFB2671BEAA0043CD09 /* SingleViewController.xib */; };
+		70E75D002671BF000043CD09 /* DoubleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E75CFE2671BF000043CD09 /* DoubleViewController.swift */; };
+		70E75D012671BF000043CD09 /* DoubleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 70E75CFF2671BF000043CD09 /* DoubleViewController.xib */; };
 		7E24D00C2668A76700195496 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E24D00B2668A76700195496 /* AppDelegate.swift */; };
 		7E24D00E2668A76700195496 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E24D00D2668A76700195496 /* SceneDelegate.swift */; };
 		7E24D0152668A76A00195496 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E24D0142668A76A00195496 /* Assets.xcassets */; };
@@ -73,6 +79,12 @@
 		705E267B26705C650092A80D /* MTDoubleTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MTDoubleTableViewCell.xib; sourceTree = "<group>"; };
 		7096EA8A266E5D0700A9D1F6 /* TextFieldTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldTableViewCell.swift; sourceTree = "<group>"; };
 		7096EA8B266E5D0700A9D1F6 /* TextFieldTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextFieldTableViewCell.xib; sourceTree = "<group>"; };
+		70E75CF22671BCA80043CD09 /* SegmentedCtrlTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedCtrlTableViewCell.swift; sourceTree = "<group>"; };
+		70E75CF32671BCA80043CD09 /* SegmentedCtrlTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SegmentedCtrlTableViewCell.xib; sourceTree = "<group>"; };
+		70E75CFA2671BEAA0043CD09 /* SingleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleViewController.swift; sourceTree = "<group>"; };
+		70E75CFB2671BEAA0043CD09 /* SingleViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SingleViewController.xib; sourceTree = "<group>"; };
+		70E75CFE2671BF000043CD09 /* DoubleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleViewController.swift; sourceTree = "<group>"; };
+		70E75CFF2671BF000043CD09 /* DoubleViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DoubleViewController.xib; sourceTree = "<group>"; };
 		7E24D0082668A76700195496 /* BadmintonTrainingSupport.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BadmintonTrainingSupport.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E24D00B2668A76700195496 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7E24D00D2668A76700195496 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -157,6 +169,7 @@
 		70502555266F4D3600EA49B0 /* MatchType */ = {
 			isa = PBXGroup;
 			children = (
+				70E75CF12671BC790043CD09 /* SegmentedControl */,
 				70502557266F4DDA00EA49B0 /* MTSingleTableViewCell.swift */,
 				70502558266F4DDA00EA49B0 /* MTSingleTableViewCell.xib */,
 				705E267A26705C650092A80D /* MTDoubleTableViewCell.swift */,
@@ -191,6 +204,19 @@
 				7096EA8B266E5D0700A9D1F6 /* TextFieldTableViewCell.xib */,
 			);
 			path = Form;
+			sourceTree = "<group>";
+		};
+		70E75CF12671BC790043CD09 /* SegmentedControl */ = {
+			isa = PBXGroup;
+			children = (
+				70E75CF22671BCA80043CD09 /* SegmentedCtrlTableViewCell.swift */,
+				70E75CF32671BCA80043CD09 /* SegmentedCtrlTableViewCell.xib */,
+				70E75CFA2671BEAA0043CD09 /* SingleViewController.swift */,
+				70E75CFB2671BEAA0043CD09 /* SingleViewController.xib */,
+				70E75CFE2671BF000043CD09 /* DoubleViewController.swift */,
+				70E75CFF2671BF000043CD09 /* DoubleViewController.xib */,
+			);
+			path = SegmentedControl;
 			sourceTree = "<group>";
 		};
 		7E24CFFF2668A76700195496 = {
@@ -399,6 +425,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				70E75CFD2671BEAA0043CD09 /* SingleViewController.xib in Resources */,
 				7050255A266F4DDA00EA49B0 /* MTSingleTableViewCell.xib in Resources */,
 				700DDE5A266FBDA4009CD06A /* ChoiceTypeTableViewCell.xib in Resources */,
 				7E4FB054266B88B300D0CEE2 /* TrainingCell.xib in Resources */,
@@ -412,6 +439,7 @@
 				7EBF9535266B5E250035D9C8 /* MatchSessionViewController.xib in Resources */,
 				7096EA8D266E5D0700A9D1F6 /* TextFieldTableViewCell.xib in Resources */,
 				7EBF9539266B5E420035D9C8 /* MatchSummaryViewController.xib in Resources */,
+				70E75D012671BF000043CD09 /* DoubleViewController.xib in Resources */,
 				700DDE54266FB7C7009CD06A /* BtnStartMatchTableViewCell.xib in Resources */,
 				7E4FB05B266BCD3800D0CEE2 /* RecentsCell.xib in Resources */,
 				7E50B260266FD1A500BAEED1 /* HomeProfileCell.xib in Resources */,
@@ -421,6 +449,7 @@
 				705E267D26705C650092A80D /* MTDoubleTableViewCell.xib in Resources */,
 				7EBF9521266B5D790035D9C8 /* NewTrainingViewController.xib in Resources */,
 				7EBF952D266B5DD80035D9C8 /* TrainingHistoryViewController.xib in Resources */,
+				70E75CF52671BCA80043CD09 /* SegmentedCtrlTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -484,15 +513,18 @@
 				7EBF9524266B5DA20035D9C8 /* TrainingSessionViewController.swift in Sources */,
 				7E4FB051266B88B300D0CEE2 /* TrainingCollectionCell.swift in Sources */,
 				7E24D00E2668A76700195496 /* SceneDelegate.swift in Sources */,
+				70E75D002671BF000043CD09 /* DoubleViewController.swift in Sources */,
 				7EBF951C266B5B4E0035D9C8 /* HomeViewController.swift in Sources */,
 				7E4FB05E266BECA800D0CEE2 /* TrainingCategory.swift in Sources */,
 				7E4FB052266B88B300D0CEE2 /* TrainingCell.swift in Sources */,
+				70E75CF42671BCA80043CD09 /* SegmentedCtrlTableViewCell.swift in Sources */,
 				7EBF9530266B5E110035D9C8 /* NewMatchViewController.swift in Sources */,
 				7E4FB060266BF48E00D0CEE2 /* Training.swift in Sources */,
 				7EBF9520266B5D790035D9C8 /* NewTrainingViewController.swift in Sources */,
 				700DDE59266FBDA4009CD06A /* ChoiceTypeTableViewCell.swift in Sources */,
 				704F135A266FAF0F0058E52F /* NMImageTableViewCell.swift in Sources */,
 				700DDE53266FB7C7009CD06A /* BtnStartMatchTableViewCell.swift in Sources */,
+				70E75CFC2671BEAA0043CD09 /* SingleViewController.swift in Sources */,
 				7E4FB056266BC1C200D0CEE2 /* Sizes.swift in Sources */,
 				7EBF9545266B78E40035D9C8 /* Constants.swift in Sources */,
 				7EBF9534266B5E250035D9C8 /* MatchSessionViewController.swift in Sources */,
