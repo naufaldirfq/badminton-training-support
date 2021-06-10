@@ -9,6 +9,12 @@ import UIKit
 
 class ChoiceTypeTableViewCell: UITableViewCell {
 
+    //MARK: Single
+    @IBOutlet weak var singleTextField: UITextField!
+    @IBOutlet weak var singleYourName: UILabel!
+    
+    
+    
     
     static let identifier = "ChoiceTypeTableViewCell"
     static func nib() -> UINib{
@@ -22,6 +28,7 @@ class ChoiceTypeTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        singleTextField.borderStyle = UITextField.BorderStyle.roundedRect
         
         
     }

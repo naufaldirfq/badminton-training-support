@@ -18,25 +18,25 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9WV-Ph-Ap8">
-                        <rect key="frame" x="16" y="5" width="81.5" height="13.5"/>
+                        <rect key="frame" x="16" y="8" width="81.5" height="13.5"/>
                         <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Cy-ZY-gTc">
-                        <rect key="frame" x="20" y="34.5" width="73.5" height="17"/>
+                        <rect key="frame" x="20" y="37.5" width="73.5" height="17"/>
                         <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VS." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pIh-Fa-ItG">
-                        <rect key="frame" x="28" y="67.5" width="57.5" height="14.5"/>
+                        <rect key="frame" x="28" y="70.5" width="57.5" height="14.5"/>
                         <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5ym-hL-B2P">
-                        <rect key="frame" x="16" y="98" width="358" height="52"/>
+                        <rect key="frame" x="16" y="101" width="358" height="52"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="358" id="JHV-rJ-V3k"/>
                             <constraint firstAttribute="height" constant="52" id="rXo-36-Drp"/>
@@ -56,7 +56,7 @@
                     <constraint firstItem="5ym-hL-B2P" firstAttribute="top" secondItem="pIh-Fa-ItG" secondAttribute="bottom" constant="16" id="1jG-d5-wHg"/>
                     <constraint firstItem="pIh-Fa-ItG" firstAttribute="top" secondItem="4Cy-ZY-gTc" secondAttribute="bottom" constant="16" id="J1G-ic-lSz"/>
                     <constraint firstAttribute="trailing" secondItem="pIh-Fa-ItG" secondAttribute="trailing" constant="28" id="JER-Xd-OYy"/>
-                    <constraint firstItem="9WV-Ph-Ap8" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="bQp-rB-sXM"/>
+                    <constraint firstItem="9WV-Ph-Ap8" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="bQp-rB-sXM"/>
                     <constraint firstItem="9WV-Ph-Ap8" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="bzw-HV-XBN"/>
                     <constraint firstAttribute="trailing" secondItem="9WV-Ph-Ap8" secondAttribute="trailing" constant="16" id="kcF-PQ-6sU"/>
                     <constraint firstItem="4Cy-ZY-gTc" firstAttribute="top" secondItem="9WV-Ph-Ap8" secondAttribute="bottom" constant="16" id="ki7-fQ-6pJ"/>

@@ -15,7 +15,6 @@ class TextFieldTableViewCell: UITableViewCell, UITextFieldDelegate {
     static let identifier = "TextFieldTableViewCell"
     
     static func nib() -> UINib {
-//        return UINib(nibName: identifier, bundle: nil)
         return UINib(nibName: "TextFieldTableViewCell", bundle: nil)
     }
   
@@ -24,16 +23,17 @@ class TextFieldTableViewCell: UITableViewCell, UITextFieldDelegate {
         labelField.text = name
         //nwField.placeholder = placeholderTemp
         
-        nwField.attributedPlaceholder = NSAttributedString(string: placeholderTemp, attributes: [NSAttributedString.Key.foregroundColor: UIColor.lightGray, NSAttributedString.Key.font :UIFont(name: "Times New Roman", size: 13)!])
+        nwField.attributedPlaceholder = NSAttributedString(string: placeholderTemp, attributes: [NSAttributedString.Key.foregroundColor: UIColor.lightGray, NSAttributedString.Key.font :UIFont(name: "Helvetica", size: 13)!])
     }
     
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
-        //nwField.placeholder = "Enter text..."
         nwField.delegate = self
         nwField.borderStyle = UITextField.BorderStyle.roundedRect
+        //nwField.font = UIFont(name: "Lato-Bold", size: 13)
+        //SF Pro Display-Bold /
+        
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool{
@@ -45,7 +45,6 @@ class TextFieldTableViewCell: UITableViewCell, UITextFieldDelegate {
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
-        // Configure the view for the selected state
     }
     
 }

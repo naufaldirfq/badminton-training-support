@@ -28,7 +28,7 @@
                             <constraint firstAttribute="height" constant="52" id="1Rx-oL-Ssr"/>
                             <constraint firstAttribute="width" constant="358" id="4FY-5N-dZg"/>
                         </constraints>
-                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="13"/>
                         <textInputTraits key="textInputTraits"/>
                     </textField>
                 </subviews>
