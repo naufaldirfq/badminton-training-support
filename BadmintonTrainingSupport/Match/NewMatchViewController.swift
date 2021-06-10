@@ -151,6 +151,7 @@ extension NewMatchViewController: UITableViewDelegate, UITableViewDataSource{
             return Sizes.NewMatch.HeightTextField
         case 4:
             return Sizes.NewMatch.CustomSegmented
+            //return UITableView.automaticDimension
         case 5:
             //return Sizes.NewMatch.PlayerType
             return 0
