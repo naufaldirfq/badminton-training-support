@@ -10,8 +10,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SingleViewController" customModule="BadmintonTrainingSupport" customModuleProvider="target">
             <connections>
-                <outlet property="fieldOpponentName" destination="ML4-KE-y3e" id="dK8-7S-OzM"/>
-                <outlet property="labelYourName" destination="EZT-qP-HjI" id="HSP-Yv-Yi4"/>
+                <outlet property="containerView" destination="e1y-Il-FOy" id="gFW-I3-OqW"/>
+                <outlet property="fieldOpponentName" destination="aIa-Dy-9Lu" id="CvC-yK-Vbn"/>
+                <outlet property="fieldYourName" destination="qpr-eR-VBL" id="lu9-O9-xZS"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -20,48 +21,53 @@
             <rect key="frame" x="0.0" y="0.0" width="358" height="128"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hanif Fauzi (You)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EZT-qP-HjI">
-                    <rect key="frame" x="16" y="8" width="326" height="17"/>
-                    <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vL7-hX-MCc">
+                    <rect key="frame" x="0.0" y="11" width="358" height="3"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VS." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U3l-dD-hai">
-                    <rect key="frame" x="16" y="33" width="326" height="14.5"/>
-                    <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ML4-KE-y3e">
-                    <rect key="frame" x="0.0" y="55.5" width="358" height="52"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="52" id="msa-1C-Zg5"/>
-                        <constraint firstAttribute="width" constant="358" id="n7V-GS-aaH"/>
-                    </constraints>
-                    <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
-                    <textInputTraits key="textInputTraits"/>
-                </textField>
+                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="e1y-Il-FOy">
+                    <rect key="frame" x="0.0" y="0.0" width="358" height="128"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Your opponent name 1" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qpr-eR-VBL">
+                            <rect key="frame" x="12" y="21" width="338" height="34"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                        <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Your opponent name 2" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aIa-Dy-9Lu">
+                            <rect key="frame" x="12" y="79" width="338" height="34"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ivm-xK-ffb" userLabel="SeparatorOpponentName">
+                            <rect key="frame" x="42" y="64" width="301" height="1"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" red="0.43921568630000002" green="0.43921568630000002" blue="0.43921568630000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </view>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="VS." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jcf-zO-sHt">
+                            <rect key="frame" x="12" y="56" width="30" height="15"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemGray5Color"/>
+                </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <color key="backgroundColor" systemColor="systemGreenColor"/>
-            <constraints>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="U3l-dD-hai" secondAttribute="trailing" constant="16" id="3EM-Mu-7W7"/>
-                <constraint firstItem="EZT-qP-HjI" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="7be-o9-tlq"/>
-                <constraint firstItem="ML4-KE-y3e" firstAttribute="top" secondItem="U3l-dD-hai" secondAttribute="bottom" constant="8" id="IK7-jE-ch6"/>
-                <constraint firstItem="U3l-dD-hai" firstAttribute="top" secondItem="EZT-qP-HjI" secondAttribute="bottom" constant="8" id="Kzw-ik-IaH"/>
-                <constraint firstItem="ML4-KE-y3e" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="O9P-zE-D6Q"/>
-                <constraint firstItem="EZT-qP-HjI" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="8" id="PlN-FS-gwB"/>
-                <constraint firstItem="U3l-dD-hai" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="ant-Qc-LkW"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="ML4-KE-y3e" secondAttribute="trailing" id="eJp-jC-DSO"/>
-                <constraint firstAttribute="trailing" secondItem="EZT-qP-HjI" secondAttribute="trailing" constant="16" id="y0U-Hi-vQ2"/>
-            </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="-155.07246376811597" y="-265.17857142857144"/>
+            <point key="canvasLocation" x="-155.07246376811597" y="-218.30357142857142"/>
         </view>
     </objects>
     <resources>
-        <systemColor name="systemGreenColor">
-            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

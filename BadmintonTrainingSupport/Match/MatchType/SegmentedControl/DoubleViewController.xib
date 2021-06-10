@@ -15,6 +15,7 @@
                 <outlet property="fieldOpponentName1" destination="Mcn-B9-Dka" id="d0x-uU-2kX"/>
                 <outlet property="fieldOpponentName2" destination="373-LS-19X" id="2Fi-ai-8Pq"/>
                 <outlet property="fieldTeammateName" destination="ccw-gh-3qw" id="itw-QE-1tw"/>
+                <outlet property="fieldYourName" destination="l8Z-Gh-5xV" id="ERh-Oz-Q60"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -71,20 +72,6 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Dk-q6-rkj">
                     <rect key="frame" x="0.0" y="0.0" width="358" height="128"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="(You)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sth-Ey-anZ">
-                            <rect key="frame" x="119" y="26" width="51" height="17"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
-                            <color key="textColor" systemColor="systemGrayColor"/>
-                            <nil key="highlightedColor"/>
-                        </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Hanif Fauzi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vFX-Zu-23d">
-                            <rect key="frame" x="12" y="26" width="346" height="17"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
-                            <nil key="textColor"/>
-                            <nil key="highlightedColor"/>
-                        </label>
                         <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Your teammate name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ccw-gh-3qw">
                             <rect key="frame" x="12" y="78" width="338" height="34"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -99,6 +86,12 @@
                                 <constraint firstAttribute="width" constant="326.67000000000002" id="oqd-mG-V4u"/>
                             </constraints>
                         </view>
+                        <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Your Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="l8Z-Gh-5xV">
+                            <rect key="frame" x="12" y="21" width="338" height="34"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemGray5Color"/>
                     <constraints>
@@ -110,7 +103,6 @@
                 </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <color key="backgroundColor" systemColor="systemOrangeColor"/>
             <constraints>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="Gn5-G5-GYt" secondAttribute="bottom" id="DOF-kn-QCS"/>
                 <constraint firstItem="Gn5-G5-GYt" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="FsQ-iz-njO"/>
@@ -124,18 +116,12 @@
                 <constraint firstItem="hJX-oa-3is" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="8" id="vrV-2f-WeB"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="24.637681159420293" y="90.736607142857139"/>
+            <point key="canvasLocation" x="112" y="99"/>
         </view>
     </objects>
     <resources>
         <systemColor name="systemGray5Color">
             <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemGrayColor">
-            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemOrangeColor">
-            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

@@ -26,6 +26,11 @@ class TextFieldTableViewCell: UITableViewCell, UITextFieldDelegate {
         nwField.attributedPlaceholder = NSAttributedString(string: placeholderTemp, attributes: [NSAttributedString.Key.foregroundColor: UIColor.lightGray, NSAttributedString.Key.font :UIFont(name: "Helvetica", size: 13)!])
     }
     
+    public func configureTemp(with dates: String){
+        nwField.text = dates
+        
+    }
+    
 
     override func awakeFromNib() {
         super.awakeFromNib()

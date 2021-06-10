@@ -30,6 +30,10 @@ struct DummyData {
         Training(name: "Serve", description: "Pros serve 100 shuttle every day")
     ]
     
+    static let DataProfile = [
+        Profile(name: "Hanif Fauzi")
+    ]
+    
     static let Physical = TrainingCategory(name: "Physical", trainings: PhysicalTrainings)
     static let Technical = TrainingCategory(name: "Technical", trainings: TechnicalTrainings)
     

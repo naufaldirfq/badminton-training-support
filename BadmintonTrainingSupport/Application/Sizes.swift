@@ -28,7 +28,7 @@ struct Sizes {
         static let HeightTextField: CGFloat = 82 //def: 80
         //static let PlayerType: CGFloat = 180
         
-        static let CustomSegmented: CGFloat = 410
+        static let CustomSegmented: CGFloat = 410 //set disini heightnya
         static let PlayerType: CGFloat = 380
         
         static let ButtonHeight: CGFloat = HeightTextField - 10
