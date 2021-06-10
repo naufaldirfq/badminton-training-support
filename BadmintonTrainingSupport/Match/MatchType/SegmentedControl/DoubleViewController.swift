@@ -48,14 +48,9 @@ class DoubleViewController: UIViewController, UITextFieldDelegate {
 
     }
 
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool{
         textField.resignFirstResponder()
         return true
     }
-    
-    
-    
-    //MARK: Keyboard
-
 
 }

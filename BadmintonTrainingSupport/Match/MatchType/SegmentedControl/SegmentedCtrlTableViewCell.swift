@@ -34,25 +34,17 @@ class SegmentedCtrlTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+    
     @IBAction func switchAction(_ sender: UISegmentedControl) {
         singleView.isHidden = true
         doubleView.isHidden = true
         switch sender.selectedSegmentIndex {
         case 0:
-//            viewContainer.bringSubviewToFront(singleView)
-//            doubleView.isHidden = false
-//            break
-            
             viewContainer.bringSubviewToFront(doubleView)
             singleView.isHidden = false
             break
         case 1:
-//            viewContainer.bringSubviewToFront(doubleView)
-//            singleView.isHidden = false
-//            break
-            
-            
-            viewContainer.bringSubviewToFront(singleView)
+        viewContainer.bringSubviewToFront(singleView)
             doubleView.isHidden = false
             break
         default:
