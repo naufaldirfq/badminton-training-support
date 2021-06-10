@@ -19,12 +19,7 @@ class NewMatchViewController: UIViewController {
         tableView.register(NMImageTableViewCell.nib(), forCellReuseIdentifier: NMImageTableViewCell.idetifier)
         tableView.register(TextFieldTableViewCell.nib(), forCellReuseIdentifier: TextFieldTableViewCell.identifier)
         //MARK: Choice Single/Double
-/*        tableView.register(ChoiceTypeTableViewCell.nib(), forCellReuseIdentifier: ChoiceTypeTableViewCell.identifier)*/
         tableView.register(SegmentedCtrlTableViewCell.nib(), forCellReuseIdentifier: SegmentedCtrlTableViewCell.identifier)
-        //tableView.register(, forCellReuseIdentifier: ChoiceTypeTableViewCell.identifier)
-        tableView.register(MTSingleTableViewCell.nib(), forCellReuseIdentifier: MTSingleTableViewCell.identifier)
-        tableView.register(MTDoubleTableViewCell.nib(), forCellReuseIdentifier: MTDoubleTableViewCell.identifier)
-        
         tableView.register(BtnStartMatchTableViewCell.nib(), forCellReuseIdentifier: BtnStartMatchTableViewCell.identifier)
         
     }
@@ -90,45 +85,13 @@ extension NewMatchViewController: UITableViewDelegate, UITableViewDataSource{
             }
         case 4:
             //MARK: Segmented Control (Match Type)
-            //https://stackoverflow.com/questions/45713772/reloading-tableview-using-uisegmentedcontrol-in-swift
-/*
-            if let choiceCell = tableView.dequeueReusableCell(withIdentifier: ChoiceTypeTableViewCell.identifier, for: indexPath) as? ChoiceTypeTableViewCell {
-                //MARK: Configure
-    
-                
-                choiceCell.selectionStyle = .none
-                return choiceCell
-            }
- */
             if let choiceCell = tableView.dequeueReusableCell(withIdentifier: SegmentedCtrlTableViewCell.identifier, for: indexPath) as? SegmentedCtrlTableViewCell{
                 
                 choiceCell.selectionStyle = .none
                 return choiceCell
             }
         case 5:
-            print("test")
-/*
-            //MARK: Single
-            if let mtSingleCell = tableView.dequeueReusableCell(withIdentifier: MTSingleTableViewCell.identifier, for: indexPath) as? MTSingleTableViewCell {
-                //MARK: Configure
-                mtSingleCell.configure(with: "Hanif Fauzi")
-                
-                mtSingleCell.selectionStyle = .none
-                return mtSingleCell
-            }
-*/
-
-/*
-            //MARK: Double
-            if let mtDoubleCell = tableView.dequeueReusableCell(withIdentifier: MTDoubleTableViewCell.identifier, for: indexPath) as? MTDoubleTableViewCell {
-                //MARK: Configure
-                mtDoubleCell.configure(with: "Hanif")
-                
-                mtDoubleCell.selectionStyle = .none
-                return mtDoubleCell
-            }
- */
-        
+            print("Bingo. This is bug hahaha")
         case 6:
             //MARK: Button StartMatch
             if let btnStartCell = tableView.dequeueReusableCell(withIdentifier: BtnStartMatchTableViewCell.identifier, for: indexPath) as? BtnStartMatchTableViewCell{
