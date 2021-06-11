@@ -16,6 +16,17 @@ class MatchHistoryCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
     }
+
+    public func configure(with match: Match) {
+        teamALabel.text = match.player1 + "\n" + match.player2
+        teamBLabel.text = match.player3 + "\n" + match.player4
+        let matchSet = NSAttributedString(string: "\n" + String( match.matchSet) + " sets")
+        let mystring = match.getOverallMatchStatus()
+        mystring.append(matchSet)
+        matchSummaryLabel.attributedText = mystring
+        
+        
+    }
     static let identifier = Identifiers.MatchHistoryCell
     
     static func nib() -> UINib {

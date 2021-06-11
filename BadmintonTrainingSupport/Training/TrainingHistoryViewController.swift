@@ -8,11 +8,12 @@
 import UIKit
 
 class TrainingHistoryViewController: UIViewController {
-
+    let trainingHistory = DummyData.TrainingHistory
     @IBOutlet weak var trainingHistoryTableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
         initTableView()
+        print(trainingHistory[0].trainingDate)
         // Do any additional setup after loading the view.
         
     }
@@ -36,19 +37,13 @@ class TrainingHistoryViewController: UIViewController {
 }
 extension TrainingHistoryViewController: UITableViewDelegate,UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
+        return trainingHistory.count
     }
     
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: TrainingHistoryTableViewCell.identifier, for: indexPath) as! TrainingHistoryTableViewCell
-        cell.trainingNameLabel.text = "asddada"
-        cell.recentsLabel.text = "4 jam lalu bdo"
-        cell.measurement1Label.text = "Laju"
-        cell.measurement2Label.text = "lama"
-
-        cell.unit1Label.text = "2 km/s"
-        cell.unit2Label.text = "4jm"
+        cell.configure(with: trainingHistory[indexPath.row])
         return cell
     }
     

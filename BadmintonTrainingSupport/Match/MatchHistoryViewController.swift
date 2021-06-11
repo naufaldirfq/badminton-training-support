@@ -10,6 +10,7 @@ import UIKit
 class MatchHistoryViewController: UIViewController {
 
     @IBOutlet weak var matchHistoryTableView: UITableView!
+    let matches = DummyData.MatchHistory
     override func viewDidLoad() {
         super.viewDidLoad()
         initTableView()
@@ -34,7 +35,7 @@ class MatchHistoryViewController: UIViewController {
 }
 extension MatchHistoryViewController: UITableViewDelegate,UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
+        return matches.count
     }
     
     
@@ -46,13 +47,8 @@ extension MatchHistoryViewController: UITableViewDelegate,UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: MatchHistoryCell.identifier, for: indexPath) as! MatchHistoryCell
         
-        cell.teamALabel.text = "asddada\nbabi"
-            cell.teamBLabel.text = "gda\nasu"
-        //if match ini menang
-        cell.matchSummaryLabel.text = "W\n2 Sets"
-        //else
-        //if match kalah
-        //else draw
+        cell.configure(with: matches[indexPath.row])
+        
         return cell
     }
     

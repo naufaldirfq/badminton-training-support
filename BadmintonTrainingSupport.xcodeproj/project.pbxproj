@@ -7,8 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		60201DAF2671EB7A00E0E7E7 /* TrainingSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60201DAE2671EB7A00E0E7E7 /* TrainingSession.swift */; };
 		6063FE6F266E7AEE001DFEA2 /* TrainingHistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6063FE6D266E7AEE001DFEA2 /* TrainingHistoryTableViewCell.swift */; };
 		6063FE70266E7AEE001DFEA2 /* TrainingHistoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6063FE6E266E7AEE001DFEA2 /* TrainingHistoryTableViewCell.xib */; };
+		60A0CF0C267104D000CBE0E5 /* Match.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60A0CF0B267104D000CBE0E5 /* Match.swift */; };
+		60E4112E266FE919006776BD /* MatchHistoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60E4112C266FE919006776BD /* MatchHistoryCell.swift */; };
+		60E4112F266FE919006776BD /* MatchHistoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60E4112D266FE919006776BD /* MatchHistoryCell.xib */; };
 		7E24D00C2668A76700195496 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E24D00B2668A76700195496 /* AppDelegate.swift */; };
 		7E24D00E2668A76700195496 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E24D00D2668A76700195496 /* SceneDelegate.swift */; };
 		7E24D0152668A76A00195496 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E24D0142668A76A00195496 /* Assets.xcassets */; };
@@ -48,8 +52,12 @@
 
 /* Begin PBXFileReference section */
 		55FEF1690DBEBA70C4411FE9 /* Pods-BadmintonTrainingSupport.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BadmintonTrainingSupport.release.xcconfig"; path = "Target Support Files/Pods-BadmintonTrainingSupport/Pods-BadmintonTrainingSupport.release.xcconfig"; sourceTree = "<group>"; };
+		60201DAE2671EB7A00E0E7E7 /* TrainingSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingSession.swift; sourceTree = "<group>"; };
 		6063FE6D266E7AEE001DFEA2 /* TrainingHistoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingHistoryTableViewCell.swift; sourceTree = "<group>"; };
 		6063FE6E266E7AEE001DFEA2 /* TrainingHistoryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrainingHistoryTableViewCell.xib; sourceTree = "<group>"; };
+		60A0CF0B267104D000CBE0E5 /* Match.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Match.swift; sourceTree = "<group>"; };
+		60E4112C266FE919006776BD /* MatchHistoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchHistoryCell.swift; sourceTree = "<group>"; };
+		60E4112D266FE919006776BD /* MatchHistoryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MatchHistoryCell.xib; sourceTree = "<group>"; };
 		7E24D0082668A76700195496 /* BadmintonTrainingSupport.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BadmintonTrainingSupport.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E24D00B2668A76700195496 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7E24D00D2668A76700195496 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -108,6 +116,23 @@
 				FAF697AAC488A05F9B529E0A /* Pods_BadmintonTrainingSupport.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		60A0CF0A267103CF00CBE0E5 /* Match */ = {
+			isa = PBXGroup;
+			children = (
+				60A0CF0B267104D000CBE0E5 /* Match.swift */,
+			);
+			path = Match;
+			sourceTree = "<group>";
+		};
+		60E4112A266FE5B7006776BD /* Match Table */ = {
+			isa = PBXGroup;
+			children = (
+				60E4112C266FE919006776BD /* MatchHistoryCell.swift */,
+				60E4112D266FE919006776BD /* MatchHistoryCell.xib */,
+			);
+			path = "Match Table";
 			sourceTree = "<group>";
 		};
 		707AA4740D180275803328A3 /* Pods */ = {
@@ -181,6 +206,7 @@
 			children = (
 				7E4FB05F266BF48E00D0CEE2 /* Training.swift */,
 				7E4FB05D266BECA800D0CEE2 /* TrainingCategory.swift */,
+				60201DAE2671EB7A00E0E7E7 /* TrainingSession.swift */,
 			);
 			path = Trainings;
 			sourceTree = "<group>";
@@ -208,6 +234,7 @@
 		7EBF9515266B5AB00035D9C8 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				60A0CF0A267103CF00CBE0E5 /* Match */,
 				7E4FB05C266BE42B00D0CEE2 /* Trainings */,
 			);
 			path = Model;
@@ -230,6 +257,7 @@
 		7EBF9517266B5AE50035D9C8 /* Match */ = {
 			isa = PBXGroup;
 			children = (
+				60E4112A266FE5B7006776BD /* Match Table */,
 				7EBF952E266B5E110035D9C8 /* NewMatchViewController.swift */,
 				7EBF952F266B5E110035D9C8 /* NewMatchViewController.xib */,
 				7EBF9532266B5E250035D9C8 /* MatchSessionViewController.swift */,
@@ -321,6 +349,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7E4FB054266B88B300D0CEE2 /* TrainingCell.xib in Resources */,
+				60E4112F266FE919006776BD /* MatchHistoryCell.xib in Resources */,
 				7EBF9529266B5DB40035D9C8 /* ProfileViewController.xib in Resources */,
 				B8F23316266E75720089B747 /* GoogleService-Info.plist in Resources */,
 				7EBF9531266B5E110035D9C8 /* NewMatchViewController.xib in Resources */,
@@ -388,8 +417,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				60201DAF2671EB7A00E0E7E7 /* TrainingSession.swift in Sources */,
 				7EBF954F266B82850035D9C8 /* DummyData.swift in Sources */,
 				7EBF9528266B5DB40035D9C8 /* ProfileViewController.swift in Sources */,
+				60E4112E266FE919006776BD /* MatchHistoryCell.swift in Sources */,
 				7E4FB05A266BCD3800D0CEE2 /* RecentsCell.swift in Sources */,
 				7EBF953C266B5E530035D9C8 /* MatchHistoryViewController.swift in Sources */,
 				7E24D00C2668A76700195496 /* AppDelegate.swift in Sources */,
@@ -406,6 +437,7 @@
 				7EBF9520266B5D790035D9C8 /* NewTrainingViewController.swift in Sources */,
 				7E4FB056266BC1C200D0CEE2 /* Sizes.swift in Sources */,
 				7EBF9545266B78E40035D9C8 /* Constants.swift in Sources */,
+				60A0CF0C267104D000CBE0E5 /* Match.swift in Sources */,
 				7EBF9534266B5E250035D9C8 /* MatchSessionViewController.swift in Sources */,
 				7EBF952C266B5DD80035D9C8 /* TrainingHistoryViewController.swift in Sources */,
 			);
