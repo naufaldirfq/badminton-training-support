@@ -1,6 +1,0 @@
-framework module Pods_BadmintonTrainingSupport {
-  umbrella header "Pods-BadmintonTrainingSupport-umbrella.h"
-
-  export *
-  module * { export * }
-}
