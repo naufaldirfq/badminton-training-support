@@ -24,6 +24,7 @@ struct Sizes {
     struct HomeProfile {
         static let Height: CGFloat = 82.0
     }
+    
     //MARK: Size for page "NewMatchVC"
     struct NewMatch {
         static let ImageHeight: CGFloat = 140

@@ -20,4 +20,6 @@ target 'BadmintonTrainingSupport' do
   pod 'Firebase/Firestore'
   pod 'IQKeyboardManagerSwift'
 
+pod 'IQKeyboardManagerSwift'
+
 end
