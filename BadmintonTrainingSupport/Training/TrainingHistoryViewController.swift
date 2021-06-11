@@ -13,26 +13,13 @@ class TrainingHistoryViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         initTableView()
-        print(trainingHistory[0].trainingDate)
-        // Do any additional setup after loading the view.
-        
+        navigationItem.title = "Training History"
     }
     func initTableView() {
         trainingHistoryTableView.dataSource = self
         trainingHistoryTableView.delegate = self
         trainingHistoryTableView.register(TrainingHistoryTableViewCell.nib(), forCellReuseIdentifier:TrainingHistoryTableViewCell.identifier)
     }
-
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
 extension TrainingHistoryViewController: UITableViewDelegate,UITableViewDataSource{
