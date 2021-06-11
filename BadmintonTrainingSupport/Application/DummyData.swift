@@ -47,6 +47,8 @@ struct DummyData {
     
     static let Categories = [Physical, Technical]
     
+    static let Profile = UserProfile(name: "Hanif Fauzi")
+    
     struct Recent {
         static let Trainings: [Training] = [
             

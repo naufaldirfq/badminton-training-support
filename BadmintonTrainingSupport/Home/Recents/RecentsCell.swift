@@ -25,11 +25,17 @@ class RecentsCell: UITableViewCell {
     static let identifier = Identifiers.RecentsCell
     
     static func nib() -> UINib {
-        return UINib(nibName: Identifiers.RecentsCell, bundle: nil)
+        return UINib(nibName: identifier, bundle: nil)
     }
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        selectionStyle = .none
+        
+        setupTableView()
+    }
+    
+    func setupTableView() {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.layer.cornerRadius = Sizes.Recents.CornerRadius
