@@ -70,10 +70,11 @@ extension ProfileViewController: ASAuthorizationControllerDelegate {
             
             Auth.auth().signIn(with: credential) { (AuthDataResult, Error) in
                 if let user = AuthDataResult?.user {
-                    self.doSignIn(appleIDCredential: appleIDCredential, user: user)
+//                    self.doSignIn(appleIDCredential: appleIDCredential, user: user)
                     let vc = HomeViewController()
                     self.navigationController?.pushViewController(vc, animated: true)
-                    print("Nice! You're now signed in as \(user.uid), email: \(user.email ?? "unknown"), name: \(user.displayName ?? "unknown")")
+                    print("Nice! You're now signed in as \(user.uid), email: \(user.email ?? "unknown"), name: \(appleIDCredential.fullName?.givenName ?? "unknown") \(appleIDCredential.fullName?.familyName ?? "")")
+                    vc.userData = UserProfile(name: "\(appleIDCredential.fullName?.givenName ?? "unknown") \(appleIDCredential.fullName?.familyName ?? "")")
                 }
             }
         }
@@ -96,8 +97,12 @@ extension ProfileViewController: ASAuthorizationControllerDelegate {
                 if error != nil {
                     print("Successfully updated display name for user [\(user.uid)] to [\(displayName)]")
                 } else {
-                    print("failed to update display name")
+                    print("failed to update display name \(error?.localizedDescription ?? "error")")
                 }
+            }
+            DispatchQueue.main.async {
+                let vc = HomeViewController()
+                self.navigationController?.pushViewController(vc, animated: true)
             }
         }
     }

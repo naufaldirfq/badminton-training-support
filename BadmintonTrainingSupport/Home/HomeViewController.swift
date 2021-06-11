@@ -37,9 +37,12 @@ class HomeViewController: UIViewController {
     }
     
     func setupUserData() {
-        if let user = Auth.auth().currentUser {
-            userData = UserProfile(name: user.displayName ?? "jin")
+        if userData == nil {
+            if let user = Auth.auth().currentUser {
+                userData = UserProfile(name: user.displayName ?? "jin")
+            }
         }
+        
     }
     
     func setupTableView() {
