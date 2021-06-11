@@ -16,11 +16,10 @@ class NewMatchViewController: UIViewController {
         tableView.dataSource = self
         tableView.delegate = self
         
-        tableView.register(NMImageTableViewCell.nib(), forCellReuseIdentifier: NMImageTableViewCell.idetifier)
+        tableView.register(NMImageTableViewCell.nib(), forCellReuseIdentifier: NMImageTableViewCell.identifier)
         tableView.register(TextFieldTableViewCell.nib(), forCellReuseIdentifier: TextFieldTableViewCell.identifier)
         //MARK: Choice Single/Double
         tableView.register(SegmentedCtrlTableViewCell.nib(), forCellReuseIdentifier: SegmentedCtrlTableViewCell.identifier)
-        tableView.register(BtnStartMatchTableViewCell.nib(), forCellReuseIdentifier: BtnStartMatchTableViewCell.identifier)
         
     }
 
@@ -34,7 +33,7 @@ extension NewMatchViewController: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         switch indexPath.row {
         case 0:
-            if let imgCell = tableView.dequeueReusableCell(withIdentifier: NMImageTableViewCell.idetifier, for: indexPath) as? NMImageTableViewCell{
+            if let imgCell = tableView.dequeueReusableCell(withIdentifier: NMImageTableViewCell.identifier, for: indexPath) as? NMImageTableViewCell{
                 //MARK: Configure
                 
                 imgCell.selectionStyle = .none
@@ -42,14 +41,6 @@ extension NewMatchViewController: UITableViewDelegate, UITableViewDataSource{
             }
         case 1:
             //MARK: Date
-/*
-            if let cell = tableView.dequeueReusableCell(withIdentifier: RecentsCell.identifier) as? RecentsCell {
-                cell.configure(name: "Recent Trainings", with: DummyData.TrainingCell())
-                cell.delegate = self
-                cell.selectionStyle = .none
-                return cell
-            }
- */
             if let fieldCell = tableView.dequeueReusableCell(withIdentifier: TextFieldTableViewCell.identifier, for: indexPath) as? TextFieldTableViewCell {
                 //MARK: Configure
                 let date = Date()
@@ -90,15 +81,6 @@ extension NewMatchViewController: UITableViewDelegate, UITableViewDataSource{
                 choiceCell.selectionStyle = .none
                 return choiceCell
             }
-        case 5:
-            print("Bingo. This is bug hahaha")
-        case 6:
-            //MARK: Button StartMatch
-            if let btnStartCell = tableView.dequeueReusableCell(withIdentifier: BtnStartMatchTableViewCell.identifier, for: indexPath) as? BtnStartMatchTableViewCell{
-                //MARK: Configure
-                
-                return btnStartCell
-            }
         default:
             break
         }
@@ -107,23 +89,13 @@ extension NewMatchViewController: UITableViewDelegate, UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        //return 150
         switch indexPath.row {
         case 0:
             return Sizes.NewMatch.ImageHeight
         case 1...3:
             return Sizes.NewMatch.HeightTextField
-        case 4:
-            return Sizes.NewMatch.CustomSegmented
-            //return UITableView.automaticDimension
-        case 5:
-            //return Sizes.NewMatch.PlayerType
-            return 0
-            //need if statement for single/double
-        case 6:
-            return Sizes.NewMatch.ButtonHeight
         default:
-            return 0
+            return UITableView.automaticDimension
         }
     }
     

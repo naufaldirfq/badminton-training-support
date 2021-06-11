@@ -30,10 +30,6 @@ struct DummyData {
         Training(name: "Serve", description: "Pros serve 100 shuttle every day")
     ]
     
-    static let DataProfile = [
-        Profile(name: "Hanif Fauzi")
-    ]
-    
     static let MatchHistory = [
         Match(player1: "you", player2: "ganteng", player3: "jelek", player4: "jago", matchSet: 2, teamScoreA: [21,21], teamScoreB: [0,0]),
         Match(player1: "you", player2: "xiix", player3: "xuxu", player4: "xaxa", matchSet: 3, teamScoreA: [19,21,0], teamScoreB: [21,0,21]),

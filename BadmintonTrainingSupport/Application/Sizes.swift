@@ -29,7 +29,6 @@ struct Sizes {
     struct NewMatch {
         static let ImageHeight: CGFloat = 140
         static let HeightTextField: CGFloat = 82 //def: 80
-        static let CustomSegmented: CGFloat = 410
         static let PlayerType: CGFloat = 380
         static let ButtonHeight: CGFloat = HeightTextField - 10
         static let CornerRadius: CGFloat = 10.0

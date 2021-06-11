@@ -13,10 +13,10 @@ class NMImageTableViewCell: UITableViewCell {
     @IBOutlet weak var newMatchImg: UIImageView!
     var image: UIImage = Images.defaultTraining
     
-    static let idetifier = "NMImageTableViewCell"
+    static let identifier = "NMImageTableViewCell"
     
     static func nib() -> UINib{
-        return UINib(nibName: "NMImageTableViewCell", bundle: nil)
+        return UINib(nibName: identifier, bundle: nil)
     }
 /*
     public func configure(with imgName: Training){
