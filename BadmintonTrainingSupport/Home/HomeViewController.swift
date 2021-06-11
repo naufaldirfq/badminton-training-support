@@ -127,10 +127,14 @@ extension HomeViewController: TrainingCollectionDelegate {
 extension HomeViewController: RecentsDelegate {
     
     func recentsView(didTapViewAllIn cell: RecentsCell) {
+        let vc = TrainingHistoryViewController()
+        navigationController?.pushViewController(vc, animated: true)
         print("Pressed View All on \(cell.name)!")
     }
     
     func recentsView(recent: UITableViewCell, index: Int, didTapRecentIn cell: RecentsCell) {
+        let vc = MatchHistoryViewController()
+        navigationController?.pushViewController(vc, animated: true)
         print("Pressed Recent Number \(index+1) on \(cell.name)!")
     }
     
