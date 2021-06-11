@@ -9,12 +9,18 @@ import UIKit
 
 class MatchHistoryViewController: UIViewController {
 
+    @IBOutlet weak var matchHistoryTableView: UITableView!
+    let matches = DummyData.MatchHistory
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        initTableView()
         // Do any additional setup after loading the view.
     }
-
+    func initTableView() {
+        matchHistoryTableView.dataSource = self
+        matchHistoryTableView.delegate = self
+        matchHistoryTableView.register(MatchHistoryCell.nib(), forCellReuseIdentifier:MatchHistoryCell.identifier)
+    }
 
     /*
     // MARK: - Navigation
@@ -26,4 +32,25 @@ class MatchHistoryViewController: UIViewController {
     }
     */
 
+}
+extension MatchHistoryViewController: UITableViewDelegate,UITableViewDataSource{
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return matches.count
+    }
+    
+    
+    
+//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+//        return match.count
+//    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: MatchHistoryCell.identifier, for: indexPath) as! MatchHistoryCell
+        
+        cell.configure(with: matches[indexPath.row])
+        
+        return cell
+    }
+    
+    
 }
