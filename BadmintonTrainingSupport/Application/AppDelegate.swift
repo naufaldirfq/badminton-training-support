@@ -17,6 +17,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         FirebaseApp.configure()
         IQKeyboardManager.shared.enable = true
+        
+        if let user = Auth.auth().currentUser {
+            print("You're signed in as \(user.uid), email: \(user.email ?? "unknown")")
+        }
+        
         return true
     }
 
