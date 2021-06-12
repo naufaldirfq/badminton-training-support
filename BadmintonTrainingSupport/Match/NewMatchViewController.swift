@@ -77,7 +77,7 @@ extension NewMatchViewController: UITableViewDelegate, UITableViewDataSource{
         case 4:
             //MARK: Segmented Control (Match Type)
             if let choiceCell = tableView.dequeueReusableCell(withIdentifier: SegmentedCtrlTableViewCell.identifier, for: indexPath) as? SegmentedCtrlTableViewCell{
-                
+                choiceCell.delegate = self
                 choiceCell.selectionStyle = .none
                 return choiceCell
             }
@@ -98,7 +98,16 @@ extension NewMatchViewController: UITableViewDelegate, UITableViewDataSource{
             return UITableView.automaticDimension
         }
     }
+}
+
+extension NewMatchViewController: SegmentedCtrlDelegate {
+    func singleMatch(with match: Match) {
+        let vc = MatchSessionViewController()
+        navigationController?.pushViewController(vc, animated: true)
+    }
     
-    
-    
+    func doubleMatch(with match: Match) {
+        let vc = MatchSessionViewController()
+        navigationController?.pushViewController(vc, animated: true)
+    }
 }
