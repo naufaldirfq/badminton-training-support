@@ -7,8 +7,14 @@
 
 import UIKit
 
+protocol SegmentedCtrlDelegate: UIViewController {
+    func singleMatch(with match: Match)
+    func doubleMatch(with match: Match)
+}
+
 class SegmentedCtrlTableViewCell: UITableViewCell {
 
+    weak var delegate: SegmentedCtrlDelegate?
     @IBOutlet weak var singleView: UIView!
     @IBOutlet weak var singleFieldOne: UITextField!
     @IBOutlet weak var singleFieldTwo: UITextField!
@@ -86,11 +92,17 @@ class SegmentedCtrlTableViewCell: UITableViewCell {
     }
     
     @IBAction func singleStartButton(_ sender: UIButton) {
-        
+        if let one = singleFieldOne.text, let two = singleFieldTwo.text {
+            let match = Match(player1: one, player2: two)
+            delegate?.singleMatch(with: match)
+        }
     }
     
     @IBAction func doubleStartButton(_ sender: UIButton) {
-        
+        if let one = doubleFieldOne.text, let two = doubleFieldTwo.text, let three = doubleFieldThree.text, let four = doubleFieldFour.text {
+            let match = Match(player1: one, player2: two, player3: three, player4: four)
+            delegate?.doubleMatch(with: match)
+        }
     }
 }
 
