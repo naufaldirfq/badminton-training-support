@@ -13,6 +13,11 @@
 		60A0CF0C267104D000CBE0E5 /* Match.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60A0CF0B267104D000CBE0E5 /* Match.swift */; };
 		60E4112E266FE919006776BD /* MatchHistoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60E4112C266FE919006776BD /* MatchHistoryCell.swift */; };
 		60E4112F266FE919006776BD /* MatchHistoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60E4112D266FE919006776BD /* MatchHistoryCell.xib */; };
+		7023740426721804001C5E41 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7023740326721804001C5E41 /* Profile.swift */; };
+		7096EA8C266E5D0700A9D1F6 /* TextFieldTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7096EA8A266E5D0700A9D1F6 /* TextFieldTableViewCell.swift */; };
+		7096EA8D266E5D0700A9D1F6 /* TextFieldTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7096EA8B266E5D0700A9D1F6 /* TextFieldTableViewCell.xib */; };
+		70E75CF42671BCA80043CD09 /* SegmentedCtrlTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E75CF22671BCA80043CD09 /* SegmentedCtrlTableViewCell.swift */; };
+		70E75CF52671BCA80043CD09 /* SegmentedCtrlTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 70E75CF32671BCA80043CD09 /* SegmentedCtrlTableViewCell.xib */; };
 		7E24D00C2668A76700195496 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E24D00B2668A76700195496 /* AppDelegate.swift */; };
 		7E24D00E2668A76700195496 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E24D00D2668A76700195496 /* SceneDelegate.swift */; };
 		7E24D0152668A76A00195496 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E24D0142668A76A00195496 /* Assets.xcassets */; };
@@ -29,6 +34,8 @@
 		7E50B25F266FD1A500BAEED1 /* HomeProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E50B25D266FD1A500BAEED1 /* HomeProfileCell.swift */; };
 		7E50B260266FD1A500BAEED1 /* HomeProfileCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E50B25E266FD1A500BAEED1 /* HomeProfileCell.xib */; };
 		7E50B262266FD30100BAEED1 /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E50B261266FD30100BAEED1 /* UserProfile.swift */; };
+		7E9A03E52673774C003EFF87 /* NMImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E9A03E32673774C003EFF87 /* NMImageTableViewCell.swift */; };
+		7E9A03E62673774C003EFF87 /* NMImageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E9A03E42673774C003EFF87 /* NMImageTableViewCell.xib */; };
 		7EBF951C266B5B4E0035D9C8 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBF951A266B5B4E0035D9C8 /* HomeViewController.swift */; };
 		7EBF951D266B5B4E0035D9C8 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7EBF951B266B5B4E0035D9C8 /* HomeViewController.xib */; };
 		7EBF9520266B5D790035D9C8 /* NewTrainingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBF951E266B5D790035D9C8 /* NewTrainingViewController.swift */; };
@@ -61,6 +68,11 @@
 		60A0CF0B267104D000CBE0E5 /* Match.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Match.swift; sourceTree = "<group>"; };
 		60E4112C266FE919006776BD /* MatchHistoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchHistoryCell.swift; sourceTree = "<group>"; };
 		60E4112D266FE919006776BD /* MatchHistoryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MatchHistoryCell.xib; sourceTree = "<group>"; };
+		7023740326721804001C5E41 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
+		7096EA8A266E5D0700A9D1F6 /* TextFieldTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldTableViewCell.swift; sourceTree = "<group>"; };
+		7096EA8B266E5D0700A9D1F6 /* TextFieldTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextFieldTableViewCell.xib; sourceTree = "<group>"; };
+		70E75CF22671BCA80043CD09 /* SegmentedCtrlTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedCtrlTableViewCell.swift; sourceTree = "<group>"; };
+		70E75CF32671BCA80043CD09 /* SegmentedCtrlTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SegmentedCtrlTableViewCell.xib; sourceTree = "<group>"; };
 		7E24D0082668A76700195496 /* BadmintonTrainingSupport.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BadmintonTrainingSupport.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E24D00B2668A76700195496 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7E24D00D2668A76700195496 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -79,6 +91,8 @@
 		7E50B25D266FD1A500BAEED1 /* HomeProfileCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeProfileCell.swift; sourceTree = "<group>"; };
 		7E50B25E266FD1A500BAEED1 /* HomeProfileCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeProfileCell.xib; sourceTree = "<group>"; };
 		7E50B261266FD30100BAEED1 /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
+		7E9A03E32673774C003EFF87 /* NMImageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NMImageTableViewCell.swift; sourceTree = "<group>"; };
+		7E9A03E42673774C003EFF87 /* NMImageTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NMImageTableViewCell.xib; sourceTree = "<group>"; };
 		7EBF951A266B5B4E0035D9C8 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		7EBF951B266B5B4E0035D9C8 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		7EBF951E266B5D790035D9C8 /* NewTrainingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTrainingViewController.swift; sourceTree = "<group>"; };
@@ -150,6 +164,19 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		7096EA85266E590F00A9D1F6 /* Form */ = {
+			isa = PBXGroup;
+			children = (
+				7E9A03E32673774C003EFF87 /* NMImageTableViewCell.swift */,
+				7E9A03E42673774C003EFF87 /* NMImageTableViewCell.xib */,
+				7096EA8A266E5D0700A9D1F6 /* TextFieldTableViewCell.swift */,
+				7096EA8B266E5D0700A9D1F6 /* TextFieldTableViewCell.xib */,
+				70E75CF22671BCA80043CD09 /* SegmentedCtrlTableViewCell.swift */,
+				70E75CF32671BCA80043CD09 /* SegmentedCtrlTableViewCell.xib */,
+			);
+			path = Form;
+			sourceTree = "<group>";
+		};
 		7E24CFFF2668A76700195496 = {
 			isa = PBXGroup;
 			children = (
@@ -212,6 +239,7 @@
 			children = (
 				7E4FB05F266BF48E00D0CEE2 /* Training.swift */,
 				7E4FB05D266BECA800D0CEE2 /* TrainingCategory.swift */,
+				7023740326721804001C5E41 /* Profile.swift */,
 				60201DAE2671EB7A00E0E7E7 /* TrainingSession.swift */,
 			);
 			path = Trainings;
@@ -264,6 +292,7 @@
 		7EBF9517266B5AE50035D9C8 /* Match */ = {
 			isa = PBXGroup;
 			children = (
+				7096EA85266E590F00A9D1F6 /* Form */,
 				60E4112A266FE5B7006776BD /* Match Table */,
 				7EBF952E266B5E110035D9C8 /* NewMatchViewController.swift */,
 				7EBF952F266B5E110035D9C8 /* NewMatchViewController.xib */,
@@ -309,7 +338,7 @@
 				7E24D0042668A76700195496 /* Sources */,
 				7E24D0052668A76700195496 /* Frameworks */,
 				7E24D0062668A76700195496 /* Resources */,
-				2B52D7BF6ADF0350665BB4C9 /* [CP] Embed Pods Frameworks */,
+				83A3B0E630850D85C703D248 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -358,6 +387,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7E4FB054266B88B300D0CEE2 /* TrainingCell.xib in Resources */,
+				7E9A03E62673774C003EFF87 /* NMImageTableViewCell.xib in Resources */,
 				60E4112F266FE919006776BD /* MatchHistoryCell.xib in Resources */,
 				7EBF9529266B5DB40035D9C8 /* ProfileViewController.xib in Resources */,
 				B8F23316266E75720089B747 /* GoogleService-Info.plist in Resources */,
@@ -366,6 +396,7 @@
 				7E4FB053266B88B300D0CEE2 /* TrainingCollectionCell.xib in Resources */,
 				7E24D0182668A76A00195496 /* LaunchScreen.storyboard in Resources */,
 				7EBF9535266B5E250035D9C8 /* MatchSessionViewController.xib in Resources */,
+				7096EA8D266E5D0700A9D1F6 /* TextFieldTableViewCell.xib in Resources */,
 				7EBF9539266B5E420035D9C8 /* MatchSummaryViewController.xib in Resources */,
 				7E4FB05B266BCD3800D0CEE2 /* RecentsCell.xib in Resources */,
 				7E50B260266FD1A500BAEED1 /* HomeProfileCell.xib in Resources */,
@@ -375,29 +406,13 @@
 				6063FE70266E7AEE001DFEA2 /* TrainingHistoryTableViewCell.xib in Resources */,
 				7EBF9521266B5D790035D9C8 /* NewTrainingViewController.xib in Resources */,
 				7EBF952D266B5DD80035D9C8 /* TrainingHistoryViewController.xib in Resources */,
+				70E75CF52671BCA80043CD09 /* SegmentedCtrlTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		2B52D7BF6ADF0350665BB4C9 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-BadmintonTrainingSupport/Pods-BadmintonTrainingSupport-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-BadmintonTrainingSupport/Pods-BadmintonTrainingSupport-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BadmintonTrainingSupport/Pods-BadmintonTrainingSupport-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		6F3FFFA46710000B6845ECFE /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -420,6 +435,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		83A3B0E630850D85C703D248 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BadmintonTrainingSupport/Pods-BadmintonTrainingSupport-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BadmintonTrainingSupport/Pods-BadmintonTrainingSupport-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BadmintonTrainingSupport/Pods-BadmintonTrainingSupport-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -430,6 +462,7 @@
 				60201DAF2671EB7A00E0E7E7 /* TrainingSession.swift in Sources */,
 				7EBF954F266B82850035D9C8 /* DummyData.swift in Sources */,
 				7EBF9528266B5DB40035D9C8 /* ProfileViewController.swift in Sources */,
+				7023740426721804001C5E41 /* Profile.swift in Sources */,
 				60E4112E266FE919006776BD /* MatchHistoryCell.swift in Sources */,
 				7E4FB05A266BCD3800D0CEE2 /* RecentsCell.swift in Sources */,
 				7EBF953C266B5E530035D9C8 /* MatchHistoryViewController.swift in Sources */,
@@ -442,9 +475,11 @@
 				6063FE6F266E7AEE001DFEA2 /* TrainingHistoryTableViewCell.swift in Sources */,
 				7E4FB05E266BECA800D0CEE2 /* TrainingCategory.swift in Sources */,
 				7E4FB052266B88B300D0CEE2 /* TrainingCell.swift in Sources */,
+				70E75CF42671BCA80043CD09 /* SegmentedCtrlTableViewCell.swift in Sources */,
 				7EBF9530266B5E110035D9C8 /* NewMatchViewController.swift in Sources */,
 				7E4FB060266BF48E00D0CEE2 /* Training.swift in Sources */,
 				7EBF9520266B5D790035D9C8 /* NewTrainingViewController.swift in Sources */,
+				7E9A03E52673774C003EFF87 /* NMImageTableViewCell.swift in Sources */,
 				7E4FB056266BC1C200D0CEE2 /* Sizes.swift in Sources */,
 				7EBF9545266B78E40035D9C8 /* Constants.swift in Sources */,
 				60A0CF0C267104D000CBE0E5 /* Match.swift in Sources */,
@@ -452,6 +487,7 @@
 				7E50B25F266FD1A500BAEED1 /* HomeProfileCell.swift in Sources */,
 				7EBF952C266B5DD80035D9C8 /* TrainingHistoryViewController.swift in Sources */,
 				7E50B262266FD30100BAEED1 /* UserProfile.swift in Sources */,
+				7096EA8C266E5D0700A9D1F6 /* TextFieldTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

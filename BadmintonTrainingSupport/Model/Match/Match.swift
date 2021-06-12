@@ -6,14 +6,42 @@
 //
 
 import UIKit
+enum MatchType {
+    case single
+    case double
+}
+
 struct Match {
     var player1: String
     var player2: String
     var player3: String
     var player4: String
+    var matchType: MatchType
     var matchSet: Int
     var teamScoreA: [Int]
     var teamScoreB: [Int]
+    
+    init(player1: String, player2: String) {
+        self.player1 = player1
+        self.player2 = player2
+        self.player3 = ""
+        self.player4 = ""
+        self.matchType = .single
+        self.matchSet = 1
+        self.teamScoreA = [0]
+        self.teamScoreB = [0]
+    }
+    
+    init(player1: String, player2: String, player3: String, player4: String) {
+        self.player1 = player1
+        self.player2 = player2
+        self.player3 = player3
+        self.player4 = player4
+        self.matchType = .double
+        self.matchSet = 1
+        self.teamScoreA = [0]
+        self.teamScoreB = [0]
+    }
     
     init(player1: String, player2: String, player3: String, player4: String, matchSet: Int, teamScoreA:[Int], teamScoreB:[Int]) {
         self.player1 = player1
@@ -21,9 +49,11 @@ struct Match {
         self.player3 = player3
         self.player4 = player4
         self.matchSet = matchSet
+        self.matchType = .double
         self.teamScoreA = teamScoreA
         self.teamScoreB = teamScoreB
     }
+    
     func getEachMatchStatus() -> [Int] {
         var matchStatus: [Int] = []
         for n in 0..<matchSet {
@@ -35,6 +65,7 @@ struct Match {
         }
         return matchStatus
     }
+    
     func getOverallMatchStatus() -> NSMutableAttributedString {
         let matchStatus = getEachMatchStatus()
         var totalMatch = 0.0
