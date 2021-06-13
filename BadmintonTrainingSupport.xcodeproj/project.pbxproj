@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		60201DAF2671EB7A00E0E7E7 /* TrainingSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60201DAE2671EB7A00E0E7E7 /* TrainingSession.swift */; };
+		60474D162674BB87000712E7 /* RunningSessionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60474D152674BB87000712E7 /* RunningSessionView.swift */; };
+		60474D182674BE05000712E7 /* RunningSessionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60474D172674BE05000712E7 /* RunningSessionView.xib */; };
 		6063FE6F266E7AEE001DFEA2 /* TrainingHistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6063FE6D266E7AEE001DFEA2 /* TrainingHistoryTableViewCell.swift */; };
 		6063FE70266E7AEE001DFEA2 /* TrainingHistoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6063FE6E266E7AEE001DFEA2 /* TrainingHistoryTableViewCell.xib */; };
 		60A0CF0C267104D000CBE0E5 /* Match.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60A0CF0B267104D000CBE0E5 /* Match.swift */; };
@@ -63,6 +65,8 @@
 /* Begin PBXFileReference section */
 		55FEF1690DBEBA70C4411FE9 /* Pods-BadmintonTrainingSupport.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BadmintonTrainingSupport.release.xcconfig"; path = "Target Support Files/Pods-BadmintonTrainingSupport/Pods-BadmintonTrainingSupport.release.xcconfig"; sourceTree = "<group>"; };
 		60201DAE2671EB7A00E0E7E7 /* TrainingSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingSession.swift; sourceTree = "<group>"; };
+		60474D152674BB87000712E7 /* RunningSessionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunningSessionView.swift; sourceTree = "<group>"; };
+		60474D172674BE05000712E7 /* RunningSessionView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RunningSessionView.xib; sourceTree = "<group>"; };
 		6063FE6D266E7AEE001DFEA2 /* TrainingHistoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingHistoryTableViewCell.swift; sourceTree = "<group>"; };
 		6063FE6E266E7AEE001DFEA2 /* TrainingHistoryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrainingHistoryTableViewCell.xib; sourceTree = "<group>"; };
 		60A0CF0B267104D000CBE0E5 /* Match.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Match.swift; sourceTree = "<group>"; };
@@ -136,6 +140,15 @@
 				FAF697AAC488A05F9B529E0A /* Pods_BadmintonTrainingSupport.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		60474D142674BB52000712E7 /* Training Session */ = {
+			isa = PBXGroup;
+			children = (
+				60474D152674BB87000712E7 /* RunningSessionView.swift */,
+				60474D172674BE05000712E7 /* RunningSessionView.xib */,
+			);
+			path = "Training Session";
 			sourceTree = "<group>";
 		};
 		60A0CF0A267103CF00CBE0E5 /* Match */ = {
@@ -278,6 +291,7 @@
 		7EBF9516266B5ABE0035D9C8 /* Training */ = {
 			isa = PBXGroup;
 			children = (
+				60474D142674BB52000712E7 /* Training Session */,
 				7E4FB04C266B88B300D0CEE2 /* Training Collection */,
 				7EBF951E266B5D790035D9C8 /* NewTrainingViewController.swift */,
 				7EBF951F266B5D790035D9C8 /* NewTrainingViewController.xib */,
@@ -388,6 +402,7 @@
 			files = (
 				7E4FB054266B88B300D0CEE2 /* TrainingCell.xib in Resources */,
 				7E9A03E62673774C003EFF87 /* NMImageTableViewCell.xib in Resources */,
+				60474D182674BE05000712E7 /* RunningSessionView.xib in Resources */,
 				60E4112F266FE919006776BD /* MatchHistoryCell.xib in Resources */,
 				7EBF9529266B5DB40035D9C8 /* ProfileViewController.xib in Resources */,
 				7EBF9531266B5E110035D9C8 /* NewMatchViewController.xib in Resources */,
@@ -481,6 +496,7 @@
 				7EBF9520266B5D790035D9C8 /* NewTrainingViewController.swift in Sources */,
 				7E9A03E52673774C003EFF87 /* NMImageTableViewCell.swift in Sources */,
 				7E4FB056266BC1C200D0CEE2 /* Sizes.swift in Sources */,
+				60474D162674BB87000712E7 /* RunningSessionView.swift in Sources */,
 				7EBF9545266B78E40035D9C8 /* Constants.swift in Sources */,
 				60A0CF0C267104D000CBE0E5 /* Match.swift in Sources */,
 				7EBF9534266B5E250035D9C8 /* MatchSessionViewController.swift in Sources */,
