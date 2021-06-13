@@ -8,10 +8,16 @@
 import UIKit
 
 class TrainingSessionViewController: UIViewController {
-
+    @IBOutlet weak var trainingBannerImageView: UIImageView!
+    @IBOutlet weak var trainingNameLabel: UILabel!
+    @IBOutlet weak var trainingPauseButton: UIButton!
+    @IBOutlet weak var trainingPlayButton: UIButton!
+    @IBOutlet weak var trainingStopButton: UIButton!
+    @IBOutlet weak var trainingSessionView: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
     }
 
