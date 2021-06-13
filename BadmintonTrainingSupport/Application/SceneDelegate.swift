@@ -50,7 +50,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func showRoot(_ scene: UIScene) {
         if let windowScene = scene as? UIWindowScene {
             let window = UIWindow(windowScene: windowScene)
-            let rootVC = HomeViewController()
+            let rootVC = TrainingSessionViewController()
             let navVC = UINavigationController(rootViewController: rootVC)
             window.rootViewController = navVC
             self.window = window
