@@ -15,6 +15,8 @@
 		60A0CF0C267104D000CBE0E5 /* Match.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60A0CF0B267104D000CBE0E5 /* Match.swift */; };
 		60E4112E266FE919006776BD /* MatchHistoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60E4112C266FE919006776BD /* MatchHistoryCell.swift */; };
 		60E4112F266FE919006776BD /* MatchHistoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60E4112D266FE919006776BD /* MatchHistoryCell.xib */; };
+		60FC4DD326774D0F00863CE3 /* RunningSessionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60FC4DD126774D0F00863CE3 /* RunningSessionViewController.swift */; };
+		60FC4DD426774D0F00863CE3 /* RunningSessionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60FC4DD226774D0F00863CE3 /* RunningSessionViewController.xib */; };
 		7023740426721804001C5E41 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7023740326721804001C5E41 /* Profile.swift */; };
 		7096EA8C266E5D0700A9D1F6 /* TextFieldTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7096EA8A266E5D0700A9D1F6 /* TextFieldTableViewCell.swift */; };
 		7096EA8D266E5D0700A9D1F6 /* TextFieldTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7096EA8B266E5D0700A9D1F6 /* TextFieldTableViewCell.xib */; };
@@ -72,6 +74,8 @@
 		60A0CF0B267104D000CBE0E5 /* Match.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Match.swift; sourceTree = "<group>"; };
 		60E4112C266FE919006776BD /* MatchHistoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchHistoryCell.swift; sourceTree = "<group>"; };
 		60E4112D266FE919006776BD /* MatchHistoryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MatchHistoryCell.xib; sourceTree = "<group>"; };
+		60FC4DD126774D0F00863CE3 /* RunningSessionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunningSessionViewController.swift; sourceTree = "<group>"; };
+		60FC4DD226774D0F00863CE3 /* RunningSessionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RunningSessionViewController.xib; sourceTree = "<group>"; };
 		7023740326721804001C5E41 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		7096EA8A266E5D0700A9D1F6 /* TextFieldTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldTableViewCell.swift; sourceTree = "<group>"; };
 		7096EA8B266E5D0700A9D1F6 /* TextFieldTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextFieldTableViewCell.xib; sourceTree = "<group>"; };
@@ -148,6 +152,8 @@
 			children = (
 				60474D152674BB87000712E7 /* RunningSessionView.swift */,
 				60474D172674BE05000712E7 /* RunningSessionView.xib */,
+				60FC4DD126774D0F00863CE3 /* RunningSessionViewController.swift */,
+				60FC4DD226774D0F00863CE3 /* RunningSessionViewController.xib */,
 			);
 			path = "Training Session";
 			sourceTree = "<group>";
@@ -411,6 +417,7 @@
 				7EBF9531266B5E110035D9C8 /* NewMatchViewController.xib in Resources */,
 				7EBF9525266B5DA20035D9C8 /* TrainingSessionViewController.xib in Resources */,
 				7E4FB053266B88B300D0CEE2 /* TrainingCollectionCell.xib in Resources */,
+				60FC4DD426774D0F00863CE3 /* RunningSessionViewController.xib in Resources */,
 				7E24D0182668A76A00195496 /* LaunchScreen.storyboard in Resources */,
 				7EBF9535266B5E250035D9C8 /* MatchSessionViewController.xib in Resources */,
 				7096EA8D266E5D0700A9D1F6 /* TextFieldTableViewCell.xib in Resources */,
@@ -499,6 +506,7 @@
 				7EBF9528266B5DB40035D9C8 /* ProfileViewController.swift in Sources */,
 				7023740426721804001C5E41 /* Profile.swift in Sources */,
 				60E4112E266FE919006776BD /* MatchHistoryCell.swift in Sources */,
+				60FC4DD326774D0F00863CE3 /* RunningSessionViewController.swift in Sources */,
 				7E4FB05A266BCD3800D0CEE2 /* RecentsCell.swift in Sources */,
 				7EBF953C266B5E530035D9C8 /* MatchHistoryViewController.swift in Sources */,
 				7E24D00C2668A76700195496 /* AppDelegate.swift in Sources */,

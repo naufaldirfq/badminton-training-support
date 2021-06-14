@@ -17,10 +17,14 @@ class TrainingSessionViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        addSessionTo(vc: self )
         // Do any additional setup after loading the view.
     }
-
+    func addSessionTo(vc: UIViewController){
+        let session = RunningSessionViewController(nibName: "RunningSessionViewController", bundle: nil)
+        vc.view.addSubview(session.view)
+        vc.addChild(session)
+    }
 
     /*
     // MARK: - Navigation
