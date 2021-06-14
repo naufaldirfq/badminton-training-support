@@ -33,4 +33,8 @@ struct Sizes {
         static let ButtonHeight: CGFloat = HeightTextField - 10
         static let CornerRadius: CGFloat = 10.0
     }
+    
+    struct  MatchSession {
+        static let Height: CGFloat = 670
+    }
 }

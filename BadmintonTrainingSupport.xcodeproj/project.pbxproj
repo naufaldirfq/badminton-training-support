@@ -25,6 +25,8 @@
 		60F907DE2677964C005007D9 /* ServeSessionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60F907DC2677964C005007D9 /* ServeSessionViewController.xib */; };
 		60FC4DD326774D0F00863CE3 /* RunningSessionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60FC4DD126774D0F00863CE3 /* RunningSessionViewController.swift */; };
 		60FC4DD426774D0F00863CE3 /* RunningSessionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60FC4DD226774D0F00863CE3 /* RunningSessionViewController.xib */; };
+		701990122677158F003FC03C /* MatchSessionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 701990102677158F003FC03C /* MatchSessionTableViewCell.swift */; };
+		701990132677158F003FC03C /* MatchSessionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 701990112677158F003FC03C /* MatchSessionTableViewCell.xib */; };
 		7023740426721804001C5E41 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7023740326721804001C5E41 /* Profile.swift */; };
 		7096EA8C266E5D0700A9D1F6 /* TextFieldTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7096EA8A266E5D0700A9D1F6 /* TextFieldTableViewCell.swift */; };
 		7096EA8D266E5D0700A9D1F6 /* TextFieldTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7096EA8B266E5D0700A9D1F6 /* TextFieldTableViewCell.xib */; };
@@ -97,6 +99,8 @@
 		60F907DC2677964C005007D9 /* ServeSessionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ServeSessionViewController.xib; sourceTree = "<group>"; };
 		60FC4DD126774D0F00863CE3 /* RunningSessionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunningSessionViewController.swift; sourceTree = "<group>"; };
 		60FC4DD226774D0F00863CE3 /* RunningSessionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RunningSessionViewController.xib; sourceTree = "<group>"; };
+		701990102677158F003FC03C /* MatchSessionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchSessionTableViewCell.swift; sourceTree = "<group>"; };
+		701990112677158F003FC03C /* MatchSessionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MatchSessionTableViewCell.xib; sourceTree = "<group>"; };
 		7023740326721804001C5E41 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		7096EA8A266E5D0700A9D1F6 /* TextFieldTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldTableViewCell.swift; sourceTree = "<group>"; };
 		7096EA8B266E5D0700A9D1F6 /* TextFieldTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextFieldTableViewCell.xib; sourceTree = "<group>"; };
@@ -207,6 +211,15 @@
 				60E4112D266FE919006776BD /* MatchHistoryCell.xib */,
 			);
 			path = "Match Table";
+			sourceTree = "<group>";
+		};
+		70199014267715AA003FC03C /* Match Session Table */ = {
+			isa = PBXGroup;
+			children = (
+				701990102677158F003FC03C /* MatchSessionTableViewCell.swift */,
+				701990112677158F003FC03C /* MatchSessionTableViewCell.xib */,
+			);
+			path = "Match Session Table";
 			sourceTree = "<group>";
 		};
 		707AA4740D180275803328A3 /* Pods */ = {
@@ -354,6 +367,7 @@
 			children = (
 				7096EA85266E590F00A9D1F6 /* Form */,
 				60E4112A266FE5B7006776BD /* Match Table */,
+				70199014267715AA003FC03C /* Match Session Table */,
 				7EBF952E266B5E110035D9C8 /* NewMatchViewController.swift */,
 				7EBF952F266B5E110035D9C8 /* NewMatchViewController.xib */,
 				7EBF9532266B5E250035D9C8 /* MatchSessionViewController.swift */,
@@ -456,6 +470,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				701990132677158F003FC03C /* MatchSessionTableViewCell.xib in Resources */,
 				7E4FB054266B88B300D0CEE2 /* TrainingCell.xib in Resources */,
 				7E9A03E62673774C003EFF87 /* NMImageTableViewCell.xib in Resources */,
 				60E4112F266FE919006776BD /* MatchHistoryCell.xib in Resources */,
@@ -567,6 +582,7 @@
 				60F907D32677959F005007D9 /* MultiShuttleSessionViewController.swift in Sources */,
 				60F907CB267792E3005007D9 /* SkippingSessionViewController.swift in Sources */,
 				7E24D00C2668A76700195496 /* AppDelegate.swift in Sources */,
+				701990122677158F003FC03C /* MatchSessionTableViewCell.swift in Sources */,
 				7EBF9538266B5E420035D9C8 /* MatchSummaryViewController.swift in Sources */,
 				7EE3CD3326774AED00791E02 /* RunningTargetViewController.swift in Sources */,
 				7EBF9524266B5DA20035D9C8 /* TrainingSessionViewController.swift in Sources */,
