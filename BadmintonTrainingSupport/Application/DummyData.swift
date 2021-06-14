@@ -10,7 +10,7 @@ import UIKit
 struct DummyData {
    
     static let Trainings = [
-        Training(name: "Running", description: "Pros run 2 km every day"),
+        Training(name: "Running", description: "Pros run 2 km every day", targetVC: RunningTargetViewController(nibName: "RunningTargetViewController", bundle: nil)),
         Training(name: "Skipping", description: "Pros skip 1000 times every day"),
         Training(name: "Push Up", description: "Pros push up 100 times every day"),
         Training(name: "Multi Shuttle", description: "Pros hit 1000 shuttles every day"),

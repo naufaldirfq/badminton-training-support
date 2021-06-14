@@ -18,6 +18,7 @@ class BottomCardViewController: UIViewController {
     var pointOrigin: CGPoint?
     var training: Training?
     
+    @IBOutlet weak var targetView: UIView!
     @IBOutlet weak var slideIndicator: UIView!
     @IBOutlet weak var startButton: UIButton!
     
@@ -28,6 +29,15 @@ class BottomCardViewController: UIViewController {
         
         slideIndicator.roundCorners(.allCorners, radius: 10)
         startButton.roundCorners(.allCorners, radius: 10)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        if let training = self.training, let targetVC = training.targetVC {
+            targetVC.view.frame = targetView.frame
+            view.addSubview(targetVC.view)
+            addChild(targetVC)
+        }
     }
     
     @IBAction func didTapStartButton(_ sender: UIButton) {

@@ -13,6 +13,7 @@
             <connections>
                 <outlet property="slideIndicator" destination="XPk-N7-n5u" id="4Ro-9m-2bf"/>
                 <outlet property="startButton" destination="Gkz-Xt-6hS" id="9Wk-kn-zvf"/>
+                <outlet property="targetView" destination="aaX-e4-N50" id="6tf-vT-T87"/>
                 <outlet property="view" destination="iN0-l3-epB" id="i6Y-rV-gXT"/>
             </connections>
         </placeholder>
@@ -56,14 +57,22 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aaX-e4-N50">
+                    <rect key="frame" x="48" y="121" width="374" height="194"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
+                <constraint firstItem="aaX-e4-N50" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="48" id="1t6-pJ-nbB"/>
                 <constraint firstItem="jGx-Lv-EGX" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="2rD-15-IWw"/>
+                <constraint firstItem="aaX-e4-N50" firstAttribute="top" secondItem="jGx-Lv-EGX" secondAttribute="bottom" constant="48" id="5cv-Na-97v"/>
                 <constraint firstItem="Gkz-Xt-6hS" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="8xN-ye-2FW"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Wfw-OC-Jtk" secondAttribute="trailing" constant="32" id="JN5-On-4lY"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="aaX-e4-N50" secondAttribute="trailing" constant="48" id="PZ2-me-Xv7"/>
                 <constraint firstItem="Wfw-OC-Jtk" firstAttribute="top" secondItem="Gkz-Xt-6hS" secondAttribute="bottom" constant="16" id="SLw-rh-90U"/>
+                <constraint firstItem="Gkz-Xt-6hS" firstAttribute="top" secondItem="aaX-e4-N50" secondAttribute="bottom" constant="48" id="VFk-YY-voK"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="Wfw-OC-Jtk" secondAttribute="bottom" constant="32" id="VgY-bD-ewQ"/>
                 <constraint firstItem="XPk-N7-n5u" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="16" id="auQ-yK-gzT"/>
                 <constraint firstItem="jGx-Lv-EGX" firstAttribute="top" secondItem="XPk-N7-n5u" secondAttribute="bottom" constant="32" id="fmn-rQ-II5"/>
