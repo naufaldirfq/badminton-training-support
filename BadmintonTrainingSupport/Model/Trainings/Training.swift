@@ -11,10 +11,12 @@ struct Training {
     let name: String
     let description: String
     let image: UIImage
+    let sessionVC: UIViewController
     
-    init(name: String, description: String, image: UIImage? = nil) {
+    init(name: String, description: String, image: UIImage? = nil, sessionVC: UIViewController? = nil) {
         self.name = name
         self.description = description
         self.image = image ?? Images.defaultTraining
+        self.sessionVC = sessionVC ?? TrainingSessionViewController()
     }
 }

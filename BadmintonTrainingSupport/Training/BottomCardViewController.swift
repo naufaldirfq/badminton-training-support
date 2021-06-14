@@ -7,10 +7,16 @@
 
 import UIKit
 
+protocol BottomCardViewDelegate: UITableViewCell {
+    func bottomCardView(didTappedStartFor training: Training)
+}
+
 class BottomCardViewController: UIViewController {
 
+    weak var delegate: BottomCardViewDelegate?
     var hasSetPointOrigin = false
     var pointOrigin: CGPoint?
+    var training: Training?
     
     @IBOutlet weak var slideIndicator: UIView!
     @IBOutlet weak var startButton: UIButton!
@@ -24,12 +30,19 @@ class BottomCardViewController: UIViewController {
         startButton.roundCorners(.allCorners, radius: 10)
     }
     
+    @IBAction func didTapStartButton(_ sender: UIButton) {
+        if let training = self.training {
+            delegate?.bottomCardView(didTappedStartFor: training)
+        }
+    }
+    
     override func viewDidLayoutSubviews() {
         if !hasSetPointOrigin {
             hasSetPointOrigin = true
             pointOrigin = self.view.frame.origin
         }
     }
+    
     @objc func panGestureRecognizerAction(sender: UIPanGestureRecognizer) {
         let translation = sender.translation(in: view)
         
@@ -51,5 +64,4 @@ class BottomCardViewController: UIViewController {
             }
         }
     }
-
 }
