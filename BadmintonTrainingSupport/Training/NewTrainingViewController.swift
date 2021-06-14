@@ -20,6 +20,7 @@ class NewTrainingViewController: UIViewController {
         tableView.dataSource = self
         tableView.register(TrainingCollectionCell.nib(), forCellReuseIdentifier: TrainingCollectionCell.identifier)
     }
+    
 
 }
 
