@@ -36,7 +36,6 @@
 		7E50B262266FD30100BAEED1 /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E50B261266FD30100BAEED1 /* UserProfile.swift */; };
 		7E9A03E52673774C003EFF87 /* NMImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E9A03E32673774C003EFF87 /* NMImageTableViewCell.swift */; };
 		7E9A03E62673774C003EFF87 /* NMImageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E9A03E42673774C003EFF87 /* NMImageTableViewCell.xib */; };
-		7E9A03ED2674BFE5003EFF87 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7E9A03EC2674BFE5003EFF87 /* GoogleService-Info.plist */; };
 		7EBF951C266B5B4E0035D9C8 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBF951A266B5B4E0035D9C8 /* HomeViewController.swift */; };
 		7EBF951D266B5B4E0035D9C8 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7EBF951B266B5B4E0035D9C8 /* HomeViewController.xib */; };
 		7EBF9520266B5D790035D9C8 /* NewTrainingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBF951E266B5D790035D9C8 /* NewTrainingViewController.swift */; };
@@ -57,6 +56,7 @@
 		7EBF953D266B5E530035D9C8 /* MatchHistoryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7EBF953B266B5E530035D9C8 /* MatchHistoryViewController.xib */; };
 		7EBF9545266B78E40035D9C8 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBF9544266B78E40035D9C8 /* Constants.swift */; };
 		7EBF954F266B82850035D9C8 /* DummyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBF954E266B82850035D9C8 /* DummyData.swift */; };
+		7EE3CD2D2677250500791E02 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7EE3CD2C2677250500791E02 /* GoogleService-Info.plist */; };
 		FAE29489CC97B62A1D41D3B4 /* Pods_BadmintonTrainingSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAF697AAC488A05F9B529E0A /* Pods_BadmintonTrainingSupport.framework */; };
 /* End PBXBuildFile section */
 
@@ -93,7 +93,6 @@
 		7E50B261266FD30100BAEED1 /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
 		7E9A03E32673774C003EFF87 /* NMImageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NMImageTableViewCell.swift; sourceTree = "<group>"; };
 		7E9A03E42673774C003EFF87 /* NMImageTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NMImageTableViewCell.xib; sourceTree = "<group>"; };
-		7E9A03EC2674BFE5003EFF87 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		7EBF951A266B5B4E0035D9C8 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		7EBF951B266B5B4E0035D9C8 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		7EBF951E266B5D790035D9C8 /* NewTrainingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTrainingViewController.swift; sourceTree = "<group>"; };
@@ -114,7 +113,9 @@
 		7EBF953B266B5E530035D9C8 /* MatchHistoryViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MatchHistoryViewController.xib; sourceTree = "<group>"; };
 		7EBF9544266B78E40035D9C8 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		7EBF954E266B82850035D9C8 /* DummyData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyData.swift; sourceTree = "<group>"; };
+		7EE3CD2C2677250500791E02 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A3B993DF360B7C68E59C73AF /* Pods-BadmintonTrainingSupport.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BadmintonTrainingSupport.debug.xcconfig"; path = "Target Support Files/Pods-BadmintonTrainingSupport/Pods-BadmintonTrainingSupport.debug.xcconfig"; sourceTree = "<group>"; };
+		B86CBDA626725E95007D2995 /* BadmintonTrainingSupport.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BadmintonTrainingSupport.entitlements; sourceTree = "<group>"; };
 		FAF697AAC488A05F9B529E0A /* Pods_BadmintonTrainingSupport.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BadmintonTrainingSupport.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -198,6 +199,7 @@
 		7E24D00A2668A76700195496 /* BadmintonTrainingSupport */ = {
 			isa = PBXGroup;
 			children = (
+				B86CBDA626725E95007D2995 /* BadmintonTrainingSupport.entitlements */,
 				7EBF9514266B5A8D0035D9C8 /* Resources */,
 				7EBF9515266B5AB00035D9C8 /* Model */,
 				7EBF9519266B5B1E0035D9C8 /* Home */,
@@ -206,7 +208,7 @@
 				7EBF9518266B5B050035D9C8 /* Profile */,
 				7EBF9513266B5A7F0035D9C8 /* Application */,
 				7E24D0162668A76A00195496 /* LaunchScreen.storyboard */,
-				7E9A03EC2674BFE5003EFF87 /* GoogleService-Info.plist */,
+				7EE3CD2C2677250500791E02 /* GoogleService-Info.plist */,
 				7E24D0192668A76A00195496 /* Info.plist */,
 			);
 			path = BadmintonTrainingSupport;
@@ -338,7 +340,8 @@
 				7E24D0042668A76700195496 /* Sources */,
 				7E24D0052668A76700195496 /* Frameworks */,
 				7E24D0062668A76700195496 /* Resources */,
-				83A3B0E630850D85C703D248 /* [CP] Embed Pods Frameworks */,
+				7A2D07EFE1A5CE9B3F93F556 /* [CP] Copy Pods Resources */,
+				B3F819C71FA2ED8F15C989E7 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -406,7 +409,7 @@
 				7EBF9521266B5D790035D9C8 /* NewTrainingViewController.xib in Resources */,
 				7EBF952D266B5DD80035D9C8 /* TrainingHistoryViewController.xib in Resources */,
 				70E75CF52671BCA80043CD09 /* SegmentedCtrlTableViewCell.xib in Resources */,
-				7E9A03ED2674BFE5003EFF87 /* GoogleService-Info.plist in Resources */,
+				7EE3CD2D2677250500791E02 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -435,7 +438,24 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		83A3B0E630850D85C703D248 /* [CP] Embed Pods Frameworks */ = {
+		7A2D07EFE1A5CE9B3F93F556 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BadmintonTrainingSupport/Pods-BadmintonTrainingSupport-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BadmintonTrainingSupport/Pods-BadmintonTrainingSupport-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BadmintonTrainingSupport/Pods-BadmintonTrainingSupport-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B3F819C71FA2ED8F15C989E7 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -627,8 +647,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = BadmintonTrainingSupport/BadmintonTrainingSupport.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 7BXMQ2C5C2;
+				DEVELOPMENT_TEAM = TM8952UAR3;
 				INFOPLIST_FILE = BadmintonTrainingSupport/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -647,8 +668,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = BadmintonTrainingSupport/BadmintonTrainingSupport.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 7BXMQ2C5C2;
+				DEVELOPMENT_TEAM = TM8952UAR3;
 				INFOPLIST_FILE = BadmintonTrainingSupport/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

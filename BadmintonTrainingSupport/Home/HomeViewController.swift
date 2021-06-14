@@ -7,17 +7,19 @@
 
 import UIKit
 import StickyButton
+import Firebase
 
 class HomeViewController: UIViewController {
     
-    
     let stickyButton = StickyButton(size: 60)
+    
+    var userData: UserProfile?
     
     @IBOutlet var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        setupUserData()
         setupTableView()
         setupStickyButton()
     }
@@ -32,6 +34,15 @@ class HomeViewController: UIViewController {
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         navigationController?.setNavigationBarHidden(false, animated: animated)
+    }
+    
+    func setupUserData() {
+        if userData == nil {
+            if let user = Auth.auth().currentUser {
+                userData = UserProfile(name: user.displayName ?? "jin")
+            }
+        }
+        
     }
     
     func setupTableView() {
@@ -63,6 +74,11 @@ class HomeViewController: UIViewController {
         }
     }
     
+    @objc func userPhotoTapped() {
+        let vc = ProfileViewController()
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
 }
 
 extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
@@ -88,7 +104,10 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         switch indexPath.row {
         case 0:
             if let cell = tableView.dequeueReusableCell(withIdentifier: HomeProfileCell.identifier) as? HomeProfileCell {
-                cell.configure(with: DummyData.Profile)
+                cell.configure(with: userData ?? DummyData.Profile)
+                let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.userPhotoTapped))
+                cell.userPhotoImageView.isUserInteractionEnabled = true
+                cell.userPhotoImageView.addGestureRecognizer(tapGestureRecognizer)
                 return cell
             }
         case 1:

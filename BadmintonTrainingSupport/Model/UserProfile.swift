@@ -8,8 +8,8 @@
 import UIKit
 
 struct UserProfile {
-    let name: String
-    let photo: UIImage
+    var name: String
+    var photo: UIImage
     
     init(name: String, photo: UIImage? = nil) {
         self.name = name

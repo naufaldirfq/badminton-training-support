@@ -18,8 +18,7 @@ target 'BadmintonTrainingSupport' do
   # For example, to use Firebase Authentication and Cloud Firestore
   pod 'Firebase/Auth'
   pod 'Firebase/Firestore'
+  pod 'FirebaseUI'
   pod 'IQKeyboardManagerSwift'
-
-pod 'IQKeyboardManagerSwift'
 
 end
