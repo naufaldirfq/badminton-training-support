@@ -16,6 +16,16 @@ struct Training: Codable {
         return UIImage(named: image)
     }
     
+    var uiSession: UIViewController? {
+        switch name {
+        case "Running":
+            return RunningTargetViewController()
+        default:
+            //TODO: tambah target view controller lain
+            return RunningTargetViewController()
+        }
+    }
+    
     init(name: String, description: String, image: String) {
         self.name = name
         self.description = description

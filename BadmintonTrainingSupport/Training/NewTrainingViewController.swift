@@ -27,7 +27,6 @@ class NewTrainingViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(TrainingCollectionCell.nib(), forCellReuseIdentifier: TrainingCollectionCell.identifier)
-//        print(trainingCategory)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -82,7 +81,6 @@ extension NewTrainingViewController: UITableViewDelegate, UITableViewDataSource,
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        print(trainingCategory)
         if let cell = tableView.dequeueReusableCell(withIdentifier: TrainingCollectionCell.identifier) as? TrainingCollectionCell {
             let category = trainingCategory[indexPath.row]
             cell.configure(name: category.name, with: category.trainings)
