@@ -8,13 +8,21 @@
 
 /* Begin PBXBuildFile section */
 		60201DAF2671EB7A00E0E7E7 /* TrainingSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60201DAE2671EB7A00E0E7E7 /* TrainingSession.swift */; };
-		60474D162674BB87000712E7 /* RunningSessionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60474D152674BB87000712E7 /* RunningSessionView.swift */; };
-		60474D182674BE05000712E7 /* RunningSessionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60474D172674BE05000712E7 /* RunningSessionView.xib */; };
 		6063FE6F266E7AEE001DFEA2 /* TrainingHistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6063FE6D266E7AEE001DFEA2 /* TrainingHistoryTableViewCell.swift */; };
 		6063FE70266E7AEE001DFEA2 /* TrainingHistoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6063FE6E266E7AEE001DFEA2 /* TrainingHistoryTableViewCell.xib */; };
 		60A0CF0C267104D000CBE0E5 /* Match.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60A0CF0B267104D000CBE0E5 /* Match.swift */; };
 		60E4112E266FE919006776BD /* MatchHistoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60E4112C266FE919006776BD /* MatchHistoryCell.swift */; };
 		60E4112F266FE919006776BD /* MatchHistoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60E4112D266FE919006776BD /* MatchHistoryCell.xib */; };
+		60F907CB267792E3005007D9 /* SkippingSessionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60F907C9267792E3005007D9 /* SkippingSessionViewController.swift */; };
+		60F907CC267792E3005007D9 /* SkippingSessionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60F907CA267792E3005007D9 /* SkippingSessionViewController.xib */; };
+		60F907CF26779555005007D9 /* PushUpSessionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60F907CD26779555005007D9 /* PushUpSessionViewController.swift */; };
+		60F907D026779555005007D9 /* PushUpSessionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60F907CE26779555005007D9 /* PushUpSessionViewController.xib */; };
+		60F907D32677959F005007D9 /* MultiShuttleSessionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60F907D12677959F005007D9 /* MultiShuttleSessionViewController.swift */; };
+		60F907D42677959F005007D9 /* MultiShuttleSessionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60F907D22677959F005007D9 /* MultiShuttleSessionViewController.xib */; };
+		60F907D9267795F7005007D9 /* ShadowSessionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60F907D7267795F7005007D9 /* ShadowSessionViewController.swift */; };
+		60F907DA267795F7005007D9 /* ShadowSessionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60F907D8267795F7005007D9 /* ShadowSessionViewController.xib */; };
+		60F907DD2677964C005007D9 /* ServeSessionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60F907DB2677964C005007D9 /* ServeSessionViewController.swift */; };
+		60F907DE2677964C005007D9 /* ServeSessionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60F907DC2677964C005007D9 /* ServeSessionViewController.xib */; };
 		60FC4DD326774D0F00863CE3 /* RunningSessionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60FC4DD126774D0F00863CE3 /* RunningSessionViewController.swift */; };
 		60FC4DD426774D0F00863CE3 /* RunningSessionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60FC4DD226774D0F00863CE3 /* RunningSessionViewController.xib */; };
 		7023740426721804001C5E41 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7023740326721804001C5E41 /* Profile.swift */; };
@@ -72,13 +80,21 @@
 /* Begin PBXFileReference section */
 		55FEF1690DBEBA70C4411FE9 /* Pods-BadmintonTrainingSupport.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BadmintonTrainingSupport.release.xcconfig"; path = "Target Support Files/Pods-BadmintonTrainingSupport/Pods-BadmintonTrainingSupport.release.xcconfig"; sourceTree = "<group>"; };
 		60201DAE2671EB7A00E0E7E7 /* TrainingSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingSession.swift; sourceTree = "<group>"; };
-		60474D152674BB87000712E7 /* RunningSessionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunningSessionView.swift; sourceTree = "<group>"; };
-		60474D172674BE05000712E7 /* RunningSessionView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RunningSessionView.xib; sourceTree = "<group>"; };
 		6063FE6D266E7AEE001DFEA2 /* TrainingHistoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingHistoryTableViewCell.swift; sourceTree = "<group>"; };
 		6063FE6E266E7AEE001DFEA2 /* TrainingHistoryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrainingHistoryTableViewCell.xib; sourceTree = "<group>"; };
 		60A0CF0B267104D000CBE0E5 /* Match.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Match.swift; sourceTree = "<group>"; };
 		60E4112C266FE919006776BD /* MatchHistoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchHistoryCell.swift; sourceTree = "<group>"; };
 		60E4112D266FE919006776BD /* MatchHistoryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MatchHistoryCell.xib; sourceTree = "<group>"; };
+		60F907C9267792E3005007D9 /* SkippingSessionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkippingSessionViewController.swift; sourceTree = "<group>"; };
+		60F907CA267792E3005007D9 /* SkippingSessionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SkippingSessionViewController.xib; sourceTree = "<group>"; };
+		60F907CD26779555005007D9 /* PushUpSessionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushUpSessionViewController.swift; sourceTree = "<group>"; };
+		60F907CE26779555005007D9 /* PushUpSessionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PushUpSessionViewController.xib; sourceTree = "<group>"; };
+		60F907D12677959F005007D9 /* MultiShuttleSessionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiShuttleSessionViewController.swift; sourceTree = "<group>"; };
+		60F907D22677959F005007D9 /* MultiShuttleSessionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MultiShuttleSessionViewController.xib; sourceTree = "<group>"; };
+		60F907D7267795F7005007D9 /* ShadowSessionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowSessionViewController.swift; sourceTree = "<group>"; };
+		60F907D8267795F7005007D9 /* ShadowSessionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShadowSessionViewController.xib; sourceTree = "<group>"; };
+		60F907DB2677964C005007D9 /* ServeSessionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServeSessionViewController.swift; sourceTree = "<group>"; };
+		60F907DC2677964C005007D9 /* ServeSessionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ServeSessionViewController.xib; sourceTree = "<group>"; };
 		60FC4DD126774D0F00863CE3 /* RunningSessionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunningSessionViewController.swift; sourceTree = "<group>"; };
 		60FC4DD226774D0F00863CE3 /* RunningSessionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RunningSessionViewController.xib; sourceTree = "<group>"; };
 		7023740326721804001C5E41 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
@@ -160,10 +176,18 @@
 		60474D142674BB52000712E7 /* Training Session */ = {
 			isa = PBXGroup;
 			children = (
-				60474D152674BB87000712E7 /* RunningSessionView.swift */,
-				60474D172674BE05000712E7 /* RunningSessionView.xib */,
 				60FC4DD126774D0F00863CE3 /* RunningSessionViewController.swift */,
 				60FC4DD226774D0F00863CE3 /* RunningSessionViewController.xib */,
+				60F907C9267792E3005007D9 /* SkippingSessionViewController.swift */,
+				60F907CA267792E3005007D9 /* SkippingSessionViewController.xib */,
+				60F907CD26779555005007D9 /* PushUpSessionViewController.swift */,
+				60F907CE26779555005007D9 /* PushUpSessionViewController.xib */,
+				60F907D12677959F005007D9 /* MultiShuttleSessionViewController.swift */,
+				60F907D22677959F005007D9 /* MultiShuttleSessionViewController.xib */,
+				60F907D7267795F7005007D9 /* ShadowSessionViewController.swift */,
+				60F907D8267795F7005007D9 /* ShadowSessionViewController.xib */,
+				60F907DB2677964C005007D9 /* ServeSessionViewController.swift */,
+				60F907DC2677964C005007D9 /* ServeSessionViewController.xib */,
 			);
 			path = "Training Session";
 			sourceTree = "<group>";
@@ -434,10 +458,11 @@
 			files = (
 				7E4FB054266B88B300D0CEE2 /* TrainingCell.xib in Resources */,
 				7E9A03E62673774C003EFF87 /* NMImageTableViewCell.xib in Resources */,
-				60474D182674BE05000712E7 /* RunningSessionView.xib in Resources */,
 				60E4112F266FE919006776BD /* MatchHistoryCell.xib in Resources */,
 				7EF6271B26710E3E00A7D612 /* BottomCardView.xib in Resources */,
 				7EBF9529266B5DB40035D9C8 /* ProfileViewController.xib in Resources */,
+				60F907CC267792E3005007D9 /* SkippingSessionViewController.xib in Resources */,
+				60F907DE2677964C005007D9 /* ServeSessionViewController.xib in Resources */,
 				7EBF9531266B5E110035D9C8 /* NewMatchViewController.xib in Resources */,
 				7EBF9525266B5DA20035D9C8 /* TrainingSessionViewController.xib in Resources */,
 				7E4FB053266B88B300D0CEE2 /* TrainingCollectionCell.xib in Resources */,
@@ -445,7 +470,9 @@
 				7E24D0182668A76A00195496 /* LaunchScreen.storyboard in Resources */,
 				7EBF9535266B5E250035D9C8 /* MatchSessionViewController.xib in Resources */,
 				7096EA8D266E5D0700A9D1F6 /* TextFieldTableViewCell.xib in Resources */,
+				60F907DA267795F7005007D9 /* ShadowSessionViewController.xib in Resources */,
 				7EBF9539266B5E420035D9C8 /* MatchSummaryViewController.xib in Resources */,
+				60F907D026779555005007D9 /* PushUpSessionViewController.xib in Resources */,
 				7E4FB05B266BCD3800D0CEE2 /* RecentsCell.xib in Resources */,
 				7E50B260266FD1A500BAEED1 /* HomeProfileCell.xib in Resources */,
 				7E24D0152668A76A00195496 /* Assets.xcassets in Resources */,
@@ -456,6 +483,7 @@
 				7EBF952D266B5DD80035D9C8 /* TrainingHistoryViewController.xib in Resources */,
 				70E75CF52671BCA80043CD09 /* SegmentedCtrlTableViewCell.xib in Resources */,
 				7EE3CD3426774AED00791E02 /* RunningTargetViewController.xib in Resources */,
+				60F907D42677959F005007D9 /* MultiShuttleSessionViewController.xib in Resources */,
 				7EE3CD2D2677250500791E02 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -526,7 +554,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				60F907CF26779555005007D9 /* PushUpSessionViewController.swift in Sources */,
 				60201DAF2671EB7A00E0E7E7 /* TrainingSession.swift in Sources */,
+				60F907DD2677964C005007D9 /* ServeSessionViewController.swift in Sources */,
 				7EBF954F266B82850035D9C8 /* DummyData.swift in Sources */,
 				7EBF9528266B5DB40035D9C8 /* ProfileViewController.swift in Sources */,
 				7023740426721804001C5E41 /* Profile.swift in Sources */,
@@ -534,6 +564,8 @@
 				60FC4DD326774D0F00863CE3 /* RunningSessionViewController.swift in Sources */,
 				7E4FB05A266BCD3800D0CEE2 /* RecentsCell.swift in Sources */,
 				7EBF953C266B5E530035D9C8 /* MatchHistoryViewController.swift in Sources */,
+				60F907D32677959F005007D9 /* MultiShuttleSessionViewController.swift in Sources */,
+				60F907CB267792E3005007D9 /* SkippingSessionViewController.swift in Sources */,
 				7E24D00C2668A76700195496 /* AppDelegate.swift in Sources */,
 				7EBF9538266B5E420035D9C8 /* MatchSummaryViewController.swift in Sources */,
 				7EE3CD3326774AED00791E02 /* RunningTargetViewController.swift in Sources */,
@@ -544,6 +576,7 @@
 				6063FE6F266E7AEE001DFEA2 /* TrainingHistoryTableViewCell.swift in Sources */,
 				7EF6271926710DBF00A7D612 /* BottomCardPresentationController.swift in Sources */,
 				7E4FB05E266BECA800D0CEE2 /* TrainingCategory.swift in Sources */,
+				60F907D9267795F7005007D9 /* ShadowSessionViewController.swift in Sources */,
 				7E4FB052266B88B300D0CEE2 /* TrainingCell.swift in Sources */,
 				70E75CF42671BCA80043CD09 /* SegmentedCtrlTableViewCell.swift in Sources */,
 				7EBF9530266B5E110035D9C8 /* NewMatchViewController.swift in Sources */,
@@ -551,7 +584,6 @@
 				7EBF9520266B5D790035D9C8 /* NewTrainingViewController.swift in Sources */,
 				7E9A03E52673774C003EFF87 /* NMImageTableViewCell.swift in Sources */,
 				7E4FB056266BC1C200D0CEE2 /* Sizes.swift in Sources */,
-				60474D162674BB87000712E7 /* RunningSessionView.swift in Sources */,
 				7EBF9545266B78E40035D9C8 /* Constants.swift in Sources */,
 				60A0CF0C267104D000CBE0E5 /* Match.swift in Sources */,
 				7EBF9534266B5E250035D9C8 /* MatchSessionViewController.swift in Sources */,

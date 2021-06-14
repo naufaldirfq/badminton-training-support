@@ -24,15 +24,6 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="google.png" translatesAutoresizingMaskIntoConstraints="NO" id="z90-8p-Lsq">
-                    <rect key="frame" x="0.0" y="0.0" width="414" height="239"/>
-                </imageView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3KS-af-b5h">
-                    <rect key="frame" x="16" y="-36.5" width="76" height="38.5"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="32"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
                 <stackView opaque="NO" contentMode="scaleToFill" spacing="79" translatesAutoresizingMaskIntoConstraints="NO" id="AcU-Re-ekg">
                     <rect key="frame" x="69.5" y="731" width="275" height="91"/>
                     <subviews>
@@ -62,32 +53,44 @@
                         <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="80"/>
                     </state>
                 </button>
-                <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ulO-rv-L5T">
-                    <rect key="frame" x="0.0" y="247" width="414" height="400"/>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ulO-rv-L5T">
+                    <rect key="frame" x="0.0" y="279" width="414" height="394"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </view>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="internaldrive" catalog="system" id="z90-8p-Lsq">
+                    <rect key="frame" x="0.0" y="45.5" width="414" height="221.5"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jogging" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3KS-af-b5h">
+                    <rect key="frame" x="16" y="214.5" width="112" height="38.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="3KS-af-b5h" firstAttribute="leading" secondItem="z90-8p-Lsq" secondAttribute="leading" constant="16" id="Ab3-Xq-fCH"/>
+                <constraint firstItem="z90-8p-Lsq" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.25" constant="1" id="Ezt-by-gca"/>
                 <constraint firstItem="z90-8p-Lsq" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="G23-9Q-vFC"/>
-                <constraint firstItem="3KS-af-b5h" firstAttribute="bottom" secondItem="z90-8p-Lsq" secondAttribute="bottom" constant="-16" id="YvH-sj-A0k"/>
+                <constraint firstItem="ulO-rv-L5T" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.44" id="Reu-t7-cKH"/>
+                <constraint firstItem="ulO-rv-L5T" firstAttribute="top" secondItem="z90-8p-Lsq" secondAttribute="bottom" constant="10" id="X8c-uT-dGO"/>
                 <constraint firstItem="z90-8p-Lsq" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="Zag-hK-nMK"/>
-                <constraint firstItem="ulO-rv-L5T" firstAttribute="top" secondItem="z90-8p-Lsq" secondAttribute="bottom" id="bh4-pm-AQO"/>
+                <constraint firstItem="3KS-af-b5h" firstAttribute="bottom" secondItem="z90-8p-Lsq" secondAttribute="bottom" constant="-16" id="apc-z6-TVM"/>
                 <constraint firstItem="ulO-rv-L5T" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="bwL-j2-Wm7"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="top" secondItem="z90-8p-Lsq" secondAttribute="top" id="f69-W2-HM6"/>
                 <constraint firstItem="AcU-Re-ekg" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="ffy-aN-V7v"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="AcU-Re-ekg" secondAttribute="bottom" constant="40" id="iOz-5l-TLE"/>
                 <constraint firstItem="ulO-rv-L5T" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="igq-ut-cng"/>
                 <constraint firstItem="xYd-vB-Ud5" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="jlA-pV-iOi"/>
-                <constraint firstItem="z90-8p-Lsq" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="vMY-pB-ODD"/>
+                <constraint firstItem="3KS-af-b5h" firstAttribute="leading" secondItem="z90-8p-Lsq" secondAttribute="leading" constant="16" id="nbH-aI-pSr"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="xYd-vB-Ud5" secondAttribute="bottom" constant="40" id="yBD-p9-0GS"/>
             </constraints>
             <point key="canvasLocation" x="131.8840579710145" y="101.78571428571428"/>
         </view>
     </objects>
     <resources>
-        <image name="google.png" width="18" height="18"/>
+        <image name="internaldrive" catalog="system" width="128" height="88"/>
         <image name="pause.circle.fill" catalog="system" width="128" height="121"/>
         <image name="play.circle.fill" catalog="system" width="128" height="121"/>
         <image name="stop.circle.fill" catalog="system" width="128" height="121"/>
