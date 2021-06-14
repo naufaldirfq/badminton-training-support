@@ -11,7 +11,7 @@ class TrainingCell: UICollectionViewCell {
     
     var name: String = "Training Name"
     var desc: String = "Training description goes here..."
-    var image: UIImage = Images.defaultTraining
+    var image: String = "Images.defaultTraining"
     
     @IBOutlet var imageView: UIImageView!
     @IBOutlet var nameLabel: UILabel!
@@ -33,7 +33,7 @@ class TrainingCell: UICollectionViewCell {
     func loadView() {
         nameLabel.text = name
         descLabel.text = desc
-        imageView.image = image
+//        imageView.image = image
     }
     
     override func awakeFromNib() {

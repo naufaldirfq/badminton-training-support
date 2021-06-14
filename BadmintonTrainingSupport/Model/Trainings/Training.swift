@@ -7,14 +7,18 @@
 
 import UIKit
 
-struct Training {
-    let name: String
-    let description: String
-    let image: UIImage
+struct Training: Codable {
+    var name: String
+    var description: String
+    var image: String
     
-    init(name: String, description: String, image: UIImage? = nil) {
+    var uiImage: UIImage? {
+        return UIImage(named: image)
+    }
+    
+    init(name: String, description: String, image: String) {
         self.name = name
         self.description = description
-        self.image = image ?? Images.defaultTraining
+        self.image = image
     }
 }
