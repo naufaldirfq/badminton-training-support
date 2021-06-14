@@ -20,10 +20,11 @@ class NewTrainingViewController: UIViewController {
         tableView.dataSource = self
         tableView.register(TrainingCollectionCell.nib(), forCellReuseIdentifier: TrainingCollectionCell.identifier)
     }
+    
 
 }
 
-extension NewTrainingViewController: UITableViewDelegate, UITableViewDataSource, TrainingCollectionDelegate {
+extension NewTrainingViewController: UITableViewDelegate, UITableViewDataSource, TrainingCollectionDelegate, UIViewControllerTransitioningDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return DummyData.Categories.count
@@ -45,5 +46,17 @@ extension NewTrainingViewController: UITableViewDelegate, UITableViewDataSource,
     
     func collectionView(trainingCell: TrainingCell, index: Int, didTappedInTableViewCell: TrainingCollectionCell) {
         print("Pressed \(trainingCell.name)!")
+        setTarget()
+    }
+    
+    @objc func setTarget() {
+        let slideVC = BottomCardViewController()
+        slideVC.modalPresentationStyle = .custom
+        slideVC.transitioningDelegate = self
+        self.present(slideVC, animated: true, completion: nil)
+    }
+    
+    func presentationController(forPresented presented: UIViewController, presenting: UIViewController?, source: UIViewController) -> UIPresentationController? {
+        BottomCardPresentationController(presentedViewController: presented, presenting: presenting)
     }
 }

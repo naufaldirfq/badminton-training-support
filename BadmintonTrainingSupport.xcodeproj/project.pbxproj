@@ -57,6 +57,7 @@
 		7EBF9545266B78E40035D9C8 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBF9544266B78E40035D9C8 /* Constants.swift */; };
 		7EBF954F266B82850035D9C8 /* DummyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBF954E266B82850035D9C8 /* DummyData.swift */; };
 		7EE3CD2D2677250500791E02 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7EE3CD2C2677250500791E02 /* GoogleService-Info.plist */; };
+		7EE3CD2F267730AD00791E02 /* BottomCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EE3CD2E267730AD00791E02 /* BottomCardViewController.swift */; };
 		7EF6271926710DBF00A7D612 /* BottomCardPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EF6271826710DBF00A7D612 /* BottomCardPresentationController.swift */; };
 		7EF6271B26710E3E00A7D612 /* BottomCardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7EF6271A26710E3E00A7D612 /* BottomCardView.xib */; };
 		FAE29489CC97B62A1D41D3B4 /* Pods_BadmintonTrainingSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAF697AAC488A05F9B529E0A /* Pods_BadmintonTrainingSupport.framework */; };
@@ -116,6 +117,7 @@
 		7EBF9544266B78E40035D9C8 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		7EBF954E266B82850035D9C8 /* DummyData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyData.swift; sourceTree = "<group>"; };
 		7EE3CD2C2677250500791E02 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		7EE3CD2E267730AD00791E02 /* BottomCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomCardViewController.swift; sourceTree = "<group>"; };
 		7EF6271826710DBF00A7D612 /* BottomCardPresentationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomCardPresentationController.swift; sourceTree = "<group>"; };
 		7EF6271A26710E3E00A7D612 /* BottomCardView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BottomCardView.xib; sourceTree = "<group>"; };
 		A3B993DF360B7C68E59C73AF /* Pods-BadmintonTrainingSupport.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BadmintonTrainingSupport.debug.xcconfig"; path = "Target Support Files/Pods-BadmintonTrainingSupport/Pods-BadmintonTrainingSupport.debug.xcconfig"; sourceTree = "<group>"; };
@@ -291,6 +293,7 @@
 				7EBF9523266B5DA20035D9C8 /* TrainingSessionViewController.xib */,
 				7EBF952A266B5DD80035D9C8 /* TrainingHistoryViewController.swift */,
 				7EBF952B266B5DD80035D9C8 /* TrainingHistoryViewController.xib */,
+				7EE3CD2E267730AD00791E02 /* BottomCardViewController.swift */,
 				7EF6271826710DBF00A7D612 /* BottomCardPresentationController.swift */,
 				7EF6271A26710E3E00A7D612 /* BottomCardView.xib */,
 			);
@@ -514,6 +517,7 @@
 				7EBF9534266B5E250035D9C8 /* MatchSessionViewController.swift in Sources */,
 				7E50B25F266FD1A500BAEED1 /* HomeProfileCell.swift in Sources */,
 				7EBF952C266B5DD80035D9C8 /* TrainingHistoryViewController.swift in Sources */,
+				7EE3CD2F267730AD00791E02 /* BottomCardViewController.swift in Sources */,
 				7E50B262266FD30100BAEED1 /* UserProfile.swift in Sources */,
 				7096EA8C266E5D0700A9D1F6 /* TextFieldTableViewCell.swift in Sources */,
 			);
