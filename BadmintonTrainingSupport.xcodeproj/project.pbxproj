@@ -61,6 +61,11 @@
 		7EBF9545266B78E40035D9C8 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBF9544266B78E40035D9C8 /* Constants.swift */; };
 		7EBF954F266B82850035D9C8 /* DummyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBF954E266B82850035D9C8 /* DummyData.swift */; };
 		7EE3CD2D2677250500791E02 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7EE3CD2C2677250500791E02 /* GoogleService-Info.plist */; };
+		7EE3CD2F267730AD00791E02 /* BottomCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EE3CD2E267730AD00791E02 /* BottomCardViewController.swift */; };
+		7EE3CD3326774AED00791E02 /* RunningTargetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EE3CD3126774AED00791E02 /* RunningTargetViewController.swift */; };
+		7EE3CD3426774AED00791E02 /* RunningTargetViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7EE3CD3226774AED00791E02 /* RunningTargetViewController.xib */; };
+		7EF6271926710DBF00A7D612 /* BottomCardPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EF6271826710DBF00A7D612 /* BottomCardPresentationController.swift */; };
+		7EF6271B26710E3E00A7D612 /* BottomCardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7EF6271A26710E3E00A7D612 /* BottomCardView.xib */; };
 		FAE29489CC97B62A1D41D3B4 /* Pods_BadmintonTrainingSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAF697AAC488A05F9B529E0A /* Pods_BadmintonTrainingSupport.framework */; };
 /* End PBXBuildFile section */
 
@@ -122,6 +127,11 @@
 		7EBF9544266B78E40035D9C8 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		7EBF954E266B82850035D9C8 /* DummyData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyData.swift; sourceTree = "<group>"; };
 		7EE3CD2C2677250500791E02 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		7EE3CD2E267730AD00791E02 /* BottomCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomCardViewController.swift; sourceTree = "<group>"; };
+		7EE3CD3126774AED00791E02 /* RunningTargetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunningTargetViewController.swift; sourceTree = "<group>"; };
+		7EE3CD3226774AED00791E02 /* RunningTargetViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RunningTargetViewController.xib; sourceTree = "<group>"; };
+		7EF6271826710DBF00A7D612 /* BottomCardPresentationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomCardPresentationController.swift; sourceTree = "<group>"; };
+		7EF6271A26710E3E00A7D612 /* BottomCardView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BottomCardView.xib; sourceTree = "<group>"; };
 		A3B993DF360B7C68E59C73AF /* Pods-BadmintonTrainingSupport.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BadmintonTrainingSupport.debug.xcconfig"; path = "Target Support Files/Pods-BadmintonTrainingSupport/Pods-BadmintonTrainingSupport.debug.xcconfig"; sourceTree = "<group>"; };
 		B86CBDA626725E95007D2995 /* BadmintonTrainingSupport.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BadmintonTrainingSupport.entitlements; sourceTree = "<group>"; };
 		FAF697AAC488A05F9B529E0A /* Pods_BadmintonTrainingSupport.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BadmintonTrainingSupport.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -300,6 +310,7 @@
 			isa = PBXGroup;
 			children = (
 				60474D142674BB52000712E7 /* Training Session */,
+				7EE3CD3026774AC800791E02 /* Training Modules */,
 				7E4FB04C266B88B300D0CEE2 /* Training Collection */,
 				7EBF951E266B5D790035D9C8 /* NewTrainingViewController.swift */,
 				7EBF951F266B5D790035D9C8 /* NewTrainingViewController.xib */,
@@ -307,6 +318,9 @@
 				7EBF9523266B5DA20035D9C8 /* TrainingSessionViewController.xib */,
 				7EBF952A266B5DD80035D9C8 /* TrainingHistoryViewController.swift */,
 				7EBF952B266B5DD80035D9C8 /* TrainingHistoryViewController.xib */,
+				7EE3CD2E267730AD00791E02 /* BottomCardViewController.swift */,
+				7EF6271826710DBF00A7D612 /* BottomCardPresentationController.swift */,
+				7EF6271A26710E3E00A7D612 /* BottomCardView.xib */,
 			);
 			path = Training;
 			sourceTree = "<group>";
@@ -347,6 +361,15 @@
 				7E50B25E266FD1A500BAEED1 /* HomeProfileCell.xib */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		7EE3CD3026774AC800791E02 /* Training Modules */ = {
+			isa = PBXGroup;
+			children = (
+				7EE3CD3126774AED00791E02 /* RunningTargetViewController.swift */,
+				7EE3CD3226774AED00791E02 /* RunningTargetViewController.xib */,
+			);
+			path = "Training Modules";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -413,6 +436,7 @@
 				7E9A03E62673774C003EFF87 /* NMImageTableViewCell.xib in Resources */,
 				60474D182674BE05000712E7 /* RunningSessionView.xib in Resources */,
 				60E4112F266FE919006776BD /* MatchHistoryCell.xib in Resources */,
+				7EF6271B26710E3E00A7D612 /* BottomCardView.xib in Resources */,
 				7EBF9529266B5DB40035D9C8 /* ProfileViewController.xib in Resources */,
 				7EBF9531266B5E110035D9C8 /* NewMatchViewController.xib in Resources */,
 				7EBF9525266B5DA20035D9C8 /* TrainingSessionViewController.xib in Resources */,
@@ -431,6 +455,7 @@
 				7EBF9521266B5D790035D9C8 /* NewTrainingViewController.xib in Resources */,
 				7EBF952D266B5DD80035D9C8 /* TrainingHistoryViewController.xib in Resources */,
 				70E75CF52671BCA80043CD09 /* SegmentedCtrlTableViewCell.xib in Resources */,
+				7EE3CD3426774AED00791E02 /* RunningTargetViewController.xib in Resources */,
 				7EE3CD2D2677250500791E02 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -511,11 +536,13 @@
 				7EBF953C266B5E530035D9C8 /* MatchHistoryViewController.swift in Sources */,
 				7E24D00C2668A76700195496 /* AppDelegate.swift in Sources */,
 				7EBF9538266B5E420035D9C8 /* MatchSummaryViewController.swift in Sources */,
+				7EE3CD3326774AED00791E02 /* RunningTargetViewController.swift in Sources */,
 				7EBF9524266B5DA20035D9C8 /* TrainingSessionViewController.swift in Sources */,
 				7E4FB051266B88B300D0CEE2 /* TrainingCollectionCell.swift in Sources */,
 				7E24D00E2668A76700195496 /* SceneDelegate.swift in Sources */,
 				7EBF951C266B5B4E0035D9C8 /* HomeViewController.swift in Sources */,
 				6063FE6F266E7AEE001DFEA2 /* TrainingHistoryTableViewCell.swift in Sources */,
+				7EF6271926710DBF00A7D612 /* BottomCardPresentationController.swift in Sources */,
 				7E4FB05E266BECA800D0CEE2 /* TrainingCategory.swift in Sources */,
 				7E4FB052266B88B300D0CEE2 /* TrainingCell.swift in Sources */,
 				70E75CF42671BCA80043CD09 /* SegmentedCtrlTableViewCell.swift in Sources */,
@@ -530,6 +557,7 @@
 				7EBF9534266B5E250035D9C8 /* MatchSessionViewController.swift in Sources */,
 				7E50B25F266FD1A500BAEED1 /* HomeProfileCell.swift in Sources */,
 				7EBF952C266B5DD80035D9C8 /* TrainingHistoryViewController.swift in Sources */,
+				7EE3CD2F267730AD00791E02 /* BottomCardViewController.swift in Sources */,
 				7E50B262266FD30100BAEED1 /* UserProfile.swift in Sources */,
 				7096EA8C266E5D0700A9D1F6 /* TextFieldTableViewCell.swift in Sources */,
 			);

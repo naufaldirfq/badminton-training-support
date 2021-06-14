@@ -81,9 +81,33 @@ extension TrainingCollectionCell: UICollectionViewDelegate, UICollectionViewData
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if let cell = collectionView.cellForItem(at: indexPath) as? TrainingCell {
+            
+            let training = DummyData.Trainings[indexPath.row]
+            setTarget(with: training)
+            
             self.delegate?.collectionView(trainingCell: cell, index: indexPath.item, didTappedInTableViewCell: self)
         }
     }
+}
+
+extension TrainingCollectionCell: BottomCardViewDelegate, UIViewControllerTransitioningDelegate {
     
+    func bottomCardView(didTappedStartFor training: Training) {
+        self.delegate?.dismiss(animated: true, completion: nil)
+        let vc = training.sessionVC
+        self.delegate?.navigationController?.pushViewController(vc, animated: true)
+    }
     
+    func setTarget(with training: Training) {
+        let slideVC = BottomCardViewController()
+        slideVC.modalPresentationStyle = .custom
+        slideVC.transitioningDelegate = self
+        slideVC.training = training
+        slideVC.delegate = self
+        self.delegate?.present(slideVC, animated: true, completion: nil)
+    }
+    
+    func presentationController(forPresented presented: UIViewController, presenting: UIViewController?, source: UIViewController) -> UIPresentationController? {
+        BottomCardPresentationController(presentedViewController: presented, presenting: presenting)
+    }
 }
