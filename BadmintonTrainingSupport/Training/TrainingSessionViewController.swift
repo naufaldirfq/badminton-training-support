@@ -7,6 +7,12 @@
 
 import UIKit
 
+protocol TrainingSessionDelegate: UIViewController {
+    func didTapPlayButton()
+    func didTapStopButton()
+    func didTapPauseButton()
+}
+
 class TrainingSessionViewController: UIViewController {
     @IBOutlet weak var trainingBannerImageView: UIImageView!
     @IBOutlet weak var trainingNameLabel: UILabel!
@@ -15,18 +21,39 @@ class TrainingSessionViewController: UIViewController {
     @IBOutlet weak var trainingStopButton: UIButton!
     @IBOutlet weak var trainingSessionView: UIView!
     
+    weak var delegate: TrainingSessionDelegate?
+    
+    var session: UIViewController?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        addSessionTo(vc: self )
+        add()
         // Do any additional setup after loading the view.
     }
-    func addSessionTo(vc: UIViewController){
-        let session = RunningSessionViewController(nibName: "RunningSessionViewController", bundle: nil)
-        session.view.frame = trainingSessionView.frame
-        vc.view.addSubview(session.view)
-        vc.addChild(session)
+    
+    @IBAction func didTapPlayButton(_ sender: UIButton) {
+        delegate?.didTapPlayButton()
     }
+    
+    @IBAction func didTapPauseButton(_ sender: UIButton) {
+        delegate?.didTapPauseButton()
+    }
+    
+    @IBAction func didTapStopButton(_ sender: UIButton) {
+        delegate?.didTapStopButton()
+    }
+    
+    func add(){
+//        let session = RunningSessionViewController(nibName: "RunningSessionViewController", bundle: nil)
+        if let session = self.session {
+            delegate = session as? TrainingSessionDelegate
+            session.view.frame = trainingSessionView.frame
+            view.addSubview(session.view)
+            addChild(session)
+        }
+    }
+    
+    
 
     /*
     // MARK: - Navigation

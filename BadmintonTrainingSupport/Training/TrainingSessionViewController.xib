@@ -34,6 +34,9 @@
                             <state key="normal" title="Button" image="play.circle.fill" catalog="system">
                                 <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="80"/>
                             </state>
+                            <connections>
+                                <action selector="didTapPlayButton:" destination="-1" eventType="touchUpInside" id="ubE-3C-W4k"/>
+                            </connections>
                         </button>
                         <button opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pnr-se-xfk">
                             <rect key="frame" x="177" y="0.0" width="98" height="91"/>
@@ -42,6 +45,9 @@
                             <state key="normal" title="Button" image="stop.circle.fill" catalog="system">
                                 <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="80"/>
                             </state>
+                            <connections>
+                                <action selector="didTapStopButton:" destination="-1" eventType="touchUpInside" id="sqe-Gf-DSV"/>
+                            </connections>
                         </button>
                     </subviews>
                 </stackView>
@@ -52,6 +58,9 @@
                     <state key="normal" title="Button" image="pause.circle.fill" catalog="system">
                         <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="80"/>
                     </state>
+                    <connections>
+                        <action selector="didTapPauseButton:" destination="-1" eventType="touchUpInside" id="L4n-YV-Iks"/>
+                    </connections>
                 </button>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ulO-rv-L5T">
                     <rect key="frame" x="0.0" y="279" width="414" height="394"/>

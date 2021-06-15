@@ -18,6 +18,7 @@ class RunningSessionViewController: UIViewController {
     @IBOutlet weak var rightMeasurementLabel: UILabel!
     @IBOutlet weak var rightCounterLabel: UILabel!
     @IBOutlet weak var rightUnitLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         let dcf = DateComponentsFormatter()
@@ -42,4 +43,20 @@ class RunningSessionViewController: UIViewController {
     }
     */
 
+}
+
+extension RunningSessionViewController: TrainingSessionDelegate {
+    func didTapPlayButton() {
+        print("play")
+    }
+    
+    func didTapStopButton() {
+        print("stop")
+    }
+    
+    func didTapPauseButton() {
+        print("pause")
+    }
+    
+    
 }

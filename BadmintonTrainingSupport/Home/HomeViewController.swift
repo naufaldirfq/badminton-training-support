@@ -15,6 +15,11 @@ class HomeViewController: UIViewController {
     
     var userData: UserProfile?
     
+    private var trainingCategory: [TrainingCategory] = []
+    var trainings: [Training] = []
+    private var trainingCategoryCollectionRef: CollectionReference!
+    private var trainingsCollectionRef: CollectionReference!
+    
     @IBOutlet var tableView: UITableView!
     
     override func viewDidLoad() {
@@ -22,6 +27,7 @@ class HomeViewController: UIViewController {
         setupUserData()
         setupTableView()
         setupStickyButton()
+        initModel()
     }
     
     
@@ -74,6 +80,45 @@ class HomeViewController: UIViewController {
         }
     }
     
+    func initModel() {
+        trainingCategoryCollectionRef = Firestore.firestore().collection("training_category")
+        trainingCategoryCollectionRef.getDocuments { (snapshot, error) in
+            if let err = error {
+                debugPrint("Error fetching docs: \(err)")
+            } else {
+                guard let snap = snapshot else { return }
+                for document in snap.documents {
+                    let data = document.data()
+                    self.trainingsCollectionRef = Firestore.firestore().collection("training_category").document(document.documentID).collection("trainings")
+                    self.trainingsCollectionRef.getDocuments { (snapshot, error) in
+                        if let err = error {
+                            debugPrint("Error fetching docs: \(err)")
+                        } else {
+                            guard let snap = snapshot else { return }
+                            for document in snap.documents {
+                                let data = document.data()
+                                let trainingName = data["name"] as! String
+                                let trainingDesc = data["description"] as! String
+                                let trainingImg = data["image_url"] as! String
+                                let newTrainings = Training(name: trainingName, description: trainingDesc, image: trainingImg)
+                                self.trainings.append(newTrainings)
+                                if self.trainings.count == 4 {
+                                    DispatchQueue.main.async {
+                                        self.tableView.reloadData()
+                                    }
+                                }
+                            }
+                        }
+                        let category = data["name"] as! String
+                        let newTrainingCategory = TrainingCategory(name: category, trainings: self.trainings)
+                        self.trainingCategory.append(newTrainingCategory)
+                    }
+                    
+                }
+            }
+        }
+    }
+    
     @objc func userPhotoTapped() {
         let vc = ProfileViewController()
         self.navigationController?.pushViewController(vc, animated: true)
@@ -112,7 +157,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
             }
         case 1:
             if let cell = tableView.dequeueReusableCell(withIdentifier: TrainingCollectionCell.identifier) as? TrainingCollectionCell {
-                cell.configure(name: "Recommendation", with: DummyData.Trainings)
+                cell.configure(name: "Recommendation", with: self.trainings)
                 cell.delegate = self
                 return cell
             }
