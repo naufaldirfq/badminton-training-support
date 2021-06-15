@@ -25,3 +25,10 @@ struct Images {
 struct Colors {
     static let AccentColor = UIColor(named: "AccentColor")!
 }
+
+struct MSstore {
+    static let Set = "0"
+    static let Time = "00/00/00"
+    static let ScoreTeammate = "0"
+    static let ScoreOpponent = "0"
+}
