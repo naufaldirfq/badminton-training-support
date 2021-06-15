@@ -35,6 +35,6 @@ struct Sizes {
     }
     
     struct  MatchSession {
-        static let Height: CGFloat = 670
+        static let Height: CGFloat = 666
     }
 }

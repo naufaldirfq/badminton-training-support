@@ -50,15 +50,16 @@ class MatchSessionTableViewCell: UITableViewCell {
     }
   
     public func configure(with match: Match) {
-        teamALabel.text = match.player1 + "\n" + match.player2
-        teamBLabel.text = match.player3 + "\n" + match.player4
-    
+        teamALabel.text = match.player1 + "\n" + match.player3
+        teamBLabel.text = match.player2 + "\n" + match.player4
+        
     }
     
     override func awakeFromNib() {
         super.awakeFromNib()
         msImage.image = image
         imageStartStop.image = #imageLiteral(resourceName: "􀊖")
+        setupStyles()
         
         self.scoreTeamMate.delegate = self
         self.scoreOpponent.delegate = self
@@ -176,13 +177,22 @@ class MatchSessionTableViewCell: UITableViewCell {
     
     func saveToDatabase() {
         //MARK: Save to Database
-        //Validasi if next set lebih besar dari 3
         print("Set Ke :\(saveSetData ?? "SET 1")")
         print(saveTimeToDatabase ?? "errorSaveTime")
         //print(savePickerPick ?? "errorSavePicker")
         print("Our Score: \(savePickerPickScore1 ?? "Error Score")")
         print("Opponent Score: \(savePickerPickScore2 ?? "Error Score")")
         
+        let defaults = UserDefaults.standard
+        defaults.setValue(saveSetData, forKey: MSstore.Set)
+        defaults.setValue(saveTimeToDatabase, forKey: MSstore.Time)
+        defaults.setValue(savePickerPickScore1, forKey: MSstore.ScoreTeammate)
+        defaults.setValue(savePickerPickScore2, forKey: MSstore.ScoreOpponent)
+    }
+    
+    func setupStyles(){
+        buttonNextSet.layer.cornerRadius = 10.0
+        msImage.layer.cornerRadius = 10.0
     }
 }
 
