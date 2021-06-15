@@ -16,20 +16,20 @@ struct Training: Codable {
         return UIImage(named: image)
     }
     
-    var uiSession: UIViewController? {
+    var uiTarget: UIViewController? {
         switch name {
         case "Running":
-            return RunningTargetViewController()
+            return RunningTargetViewController(nibName: "RunningTargetViewController", bundle: nil)
         default:
             //TODO: tambah target view controller lain
             return nil
         }
     }
     
-    var uiTarget: UIViewController? {
+    var uiSession: UIViewController? {
         switch name {
         case "Running":
-            return TrainingSessionViewController()
+            return RunningSessionViewController(nibName: "RunningSessionViewController", bundle: nil)
         default:
             //TODO: tambah target view controller lain
             return nil

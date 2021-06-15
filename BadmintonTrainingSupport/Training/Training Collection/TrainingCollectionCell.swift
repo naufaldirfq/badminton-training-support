@@ -45,10 +45,12 @@ class TrainingCollectionCell: UITableViewCell {
     }
     
     public func configure(name: String, with trainings: [Training], width: CGFloat? = nil) {
+        print(trainings)
         self.name = name
         self.trainings.append(contentsOf: trainings)
         self.width = width ?? self.width
         loadView()
+        collectionView.reloadData()
     }
     
     func loadView() {
@@ -82,7 +84,7 @@ extension TrainingCollectionCell: UICollectionViewDelegate, UICollectionViewData
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if let cell = collectionView.cellForItem(at: indexPath) as? TrainingCell {
             
-            let training = DummyData.Trainings[indexPath.row]
+            let training = trainings[indexPath.row]
             setTarget(with: training)
             
             self.delegate?.collectionView(trainingCell: cell, index: indexPath.item, didTappedInTableViewCell: self)
@@ -94,7 +96,8 @@ extension TrainingCollectionCell: BottomCardViewDelegate, UIViewControllerTransi
     
     func bottomCardView(didTappedStartFor training: Training) {
         self.delegate?.dismiss(animated: true, completion: nil)
-        let vc = training.uiSession!
+        let vc = TrainingSessionViewController()
+        vc.session = training.uiSession
         self.delegate?.navigationController?.pushViewController(vc, animated: true)
     }
     

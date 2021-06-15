@@ -33,7 +33,7 @@ class BottomCardViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
-        if let training = self.training, let targetVC = training.uiSession {
+        if let training = self.training, let targetVC = training.uiTarget {
             targetVC.view.frame = targetView.frame
             view.addSubview(targetVC.view)
             addChild(targetVC)
