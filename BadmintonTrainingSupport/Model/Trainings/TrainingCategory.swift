@@ -7,8 +7,8 @@
 
 import UIKit
 
-struct TrainingCategory {
-    let name: String
+struct TrainingCategory: Codable{
+    var name: String
     var trainings: [Training] = []
     
     init(name: String, trainings: [Training]) {

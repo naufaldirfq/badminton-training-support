@@ -94,7 +94,7 @@ extension TrainingCollectionCell: BottomCardViewDelegate, UIViewControllerTransi
     
     func bottomCardView(didTappedStartFor training: Training) {
         self.delegate?.dismiss(animated: true, completion: nil)
-        let vc = training.sessionVC
+        let vc = training.uiSession!
         self.delegate?.navigationController?.pushViewController(vc, animated: true)
     }
     

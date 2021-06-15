@@ -10,24 +10,12 @@ import UIKit
 struct DummyData {
    
     static let Trainings = [
-        Training(name: "Running", description: "Pros run 2 km every day", targetVC: RunningTargetViewController(nibName: "RunningTargetViewController", bundle: nil)),
-        Training(name: "Skipping", description: "Pros skip 1000 times every day"),
-        Training(name: "Push Up", description: "Pros push up 100 times every day"),
-        Training(name: "Multi Shuttle", description: "Pros hit 1000 shuttles every day"),
-        Training(name: "Shadow Badminton", description: "Pros do 30 minutes of shadow badminton every day"),
-        Training(name: "Serve", description: "Pros serve 100 shuttle every day")
-    ]
-    
-    static let PhysicalTrainings = [
-        Training(name: "Running", description: "Pros run 2 km every day"),
-        Training(name: "Skipping", description: "Pros skip 1000 times every day"),
-        Training(name: "Push Up", description: "Pros push up 100 times every day")
-    ]
-    
-    static let TechnicalTrainings = [
-        Training(name: "Multi Shuttle", description: "Pros hit 1000 shuttles every day"),
-        Training(name: "Shadow Badminton", description: "Pros do 30 minutes of shadow badminton every day"),
-        Training(name: "Serve", description: "Pros serve 100 shuttle every day")
+        Training(name: "Running", description: "Pros run 2 km every day", image: ""),
+        Training(name: "Skipping", description: "Pros skip 1000 times every day", image: ""),
+        Training(name: "Push Up", description: "Pros push up 100 times every day", image: ""),
+        Training(name: "Multi Shuttle", description: "Pros hit 1000 shuttles every day", image: ""),
+        Training(name: "Shadow Badminton", description: "Pros do 30 minutes of shadow badminton every day", image: ""),
+        Training(name: "Serve", description: "Pros serve 100 shuttle every day", image: "")
     ]
     
     static let MatchHistory = [
@@ -41,11 +29,6 @@ struct DummyData {
 , trainingResult: ["1 Km","20 min"], trainingMeasurement: ["Jarak","waktu"]),
                                   TrainingSession(trainingName: "Larii", trainingDate: Date().addingTimeInterval(-17000), trainingResult: ["1 m/s","2 Sets"], trainingMeasurement: ["Laju","Reps"]),
                                   TrainingSession(trainingName: "Larii", trainingDate: Date().addingTimeInterval(-20000), trainingResult: ["1 m/s","2 kilo"], trainingMeasurement: ["Laju","Jarak"])]
-    
-    static let Physical = TrainingCategory(name: "Physical", trainings: PhysicalTrainings)
-    static let Technical = TrainingCategory(name: "Technical", trainings: TechnicalTrainings)
-    
-    static let Categories = [Physical, Technical]
     
     static let Profile = UserProfile(name: "Hanif Fauzi")
     

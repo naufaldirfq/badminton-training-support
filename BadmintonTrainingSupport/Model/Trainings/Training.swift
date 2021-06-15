@@ -7,18 +7,28 @@
 
 import UIKit
 
-struct Training {
-    let name: String
-    let description: String
-    let image: UIImage
-    let sessionVC: UIViewController
-    let targetVC: UIViewController?
+struct Training: Codable {
+    var name: String
+    var description: String
+    var image: String
     
-    init(name: String, description: String, image: UIImage? = nil, targetVC: UIViewController? = nil, sessionVC: UIViewController? = nil) {
+    var uiImage: UIImage? {
+        return UIImage(named: image)
+    }
+    
+    var uiSession: UIViewController? {
+        switch name {
+        case "Running":
+            return RunningTargetViewController()
+        default:
+            //TODO: tambah target view controller lain
+            return RunningTargetViewController()
+        }
+    }
+    
+    init(name: String, description: String, image: String) {
         self.name = name
         self.description = description
-        self.image = image ?? Images.defaultTraining
-        self.targetVC = targetVC
-        self.sessionVC = sessionVC ?? TrainingSessionViewController()
+        self.image = image
     }
 }
