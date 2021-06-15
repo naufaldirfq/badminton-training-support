@@ -62,6 +62,7 @@
 		7EE3CD3426774AED00791E02 /* RunningTargetViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7EE3CD3226774AED00791E02 /* RunningTargetViewController.xib */; };
 		7EF6271926710DBF00A7D612 /* BottomCardPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EF6271826710DBF00A7D612 /* BottomCardPresentationController.swift */; };
 		7EF6271B26710E3E00A7D612 /* BottomCardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7EF6271A26710E3E00A7D612 /* BottomCardView.xib */; };
+		B8B6CD5F2678924A006E8362 /* FirestoreReferenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B6CD5E2678924A006E8362 /* FirestoreReferenceManager.swift */; };
 		FAE29489CC97B62A1D41D3B4 /* Pods_BadmintonTrainingSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAF697AAC488A05F9B529E0A /* Pods_BadmintonTrainingSupport.framework */; };
 /* End PBXBuildFile section */
 
@@ -126,6 +127,7 @@
 		7EF6271A26710E3E00A7D612 /* BottomCardView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BottomCardView.xib; sourceTree = "<group>"; };
 		A3B993DF360B7C68E59C73AF /* Pods-BadmintonTrainingSupport.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BadmintonTrainingSupport.debug.xcconfig"; path = "Target Support Files/Pods-BadmintonTrainingSupport/Pods-BadmintonTrainingSupport.debug.xcconfig"; sourceTree = "<group>"; };
 		B86CBDA626725E95007D2995 /* BadmintonTrainingSupport.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BadmintonTrainingSupport.entitlements; sourceTree = "<group>"; };
+		B8B6CD5E2678924A006E8362 /* FirestoreReferenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreReferenceManager.swift; sourceTree = "<group>"; };
 		FAF697AAC488A05F9B529E0A /* Pods_BadmintonTrainingSupport.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BadmintonTrainingSupport.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -265,6 +267,7 @@
 				7EBF9544266B78E40035D9C8 /* Constants.swift */,
 				7EBF954E266B82850035D9C8 /* DummyData.swift */,
 				7E4FB055266BC1C200D0CEE2 /* Sizes.swift */,
+				B8B6CD5E2678924A006E8362 /* FirestoreReferenceManager.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -504,6 +507,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B8B6CD5F2678924A006E8362 /* FirestoreReferenceManager.swift in Sources */,
 				60201DAF2671EB7A00E0E7E7 /* TrainingSession.swift in Sources */,
 				7EBF954F266B82850035D9C8 /* DummyData.swift in Sources */,
 				7EBF9528266B5DB40035D9C8 /* ProfileViewController.swift in Sources */,

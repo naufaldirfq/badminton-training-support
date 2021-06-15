@@ -22,7 +22,17 @@ struct Training: Codable {
             return RunningTargetViewController()
         default:
             //TODO: tambah target view controller lain
-            return RunningTargetViewController()
+            return nil
+        }
+    }
+    
+    var uiTarget: UIViewController? {
+        switch name {
+        case "Running":
+            return TrainingSessionViewController()
+        default:
+            //TODO: tambah target view controller lain
+            return nil
         }
     }
     
