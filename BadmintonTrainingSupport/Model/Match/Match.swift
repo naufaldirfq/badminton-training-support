@@ -17,9 +17,11 @@ struct Match {
     var player3: String
     var player4: String
     var matchType: MatchType
+    var matchDate: Date
     var matchSet: Int
     var teamScoreA: [Int]
     var teamScoreB: [Int]
+    var teams: [Team]
     
     init(player1: String, player2: String) {
         self.player1 = player1
@@ -52,8 +54,19 @@ struct Match {
         self.matchType = .double
         self.teamScoreA = teamScoreA
         self.teamScoreB = teamScoreB
+        
     }
-    
+    init(player1: String, player2: String, player3: String, player4: String, matchSet: Int, teamScoreA:[Int], teamScoreB:[Int], teams: [Team]) {
+        self.player1 = player1
+        self.player2 = player2
+        self.player3 = player3
+        self.player4 = player4
+        self.matchSet = matchSet
+        self.matchType = .double
+        self.teamScoreA = teamScoreA
+        self.teamScoreB = teamScoreB
+        self.teams = teams
+    }
     func getEachMatchStatus() -> [Int] {
         var matchStatus: [Int] = []
         for n in 0..<matchSet {
