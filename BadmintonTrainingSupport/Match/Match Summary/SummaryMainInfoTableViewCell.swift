@@ -15,18 +15,25 @@ class SummaryMainInfoTableViewCell: UITableViewCell {
     @IBOutlet weak var rightInfoLabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
+        selectionStyle = .none
         // Initialization code
     }
-    static let identifier = "SummaryMainInfoTableViewCell"
+    static let identifier = Identifiers.SummaryMainInfoCell
     
     static func nib() -> UINib{
-        return UINib(nibName: identifier, bundle: nil)
+        return UINib(nibName:  Identifiers.SummaryMainInfoCell, bundle: nil)
     }
     func configureCell(leftInfo: String, leftTitle: String, rightInfo:String, rightTitle:String){
         leftTitleLabel.text = leftTitle
         leftInfoLabel.text = leftInfo
         rightInfoLabel.text = rightInfo
         rightTItleLabel.text = rightTitle
+    }
+    func configureCell(leftInfo: String, leftTitle: String){
+        leftTitleLabel.text = leftTitle
+        leftInfoLabel.text = leftInfo
+        rightInfoLabel.isHidden = true
+        rightTItleLabel.isHidden = true
     }
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)

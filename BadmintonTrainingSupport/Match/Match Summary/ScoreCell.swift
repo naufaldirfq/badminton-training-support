@@ -14,19 +14,23 @@ class ScoreCell: UITableViewCell {
     @IBOutlet weak var score3Label: UILabel!
     @IBOutlet weak var TeamLabel: UILabel!
     override func awakeFromNib() {
+        
         super.awakeFromNib()
+        selectionStyle = .none
         // Initialization code
     }
-    static let identifier = "ScoreCell"
+    static let identifier = Identifiers.ScoreCell
     static func nib() -> UINib{
-        return UINib(nibName: identifier, bundle: nil)
+        return UINib(nibName: Identifiers.ScoreCell, bundle: nil)
     }
     func configure(team : Team)->(){
         TeamLabel.text = ""
-        for n in 0..<team.players.count {
-            TeamLabel.text = TeamLabel.text! + "\n" + team.players[n]
-            
+
+        TeamLabel.text = team.players[0]
+        if team.players.count == 2 {
+            TeamLabel.text = TeamLabel.text! + "\n" + team.players[1]
         }
+        
         if team.teamScore.count >= 1 {
             score1Label.text = String(team.teamScore[0])
             if team.teamScore.count >= 2 {

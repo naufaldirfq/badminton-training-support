@@ -8,11 +8,12 @@
 import UIKit
 
 class ScoreTableCell: UITableViewCell {
-    var team :[Team] = []
+    var team :[Team] = DummyData.Teams
     @IBOutlet weak var headerView: UIView!
     @IBOutlet weak var scoreTable: UITableView!
     override func awakeFromNib() {
         super.awakeFromNib()
+        selectionStyle = .none
         initTableView()
         
         // Initialization code
@@ -23,7 +24,11 @@ class ScoreTableCell: UITableViewCell {
         self.scoreTable.register(ScoreCell.nib() , forCellReuseIdentifier: ScoreCell.identifier)
     }
     func configure(match: Match){
-        self.team = match.teams
+        
+    }
+    static let identifier = Identifiers.ScoreTabelCell
+    static func nib() -> UINib{
+        return UINib(nibName: Identifiers.ScoreTabelCell, bundle: nil)
     }
     
 }
