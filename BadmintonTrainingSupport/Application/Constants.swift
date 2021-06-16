@@ -21,6 +21,14 @@ struct Identifiers {
     static let FinishMatchCell = "FinishMatchCell"
 }
 
+struct Formatter {
+    static var date: DateFormatter {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "d MMM yyyy"
+        return formatter
+    }
+}
+
 struct Images {
     static let defaultTraining = UIImage(systemName: "photo")!
     static let defaultUser = UIImage(systemName: "person.circle")!

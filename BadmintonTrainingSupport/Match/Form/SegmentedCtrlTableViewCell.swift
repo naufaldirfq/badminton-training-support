@@ -10,6 +10,7 @@ import UIKit
 protocol SegmentedCtrlDelegate: UIViewController {
     func singleMatch(with match: Match)
     func doubleMatch(with match: Match)
+    func segmentedCtrl(with text: String, didFinishEditingFor textField: MatchFormTextField)
 }
 
 class SegmentedCtrlTableViewCell: UITableViewCell {
@@ -93,19 +94,50 @@ class SegmentedCtrlTableViewCell: UITableViewCell {
     
     @IBAction func singleStartButton(_ sender: UIButton) {
         if let one = singleFieldOne.text, let two = singleFieldTwo.text {
-            let match = Match(player1: one, player2: two)
+            let players: [String] = [one, two]
+            let match = Match(type: .single, with: players)
             delegate?.singleMatch(with: match)
         }
     }
     
     @IBAction func doubleStartButton(_ sender: UIButton) {
         if let one = doubleFieldOne.text, let two = doubleFieldTwo.text, let three = doubleFieldThree.text, let four = doubleFieldFour.text {
-            let match = Match(player1: one, player2: two, player3: three, player4: four)
+            let players: [String] = [one, two, three, four]
+            let match = Match(type: .double, with: players)
             delegate?.doubleMatch(with: match)
         }
     }
 }
 
 extension SegmentedCtrlTableViewCell: UITextFieldDelegate {
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        if let text = textField.text {
+            var playerField: MatchFormTextField? {
+                switch textField {
+                case singleFieldOne:
+                    return .playerA1
+                case singleFieldTwo:
+                    return .playerB1
+                case doubleFieldOne:
+                    return .playerA1
+                case doubleFieldTwo:
+                    return .playerA2
+                case doubleFieldThree:
+                    return .playerB1
+                case doubleFieldFour:
+                    return .playerB2
+                default:
+                    return nil
+                }
+            }
+            if let field = playerField {
+                delegate?.segmentedCtrl(with: text, didFinishEditingFor: field)
+            }
+        }
+    }
     
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool{
+        textField.resignFirstResponder()
+        return true
+    }
 }

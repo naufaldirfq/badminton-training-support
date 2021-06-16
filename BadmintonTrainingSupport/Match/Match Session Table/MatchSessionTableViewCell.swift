@@ -50,9 +50,8 @@ class MatchSessionTableViewCell: UITableViewCell {
     }
   
     public func configure(with match: Match) {
-        teamALabel.text = match.player1 + "\n" + match.player3
-        teamBLabel.text = match.player2 + "\n" + match.player4
-        
+        teamALabel.text = match.teams[0].playerNames
+        teamBLabel.text = match.teams[1].playerNames
     }
     
     override func awakeFromNib() {
@@ -65,7 +64,10 @@ class MatchSessionTableViewCell: UITableViewCell {
         self.scoreOpponent.delegate = self
         
         //MARK: Picker Data
-        pickerData = ["0","1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11","12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23"]
+        pickerData = []
+        for i in 0...23 {
+            pickerData.append(String(i))
+        }
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

@@ -11,29 +11,18 @@ class NMImageTableViewCell: UITableViewCell {
 
     
     @IBOutlet weak var newMatchImg: UIImageView!
-    var image: UIImage = Images.defaultTraining
+    var image: UIImage = #imageLiteral(resourceName: "new_match")
     
     static let identifier = "NMImageTableViewCell"
     
     static func nib() -> UINib{
         return UINib(nibName: identifier, bundle: nil)
     }
-/*
-    public func configure(with imgName: Training){
-        //MARK: image
-        image = imgName.image
-        loadView()
-    }
-    
-    func loadView() {
-        newMatchImg.image = image
-    }
- */
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
         newMatchImg.image = image
+        newMatchImg.layer.cornerRadius = 10.0
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

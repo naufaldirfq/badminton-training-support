@@ -18,14 +18,6 @@ struct DummyData {
         Training(name: "Serve", description: "Pros serve 100 shuttle every day", image: "")
     ]
     
-    static let MatchHistory = [
-        Match(player1: "you", player2: "ganteng", player3: "jelek", player4: "jago", matchSet: 2, teamScoreA: [21,21], teamScoreB: [0,0]),
-        Match(player1: "you", player2: "xiix", player3: "xuxu", player4: "xaxa", matchSet: 3, teamScoreA: [19,21,0], teamScoreB: [21,0,21]),
-        Match(player1: "you", player2: "hehe", player3: "huhu", player4: "haha", matchSet: 2, teamScoreA: [19,21], teamScoreB: [21,0])
-        
-    ]
-    static let Teams = [Team(players: ["Hanif","Ades"], teamScore: [21,3,4]) , Team(players: ["Jojo","Jonda"], teamScore: [0,21,22])]
-    
     static let TrainingHistory = [TrainingSession(trainingName: "Larii", trainingDate: Date().addingTimeInterval(-15000)
 , trainingResult: ["1 Km","20 min"], trainingMeasurement: ["Jarak","waktu"]),
                                   TrainingSession(trainingName: "Larii", trainingDate: Date().addingTimeInterval(-17000), trainingResult: ["1 m/s","2 Sets"], trainingMeasurement: ["Laju","Reps"]),

@@ -1,0 +1,11 @@
+name: BadmintonTrainingSupport
+options:
+  bundleIdPrefix: com.jfebrian.BadmintonTrainingSupport
+  deploymentTarget:
+    iOS: 14.5
+targets:
+  BadmintonTrainingSupport:
+    type: application
+    platform: iOS
+    sources:
+      - path: BadmintonTrainingSupport
