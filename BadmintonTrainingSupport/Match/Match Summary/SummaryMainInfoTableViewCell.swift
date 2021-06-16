@@ -10,7 +10,7 @@ import UIKit
 class SummaryMainInfoTableViewCell: UITableViewCell {
 
     @IBOutlet weak var leftTitleLabel: UILabel!
-    @IBOutlet weak var rightTItleLabel: UILabel!
+    @IBOutlet weak var rightTitleLabel: UILabel!
     @IBOutlet weak var leftInfoLabel: UILabel!
     @IBOutlet weak var rightInfoLabel: UILabel!
     override func awakeFromNib() {
@@ -23,22 +23,20 @@ class SummaryMainInfoTableViewCell: UITableViewCell {
     static func nib() -> UINib{
         return UINib(nibName:  Identifiers.SummaryMainInfoCell, bundle: nil)
     }
-    func configureCell(leftInfo: String, leftTitle: String, rightInfo:String, rightTitle:String){
+    func configureCell(leftInfo: String, leftTitle: String, rightInfo:String? = nil, rightTitle:String? = nil){
         leftTitleLabel.text = leftTitle
         leftInfoLabel.text = leftInfo
-        rightInfoLabel.text = rightInfo
-        rightTItleLabel.text = rightTitle
+        if rightTitle != "" {
+            rightInfoLabel.text = rightInfo == "" ? "N/A" : rightInfo
+            rightTitleLabel.text = rightTitle
+        } else {
+            rightInfoLabel.isHidden = true
+            rightTitleLabel.isHidden = true
+        }
     }
-    func configureCell(leftInfo: String, leftTitle: String){
-        leftTitleLabel.text = leftTitle
-        leftInfoLabel.text = leftInfo
-        rightInfoLabel.isHidden = true
-        rightTItleLabel.isHidden = true
-    }
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
     
 }

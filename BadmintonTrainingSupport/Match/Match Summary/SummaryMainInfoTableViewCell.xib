@@ -41,13 +41,13 @@
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UXZ-UY-qXR">
                                         <rect key="frame" x="0.0" y="0.0" width="171.5" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bLs-23-sa2">
                                         <rect key="frame" x="186.5" y="0.0" width="171.5" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -68,7 +68,7 @@
                 <outlet property="leftInfoLabel" destination="UXZ-UY-qXR" id="Gx7-lg-aVV"/>
                 <outlet property="leftTitleLabel" destination="Abg-fQ-fy4" id="DCe-aY-s9y"/>
                 <outlet property="rightInfoLabel" destination="bLs-23-sa2" id="wTq-o8-3W7"/>
-                <outlet property="rightTItleLabel" destination="Wbw-m8-gug" id="Wyg-yA-uHV"/>
+                <outlet property="rightTitleLabel" destination="Wbw-m8-gug" id="Wyg-yA-uHV"/>
             </connections>
             <point key="canvasLocation" x="137.68115942028987" y="103.79464285714285"/>
         </tableViewCell>

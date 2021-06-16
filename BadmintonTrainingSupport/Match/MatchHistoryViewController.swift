@@ -10,7 +10,9 @@ import UIKit
 class MatchHistoryViewController: UIViewController {
 
     @IBOutlet weak var matchHistoryTableView: UITableView!
-    let matches = DummyData.MatchHistory
+    
+    let matches: [Match] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         initTableView()

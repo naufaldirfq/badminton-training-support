@@ -18,15 +18,14 @@ class MatchHistoryCell: UITableViewCell {
     }
 
     public func configure(with match: Match) {
-        teamALabel.text = match.player1 + "\n" + match.player2
-        teamBLabel.text = match.player3 + "\n" + match.player4
-        let matchSet = NSAttributedString(string: "\n" + String( match.matchSet) + " sets")
-        let mystring = match.getOverallMatchStatus()
-        mystring.append(matchSet)
-        matchSummaryLabel.attributedText = mystring
-        
-        
+        teamALabel.text = match.teams[0].playerNames
+        teamBLabel.text = match.teams[1].playerNames
+        let matchStatus = match.matchStatus
+        let numberOfSets = NSAttributedString(string: "\n\(match.numberOfSets) Sets")
+        matchStatus.append(numberOfSets)
+        matchSummaryLabel.attributedText = matchStatus
     }
+    
     static let identifier = Identifiers.MatchHistoryCell
     
     static func nib() -> UINib {

@@ -6,95 +6,80 @@
 //
 
 import UIKit
-enum MatchType {
-    case single
-    case double
+
+enum MatchType: String {
+    case single = "Single"
+    case double = "Double"
 }
 
-struct Match {
-    var player1: String
-    var player2: String
-    var player3: String
-    var player4: String
-    var matchType: MatchType
-
-    var matchSet: Int
-    var teamScoreA: [Int]
-    var teamScoreB: [Int]
+class Match {
     
-    init(player1: String, player2: String) {
-        self.player1 = player1
-        self.player2 = player2
-        self.player3 = ""
-        self.player4 = ""
-        self.matchType = .single
-        self.matchSet = 1
-        self.teamScoreA = [0]
-        self.teamScoreB = [0]
+    var date = Date()
+    var place: String
+    var description: String
+    
+    var type: MatchType
+    var teams: [Team]
+    var durations: [Int]
+  
+    var numberOfSets: Int {
+        return teams[0].teamScore.count
     }
     
-    init(player1: String, player2: String, player3: String, player4: String) {
-        self.player1 = player1
-        self.player2 = player2
-        self.player3 = player3
-        self.player4 = player4
-        self.matchType = .double
-        self.matchSet = 1
-        self.teamScoreA = [0]
-        self.teamScoreB = [0]
+    var durationString: String {
+        var totalDuration = 0
+        for duration in durations {
+            totalDuration += duration
+        }
+        var hours: Int { return totalDuration / 3600 }
+        var minutes: Int { return (totalDuration % 3600) / 60 }
+        var seconds: Int { return (totalDuration % 60) }
+        var string = ""
+        if hours > 0 {
+            string.append("\(String(format: "%02d", hours)):")
+        }
+        string.append("\(String(format: "%02d", minutes)):\(String(format: "%02d", seconds))")
+        return string
     }
     
-    init(player1: String, player2: String, player3: String, player4: String, matchSet: Int, teamScoreA:[Int], teamScoreB:[Int]) {
-        self.player1 = player1
-        self.player2 = player2
-        self.player3 = player3
-        self.player4 = player4
-        self.matchSet = matchSet
-        self.matchType = .double
-        self.teamScoreA = teamScoreA
-        self.teamScoreB = teamScoreB
-        
-    }
-    init(player1: String, player2: String, player3: String, player4: String, matchSet: Int, teamScoreA:[Int], teamScoreB:[Int], teams: [Team]) {
-        self.player1 = player1
-        self.player2 = player2
-        self.player3 = player3
-        self.player4 = player4
-        self.matchSet = matchSet
-        self.matchType = .double
-        self.teamScoreA = teamScoreA
-        self.teamScoreB = teamScoreB
-
-    }
-    func getEachMatchStatus() -> [Int] {
-        var matchStatus: [Int] = []
-        for n in 0..<matchSet {
-            if teamScoreA[n] > teamScoreB[n] {
-                matchStatus.append(1)
+    var userMatchWon: Double {
+        var matchWon: Double = 0
+        for n in 0 ..< numberOfSets {
+            if teams[0].teamScore[n] > teams[1].teamScore[n] {
+                matchWon += 1
             }else{
-                matchStatus.append(0)
+                matchWon += 1
             }
         }
-        return matchStatus
+        return matchWon
     }
     
-    func getOverallMatchStatus() -> NSMutableAttributedString {
-        let matchStatus = getEachMatchStatus()
-        var totalMatch = 0.0
-        for n in 0..<matchSet {
-            totalMatch = totalMatch + Double(matchStatus[n])
-        }
-        if  totalMatch > Double(matchSet)/2{
+    var matchStatus: NSMutableAttributedString {
+        if userMatchWon > Double(numberOfSets)/2{
             let myAttribute = [ NSAttributedString.Key.foregroundColor: UIColor.green ]
             return NSMutableAttributedString(string: "W", attributes: myAttribute)
-        }else{
-            if totalMatch < Double(matchSet)/2  {
-                let myAttribute = [ NSAttributedString.Key.foregroundColor: UIColor.red ]
-                return NSMutableAttributedString(string: "L", attributes: myAttribute)
-            }else{
-                let myAttribute = [ NSAttributedString.Key.foregroundColor: UIColor.black ]
-                return NSMutableAttributedString(string: "D", attributes: myAttribute)
-            }
+        } else if userMatchWon < Double(numberOfSets)/2  {
+            let myAttribute = [ NSAttributedString.Key.foregroundColor: UIColor.red ]
+            return NSMutableAttributedString(string: "L", attributes: myAttribute)
+        } else {
+            let myAttribute = [ NSAttributedString.Key.foregroundColor: UIColor.black ]
+            return NSMutableAttributedString(string: "D", attributes: myAttribute)
         }
+    }
+    
+    init(type: MatchType, with players:[String], place: String? = nil, description: String? = nil){
+        teams = []
+        durations = []
+        self.type = type
+        switch type {
+        case .single:
+            teams.append(Team(players: [players[0]], teamScore: []))
+            teams.append(Team(players: [players[1]], teamScore: []))
+        case .double:
+            teams.append(Team(players: [players[0],players[2]], teamScore: []))
+            teams.append(Team(players: [players[1],players[3]], teamScore: []))
+        }
+        self.place = place ?? ""
+        self.description = description ?? ""
     }
 }

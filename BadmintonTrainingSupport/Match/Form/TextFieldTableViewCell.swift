@@ -7,10 +7,16 @@
 
 import UIKit
 
-class TextFieldTableViewCell: UITableViewCell, UITextFieldDelegate {
+protocol TextFieldCellDelegate: UIViewController {
+    func textField(with text: String, didFinishEditingFor textField: MatchFormTextField)
+}
+
+class TextFieldTableViewCell: UITableViewCell {
 
     @IBOutlet weak var labelField: UILabel!
-    @IBOutlet weak var nwField: UITextField!
+    @IBOutlet weak var textField: UITextField!
+    weak var delegate: TextFieldCellDelegate?
+    var field: MatchFormTextField?
     
     static let identifier = "TextFieldTableViewCell"
     
@@ -19,38 +25,45 @@ class TextFieldTableViewCell: UITableViewCell, UITextFieldDelegate {
     }
   
     
-    public func configure(with name: String, placeholderTemp: String) {
+    public func configure(with name: String, for field: MatchFormTextField, placeholderTemp: String? = nil, readonly: Bool = false) {
         labelField.text = name
-        nwField.attributedPlaceholder = NSAttributedString(string: placeholderTemp, attributes: [NSAttributedString.Key.foregroundColor: UIColor.lightGray, NSAttributedString.Key.font :UIFont(name: "Helvetica", size: 13)!])
+        self.field = field
+        if let placeholder = placeholderTemp {
+            textField.attributedPlaceholder = NSAttributedString(string: placeholder, attributes: [NSAttributedString.Key.foregroundColor: UIColor.lightGray, NSAttributedString.Key.font :UIFont(name: "Helvetica", size: 13)!])
+        }
+        textField.isUserInteractionEnabled = !readonly
     }
     
     public func configureDate(with currentDate: String){
-        nwField.text = currentDate
+        textField.text = currentDate
     }
     
     public func configureTemp(with dates: String){
-        nwField.text = dates
+        textField.text = dates
         
     }
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        nwField.delegate = self
-        nwField.borderStyle = UITextField.BorderStyle.roundedRect
-        //nwField.font = UIFont(name: "Lato-Bold", size: 13)
-        //SF Pro Display-Bold /
-        
-    }
-    
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool{
-        textField.resignFirstResponder()
-        print("\(nwField.text ?? "")")
-        return true
+        textField.delegate = self
+        textField.borderStyle = UITextField.BorderStyle.roundedRect
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
     }
     
+}
+
+extension TextFieldTableViewCell: UITextFieldDelegate {
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        if let text = textField.text, let field = self.field {
+            delegate?.textField(with: text, didFinishEditingFor: field)
+        }
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool{
+        textField.resignFirstResponder()
+        return true
+    }
 }

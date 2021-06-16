@@ -7,460 +7,460 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		605AABC72679C87600924817 /* FinishMatchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 605AABC52679C87600924817 /* FinishMatchCell.swift */; };
-		605AABC82679C87600924817 /* FinishMatchCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 605AABC62679C87600924817 /* FinishMatchCell.xib */; };
-		6063FE6F266E7AEE001DFEA2 /* TrainingHistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6063FE6D266E7AEE001DFEA2 /* TrainingHistoryTableViewCell.swift */; };
-		6063FE70266E7AEE001DFEA2 /* TrainingHistoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6063FE6E266E7AEE001DFEA2 /* TrainingHistoryTableViewCell.xib */; };
-		60A0CF0C267104D000CBE0E5 /* Match.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60A0CF0B267104D000CBE0E5 /* Match.swift */; };
-		60CA66ED2678680C00A75B2A /* SummaryMainInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60CA66EB2678680C00A75B2A /* SummaryMainInfoTableViewCell.swift */; };
-		60CA66EE2678680C00A75B2A /* SummaryMainInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60CA66EC2678680C00A75B2A /* SummaryMainInfoTableViewCell.xib */; };
-		60CA66F1267879FF00A75B2A /* ScoreTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60CA66EF267879FF00A75B2A /* ScoreTableCell.swift */; };
-		60CA66F2267879FF00A75B2A /* ScoreTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60CA66F0267879FF00A75B2A /* ScoreTableCell.xib */; };
-		60CA66F9267882FC00A75B2A /* ScoreCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60CA66F7267882FC00A75B2A /* ScoreCell.swift */; };
-		60CA66FA267882FC00A75B2A /* ScoreCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60CA66F8267882FC00A75B2A /* ScoreCell.xib */; };
-		60CA66FC2678864200A75B2A /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60CA66FB2678864200A75B2A /* Team.swift */; };
-		60E4112E266FE919006776BD /* MatchHistoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60E4112C266FE919006776BD /* MatchHistoryCell.swift */; };
-		60E4112F266FE919006776BD /* MatchHistoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60E4112D266FE919006776BD /* MatchHistoryCell.xib */; };
-		60F907CB267792E3005007D9 /* SkippingSessionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60F907C9267792E3005007D9 /* SkippingSessionViewController.swift */; };
-		60F907CC267792E3005007D9 /* SkippingSessionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60F907CA267792E3005007D9 /* SkippingSessionViewController.xib */; };
-		60F907D026779555005007D9 /* PushUpSessionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60F907CE26779555005007D9 /* PushUpSessionViewController.xib */; };
-		60F907D32677959F005007D9 /* MultiShuttleSessionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60F907D12677959F005007D9 /* MultiShuttleSessionViewController.swift */; };
-		60F907D42677959F005007D9 /* MultiShuttleSessionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60F907D22677959F005007D9 /* MultiShuttleSessionViewController.xib */; };
-		60F907D9267795F7005007D9 /* ShadowSessionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60F907D7267795F7005007D9 /* ShadowSessionViewController.swift */; };
-		60F907DA267795F7005007D9 /* ShadowSessionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60F907D8267795F7005007D9 /* ShadowSessionViewController.xib */; };
-		60F907DD2677964C005007D9 /* ServeSessionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60F907DB2677964C005007D9 /* ServeSessionViewController.swift */; };
-		60F907DE2677964C005007D9 /* ServeSessionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60F907DC2677964C005007D9 /* ServeSessionViewController.xib */; };
-		60FC4DD326774D0F00863CE3 /* RunningSessionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60FC4DD126774D0F00863CE3 /* RunningSessionViewController.swift */; };
-		60FC4DD426774D0F00863CE3 /* RunningSessionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60FC4DD226774D0F00863CE3 /* RunningSessionViewController.xib */; };
-		701990122677158F003FC03C /* MatchSessionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 701990102677158F003FC03C /* MatchSessionTableViewCell.swift */; };
-		701990132677158F003FC03C /* MatchSessionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 701990112677158F003FC03C /* MatchSessionTableViewCell.xib */; };
-		7096EA8C266E5D0700A9D1F6 /* TextFieldTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7096EA8A266E5D0700A9D1F6 /* TextFieldTableViewCell.swift */; };
-		7096EA8D266E5D0700A9D1F6 /* TextFieldTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7096EA8B266E5D0700A9D1F6 /* TextFieldTableViewCell.xib */; };
-		70E75CF42671BCA80043CD09 /* SegmentedCtrlTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E75CF22671BCA80043CD09 /* SegmentedCtrlTableViewCell.swift */; };
-		70E75CF52671BCA80043CD09 /* SegmentedCtrlTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 70E75CF32671BCA80043CD09 /* SegmentedCtrlTableViewCell.xib */; };
-		7E07A7A22679F12B00350A14 /* TrainingCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E07A79E2679F12B00350A14 /* TrainingCategory.swift */; };
-		7E07A7A32679F12B00350A14 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E07A79F2679F12B00350A14 /* Profile.swift */; };
-		7E07A7A42679F12B00350A14 /* Training.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E07A7A02679F12B00350A14 /* Training.swift */; };
-		7E07A7A52679F12B00350A14 /* TrainingSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E07A7A12679F12B00350A14 /* TrainingSession.swift */; };
-		7E24D00C2668A76700195496 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E24D00B2668A76700195496 /* AppDelegate.swift */; };
-		7E24D00E2668A76700195496 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E24D00D2668A76700195496 /* SceneDelegate.swift */; };
-		7E24D0152668A76A00195496 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E24D0142668A76A00195496 /* Assets.xcassets */; };
-		7E24D0182668A76A00195496 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E24D0162668A76A00195496 /* LaunchScreen.storyboard */; };
-		7E4FB051266B88B300D0CEE2 /* TrainingCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E4FB04D266B88B300D0CEE2 /* TrainingCollectionCell.swift */; };
-		7E4FB052266B88B300D0CEE2 /* TrainingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E4FB04E266B88B300D0CEE2 /* TrainingCell.swift */; };
-		7E4FB053266B88B300D0CEE2 /* TrainingCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E4FB04F266B88B300D0CEE2 /* TrainingCollectionCell.xib */; };
-		7E4FB054266B88B300D0CEE2 /* TrainingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E4FB050266B88B300D0CEE2 /* TrainingCell.xib */; };
-		7E4FB056266BC1C200D0CEE2 /* Sizes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E4FB055266BC1C200D0CEE2 /* Sizes.swift */; };
-		7E4FB05A266BCD3800D0CEE2 /* RecentsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E4FB058266BCD3800D0CEE2 /* RecentsCell.swift */; };
-		7E4FB05B266BCD3800D0CEE2 /* RecentsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E4FB059266BCD3800D0CEE2 /* RecentsCell.xib */; };
-		7E50B25F266FD1A500BAEED1 /* HomeProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E50B25D266FD1A500BAEED1 /* HomeProfileCell.swift */; };
-		7E50B260266FD1A500BAEED1 /* HomeProfileCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E50B25E266FD1A500BAEED1 /* HomeProfileCell.xib */; };
-		7E50B262266FD30100BAEED1 /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E50B261266FD30100BAEED1 /* UserProfile.swift */; };
-		7E9A03E52673774C003EFF87 /* NMImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E9A03E32673774C003EFF87 /* NMImageTableViewCell.swift */; };
-		7E9A03E62673774C003EFF87 /* NMImageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E9A03E42673774C003EFF87 /* NMImageTableViewCell.xib */; };
-		7EBF951C266B5B4E0035D9C8 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBF951A266B5B4E0035D9C8 /* HomeViewController.swift */; };
-		7EBF951D266B5B4E0035D9C8 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7EBF951B266B5B4E0035D9C8 /* HomeViewController.xib */; };
-		7EBF9520266B5D790035D9C8 /* NewTrainingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBF951E266B5D790035D9C8 /* NewTrainingViewController.swift */; };
-		7EBF9521266B5D790035D9C8 /* NewTrainingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7EBF951F266B5D790035D9C8 /* NewTrainingViewController.xib */; };
-		7EBF9524266B5DA20035D9C8 /* TrainingSessionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBF9522266B5DA20035D9C8 /* TrainingSessionViewController.swift */; };
-		7EBF9525266B5DA20035D9C8 /* TrainingSessionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7EBF9523266B5DA20035D9C8 /* TrainingSessionViewController.xib */; };
-		7EBF9528266B5DB40035D9C8 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBF9526266B5DB40035D9C8 /* ProfileViewController.swift */; };
-		7EBF9529266B5DB40035D9C8 /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7EBF9527266B5DB40035D9C8 /* ProfileViewController.xib */; };
-		7EBF952C266B5DD80035D9C8 /* TrainingHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBF952A266B5DD80035D9C8 /* TrainingHistoryViewController.swift */; };
-		7EBF952D266B5DD80035D9C8 /* TrainingHistoryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7EBF952B266B5DD80035D9C8 /* TrainingHistoryViewController.xib */; };
-		7EBF9530266B5E110035D9C8 /* NewMatchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBF952E266B5E110035D9C8 /* NewMatchViewController.swift */; };
-		7EBF9531266B5E110035D9C8 /* NewMatchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7EBF952F266B5E110035D9C8 /* NewMatchViewController.xib */; };
-		7EBF9534266B5E250035D9C8 /* MatchSessionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBF9532266B5E250035D9C8 /* MatchSessionViewController.swift */; };
-		7EBF9535266B5E250035D9C8 /* MatchSessionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7EBF9533266B5E250035D9C8 /* MatchSessionViewController.xib */; };
-		7EBF9538266B5E420035D9C8 /* MatchSummaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBF9536266B5E420035D9C8 /* MatchSummaryViewController.swift */; };
-		7EBF9539266B5E420035D9C8 /* MatchSummaryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7EBF9537266B5E420035D9C8 /* MatchSummaryViewController.xib */; };
-		7EBF953C266B5E530035D9C8 /* MatchHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBF953A266B5E530035D9C8 /* MatchHistoryViewController.swift */; };
-		7EBF953D266B5E530035D9C8 /* MatchHistoryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7EBF953B266B5E530035D9C8 /* MatchHistoryViewController.xib */; };
-		7EBF9545266B78E40035D9C8 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBF9544266B78E40035D9C8 /* Constants.swift */; };
-		7EBF954F266B82850035D9C8 /* DummyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBF954E266B82850035D9C8 /* DummyData.swift */; };
-		7EE3CD2D2677250500791E02 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7EE3CD2C2677250500791E02 /* GoogleService-Info.plist */; };
-		7EE3CD2F267730AD00791E02 /* BottomCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EE3CD2E267730AD00791E02 /* BottomCardViewController.swift */; };
-		7EE3CD3326774AED00791E02 /* RunningTargetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EE3CD3126774AED00791E02 /* RunningTargetViewController.swift */; };
-		7EE3CD3426774AED00791E02 /* RunningTargetViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7EE3CD3226774AED00791E02 /* RunningTargetViewController.xib */; };
-		7EF6271926710DBF00A7D612 /* BottomCardPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EF6271826710DBF00A7D612 /* BottomCardPresentationController.swift */; };
-		7EF6271B26710E3E00A7D612 /* BottomCardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7EF6271A26710E3E00A7D612 /* BottomCardView.xib */; };
-		B8B6CD5F2678924A006E8362 /* FirestoreReferenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B6CD5E2678924A006E8362 /* FirestoreReferenceManager.swift */; };
-		FAE29489CC97B62A1D41D3B4 /* Pods_BadmintonTrainingSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAF697AAC488A05F9B529E0A /* Pods_BadmintonTrainingSupport.framework */; };
+		06315A6710554A22D18B6A69 /* MatchHistoryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0244FCB134E3FA497367FB6D /* MatchHistoryViewController.xib */; };
+		08CAC31AA6FD3C08279F43D4 /* NMImageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51BE437302199D961C2087BD /* NMImageTableViewCell.xib */; };
+		09C7C7F3DF0A0313F1CC267B /* NMImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A1633273F291CB4844153F8 /* NMImageTableViewCell.swift */; };
+		0AFF98C3E1CCB968878606D9 /* SegmentedCtrlTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837992D49D6B74E8AFC02987 /* SegmentedCtrlTableViewCell.swift */; };
+		1031E2A7BC36F0B2A6C77E7D /* ServeSessionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1FA5ADE4A80FFFBC6C807746 /* ServeSessionViewController.xib */; };
+		130DFFA9A47D0AA553282D90 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C4F7640E17BE7114DFADF9 /* AppDelegate.swift */; };
+		13A8AF94680BA9561B7F579A /* RunningSessionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 73FD800A23AA931ABCE83DE6 /* RunningSessionViewController.xib */; };
+		1526AB99FF152420CF17750E /* NewMatchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1116986A4D28D1919A33103B /* NewMatchViewController.swift */; };
+		1A4782E1650326763E807B6F /* TrainingCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD8257B745BFB25B5968487C /* TrainingCollectionCell.xib */; };
+		1B5BB41F2A6AC337933DC016 /* BottomCardPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D3F0B53FDA7AD7D08FC1CDE /* BottomCardPresentationController.swift */; };
+		1D58B5A41B895DAE579B649C /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13A9E042E0DF969D73CA9C10 /* ProfileViewController.xib */; };
+		1E6B8E6855DB575FAE2F3D39 /* DummyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24D3A62D9207669869FF7BDD /* DummyData.swift */; };
+		2415FCF206E9D1F61FCE90E4 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B39F9D1FB948E9CA174C762 /* HomeViewController.xib */; };
+		26A1B4F4CF20565420E006FE /* ShadowSessionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E57AD91922DF417EB52A6627 /* ShadowSessionViewController.xib */; };
+		26A26ACC593DF5106CF1B926 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E44744A48A7D09B3F37CA4 /* Profile.swift */; };
+		29D55E6E902F6E7B963E6FD3 /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = E162F3A7A24F832EBEF1492E /* Team.swift */; };
+		2B0B0EB9EC5B3826BF85542C /* HomeProfileCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E4936F06A644C07B865F625D /* HomeProfileCell.xib */; };
+		2C46B68FA85FF53725444224 /* NewMatchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D80E4CA8EB786BC5EE4A8C1 /* NewMatchViewController.xib */; };
+		304B56E0D75875DA7CB52BD7 /* ScoreTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F763997A44A91B1BCD5D548 /* ScoreTableCell.xib */; };
+		31B9BBCF0319D0432823E5D1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A13B7FD939DBF8865371AD85 /* LaunchScreen.storyboard */; };
+		351DC82309C1C87A325CE74A /* RunningTargetViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE7C606886394B222D29E858 /* RunningTargetViewController.xib */; };
+		355274A127548FB9B4F45EAD /* TextFieldTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 726E3E3D2103F2B41287B963 /* TextFieldTableViewCell.xib */; };
+		391BEAB56B90412B6FA31031 /* TrainingSessionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B117BF10809C3EFA318C9C9 /* TrainingSessionViewController.swift */; };
+		3ACF886CB33DA15A720B357E /* ScoreCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E3D73D4426C59966ADF8A9 /* ScoreCell.swift */; };
+		3E21CBAF70F56F9E4F48AD48 /* HomeProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E53E238F67E8A7B20BF6C38B /* HomeProfileCell.swift */; };
+		3F79F6E460D2FD9AC44A49F3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C24DE2AFCF90102FF8D7D94 /* SceneDelegate.swift */; };
+		40223BEC2793239B620BA397 /* MatchSummaryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5510018B5A5AD6AE5CA219A1 /* MatchSummaryViewController.xib */; };
+		41EA45A59EAD3394111F6F9A /* FinishMatchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C167C01E0C53F09886771A2 /* FinishMatchCell.swift */; };
+		42C40BD20725542B8870F804 /* Match.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76BB1D277350F72677004121 /* Match.swift */; };
+		44BAEAFC528D8FE22B48775D /* MatchHistoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D946890FC81ABD96B2E208B /* MatchHistoryCell.swift */; };
+		45D6B95DCDAB41E8CA38C7D7 /* PushUpSessionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5BAF339A15AC431A93647E2B /* PushUpSessionViewController.xib */; };
+		46DC1AA5A23FBE81DFC73F72 /* MatchSessionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16978ACDB1CA32CCD225261D /* MatchSessionTableViewCell.swift */; };
+		48893DB3825977FF07DD5093 /* Pods_BadmintonTrainingSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBE73CB3448994BABD44D2EA /* Pods_BadmintonTrainingSupport.framework */; };
+		49D00FFFC5673FD1AC226500 /* ServeSessionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5F76B639E053C5B0F8ABBF /* ServeSessionViewController.swift */; };
+		4C24786661734E33068CD89D /* TrainingSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A3249C5BAA87292B9F2731 /* TrainingSession.swift */; };
+		52F0F8FF421661C66E46EBD5 /* ScoreCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B881C823EE69772ED636E873 /* ScoreCell.xib */; };
+		5724523D8441FB506F199555 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94B15577C61B49A2D51F4BA /* Constants.swift */; };
+		5974AB101156752E05D9C1DB /* BottomCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DCDAAFBF7EFAB786EFB5B42 /* BottomCardViewController.swift */; };
+		5CEAD27407D50F0E6E9F26F7 /* MultiShuttleSessionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C2E80EC00F784B9B6C0B19 /* MultiShuttleSessionViewController.swift */; };
+		5D79C2956134C846E4386E12 /* FinishMatchCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB6EC644B17E8D3497B7F015 /* FinishMatchCell.xib */; };
+		5E2F90F1DDDB3102B3A480C3 /* TrainingHistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C113B5DF4684FAFCE3DDC5 /* TrainingHistoryTableViewCell.swift */; };
+		6183CEF16F86AB616C6B1092 /* MatchHistoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 29EB5CA98CDF66240E23ED07 /* MatchHistoryCell.xib */; };
+		629582D388E05F8070CC9D15 /* FirestoreReferenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95DA28EBE4B040F8ECC52DD8 /* FirestoreReferenceManager.swift */; };
+		638537594448E9FB97DFF290 /* MultiShuttleSessionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AAA24E4CE5CA5FE18A82A9E /* MultiShuttleSessionViewController.xib */; };
+		6E62DE81A06F606FAF524D0A /* MatchSessionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AFABE9FE9150ABCF0E7D211 /* MatchSessionViewController.swift */; };
+		721E499ABD27C9E9BF934E21 /* TrainingSessionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4921D99A80B95E099DBAC5DC /* TrainingSessionViewController.xib */; };
+		734618F9DE491A4FA933347C /* SkippingSessionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B793C20C4E51D9925387AE9E /* SkippingSessionViewController.xib */; };
+		7CE452ACD462D6F3A994E326 /* RecentsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60A0CD9C2F84AFF3FE1E1D46 /* RecentsCell.xib */; };
+		7DB6010F9AA246AACEB6BD33 /* SegmentedCtrlTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B8F3B5722CF92A21800B6D0B /* SegmentedCtrlTableViewCell.xib */; };
+		7FC86FE38C45221798C37FB9 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CDC534B83A836E4B63BBD23 /* HomeViewController.swift */; };
+		8122F89D48949E2A19505BEF /* SummaryMainInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA4C8FC4DB71A8EAABF177B5 /* SummaryMainInfoTableViewCell.xib */; };
+		8649D5A7D3ED753AC44E598F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 51092250ED4C2B30D368CC26 /* GoogleService-Info.plist */; };
+		885E1D825500B7EFFAC6517B /* ShadowSessionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17AE6641E35A236ABF061654 /* ShadowSessionViewController.swift */; };
+		89AE167A6B8879260C22A67E /* TrainingCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55EDEAE4C5A5F668D249F8E /* TrainingCategory.swift */; };
+		906A2B4CC0A9C4B7E83CDDD4 /* SummaryMainInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 536FC0C95D1A6961D0BF40C5 /* SummaryMainInfoTableViewCell.swift */; };
+		93A96A03C7F11380D2BBEA3C /* TextFieldTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA01A95C71891F726AD8D3A9 /* TextFieldTableViewCell.swift */; };
+		96576918B9D44FA52BE91A52 /* RecentsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B540CF264FBB7726C59D9014 /* RecentsCell.swift */; };
+		96765AC8CF7A2B0FFF0D75EF /* TrainingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1439C95A7AD54E831E76F60 /* TrainingCell.swift */; };
+		96CD37EF188584A52498B0C4 /* BottomCardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1E79077146374E92DA9DEF4 /* BottomCardView.xib */; };
+		99D5EED5B48B3124B9C33AC4 /* RunningSessionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0398E0DE242DE71421C1D38 /* RunningSessionViewController.swift */; };
+		9BFE5C3EBDAD49734003B670 /* TrainingCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14AA4BE5DE1E136FAC68D413 /* TrainingCollectionCell.swift */; };
+		A418B4C486B466A84F93168E /* TrainingHistoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 959FA9B45C73E09CDFC5CF49 /* TrainingHistoryTableViewCell.xib */; };
+		AE92A6D9BE7845DF8E6CBF0E /* Training.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0AD815ABBFDC70E95057AC8 /* Training.swift */; };
+		AFB93654DBF0F735BCEB3AC8 /* MatchSummaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2F263B61CC57A880E391F3 /* MatchSummaryViewController.swift */; };
+		B090A8961974BC28CBF1F00D /* Sizes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D42F254D0E4BAADC181CA25 /* Sizes.swift */; };
+		B17C576DAE8220AD2A36448D /* PushUpSessionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F578206F37738B6167D904ED /* PushUpSessionViewController.swift */; };
+		BBA651A8C47F5C203346A8AF /* ScoreTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5754E14475BD3D93B3860949 /* ScoreTableCell.swift */; };
+		C077AB2919A9F111964875A1 /* MatchSessionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F59EE8E23D8011B06490FD3 /* MatchSessionViewController.xib */; };
+		C0F5E0F7F7E3AD29398C7EFB /* MatchSessionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BED3B15679C210263AA72C21 /* MatchSessionTableViewCell.xib */; };
+		C577C684DAFAD26B4F2B14E4 /* MatchHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B53DF2794B2ACAB0948EA3A /* MatchHistoryViewController.swift */; };
+		C895039C96A59C7534AA2E16 /* SkippingSessionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A07C864749DBD2FCEF6B45F /* SkippingSessionViewController.swift */; };
+		CB8C2946EF49762C1F84612A /* TrainingHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4950BEF0FF0171B8E3B31AD /* TrainingHistoryViewController.swift */; };
+		D29B4E28E28DBBFDCBF78E8D /* NewTrainingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A922F101E26BF93DB9D97678 /* NewTrainingViewController.swift */; };
+		DD5B431CB0ADABF4B5F8F4B4 /* RunningTargetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBD83A25287DA28D5B0A6BC1 /* RunningTargetViewController.swift */; };
+		E1626BAD0FBE0FF14C631F67 /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED61F00EB5A0B48D6543DE24 /* UserProfile.swift */; };
+		E91F7B311570A615B3DAD53D /* TrainingHistoryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0DA1F0053153735ABD309331 /* TrainingHistoryViewController.xib */; };
+		E9B6F000BDD7237CC484A1B5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1398F6D1F3CA3E4D60534B79 /* Assets.xcassets */; };
+		EDC9D068D5E03281A5547DF0 /* TrainingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 61763640091710EB73AEF547 /* TrainingCell.xib */; };
+		F2D7A16495176BE78119629C /* NewTrainingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24BADE8E061B1D0CED5CC81D /* NewTrainingViewController.xib */; };
+		FCFFCEAB83168F4752254D39 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E504F1F78412742599128B8C /* ProfileViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		55FEF1690DBEBA70C4411FE9 /* Pods-BadmintonTrainingSupport.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BadmintonTrainingSupport.release.xcconfig"; path = "Target Support Files/Pods-BadmintonTrainingSupport/Pods-BadmintonTrainingSupport.release.xcconfig"; sourceTree = "<group>"; };
-		605AABC52679C87600924817 /* FinishMatchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishMatchCell.swift; sourceTree = "<group>"; };
-		605AABC62679C87600924817 /* FinishMatchCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FinishMatchCell.xib; sourceTree = "<group>"; };
-		6063FE6D266E7AEE001DFEA2 /* TrainingHistoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingHistoryTableViewCell.swift; sourceTree = "<group>"; };
-		6063FE6E266E7AEE001DFEA2 /* TrainingHistoryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrainingHistoryTableViewCell.xib; sourceTree = "<group>"; };
-		60A0CF0B267104D000CBE0E5 /* Match.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Match.swift; sourceTree = "<group>"; };
-		60CA66EB2678680C00A75B2A /* SummaryMainInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryMainInfoTableViewCell.swift; sourceTree = "<group>"; };
-		60CA66EC2678680C00A75B2A /* SummaryMainInfoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SummaryMainInfoTableViewCell.xib; sourceTree = "<group>"; };
-		60CA66EF267879FF00A75B2A /* ScoreTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreTableCell.swift; sourceTree = "<group>"; };
-		60CA66F0267879FF00A75B2A /* ScoreTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ScoreTableCell.xib; sourceTree = "<group>"; };
-		60CA66F7267882FC00A75B2A /* ScoreCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreCell.swift; sourceTree = "<group>"; };
-		60CA66F8267882FC00A75B2A /* ScoreCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ScoreCell.xib; sourceTree = "<group>"; };
-		60CA66FB2678864200A75B2A /* Team.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
-		60E4112C266FE919006776BD /* MatchHistoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchHistoryCell.swift; sourceTree = "<group>"; };
-		60E4112D266FE919006776BD /* MatchHistoryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MatchHistoryCell.xib; sourceTree = "<group>"; };
-		60F907C9267792E3005007D9 /* SkippingSessionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkippingSessionViewController.swift; sourceTree = "<group>"; };
-		60F907CA267792E3005007D9 /* SkippingSessionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SkippingSessionViewController.xib; sourceTree = "<group>"; };
-		60F907CD26779555005007D9 /* PushUpSessionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushUpSessionViewController.swift; sourceTree = "<group>"; };
-		60F907CE26779555005007D9 /* PushUpSessionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PushUpSessionViewController.xib; sourceTree = "<group>"; };
-		60F907D12677959F005007D9 /* MultiShuttleSessionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiShuttleSessionViewController.swift; sourceTree = "<group>"; };
-		60F907D22677959F005007D9 /* MultiShuttleSessionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MultiShuttleSessionViewController.xib; sourceTree = "<group>"; };
-		60F907D7267795F7005007D9 /* ShadowSessionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowSessionViewController.swift; sourceTree = "<group>"; };
-		60F907D8267795F7005007D9 /* ShadowSessionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShadowSessionViewController.xib; sourceTree = "<group>"; };
-		60F907DB2677964C005007D9 /* ServeSessionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServeSessionViewController.swift; sourceTree = "<group>"; };
-		60F907DC2677964C005007D9 /* ServeSessionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ServeSessionViewController.xib; sourceTree = "<group>"; };
-		60FC4DD126774D0F00863CE3 /* RunningSessionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunningSessionViewController.swift; sourceTree = "<group>"; };
-		60FC4DD226774D0F00863CE3 /* RunningSessionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RunningSessionViewController.xib; sourceTree = "<group>"; };
-		701990102677158F003FC03C /* MatchSessionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchSessionTableViewCell.swift; sourceTree = "<group>"; };
-		701990112677158F003FC03C /* MatchSessionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MatchSessionTableViewCell.xib; sourceTree = "<group>"; };
-		7096EA8A266E5D0700A9D1F6 /* TextFieldTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldTableViewCell.swift; sourceTree = "<group>"; };
-		7096EA8B266E5D0700A9D1F6 /* TextFieldTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextFieldTableViewCell.xib; sourceTree = "<group>"; };
-		70E75CF22671BCA80043CD09 /* SegmentedCtrlTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedCtrlTableViewCell.swift; sourceTree = "<group>"; };
-		70E75CF32671BCA80043CD09 /* SegmentedCtrlTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SegmentedCtrlTableViewCell.xib; sourceTree = "<group>"; };
-		7E07A79E2679F12B00350A14 /* TrainingCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrainingCategory.swift; sourceTree = "<group>"; };
-		7E07A79F2679F12B00350A14 /* Profile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
-		7E07A7A02679F12B00350A14 /* Training.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Training.swift; sourceTree = "<group>"; };
-		7E07A7A12679F12B00350A14 /* TrainingSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrainingSession.swift; sourceTree = "<group>"; };
-		7E24D0082668A76700195496 /* BadmintonTrainingSupport.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BadmintonTrainingSupport.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		7E24D00B2668A76700195496 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		7E24D00D2668A76700195496 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		7E24D0142668A76A00195496 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		7E24D0172668A76A00195496 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		7E24D0192668A76A00195496 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7E4FB04D266B88B300D0CEE2 /* TrainingCollectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrainingCollectionCell.swift; sourceTree = "<group>"; };
-		7E4FB04E266B88B300D0CEE2 /* TrainingCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrainingCell.swift; sourceTree = "<group>"; };
-		7E4FB04F266B88B300D0CEE2 /* TrainingCollectionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TrainingCollectionCell.xib; sourceTree = "<group>"; };
-		7E4FB050266B88B300D0CEE2 /* TrainingCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TrainingCell.xib; sourceTree = "<group>"; };
-		7E4FB055266BC1C200D0CEE2 /* Sizes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sizes.swift; sourceTree = "<group>"; };
-		7E4FB058266BCD3800D0CEE2 /* RecentsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentsCell.swift; sourceTree = "<group>"; };
-		7E4FB059266BCD3800D0CEE2 /* RecentsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecentsCell.xib; sourceTree = "<group>"; };
-		7E50B25D266FD1A500BAEED1 /* HomeProfileCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeProfileCell.swift; sourceTree = "<group>"; };
-		7E50B25E266FD1A500BAEED1 /* HomeProfileCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeProfileCell.xib; sourceTree = "<group>"; };
-		7E50B261266FD30100BAEED1 /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
-		7E9A03E32673774C003EFF87 /* NMImageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NMImageTableViewCell.swift; sourceTree = "<group>"; };
-		7E9A03E42673774C003EFF87 /* NMImageTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NMImageTableViewCell.xib; sourceTree = "<group>"; };
-		7EBF951A266B5B4E0035D9C8 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		7EBF951B266B5B4E0035D9C8 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
-		7EBF951E266B5D790035D9C8 /* NewTrainingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTrainingViewController.swift; sourceTree = "<group>"; };
-		7EBF951F266B5D790035D9C8 /* NewTrainingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewTrainingViewController.xib; sourceTree = "<group>"; };
-		7EBF9522266B5DA20035D9C8 /* TrainingSessionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingSessionViewController.swift; sourceTree = "<group>"; };
-		7EBF9523266B5DA20035D9C8 /* TrainingSessionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrainingSessionViewController.xib; sourceTree = "<group>"; };
-		7EBF9526266B5DB40035D9C8 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
-		7EBF9527266B5DB40035D9C8 /* ProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
-		7EBF952A266B5DD80035D9C8 /* TrainingHistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingHistoryViewController.swift; sourceTree = "<group>"; };
-		7EBF952B266B5DD80035D9C8 /* TrainingHistoryViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrainingHistoryViewController.xib; sourceTree = "<group>"; };
-		7EBF952E266B5E110035D9C8 /* NewMatchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewMatchViewController.swift; sourceTree = "<group>"; };
-		7EBF952F266B5E110035D9C8 /* NewMatchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewMatchViewController.xib; sourceTree = "<group>"; };
-		7EBF9532266B5E250035D9C8 /* MatchSessionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchSessionViewController.swift; sourceTree = "<group>"; };
-		7EBF9533266B5E250035D9C8 /* MatchSessionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MatchSessionViewController.xib; sourceTree = "<group>"; };
-		7EBF9536266B5E420035D9C8 /* MatchSummaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchSummaryViewController.swift; sourceTree = "<group>"; };
-		7EBF9537266B5E420035D9C8 /* MatchSummaryViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MatchSummaryViewController.xib; sourceTree = "<group>"; };
-		7EBF953A266B5E530035D9C8 /* MatchHistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchHistoryViewController.swift; sourceTree = "<group>"; };
-		7EBF953B266B5E530035D9C8 /* MatchHistoryViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MatchHistoryViewController.xib; sourceTree = "<group>"; };
-		7EBF9544266B78E40035D9C8 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		7EBF954E266B82850035D9C8 /* DummyData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyData.swift; sourceTree = "<group>"; };
-		7EE3CD2C2677250500791E02 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		7EE3CD2E267730AD00791E02 /* BottomCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomCardViewController.swift; sourceTree = "<group>"; };
-		7EE3CD3126774AED00791E02 /* RunningTargetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunningTargetViewController.swift; sourceTree = "<group>"; };
-		7EE3CD3226774AED00791E02 /* RunningTargetViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RunningTargetViewController.xib; sourceTree = "<group>"; };
-		7EF6271826710DBF00A7D612 /* BottomCardPresentationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomCardPresentationController.swift; sourceTree = "<group>"; };
-		7EF6271A26710E3E00A7D612 /* BottomCardView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BottomCardView.xib; sourceTree = "<group>"; };
-		A3B993DF360B7C68E59C73AF /* Pods-BadmintonTrainingSupport.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BadmintonTrainingSupport.debug.xcconfig"; path = "Target Support Files/Pods-BadmintonTrainingSupport/Pods-BadmintonTrainingSupport.debug.xcconfig"; sourceTree = "<group>"; };
-		B86CBDA626725E95007D2995 /* BadmintonTrainingSupport.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BadmintonTrainingSupport.entitlements; sourceTree = "<group>"; };
-		B8B6CD5E2678924A006E8362 /* FirestoreReferenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreReferenceManager.swift; sourceTree = "<group>"; };
-		FAF697AAC488A05F9B529E0A /* Pods_BadmintonTrainingSupport.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BadmintonTrainingSupport.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0244FCB134E3FA497367FB6D /* MatchHistoryViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MatchHistoryViewController.xib; sourceTree = "<group>"; };
+		08C4F7640E17BE7114DFADF9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		0AAA24E4CE5CA5FE18A82A9E /* MultiShuttleSessionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MultiShuttleSessionViewController.xib; sourceTree = "<group>"; };
+		0C24DE2AFCF90102FF8D7D94 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		0D3F0B53FDA7AD7D08FC1CDE /* BottomCardPresentationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomCardPresentationController.swift; sourceTree = "<group>"; };
+		0D42F254D0E4BAADC181CA25 /* Sizes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sizes.swift; sourceTree = "<group>"; };
+		0DA1F0053153735ABD309331 /* TrainingHistoryViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrainingHistoryViewController.xib; sourceTree = "<group>"; };
+		1116986A4D28D1919A33103B /* NewMatchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewMatchViewController.swift; sourceTree = "<group>"; };
+		1398F6D1F3CA3E4D60534B79 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		13A9E042E0DF969D73CA9C10 /* ProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
+		14AA4BE5DE1E136FAC68D413 /* TrainingCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingCollectionCell.swift; sourceTree = "<group>"; };
+		16978ACDB1CA32CCD225261D /* MatchSessionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchSessionTableViewCell.swift; sourceTree = "<group>"; };
+		17AE6641E35A236ABF061654 /* ShadowSessionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowSessionViewController.swift; sourceTree = "<group>"; };
+		199CB3EB55FFC5D1867FC52B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		1B39F9D1FB948E9CA174C762 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		1FA5ADE4A80FFFBC6C807746 /* ServeSessionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ServeSessionViewController.xib; sourceTree = "<group>"; };
+		24BADE8E061B1D0CED5CC81D /* NewTrainingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewTrainingViewController.xib; sourceTree = "<group>"; };
+		24D3A62D9207669869FF7BDD /* DummyData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyData.swift; sourceTree = "<group>"; };
+		29EB5CA98CDF66240E23ED07 /* MatchHistoryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MatchHistoryCell.xib; sourceTree = "<group>"; };
+		2F59EE8E23D8011B06490FD3 /* MatchSessionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MatchSessionViewController.xib; sourceTree = "<group>"; };
+		3B53DF2794B2ACAB0948EA3A /* MatchHistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchHistoryViewController.swift; sourceTree = "<group>"; };
+		48AE351C6B27F4DF5917737C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		48C2E80EC00F784B9B6C0B19 /* MultiShuttleSessionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiShuttleSessionViewController.swift; sourceTree = "<group>"; };
+		4921D99A80B95E099DBAC5DC /* TrainingSessionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrainingSessionViewController.xib; sourceTree = "<group>"; };
+		4CDC534B83A836E4B63BBD23 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		51092250ED4C2B30D368CC26 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		51BE437302199D961C2087BD /* NMImageTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NMImageTableViewCell.xib; sourceTree = "<group>"; };
+		536FC0C95D1A6961D0BF40C5 /* SummaryMainInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryMainInfoTableViewCell.swift; sourceTree = "<group>"; };
+		5510018B5A5AD6AE5CA219A1 /* MatchSummaryViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MatchSummaryViewController.xib; sourceTree = "<group>"; };
+		5754E14475BD3D93B3860949 /* ScoreTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreTableCell.swift; sourceTree = "<group>"; };
+		5A07C864749DBD2FCEF6B45F /* SkippingSessionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkippingSessionViewController.swift; sourceTree = "<group>"; };
+		5B117BF10809C3EFA318C9C9 /* TrainingSessionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingSessionViewController.swift; sourceTree = "<group>"; };
+		5B5F76B639E053C5B0F8ABBF /* ServeSessionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServeSessionViewController.swift; sourceTree = "<group>"; };
+		5BAF339A15AC431A93647E2B /* PushUpSessionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PushUpSessionViewController.xib; sourceTree = "<group>"; };
+		5D80E4CA8EB786BC5EE4A8C1 /* NewMatchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewMatchViewController.xib; sourceTree = "<group>"; };
+		5DCDAAFBF7EFAB786EFB5B42 /* BottomCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomCardViewController.swift; sourceTree = "<group>"; };
+		60A0CD9C2F84AFF3FE1E1D46 /* RecentsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecentsCell.xib; sourceTree = "<group>"; };
+		61763640091710EB73AEF547 /* TrainingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrainingCell.xib; sourceTree = "<group>"; };
+		726E3E3D2103F2B41287B963 /* TextFieldTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextFieldTableViewCell.xib; sourceTree = "<group>"; };
+		73FD800A23AA931ABCE83DE6 /* RunningSessionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RunningSessionViewController.xib; sourceTree = "<group>"; };
+		761AD52C703885DAC8CF6C4D /* BadmintonTrainingSupport.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BadmintonTrainingSupport.entitlements; sourceTree = "<group>"; };
+		76BB1D277350F72677004121 /* Match.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Match.swift; sourceTree = "<group>"; };
+		837992D49D6B74E8AFC02987 /* SegmentedCtrlTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedCtrlTableViewCell.swift; sourceTree = "<group>"; };
+		8F763997A44A91B1BCD5D548 /* ScoreTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ScoreTableCell.xib; sourceTree = "<group>"; };
+		959FA9B45C73E09CDFC5CF49 /* TrainingHistoryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrainingHistoryTableViewCell.xib; sourceTree = "<group>"; };
+		95DA28EBE4B040F8ECC52DD8 /* FirestoreReferenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreReferenceManager.swift; sourceTree = "<group>"; };
+		9A1633273F291CB4844153F8 /* NMImageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NMImageTableViewCell.swift; sourceTree = "<group>"; };
+		9AFABE9FE9150ABCF0E7D211 /* MatchSessionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchSessionViewController.swift; sourceTree = "<group>"; };
+		9C167C01E0C53F09886771A2 /* FinishMatchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishMatchCell.swift; sourceTree = "<group>"; };
+		9D946890FC81ABD96B2E208B /* MatchHistoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchHistoryCell.swift; sourceTree = "<group>"; };
+		A0AD815ABBFDC70E95057AC8 /* Training.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Training.swift; sourceTree = "<group>"; };
+		A1439C95A7AD54E831E76F60 /* TrainingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingCell.swift; sourceTree = "<group>"; };
+		A7E44744A48A7D09B3F37CA4 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
+		A922F101E26BF93DB9D97678 /* NewTrainingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTrainingViewController.swift; sourceTree = "<group>"; };
+		A9B48FA7A562C95E0CC98840 /* Pods-BadmintonTrainingSupport.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BadmintonTrainingSupport.debug.xcconfig"; path = "Target Support Files/Pods-BadmintonTrainingSupport/Pods-BadmintonTrainingSupport.debug.xcconfig"; sourceTree = "<group>"; };
+		AF2F263B61CC57A880E391F3 /* MatchSummaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchSummaryViewController.swift; sourceTree = "<group>"; };
+		B2A3249C5BAA87292B9F2731 /* TrainingSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingSession.swift; sourceTree = "<group>"; };
+		B2E3D73D4426C59966ADF8A9 /* ScoreCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreCell.swift; sourceTree = "<group>"; };
+		B540CF264FBB7726C59D9014 /* RecentsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentsCell.swift; sourceTree = "<group>"; };
+		B793C20C4E51D9925387AE9E /* SkippingSessionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SkippingSessionViewController.xib; sourceTree = "<group>"; };
+		B881C823EE69772ED636E873 /* ScoreCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ScoreCell.xib; sourceTree = "<group>"; };
+		B8F3B5722CF92A21800B6D0B /* SegmentedCtrlTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SegmentedCtrlTableViewCell.xib; sourceTree = "<group>"; };
+		BBE73CB3448994BABD44D2EA /* Pods_BadmintonTrainingSupport.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BadmintonTrainingSupport.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BED3B15679C210263AA72C21 /* MatchSessionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MatchSessionTableViewCell.xib; sourceTree = "<group>"; };
+		C0398E0DE242DE71421C1D38 /* RunningSessionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunningSessionViewController.swift; sourceTree = "<group>"; };
+		C115017D8285865150915D0B /* BadmintonTrainingSupport.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BadmintonTrainingSupport.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C4950BEF0FF0171B8E3B31AD /* TrainingHistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingHistoryViewController.swift; sourceTree = "<group>"; };
+		CA01A95C71891F726AD8D3A9 /* TextFieldTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldTableViewCell.swift; sourceTree = "<group>"; };
+		CA4C8FC4DB71A8EAABF177B5 /* SummaryMainInfoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SummaryMainInfoTableViewCell.xib; sourceTree = "<group>"; };
+		CD8257B745BFB25B5968487C /* TrainingCollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrainingCollectionCell.xib; sourceTree = "<group>"; };
+		DB6EC644B17E8D3497B7F015 /* FinishMatchCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FinishMatchCell.xib; sourceTree = "<group>"; };
+		DE7C606886394B222D29E858 /* RunningTargetViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RunningTargetViewController.xib; sourceTree = "<group>"; };
+		E162F3A7A24F832EBEF1492E /* Team.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
+		E1E79077146374E92DA9DEF4 /* BottomCardView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BottomCardView.xib; sourceTree = "<group>"; };
+		E4936F06A644C07B865F625D /* HomeProfileCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeProfileCell.xib; sourceTree = "<group>"; };
+		E504F1F78412742599128B8C /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		E53E238F67E8A7B20BF6C38B /* HomeProfileCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeProfileCell.swift; sourceTree = "<group>"; };
+		E57AD91922DF417EB52A6627 /* ShadowSessionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShadowSessionViewController.xib; sourceTree = "<group>"; };
+		E8C113B5DF4684FAFCE3DDC5 /* TrainingHistoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingHistoryTableViewCell.swift; sourceTree = "<group>"; };
+		ED61F00EB5A0B48D6543DE24 /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
+		F55EDEAE4C5A5F668D249F8E /* TrainingCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingCategory.swift; sourceTree = "<group>"; };
+		F578206F37738B6167D904ED /* PushUpSessionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushUpSessionViewController.swift; sourceTree = "<group>"; };
+		F94B15577C61B49A2D51F4BA /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		FBD83A25287DA28D5B0A6BC1 /* RunningTargetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunningTargetViewController.swift; sourceTree = "<group>"; };
+		FBF5A7F0CCFC4C589BF2867A /* Pods-BadmintonTrainingSupport.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BadmintonTrainingSupport.release.xcconfig"; path = "Target Support Files/Pods-BadmintonTrainingSupport/Pods-BadmintonTrainingSupport.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		7E24D0052668A76700195496 /* Frameworks */ = {
+		B744C01839CB42771CDB0415 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FAE29489CC97B62A1D41D3B4 /* Pods_BadmintonTrainingSupport.framework in Frameworks */,
+				48893DB3825977FF07DD5093 /* Pods_BadmintonTrainingSupport.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		48CC5065EDC3C5DCBC0D74C2 /* Frameworks */ = {
+		0C5FE07952D3C07F69B58268 /* Form */ = {
 			isa = PBXGroup;
 			children = (
-				FAF697AAC488A05F9B529E0A /* Pods_BadmintonTrainingSupport.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		60474D142674BB52000712E7 /* Training Session */ = {
-			isa = PBXGroup;
-			children = (
-				60FC4DD126774D0F00863CE3 /* RunningSessionViewController.swift */,
-				60FC4DD226774D0F00863CE3 /* RunningSessionViewController.xib */,
-				60F907C9267792E3005007D9 /* SkippingSessionViewController.swift */,
-				60F907CA267792E3005007D9 /* SkippingSessionViewController.xib */,
-				60F907CD26779555005007D9 /* PushUpSessionViewController.swift */,
-				60F907CE26779555005007D9 /* PushUpSessionViewController.xib */,
-				60F907D12677959F005007D9 /* MultiShuttleSessionViewController.swift */,
-				60F907D22677959F005007D9 /* MultiShuttleSessionViewController.xib */,
-				60F907D7267795F7005007D9 /* ShadowSessionViewController.swift */,
-				60F907D8267795F7005007D9 /* ShadowSessionViewController.xib */,
-				60F907DB2677964C005007D9 /* ServeSessionViewController.swift */,
-				60F907DC2677964C005007D9 /* ServeSessionViewController.xib */,
-			);
-			path = "Training Session";
-			sourceTree = "<group>";
-		};
-		60A0CF0A267103CF00CBE0E5 /* Match */ = {
-			isa = PBXGroup;
-			children = (
-				60A0CF0B267104D000CBE0E5 /* Match.swift */,
-				60CA66FB2678864200A75B2A /* Team.swift */,
-				7E07A79D2679F12B00350A14 /* Trainings */,
-			);
-			path = Match;
-			sourceTree = "<group>";
-		};
-		60CA66EA267866E700A75B2A /* Match Summary */ = {
-			isa = PBXGroup;
-			children = (
-				60CA66EB2678680C00A75B2A /* SummaryMainInfoTableViewCell.swift */,
-				60CA66EC2678680C00A75B2A /* SummaryMainInfoTableViewCell.xib */,
-				60CA66EF267879FF00A75B2A /* ScoreTableCell.swift */,
-				60CA66F0267879FF00A75B2A /* ScoreTableCell.xib */,
-				60CA66F7267882FC00A75B2A /* ScoreCell.swift */,
-				60CA66F8267882FC00A75B2A /* ScoreCell.xib */,
-				605AABC52679C87600924817 /* FinishMatchCell.swift */,
-				605AABC62679C87600924817 /* FinishMatchCell.xib */,
-			);
-			path = "Match Summary";
-			sourceTree = "<group>";
-		};
-		60E4112A266FE5B7006776BD /* Match Table */ = {
-			isa = PBXGroup;
-			children = (
-				60E4112C266FE919006776BD /* MatchHistoryCell.swift */,
-				60E4112D266FE919006776BD /* MatchHistoryCell.xib */,
-			);
-			path = "Match Table";
-			sourceTree = "<group>";
-		};
-		70199014267715AA003FC03C /* Match Session Table */ = {
-			isa = PBXGroup;
-			children = (
-				701990102677158F003FC03C /* MatchSessionTableViewCell.swift */,
-				701990112677158F003FC03C /* MatchSessionTableViewCell.xib */,
-			);
-			path = "Match Session Table";
-			sourceTree = "<group>";
-		};
-		707AA4740D180275803328A3 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				A3B993DF360B7C68E59C73AF /* Pods-BadmintonTrainingSupport.debug.xcconfig */,
-				55FEF1690DBEBA70C4411FE9 /* Pods-BadmintonTrainingSupport.release.xcconfig */,
-			);
-			path = Pods;
-			sourceTree = "<group>";
-		};
-		7096EA85266E590F00A9D1F6 /* Form */ = {
-			isa = PBXGroup;
-			children = (
-				7E9A03E32673774C003EFF87 /* NMImageTableViewCell.swift */,
-				7E9A03E42673774C003EFF87 /* NMImageTableViewCell.xib */,
-				7096EA8A266E5D0700A9D1F6 /* TextFieldTableViewCell.swift */,
-				7096EA8B266E5D0700A9D1F6 /* TextFieldTableViewCell.xib */,
-				70E75CF22671BCA80043CD09 /* SegmentedCtrlTableViewCell.swift */,
-				70E75CF32671BCA80043CD09 /* SegmentedCtrlTableViewCell.xib */,
+				9A1633273F291CB4844153F8 /* NMImageTableViewCell.swift */,
+				51BE437302199D961C2087BD /* NMImageTableViewCell.xib */,
+				837992D49D6B74E8AFC02987 /* SegmentedCtrlTableViewCell.swift */,
+				B8F3B5722CF92A21800B6D0B /* SegmentedCtrlTableViewCell.xib */,
+				CA01A95C71891F726AD8D3A9 /* TextFieldTableViewCell.swift */,
+				726E3E3D2103F2B41287B963 /* TextFieldTableViewCell.xib */,
 			);
 			path = Form;
 			sourceTree = "<group>";
 		};
-		7E07A79D2679F12B00350A14 /* Trainings */ = {
+		19CADF461189B9ECE5F31C7E /* Training Session */ = {
 			isa = PBXGroup;
 			children = (
-				7E07A79E2679F12B00350A14 /* TrainingCategory.swift */,
-				7E07A79F2679F12B00350A14 /* Profile.swift */,
-				7E07A7A02679F12B00350A14 /* Training.swift */,
-				7E07A7A12679F12B00350A14 /* TrainingSession.swift */,
+				48C2E80EC00F784B9B6C0B19 /* MultiShuttleSessionViewController.swift */,
+				0AAA24E4CE5CA5FE18A82A9E /* MultiShuttleSessionViewController.xib */,
+				F578206F37738B6167D904ED /* PushUpSessionViewController.swift */,
+				5BAF339A15AC431A93647E2B /* PushUpSessionViewController.xib */,
+				C0398E0DE242DE71421C1D38 /* RunningSessionViewController.swift */,
+				73FD800A23AA931ABCE83DE6 /* RunningSessionViewController.xib */,
+				5B5F76B639E053C5B0F8ABBF /* ServeSessionViewController.swift */,
+				1FA5ADE4A80FFFBC6C807746 /* ServeSessionViewController.xib */,
+				17AE6641E35A236ABF061654 /* ShadowSessionViewController.swift */,
+				E57AD91922DF417EB52A6627 /* ShadowSessionViewController.xib */,
+				5A07C864749DBD2FCEF6B45F /* SkippingSessionViewController.swift */,
+				B793C20C4E51D9925387AE9E /* SkippingSessionViewController.xib */,
 			);
-			name = Trainings;
-			path = BadmintonTrainingSupport/Model/Trainings;
-			sourceTree = SOURCE_ROOT;
-		};
-		7E24CFFF2668A76700195496 = {
-			isa = PBXGroup;
-			children = (
-				7E24D00A2668A76700195496 /* BadmintonTrainingSupport */,
-				7E24D0092668A76700195496 /* Products */,
-				707AA4740D180275803328A3 /* Pods */,
-				48CC5065EDC3C5DCBC0D74C2 /* Frameworks */,
-			);
+			path = "Training Session";
 			sourceTree = "<group>";
 		};
-		7E24D0092668A76700195496 /* Products */ = {
+		2BEB628AAB25AD80D08E3C1B /* Match */ = {
 			isa = PBXGroup;
 			children = (
-				7E24D0082668A76700195496 /* BadmintonTrainingSupport.app */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		7E24D00A2668A76700195496 /* BadmintonTrainingSupport */ = {
-			isa = PBXGroup;
-			children = (
-				B86CBDA626725E95007D2995 /* BadmintonTrainingSupport.entitlements */,
-				7EBF9514266B5A8D0035D9C8 /* Resources */,
-				7EBF9515266B5AB00035D9C8 /* Model */,
-				7EBF9519266B5B1E0035D9C8 /* Home */,
-				7EBF9517266B5AE50035D9C8 /* Match */,
-				7EBF9516266B5ABE0035D9C8 /* Training */,
-				7EBF9518266B5B050035D9C8 /* Profile */,
-				7EBF9513266B5A7F0035D9C8 /* Application */,
-				7E24D0162668A76A00195496 /* LaunchScreen.storyboard */,
-				7EE3CD2C2677250500791E02 /* GoogleService-Info.plist */,
-				7E24D0192668A76A00195496 /* Info.plist */,
-			);
-			path = BadmintonTrainingSupport;
-			sourceTree = "<group>";
-		};
-		7E4FB04C266B88B300D0CEE2 /* Training Collection */ = {
-			isa = PBXGroup;
-			children = (
-				7E4FB04E266B88B300D0CEE2 /* TrainingCell.swift */,
-				7E4FB050266B88B300D0CEE2 /* TrainingCell.xib */,
-				7E4FB04D266B88B300D0CEE2 /* TrainingCollectionCell.swift */,
-				7E4FB04F266B88B300D0CEE2 /* TrainingCollectionCell.xib */,
-				6063FE6D266E7AEE001DFEA2 /* TrainingHistoryTableViewCell.swift */,
-				6063FE6E266E7AEE001DFEA2 /* TrainingHistoryTableViewCell.xib */,
-			);
-			path = "Training Collection";
-			sourceTree = "<group>";
-		};
-		7E4FB057266BCD1200D0CEE2 /* Recents */ = {
-			isa = PBXGroup;
-			children = (
-				7E4FB058266BCD3800D0CEE2 /* RecentsCell.swift */,
-				7E4FB059266BCD3800D0CEE2 /* RecentsCell.xib */,
-			);
-			path = Recents;
-			sourceTree = "<group>";
-		};
-		7EBF9513266B5A7F0035D9C8 /* Application */ = {
-			isa = PBXGroup;
-			children = (
-				7E24D00B2668A76700195496 /* AppDelegate.swift */,
-				7E24D00D2668A76700195496 /* SceneDelegate.swift */,
-				7EBF9544266B78E40035D9C8 /* Constants.swift */,
-				7EBF954E266B82850035D9C8 /* DummyData.swift */,
-				7E4FB055266BC1C200D0CEE2 /* Sizes.swift */,
-				B8B6CD5E2678924A006E8362 /* FirestoreReferenceManager.swift */,
-			);
-			path = Application;
-			sourceTree = "<group>";
-		};
-		7EBF9514266B5A8D0035D9C8 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				7E24D0142668A76A00195496 /* Assets.xcassets */,
-			);
-			path = Resources;
-			sourceTree = "<group>";
-		};
-		7EBF9515266B5AB00035D9C8 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				60A0CF0A267103CF00CBE0E5 /* Match */,
-				7E50B261266FD30100BAEED1 /* UserProfile.swift */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		7EBF9516266B5ABE0035D9C8 /* Training */ = {
-			isa = PBXGroup;
-			children = (
-				60474D142674BB52000712E7 /* Training Session */,
-				7EE3CD3026774AC800791E02 /* Training Modules */,
-				7E4FB04C266B88B300D0CEE2 /* Training Collection */,
-				7EBF951E266B5D790035D9C8 /* NewTrainingViewController.swift */,
-				7EBF951F266B5D790035D9C8 /* NewTrainingViewController.xib */,
-				7EBF9522266B5DA20035D9C8 /* TrainingSessionViewController.swift */,
-				7EBF9523266B5DA20035D9C8 /* TrainingSessionViewController.xib */,
-				7EBF952A266B5DD80035D9C8 /* TrainingHistoryViewController.swift */,
-				7EBF952B266B5DD80035D9C8 /* TrainingHistoryViewController.xib */,
-				7EE3CD2E267730AD00791E02 /* BottomCardViewController.swift */,
-				7EF6271826710DBF00A7D612 /* BottomCardPresentationController.swift */,
-				7EF6271A26710E3E00A7D612 /* BottomCardView.xib */,
-			);
-			path = Training;
-			sourceTree = "<group>";
-		};
-		7EBF9517266B5AE50035D9C8 /* Match */ = {
-			isa = PBXGroup;
-			children = (
-				60CA66EA267866E700A75B2A /* Match Summary */,
-				7096EA85266E590F00A9D1F6 /* Form */,
-				60E4112A266FE5B7006776BD /* Match Table */,
-				70199014267715AA003FC03C /* Match Session Table */,
-				7EBF952E266B5E110035D9C8 /* NewMatchViewController.swift */,
-				7EBF952F266B5E110035D9C8 /* NewMatchViewController.xib */,
-				7EBF9532266B5E250035D9C8 /* MatchSessionViewController.swift */,
-				7EBF9533266B5E250035D9C8 /* MatchSessionViewController.xib */,
-				7EBF9536266B5E420035D9C8 /* MatchSummaryViewController.swift */,
-				7EBF9537266B5E420035D9C8 /* MatchSummaryViewController.xib */,
-				7EBF953A266B5E530035D9C8 /* MatchHistoryViewController.swift */,
-				7EBF953B266B5E530035D9C8 /* MatchHistoryViewController.xib */,
+				3B53DF2794B2ACAB0948EA3A /* MatchHistoryViewController.swift */,
+				0244FCB134E3FA497367FB6D /* MatchHistoryViewController.xib */,
+				9AFABE9FE9150ABCF0E7D211 /* MatchSessionViewController.swift */,
+				2F59EE8E23D8011B06490FD3 /* MatchSessionViewController.xib */,
+				AF2F263B61CC57A880E391F3 /* MatchSummaryViewController.swift */,
+				5510018B5A5AD6AE5CA219A1 /* MatchSummaryViewController.xib */,
+				1116986A4D28D1919A33103B /* NewMatchViewController.swift */,
+				5D80E4CA8EB786BC5EE4A8C1 /* NewMatchViewController.xib */,
+				0C5FE07952D3C07F69B58268 /* Form */,
+				5050F18380207AF1DC4376EF /* Match Session Table */,
+				B2DBC2DE469FA889F8301C6E /* Match Summary */,
+				EF63843F370D098CD6BE4ACF /* Match Table */,
 			);
 			path = Match;
 			sourceTree = "<group>";
 		};
-		7EBF9518266B5B050035D9C8 /* Profile */ = {
+		4BB90E2781F2771E2E0D9A91 /* Training */ = {
 			isa = PBXGroup;
 			children = (
-				7EBF9526266B5DB40035D9C8 /* ProfileViewController.swift */,
-				7EBF9527266B5DB40035D9C8 /* ProfileViewController.xib */,
+				0D3F0B53FDA7AD7D08FC1CDE /* BottomCardPresentationController.swift */,
+				E1E79077146374E92DA9DEF4 /* BottomCardView.xib */,
+				5DCDAAFBF7EFAB786EFB5B42 /* BottomCardViewController.swift */,
+				A922F101E26BF93DB9D97678 /* NewTrainingViewController.swift */,
+				24BADE8E061B1D0CED5CC81D /* NewTrainingViewController.xib */,
+				C4950BEF0FF0171B8E3B31AD /* TrainingHistoryViewController.swift */,
+				0DA1F0053153735ABD309331 /* TrainingHistoryViewController.xib */,
+				5B117BF10809C3EFA318C9C9 /* TrainingSessionViewController.swift */,
+				4921D99A80B95E099DBAC5DC /* TrainingSessionViewController.xib */,
+				75DBD7879E89D3834104BA6E /* Training Collection */,
+				87A4D2FA5BD4EFDBA3E3C66C /* Training Modules */,
+				19CADF461189B9ECE5F31C7E /* Training Session */,
+			);
+			path = Training;
+			sourceTree = "<group>";
+		};
+		5050F18380207AF1DC4376EF /* Match Session Table */ = {
+			isa = PBXGroup;
+			children = (
+				16978ACDB1CA32CCD225261D /* MatchSessionTableViewCell.swift */,
+				BED3B15679C210263AA72C21 /* MatchSessionTableViewCell.xib */,
+			);
+			path = "Match Session Table";
+			sourceTree = "<group>";
+		};
+		6F9581FFE027CF1395E37FB8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				ED61F00EB5A0B48D6543DE24 /* UserProfile.swift */,
+				CA5C3DBA0ECB13AF50CF9E18 /* Match */,
+				D677568A04E12729983E8C94 /* Trainings */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		75DBD7879E89D3834104BA6E /* Training Collection */ = {
+			isa = PBXGroup;
+			children = (
+				A1439C95A7AD54E831E76F60 /* TrainingCell.swift */,
+				61763640091710EB73AEF547 /* TrainingCell.xib */,
+				14AA4BE5DE1E136FAC68D413 /* TrainingCollectionCell.swift */,
+				CD8257B745BFB25B5968487C /* TrainingCollectionCell.xib */,
+				E8C113B5DF4684FAFCE3DDC5 /* TrainingHistoryTableViewCell.swift */,
+				959FA9B45C73E09CDFC5CF49 /* TrainingHistoryTableViewCell.xib */,
+			);
+			path = "Training Collection";
+			sourceTree = "<group>";
+		};
+		81DDD9A1AE827F4E7E14FC6D /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				1398F6D1F3CA3E4D60534B79 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		87A4D2FA5BD4EFDBA3E3C66C /* Training Modules */ = {
+			isa = PBXGroup;
+			children = (
+				FBD83A25287DA28D5B0A6BC1 /* RunningTargetViewController.swift */,
+				DE7C606886394B222D29E858 /* RunningTargetViewController.xib */,
+			);
+			path = "Training Modules";
+			sourceTree = "<group>";
+		};
+		898CE7157BF19EB15CE950D2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A9B48FA7A562C95E0CC98840 /* Pods-BadmintonTrainingSupport.debug.xcconfig */,
+				FBF5A7F0CCFC4C589BF2867A /* Pods-BadmintonTrainingSupport.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		8F19DF3195EA6D77DE6324CA /* Recents */ = {
+			isa = PBXGroup;
+			children = (
+				B540CF264FBB7726C59D9014 /* RecentsCell.swift */,
+				60A0CD9C2F84AFF3FE1E1D46 /* RecentsCell.xib */,
+			);
+			path = Recents;
+			sourceTree = "<group>";
+		};
+		95C5C5D4069C1374F0D27A51 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				E504F1F78412742599128B8C /* ProfileViewController.swift */,
+				13A9E042E0DF969D73CA9C10 /* ProfileViewController.xib */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
 		};
-		7EBF9519266B5B1E0035D9C8 /* Home */ = {
+		9E2BE1F36BBBF24D85DA0D52 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				7E4FB057266BCD1200D0CEE2 /* Recents */,
-				7EBF951A266B5B4E0035D9C8 /* HomeViewController.swift */,
-				7EBF951B266B5B4E0035D9C8 /* HomeViewController.xib */,
-				7E50B25D266FD1A500BAEED1 /* HomeProfileCell.swift */,
-				7E50B25E266FD1A500BAEED1 /* HomeProfileCell.xib */,
+				E53E238F67E8A7B20BF6C38B /* HomeProfileCell.swift */,
+				E4936F06A644C07B865F625D /* HomeProfileCell.xib */,
+				4CDC534B83A836E4B63BBD23 /* HomeViewController.swift */,
+				1B39F9D1FB948E9CA174C762 /* HomeViewController.xib */,
+				8F19DF3195EA6D77DE6324CA /* Recents */,
 			);
 			path = Home;
 			sourceTree = "<group>";
 		};
-		7EE3CD3026774AC800791E02 /* Training Modules */ = {
+		B071019401015478DCF2EBC8 /* Application */ = {
 			isa = PBXGroup;
 			children = (
-				7EE3CD3126774AED00791E02 /* RunningTargetViewController.swift */,
-				7EE3CD3226774AED00791E02 /* RunningTargetViewController.xib */,
+				08C4F7640E17BE7114DFADF9 /* AppDelegate.swift */,
+				F94B15577C61B49A2D51F4BA /* Constants.swift */,
+				24D3A62D9207669869FF7BDD /* DummyData.swift */,
+				95DA28EBE4B040F8ECC52DD8 /* FirestoreReferenceManager.swift */,
+				0C24DE2AFCF90102FF8D7D94 /* SceneDelegate.swift */,
+				0D42F254D0E4BAADC181CA25 /* Sizes.swift */,
 			);
-			path = "Training Modules";
+			path = Application;
+			sourceTree = "<group>";
+		};
+		B18779403FEAF593154E03B6 /* BadmintonTrainingSupport */ = {
+			isa = PBXGroup;
+			children = (
+				761AD52C703885DAC8CF6C4D /* BadmintonTrainingSupport.entitlements */,
+				51092250ED4C2B30D368CC26 /* GoogleService-Info.plist */,
+				48AE351C6B27F4DF5917737C /* Info.plist */,
+				A13B7FD939DBF8865371AD85 /* LaunchScreen.storyboard */,
+				B071019401015478DCF2EBC8 /* Application */,
+				9E2BE1F36BBBF24D85DA0D52 /* Home */,
+				2BEB628AAB25AD80D08E3C1B /* Match */,
+				6F9581FFE027CF1395E37FB8 /* Model */,
+				95C5C5D4069C1374F0D27A51 /* Profile */,
+				81DDD9A1AE827F4E7E14FC6D /* Resources */,
+				4BB90E2781F2771E2E0D9A91 /* Training */,
+			);
+			path = BadmintonTrainingSupport;
+			sourceTree = "<group>";
+		};
+		B2DBC2DE469FA889F8301C6E /* Match Summary */ = {
+			isa = PBXGroup;
+			children = (
+				9C167C01E0C53F09886771A2 /* FinishMatchCell.swift */,
+				DB6EC644B17E8D3497B7F015 /* FinishMatchCell.xib */,
+				B2E3D73D4426C59966ADF8A9 /* ScoreCell.swift */,
+				B881C823EE69772ED636E873 /* ScoreCell.xib */,
+				5754E14475BD3D93B3860949 /* ScoreTableCell.swift */,
+				8F763997A44A91B1BCD5D548 /* ScoreTableCell.xib */,
+				536FC0C95D1A6961D0BF40C5 /* SummaryMainInfoTableViewCell.swift */,
+				CA4C8FC4DB71A8EAABF177B5 /* SummaryMainInfoTableViewCell.xib */,
+			);
+			path = "Match Summary";
+			sourceTree = "<group>";
+		};
+		BC7696A5F975C497690DE67A = {
+			isa = PBXGroup;
+			children = (
+				B18779403FEAF593154E03B6 /* BadmintonTrainingSupport */,
+				C6BBF416B8D4CBA9255FDD01 /* Products */,
+				898CE7157BF19EB15CE950D2 /* Pods */,
+				EA960A77BA3BBFD1945BCE66 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		C6BBF416B8D4CBA9255FDD01 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C115017D8285865150915D0B /* BadmintonTrainingSupport.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CA5C3DBA0ECB13AF50CF9E18 /* Match */ = {
+			isa = PBXGroup;
+			children = (
+				76BB1D277350F72677004121 /* Match.swift */,
+				E162F3A7A24F832EBEF1492E /* Team.swift */,
+			);
+			path = Match;
+			sourceTree = "<group>";
+		};
+		D677568A04E12729983E8C94 /* Trainings */ = {
+			isa = PBXGroup;
+			children = (
+				A7E44744A48A7D09B3F37CA4 /* Profile.swift */,
+				A0AD815ABBFDC70E95057AC8 /* Training.swift */,
+				F55EDEAE4C5A5F668D249F8E /* TrainingCategory.swift */,
+				B2A3249C5BAA87292B9F2731 /* TrainingSession.swift */,
+			);
+			path = Trainings;
+			sourceTree = "<group>";
+		};
+		EA960A77BA3BBFD1945BCE66 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BBE73CB3448994BABD44D2EA /* Pods_BadmintonTrainingSupport.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EF63843F370D098CD6BE4ACF /* Match Table */ = {
+			isa = PBXGroup;
+			children = (
+				9D946890FC81ABD96B2E208B /* MatchHistoryCell.swift */,
+				29EB5CA98CDF66240E23ED07 /* MatchHistoryCell.xib */,
+			);
+			path = "Match Table";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		7E24D0072668A76700195496 /* BadmintonTrainingSupport */ = {
+		BB3BB3B03E1751B6D6A3DCCD /* BadmintonTrainingSupport */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7E24D01C2668A76A00195496 /* Build configuration list for PBXNativeTarget "BadmintonTrainingSupport" */;
+			buildConfigurationList = 972C2636BA1B79A7CF5F3891 /* Build configuration list for PBXNativeTarget "BadmintonTrainingSupport" */;
 			buildPhases = (
-				6F3FFFA46710000B6845ECFE /* [CP] Check Pods Manifest.lock */,
-				7E24D0042668A76700195496 /* Sources */,
-				7E24D0052668A76700195496 /* Frameworks */,
-				7E24D0062668A76700195496 /* Resources */,
-				7A2D07EFE1A5CE9B3F93F556 /* [CP] Copy Pods Resources */,
-				B3F819C71FA2ED8F15C989E7 /* [CP] Embed Pods Frameworks */,
+				7572ED56ED1236BF0EBD48B0 /* [CP] Check Pods Manifest.lock */,
+				78020069DF0532B53EF2352F /* Sources */,
+				D61F88C670B6363096C52799 /* Resources */,
+				B744C01839CB42771CDB0415 /* Frameworks */,
+				DCD862679FA70141E569E389 /* [CP] Embed Pods Frameworks */,
+				39B9D19121AEABDE42D43C1A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -468,87 +468,98 @@
 			);
 			name = BadmintonTrainingSupport;
 			productName = BadmintonTrainingSupport;
-			productReference = 7E24D0082668A76700195496 /* BadmintonTrainingSupport.app */;
+			productReference = C115017D8285865150915D0B /* BadmintonTrainingSupport.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		7E24D0002668A76700195496 /* Project object */ = {
+		D37325CFECC396BAF4C53FAC /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1250;
-				LastUpgradeCheck = 1250;
-				TargetAttributes = {
-					7E24D0072668A76700195496 = {
-						CreatedOnToolsVersion = 12.5;
-					};
-				};
+				LastUpgradeCheck = 1200;
 			};
-			buildConfigurationList = 7E24D0032668A76700195496 /* Build configuration list for PBXProject "BadmintonTrainingSupport" */;
-			compatibilityVersion = "Xcode 9.3";
+			buildConfigurationList = 7A2D16E26F8EC875CFAD428C /* Build configuration list for PBXProject "BadmintonTrainingSupport" */;
+			compatibilityVersion = "Xcode 10.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				en,
 				Base,
+				en,
 			);
-			mainGroup = 7E24CFFF2668A76700195496;
-			productRefGroup = 7E24D0092668A76700195496 /* Products */;
+			mainGroup = BC7696A5F975C497690DE67A;
+			productRefGroup = C6BBF416B8D4CBA9255FDD01 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				7E24D0072668A76700195496 /* BadmintonTrainingSupport */,
+				BB3BB3B03E1751B6D6A3DCCD /* BadmintonTrainingSupport */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		7E24D0062668A76700195496 /* Resources */ = {
+		D61F88C670B6363096C52799 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				605AABC82679C87600924817 /* FinishMatchCell.xib in Resources */,
-				701990132677158F003FC03C /* MatchSessionTableViewCell.xib in Resources */,
-				7E4FB054266B88B300D0CEE2 /* TrainingCell.xib in Resources */,
-				7E9A03E62673774C003EFF87 /* NMImageTableViewCell.xib in Resources */,
-				60E4112F266FE919006776BD /* MatchHistoryCell.xib in Resources */,
-				7EF6271B26710E3E00A7D612 /* BottomCardView.xib in Resources */,
-				7EBF9529266B5DB40035D9C8 /* ProfileViewController.xib in Resources */,
-				60CA66F2267879FF00A75B2A /* ScoreTableCell.xib in Resources */,
-				60F907CC267792E3005007D9 /* SkippingSessionViewController.xib in Resources */,
-				60F907DE2677964C005007D9 /* ServeSessionViewController.xib in Resources */,
-				7EBF9531266B5E110035D9C8 /* NewMatchViewController.xib in Resources */,
-				7EBF9525266B5DA20035D9C8 /* TrainingSessionViewController.xib in Resources */,
-				7E4FB053266B88B300D0CEE2 /* TrainingCollectionCell.xib in Resources */,
-				60FC4DD426774D0F00863CE3 /* RunningSessionViewController.xib in Resources */,
-				7E24D0182668A76A00195496 /* LaunchScreen.storyboard in Resources */,
-				7EBF9535266B5E250035D9C8 /* MatchSessionViewController.xib in Resources */,
-				7096EA8D266E5D0700A9D1F6 /* TextFieldTableViewCell.xib in Resources */,
-				60CA66FA267882FC00A75B2A /* ScoreCell.xib in Resources */,
-				60F907DA267795F7005007D9 /* ShadowSessionViewController.xib in Resources */,
-				7EBF9539266B5E420035D9C8 /* MatchSummaryViewController.xib in Resources */,
-				60F907D026779555005007D9 /* PushUpSessionViewController.xib in Resources */,
-				7E4FB05B266BCD3800D0CEE2 /* RecentsCell.xib in Resources */,
-				7E50B260266FD1A500BAEED1 /* HomeProfileCell.xib in Resources */,
-				7E24D0152668A76A00195496 /* Assets.xcassets in Resources */,
-				7EBF953D266B5E530035D9C8 /* MatchHistoryViewController.xib in Resources */,
-				7EBF951D266B5B4E0035D9C8 /* HomeViewController.xib in Resources */,
-				6063FE70266E7AEE001DFEA2 /* TrainingHistoryTableViewCell.xib in Resources */,
-				7EBF9521266B5D790035D9C8 /* NewTrainingViewController.xib in Resources */,
-				7EBF952D266B5DD80035D9C8 /* TrainingHistoryViewController.xib in Resources */,
-				70E75CF52671BCA80043CD09 /* SegmentedCtrlTableViewCell.xib in Resources */,
-				7EE3CD3426774AED00791E02 /* RunningTargetViewController.xib in Resources */,
-				60CA66EE2678680C00A75B2A /* SummaryMainInfoTableViewCell.xib in Resources */,
-				60F907D42677959F005007D9 /* MultiShuttleSessionViewController.xib in Resources */,
-				7EE3CD2D2677250500791E02 /* GoogleService-Info.plist in Resources */,
+				E9B6F000BDD7237CC484A1B5 /* Assets.xcassets in Resources */,
+				96CD37EF188584A52498B0C4 /* BottomCardView.xib in Resources */,
+				5D79C2956134C846E4386E12 /* FinishMatchCell.xib in Resources */,
+				8649D5A7D3ED753AC44E598F /* GoogleService-Info.plist in Resources */,
+				2B0B0EB9EC5B3826BF85542C /* HomeProfileCell.xib in Resources */,
+				2415FCF206E9D1F61FCE90E4 /* HomeViewController.xib in Resources */,
+				31B9BBCF0319D0432823E5D1 /* LaunchScreen.storyboard in Resources */,
+				6183CEF16F86AB616C6B1092 /* MatchHistoryCell.xib in Resources */,
+				06315A6710554A22D18B6A69 /* MatchHistoryViewController.xib in Resources */,
+				C0F5E0F7F7E3AD29398C7EFB /* MatchSessionTableViewCell.xib in Resources */,
+				C077AB2919A9F111964875A1 /* MatchSessionViewController.xib in Resources */,
+				40223BEC2793239B620BA397 /* MatchSummaryViewController.xib in Resources */,
+				638537594448E9FB97DFF290 /* MultiShuttleSessionViewController.xib in Resources */,
+				08CAC31AA6FD3C08279F43D4 /* NMImageTableViewCell.xib in Resources */,
+				2C46B68FA85FF53725444224 /* NewMatchViewController.xib in Resources */,
+				F2D7A16495176BE78119629C /* NewTrainingViewController.xib in Resources */,
+				1D58B5A41B895DAE579B649C /* ProfileViewController.xib in Resources */,
+				45D6B95DCDAB41E8CA38C7D7 /* PushUpSessionViewController.xib in Resources */,
+				7CE452ACD462D6F3A994E326 /* RecentsCell.xib in Resources */,
+				13A8AF94680BA9561B7F579A /* RunningSessionViewController.xib in Resources */,
+				351DC82309C1C87A325CE74A /* RunningTargetViewController.xib in Resources */,
+				52F0F8FF421661C66E46EBD5 /* ScoreCell.xib in Resources */,
+				304B56E0D75875DA7CB52BD7 /* ScoreTableCell.xib in Resources */,
+				7DB6010F9AA246AACEB6BD33 /* SegmentedCtrlTableViewCell.xib in Resources */,
+				1031E2A7BC36F0B2A6C77E7D /* ServeSessionViewController.xib in Resources */,
+				26A1B4F4CF20565420E006FE /* ShadowSessionViewController.xib in Resources */,
+				734618F9DE491A4FA933347C /* SkippingSessionViewController.xib in Resources */,
+				8122F89D48949E2A19505BEF /* SummaryMainInfoTableViewCell.xib in Resources */,
+				355274A127548FB9B4F45EAD /* TextFieldTableViewCell.xib in Resources */,
+				EDC9D068D5E03281A5547DF0 /* TrainingCell.xib in Resources */,
+				1A4782E1650326763E807B6F /* TrainingCollectionCell.xib in Resources */,
+				A418B4C486B466A84F93168E /* TrainingHistoryTableViewCell.xib in Resources */,
+				E91F7B311570A615B3DAD53D /* TrainingHistoryViewController.xib in Resources */,
+				721E499ABD27C9E9BF934E21 /* TrainingSessionViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		6F3FFFA46710000B6845ECFE /* [CP] Check Pods Manifest.lock */ = {
+		39B9D19121AEABDE42D43C1A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BadmintonTrainingSupport/Pods-BadmintonTrainingSupport-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BadmintonTrainingSupport/Pods-BadmintonTrainingSupport-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BadmintonTrainingSupport/Pods-BadmintonTrainingSupport-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7572ED56ED1236BF0EBD48B0 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -570,24 +581,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		7A2D07EFE1A5CE9B3F93F556 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-BadmintonTrainingSupport/Pods-BadmintonTrainingSupport-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-BadmintonTrainingSupport/Pods-BadmintonTrainingSupport-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BadmintonTrainingSupport/Pods-BadmintonTrainingSupport-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		B3F819C71FA2ED8F15C989E7 /* [CP] Embed Pods Frameworks */ = {
+		DCD862679FA70141E569E389 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -607,64 +601,65 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		7E24D0042668A76700195496 /* Sources */ = {
+		78020069DF0532B53EF2352F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7E07A7A42679F12B00350A14 /* Training.swift in Sources */,
-				60CA66FC2678864200A75B2A /* Team.swift in Sources */,
-				B8B6CD5F2678924A006E8362 /* FirestoreReferenceManager.swift in Sources */,
-				60F907DD2677964C005007D9 /* ServeSessionViewController.swift in Sources */,
-				7EBF954F266B82850035D9C8 /* DummyData.swift in Sources */,
-				7EBF9528266B5DB40035D9C8 /* ProfileViewController.swift in Sources */,
-				60E4112E266FE919006776BD /* MatchHistoryCell.swift in Sources */,
-				60FC4DD326774D0F00863CE3 /* RunningSessionViewController.swift in Sources */,
-				7E4FB05A266BCD3800D0CEE2 /* RecentsCell.swift in Sources */,
-				7EBF953C266B5E530035D9C8 /* MatchHistoryViewController.swift in Sources */,
-				60F907D32677959F005007D9 /* MultiShuttleSessionViewController.swift in Sources */,
-				60F907CB267792E3005007D9 /* SkippingSessionViewController.swift in Sources */,
-				7E24D00C2668A76700195496 /* AppDelegate.swift in Sources */,
-				701990122677158F003FC03C /* MatchSessionTableViewCell.swift in Sources */,
-				7EBF9538266B5E420035D9C8 /* MatchSummaryViewController.swift in Sources */,
-				7EE3CD3326774AED00791E02 /* RunningTargetViewController.swift in Sources */,
-				7EBF9524266B5DA20035D9C8 /* TrainingSessionViewController.swift in Sources */,
-				7E4FB051266B88B300D0CEE2 /* TrainingCollectionCell.swift in Sources */,
-				7E24D00E2668A76700195496 /* SceneDelegate.swift in Sources */,
-				7EBF951C266B5B4E0035D9C8 /* HomeViewController.swift in Sources */,
-				7E07A7A52679F12B00350A14 /* TrainingSession.swift in Sources */,
-				6063FE6F266E7AEE001DFEA2 /* TrainingHistoryTableViewCell.swift in Sources */,
-				60CA66F1267879FF00A75B2A /* ScoreTableCell.swift in Sources */,
-				7EF6271926710DBF00A7D612 /* BottomCardPresentationController.swift in Sources */,
-				60CA66F9267882FC00A75B2A /* ScoreCell.swift in Sources */,
-				60F907D9267795F7005007D9 /* ShadowSessionViewController.swift in Sources */,
-				7E07A7A22679F12B00350A14 /* TrainingCategory.swift in Sources */,
-				7E4FB052266B88B300D0CEE2 /* TrainingCell.swift in Sources */,
-				70E75CF42671BCA80043CD09 /* SegmentedCtrlTableViewCell.swift in Sources */,
-				7EBF9530266B5E110035D9C8 /* NewMatchViewController.swift in Sources */,
-				7EBF9520266B5D790035D9C8 /* NewTrainingViewController.swift in Sources */,
-				7E9A03E52673774C003EFF87 /* NMImageTableViewCell.swift in Sources */,
-				7E4FB056266BC1C200D0CEE2 /* Sizes.swift in Sources */,
-				7E07A7A32679F12B00350A14 /* Profile.swift in Sources */,
-				7EBF9545266B78E40035D9C8 /* Constants.swift in Sources */,
-				60A0CF0C267104D000CBE0E5 /* Match.swift in Sources */,
-				7EBF9534266B5E250035D9C8 /* MatchSessionViewController.swift in Sources */,
-				7E50B25F266FD1A500BAEED1 /* HomeProfileCell.swift in Sources */,
-				7EBF952C266B5DD80035D9C8 /* TrainingHistoryViewController.swift in Sources */,
-				7EE3CD2F267730AD00791E02 /* BottomCardViewController.swift in Sources */,
-				7E50B262266FD30100BAEED1 /* UserProfile.swift in Sources */,
-				60CA66ED2678680C00A75B2A /* SummaryMainInfoTableViewCell.swift in Sources */,
-				605AABC72679C87600924817 /* FinishMatchCell.swift in Sources */,
-				7096EA8C266E5D0700A9D1F6 /* TextFieldTableViewCell.swift in Sources */,
+				130DFFA9A47D0AA553282D90 /* AppDelegate.swift in Sources */,
+				1B5BB41F2A6AC337933DC016 /* BottomCardPresentationController.swift in Sources */,
+				5974AB101156752E05D9C1DB /* BottomCardViewController.swift in Sources */,
+				5724523D8441FB506F199555 /* Constants.swift in Sources */,
+				1E6B8E6855DB575FAE2F3D39 /* DummyData.swift in Sources */,
+				41EA45A59EAD3394111F6F9A /* FinishMatchCell.swift in Sources */,
+				629582D388E05F8070CC9D15 /* FirestoreReferenceManager.swift in Sources */,
+				3E21CBAF70F56F9E4F48AD48 /* HomeProfileCell.swift in Sources */,
+				7FC86FE38C45221798C37FB9 /* HomeViewController.swift in Sources */,
+				42C40BD20725542B8870F804 /* Match.swift in Sources */,
+				44BAEAFC528D8FE22B48775D /* MatchHistoryCell.swift in Sources */,
+				C577C684DAFAD26B4F2B14E4 /* MatchHistoryViewController.swift in Sources */,
+				46DC1AA5A23FBE81DFC73F72 /* MatchSessionTableViewCell.swift in Sources */,
+				6E62DE81A06F606FAF524D0A /* MatchSessionViewController.swift in Sources */,
+				AFB93654DBF0F735BCEB3AC8 /* MatchSummaryViewController.swift in Sources */,
+				5CEAD27407D50F0E6E9F26F7 /* MultiShuttleSessionViewController.swift in Sources */,
+				09C7C7F3DF0A0313F1CC267B /* NMImageTableViewCell.swift in Sources */,
+				1526AB99FF152420CF17750E /* NewMatchViewController.swift in Sources */,
+				D29B4E28E28DBBFDCBF78E8D /* NewTrainingViewController.swift in Sources */,
+				26A26ACC593DF5106CF1B926 /* Profile.swift in Sources */,
+				FCFFCEAB83168F4752254D39 /* ProfileViewController.swift in Sources */,
+				B17C576DAE8220AD2A36448D /* PushUpSessionViewController.swift in Sources */,
+				96576918B9D44FA52BE91A52 /* RecentsCell.swift in Sources */,
+				99D5EED5B48B3124B9C33AC4 /* RunningSessionViewController.swift in Sources */,
+				DD5B431CB0ADABF4B5F8F4B4 /* RunningTargetViewController.swift in Sources */,
+				3F79F6E460D2FD9AC44A49F3 /* SceneDelegate.swift in Sources */,
+				3ACF886CB33DA15A720B357E /* ScoreCell.swift in Sources */,
+				BBA651A8C47F5C203346A8AF /* ScoreTableCell.swift in Sources */,
+				0AFF98C3E1CCB968878606D9 /* SegmentedCtrlTableViewCell.swift in Sources */,
+				49D00FFFC5673FD1AC226500 /* ServeSessionViewController.swift in Sources */,
+				885E1D825500B7EFFAC6517B /* ShadowSessionViewController.swift in Sources */,
+				B090A8961974BC28CBF1F00D /* Sizes.swift in Sources */,
+				C895039C96A59C7534AA2E16 /* SkippingSessionViewController.swift in Sources */,
+				906A2B4CC0A9C4B7E83CDDD4 /* SummaryMainInfoTableViewCell.swift in Sources */,
+				29D55E6E902F6E7B963E6FD3 /* Team.swift in Sources */,
+				93A96A03C7F11380D2BBEA3C /* TextFieldTableViewCell.swift in Sources */,
+				AE92A6D9BE7845DF8E6CBF0E /* Training.swift in Sources */,
+				89AE167A6B8879260C22A67E /* TrainingCategory.swift in Sources */,
+				96765AC8CF7A2B0FFF0D75EF /* TrainingCell.swift in Sources */,
+				9BFE5C3EBDAD49734003B670 /* TrainingCollectionCell.swift in Sources */,
+				5E2F90F1DDDB3102B3A480C3 /* TrainingHistoryTableViewCell.swift in Sources */,
+				CB8C2946EF49762C1F84612A /* TrainingHistoryViewController.swift in Sources */,
+				4C24786661734E33068CD89D /* TrainingSession.swift in Sources */,
+				391BEAB56B90412B6FA31031 /* TrainingSessionViewController.swift in Sources */,
+				E1626BAD0FBE0FF14C631F67 /* UserProfile.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		7E24D0162668A76A00195496 /* LaunchScreen.storyboard */ = {
+		A13B7FD939DBF8865371AD85 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				7E24D0172668A76A00195496 /* Base */,
+				199CB3EB55FFC5D1867FC52B /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -672,7 +667,25 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		7E24D01A2668A76A00195496 /* Debug */ = {
+		27318B8698C1081C7CF51CE0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FBF5A7F0CCFC4C589BF2867A /* Pods-BadmintonTrainingSupport.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = BadmintonTrainingSupport/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.jfebrian.BadmintonTrainingSupport.BadmintonTrainingSupport;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		2B76B1E13DC827F4B03FAD18 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -714,8 +727,8 @@
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
 					"$(inherited)",
+					"DEBUG=1",
 				);
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
@@ -727,13 +740,33 @@
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
-		7E24D01B2668A76A00195496 /* Release */ = {
+		50DBF09C7C552AB9EE87493E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A9B48FA7A562C95E0CC98840 /* Pods-BadmintonTrainingSupport.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = BadmintonTrainingSupport/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.jfebrian.BadmintonTrainingSupport.BadmintonTrainingSupport;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		556310B9E21754809C3333FB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -781,81 +814,36 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		7E24D01D2668A76A00195496 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = A3B993DF360B7C68E59C73AF /* Pods-BadmintonTrainingSupport.debug.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = BadmintonTrainingSupport/BadmintonTrainingSupport.entitlements;
-				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = W6NYRRRG5Q;
-				INFOPLIST_FILE = BadmintonTrainingSupport/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.jfebrian.BadmintonTrainingSupport;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		7E24D01E2668A76A00195496 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 55FEF1690DBEBA70C4411FE9 /* Pods-BadmintonTrainingSupport.release.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = BadmintonTrainingSupport/BadmintonTrainingSupport.entitlements;
-				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = W6NYRRRG5Q;
-				INFOPLIST_FILE = BadmintonTrainingSupport/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.jfebrian.BadmintonTrainingSupport;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		7E24D0032668A76700195496 /* Build configuration list for PBXProject "BadmintonTrainingSupport" */ = {
+		7A2D16E26F8EC875CFAD428C /* Build configuration list for PBXProject "BadmintonTrainingSupport" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				7E24D01A2668A76A00195496 /* Debug */,
-				7E24D01B2668A76A00195496 /* Release */,
+				2B76B1E13DC827F4B03FAD18 /* Debug */,
+				556310B9E21754809C3333FB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
-		7E24D01C2668A76A00195496 /* Build configuration list for PBXNativeTarget "BadmintonTrainingSupport" */ = {
+		972C2636BA1B79A7CF5F3891 /* Build configuration list for PBXNativeTarget "BadmintonTrainingSupport" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				7E24D01D2668A76A00195496 /* Debug */,
-				7E24D01E2668A76A00195496 /* Release */,
+				50DBF09C7C552AB9EE87493E /* Debug */,
+				27318B8698C1081C7CF51CE0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 7E24D0002668A76700195496 /* Project object */;
+	rootObject = D37325CFECC396BAF4C53FAC /* Project object */;
 }

@@ -6,10 +6,24 @@
 //
 
 import Foundation
+
 struct Team{
-    var players: [String]
     
+    var players: [String]
     var teamScore: [Int]
+    
+    var playerNames: String {
+        var playerNames = ""
+        for player in players {
+            if player == players[0] {
+                playerNames.append(player)
+            } else {
+                playerNames.append("\n\(player)")
+            }
+        }
+        return playerNames
+    }
+    
     init(players : [String], teamScore: [Int]) {
         self.players = players
         self.teamScore = teamScore
