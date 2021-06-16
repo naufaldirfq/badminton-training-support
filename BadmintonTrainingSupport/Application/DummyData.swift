@@ -24,6 +24,7 @@ struct DummyData {
         Match(player1: "you", player2: "hehe", player3: "huhu", player4: "haha", matchSet: 2, teamScoreA: [19,21], teamScoreB: [21,0])
         
     ]
+    static let Teams = [Team(players: ["Hanif","Ades"], teamScore: [21,3,4]) , Team(players: ["Jojo","Jonda"], teamScore: [0,21,22])]
     
     static let TrainingHistory = [TrainingSession(trainingName: "Larii", trainingDate: Date().addingTimeInterval(-15000)
 , trainingResult: ["1 Km","20 min"], trainingMeasurement: ["Jarak","waktu"]),

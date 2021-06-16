@@ -15,6 +15,10 @@ struct Identifiers {
     static let TrainingHistoryCell = "TrainingHistoryTableViewCell"
     static let MatchHistoryCell = "MatchHistoryCell"
     static let HomeProfileCell = "HomeProfileCell"
+    static let SummaryMainInfoCell = "SummaryMainInfoTableViewCell"
+    static let ScoreTabelCell = "ScoreTableCell"
+    static let ScoreCell = "ScoreCell"
+    static let FinishMatchCell = "FinishMatchCell"
 }
 
 struct Images {

@@ -37,4 +37,11 @@ struct Sizes {
     struct  MatchSession {
         static let Height: CGFloat = 666
     }
+    struct MatchSummary{
+        static let ImageHeight: CGFloat = 140
+        static let SummaryInfo: CGFloat = 80 //def: 80
+        static let ScoreTable: CGFloat = 154
+        static let FinishButton: CGFloat = 52
+
+    }
 }
