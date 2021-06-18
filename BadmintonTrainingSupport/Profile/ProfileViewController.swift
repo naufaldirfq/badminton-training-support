@@ -11,12 +11,17 @@ import FirebaseAuth
 
 class ProfileViewController: UIViewController {
 
+    @IBOutlet weak var profileTableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        setupTableView()
         setupSignInButton()
     }
-
+    func setupTableView() {
+        profileTableView.delegate = self
+        profileTableView.dataSource = self
+        profileTableView.register(TrainingChartCell.nib(), forCellReuseIdentifier: TrainingChartCell.identifier)
+    }
     func setupSignInButton() {
         let button = ASAuthorizationAppleIDButton()
         button.addTarget(self, action: #selector(handleSignInWithAppleTapped), for: .touchUpInside)
@@ -148,6 +153,23 @@ private func randomNonceString(length: Int = 32) -> String {
 
   return result
 }
+extension ProfileViewController: UITableViewDelegate, UITableViewDataSource{
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 6
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if let cell = tableView.dequeueReusableCell(withIdentifier: TrainingChartCell.identifier, for: indexPath) as? TrainingChartCell{
+            
+                return cell
+        }
+        return UITableViewCell()
+    }
+}
+    
+    
+    
+
 
 import CryptoKit
 

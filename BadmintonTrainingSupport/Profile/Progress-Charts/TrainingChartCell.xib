@@ -17,7 +17,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="390" height="148"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wpV-EZ-MI5" customClass="BarChartView" customModule="BadmintonTrainingSupport">
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wpV-EZ-MI5" customClass="BarChartView" customModule="Charts">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="148"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
@@ -30,6 +30,9 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="trainingChart" destination="wpV-EZ-MI5" id="3nk-Z4-I63"/>
+            </connections>
             <point key="canvasLocation" x="182.60869565217394" y="138.61607142857142"/>
         </tableViewCell>
     </objects>
