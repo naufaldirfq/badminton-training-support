@@ -51,7 +51,12 @@ extension RunningSessionViewController: TrainingSessionDelegate {
     }
     
     func didTapStopButton() {
-        print("stop")
+        FirestoreReferenceManager.physical_db.document("running").collection("training_data").addDocument(data: [
+            "time": 10,
+            "distance": 100,
+            "pace": 10
+        ])
+        print("data added")
     }
     
     func didTapPauseButton() {
