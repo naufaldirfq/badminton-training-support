@@ -10,30 +10,45 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="148" id="KGk-i7-Jjw" customClass="TrainingChartCell" customModule="BadmintonTrainingSupport" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="390" height="148"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="196" id="KGk-i7-Jjw" customClass="TrainingChartCell" customModule="BadmintonTrainingSupport" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="390" height="196"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="390" height="148"/>
+                <rect key="frame" x="0.0" y="0.0" width="390" height="196"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wpV-EZ-MI5" customClass="BarChartView" customModule="Charts">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="148"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="yEs-Sd-Ln3">
+                        <rect key="frame" x="16" y="16" width="358" height="164"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Training" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="io4-oM-Wjj">
+                                <rect key="frame" x="0.0" y="0.0" width="358" height="20.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wpV-EZ-MI5" customClass="BarChartView" customModule="Charts">
+                                <rect key="frame" x="0.0" y="20.5" width="358" height="143.5"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="wpV-EZ-MI5" firstAttribute="width" secondItem="yEs-Sd-Ln3" secondAttribute="width" id="C08-15-1YT"/>
+                            <constraint firstItem="io4-oM-Wjj" firstAttribute="width" secondItem="yEs-Sd-Ln3" secondAttribute="width" id="t42-XG-h5R"/>
+                        </constraints>
+                    </stackView>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="wpV-EZ-MI5" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="1ws-s9-a1R"/>
-                    <constraint firstAttribute="bottom" secondItem="wpV-EZ-MI5" secondAttribute="bottom" id="2Xo-XF-1YA"/>
-                    <constraint firstItem="wpV-EZ-MI5" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="3Tq-Ym-cLJ"/>
-                    <constraint firstAttribute="trailing" secondItem="wpV-EZ-MI5" secondAttribute="trailing" id="BN7-Zr-lg3"/>
+                    <constraint firstItem="yEs-Sd-Ln3" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="3lc-BK-R6Q"/>
+                    <constraint firstItem="yEs-Sd-Ln3" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="MML-Qr-VZ5"/>
+                    <constraint firstAttribute="trailing" secondItem="yEs-Sd-Ln3" secondAttribute="trailing" constant="16" id="Tuw-zU-Fdr"/>
+                    <constraint firstAttribute="bottom" secondItem="yEs-Sd-Ln3" secondAttribute="bottom" constant="16" id="gh6-dR-BQ3"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="trainingChart" destination="wpV-EZ-MI5" id="3nk-Z4-I63"/>
             </connections>
-            <point key="canvasLocation" x="182.60869565217394" y="138.61607142857142"/>
+            <point key="canvasLocation" x="182.60869565217394" y="122.54464285714285"/>
         </tableViewCell>
     </objects>
     <resources>

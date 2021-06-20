@@ -21,6 +21,7 @@ class ProfileViewController: UIViewController {
         profileTableView.delegate = self
         profileTableView.dataSource = self
         profileTableView.register(TrainingChartCell.nib(), forCellReuseIdentifier: TrainingChartCell.identifier)
+        profileTableView.register(ProfileInfoCell.nib(), forCellReuseIdentifier: ProfileInfoCell.identifier)
     }
     func setupSignInButton() {
         let button = ASAuthorizationAppleIDButton()
@@ -159,11 +160,31 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if let cell = tableView.dequeueReusableCell(withIdentifier: TrainingChartCell.identifier, for: indexPath) as? TrainingChartCell{
-            
-                return cell
+        switch indexPath.row {
+        case 0:
+            if let cell = tableView.dequeueReusableCell(withIdentifier: ProfileInfoCell.identifier, for: indexPath) as? ProfileInfoCell{
+                cell.configure(user: DummyData.Profile)
+                cell.delegate = self
+                    return cell
+            }
+        default:
+            if let cell = tableView.dequeueReusableCell(withIdentifier: TrainingChartCell.identifier, for: indexPath) as? TrainingChartCell{
+                
+                    return cell
+            }
         }
+        
+        
         return UITableViewCell()
+    }
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        switch indexPath.row {
+        case 0:
+            return Sizes.HomeProfile.ProfileInfoHeight
+        
+        default:
+            return Sizes.HomeProfile.ChartsHeight
+        }
     }
 }
     

@@ -50,6 +50,8 @@
 		5E2F90F1DDDB3102B3A480C3 /* TrainingHistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C113B5DF4684FAFCE3DDC5 /* TrainingHistoryTableViewCell.swift */; };
 		601F3E68267C889A00F32D1B /* TrainingChartCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 601F3E66267C889A00F32D1B /* TrainingChartCell.swift */; };
 		601F3E69267C889A00F32D1B /* TrainingChartCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 601F3E67267C889A00F32D1B /* TrainingChartCell.xib */; };
+		60AB23E0267F35690001E80B /* ProfileInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60AB23DE267F35690001E80B /* ProfileInfoCell.swift */; };
+		60AB23E1267F35690001E80B /* ProfileInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60AB23DF267F35690001E80B /* ProfileInfoCell.xib */; };
 		6183CEF16F86AB616C6B1092 /* MatchHistoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 29EB5CA98CDF66240E23ED07 /* MatchHistoryCell.xib */; };
 		629582D388E05F8070CC9D15 /* FirestoreReferenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95DA28EBE4B040F8ECC52DD8 /* FirestoreReferenceManager.swift */; };
 		638537594448E9FB97DFF290 /* MultiShuttleSessionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AAA24E4CE5CA5FE18A82A9E /* MultiShuttleSessionViewController.xib */; };
@@ -131,6 +133,8 @@
 		601F3E66267C889A00F32D1B /* TrainingChartCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingChartCell.swift; sourceTree = "<group>"; };
 		601F3E67267C889A00F32D1B /* TrainingChartCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrainingChartCell.xib; sourceTree = "<group>"; };
 		60A0CD9C2F84AFF3FE1E1D46 /* RecentsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecentsCell.xib; sourceTree = "<group>"; };
+		60AB23DE267F35690001E80B /* ProfileInfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileInfoCell.swift; sourceTree = "<group>"; };
+		60AB23DF267F35690001E80B /* ProfileInfoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileInfoCell.xib; sourceTree = "<group>"; };
 		61763640091710EB73AEF547 /* TrainingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrainingCell.xib; sourceTree = "<group>"; };
 		726E3E3D2103F2B41287B963 /* TextFieldTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextFieldTableViewCell.xib; sourceTree = "<group>"; };
 		73FD800A23AA931ABCE83DE6 /* RunningSessionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RunningSessionViewController.xib; sourceTree = "<group>"; };
@@ -345,6 +349,8 @@
 				601F3E5D267C7B8C00F32D1B /* Progress-Charts */,
 				E504F1F78412742599128B8C /* ProfileViewController.swift */,
 				13A9E042E0DF969D73CA9C10 /* ProfileViewController.xib */,
+				60AB23DE267F35690001E80B /* ProfileInfoCell.swift */,
+				60AB23DF267F35690001E80B /* ProfileInfoCell.xib */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -545,6 +551,7 @@
 				734618F9DE491A4FA933347C /* SkippingSessionViewController.xib in Resources */,
 				8122F89D48949E2A19505BEF /* SummaryMainInfoTableViewCell.xib in Resources */,
 				355274A127548FB9B4F45EAD /* TextFieldTableViewCell.xib in Resources */,
+				60AB23E1267F35690001E80B /* ProfileInfoCell.xib in Resources */,
 				EDC9D068D5E03281A5547DF0 /* TrainingCell.xib in Resources */,
 				1A4782E1650326763E807B6F /* TrainingCollectionCell.xib in Resources */,
 				A418B4C486B466A84F93168E /* TrainingHistoryTableViewCell.xib in Resources */,
@@ -646,6 +653,7 @@
 				96576918B9D44FA52BE91A52 /* RecentsCell.swift in Sources */,
 				99D5EED5B48B3124B9C33AC4 /* RunningSessionViewController.swift in Sources */,
 				DD5B431CB0ADABF4B5F8F4B4 /* RunningTargetViewController.swift in Sources */,
+				60AB23E0267F35690001E80B /* ProfileInfoCell.swift in Sources */,
 				3F79F6E460D2FD9AC44A49F3 /* SceneDelegate.swift in Sources */,
 				3ACF886CB33DA15A720B357E /* ScoreCell.swift in Sources */,
 				BBA651A8C47F5C203346A8AF /* ScoreTableCell.swift in Sources */,
