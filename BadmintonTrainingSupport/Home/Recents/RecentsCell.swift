@@ -62,7 +62,6 @@ class RecentsCell: UITableViewCell {
         loadView()
         fetchData()
         matches =  DummyData.history.dummyMatches
-        trainings =  DummyData.history.TrainingHistory
         tableView.reloadData()
     }
     
