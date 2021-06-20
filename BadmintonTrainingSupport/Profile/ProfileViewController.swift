@@ -15,7 +15,6 @@ class ProfileViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
-        setupSignInButton()
     }
     func setupTableView() {
         profileTableView.delegate = self
@@ -23,13 +22,6 @@ class ProfileViewController: UIViewController {
         profileTableView.register(TrainingChartCell.nib(), forCellReuseIdentifier: TrainingChartCell.identifier)
         profileTableView.register(ProfileInfoCell.nib(), forCellReuseIdentifier: ProfileInfoCell.identifier)
     }
-    func setupSignInButton() {
-        let button = ASAuthorizationAppleIDButton()
-        button.addTarget(self, action: #selector(handleSignInWithAppleTapped), for: .touchUpInside)
-        button.center = view.center
-        view.addSubview(button)
-    }
-
     @objc func handleSignInWithAppleTapped() {
         performSignIn()
     }
@@ -167,6 +159,17 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource{
                 cell.delegate = self
                     return cell
             }
+        case 1:
+            let cell = UITableViewCell()
+            let button = ASAuthorizationAppleIDButton()
+            button.addTarget(self, action: #selector(handleSignInWithAppleTapped), for: .touchUpInside)
+            button.center = cell.contentView.center
+            button.autoresizingMask = [.flexibleLeftMargin,.flexibleBottomMargin,.flexibleRightMargin,.flexibleTopMargin]
+            
+            cell.addSubview(button)
+            button.widthAnchor.constraint(equalToConstant: tableView.frame.width - 64).isActive = true
+
+            return cell
         default:
             if let cell = tableView.dequeueReusableCell(withIdentifier: TrainingChartCell.identifier, for: indexPath) as? TrainingChartCell{
                 
@@ -181,7 +184,7 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource{
         switch indexPath.row {
         case 0:
             return Sizes.HomeProfile.ProfileInfoHeight
-        
+        case 1: return 72
         default:
             return Sizes.HomeProfile.ChartsHeight
         }

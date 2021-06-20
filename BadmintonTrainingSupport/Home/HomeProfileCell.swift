@@ -28,6 +28,7 @@ class HomeProfileCell: UITableViewCell {
     func configure(with user: UserProfile) {
         userNameLabel.text = user.name
         userPhotoImageView.image = user.photo
+        userPhotoImageView.layer.cornerRadius = userPhotoImageView.frame.width/2
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

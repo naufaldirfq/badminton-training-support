@@ -36,6 +36,7 @@ class HomeViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         stickyButton.setStickySide(.right)
+        tableView.reloadData()
         navigationController?.setNavigationBarHidden(true, animated: animated)
     }
     

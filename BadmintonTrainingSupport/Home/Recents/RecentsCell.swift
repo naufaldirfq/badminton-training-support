@@ -40,7 +40,7 @@ class RecentsCell: UITableViewCell {
         selectionStyle = .none
         setupTableView()
         
-        matches.append(contentsOf: DummyData.dummyMatches)
+       
     }
     
     func setupTableView() {
@@ -61,7 +61,9 @@ class RecentsCell: UITableViewCell {
         print(trainings)
         loadView()
         fetchData()
-        self.tableView.reloadData()
+        matches =  DummyData.history.dummyMatches
+        trainings =  DummyData.history.TrainingHistory
+        tableView.reloadData()
     }
     
     func loadView() {
@@ -102,11 +104,11 @@ extension RecentsCell: UITableViewDelegate, UITableViewDataSource {
         switch type {
         case .training:
             let cell = tableView.dequeueReusableCell(withIdentifier: TrainingHistoryTableViewCell.identifier, for: indexPath) as! TrainingHistoryTableViewCell
-            cell.configure(with: trainings[indexPath.row])
+            cell.configure(with: trainings[trainings.count - indexPath.row - 1])
             return cell
         case .match:
             let cell = tableView.dequeueReusableCell(withIdentifier: MatchHistoryCell.identifier, for: indexPath) as! MatchHistoryCell
-            cell.configure(with: matches[indexPath.row])
+            cell.configure(with: matches[matches.count - indexPath.row - 1])
             return cell
         default:
             return UITableViewCell()

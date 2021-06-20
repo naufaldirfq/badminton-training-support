@@ -38,12 +38,20 @@ class SegmentedCtrlTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        disableAutoCorrect()
         doubleView.isHidden = true
         doubleButton.isHidden = true
         setupStyles()
         setupDelegates()
     }
-    
+    func disableAutoCorrect() {
+        singleFieldOne.autocorrectionType = .no
+        singleFieldTwo.autocorrectionType = .no
+        doubleFieldOne.autocorrectionType = .no
+        doubleFieldTwo.autocorrectionType = .no
+        doubleFieldThree.autocorrectionType = .no
+        doubleFieldFour.autocorrectionType = .no
+    }
     func setupDelegates() {
         singleFieldOne.delegate = self
         singleFieldTwo.delegate = self
