@@ -18,12 +18,12 @@ class TrainingHistoryTableViewCell: UITableViewCell {
     
     static let identifier = Identifiers.TrainingHistoryCell
     public func configure(with training: TrainingSession) {
-        trainingNameLabel.text = training.trainingName
+        trainingNameLabel.text = training.name
         recentsLabel.text = training.getDateRelativity()
-        measurement1Label.text = training.trainingMeasurement[0]
-        measurement2Label.text = training.trainingMeasurement[1]
-        unit1Label.text = String(training.trainingResult[0])
-        unit2Label.text = String(training.trainingResult[1])
+//        measurement1Label.text = training.trainingMeasurement[0].name
+//        measurement2Label.text = training.trainingMeasurement[1]
+//        unit1Label.text = String(training.trainingMeasurement[0].value)
+//        unit2Label.text = String(training.trainingResult[1])
         
         
     }

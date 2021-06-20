@@ -19,6 +19,8 @@ class RunningSessionViewController: UIViewController {
     @IBOutlet weak var rightCounterLabel: UILabel!
     @IBOutlet weak var rightUnitLabel: UILabel!
     
+    private var trainingSession: TrainingSession?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         let dcf = DateComponentsFormatter()
@@ -51,10 +53,11 @@ extension RunningSessionViewController: TrainingSessionDelegate {
     }
     
     func didTapStopButton() {
-        FirestoreReferenceManager.physical_db.document("running").collection("training_data").addDocument(data: [
+        FirestoreReferenceManager.db.collection("training_history").addDocument(data: [
             "time": 10,
             "distance": 100,
-            "pace": 10
+            "pace": 10,
+            "training_name": FirestoreReferenceManager.db.document("training_category/physical/trainings/running")
         ])
         print("data added")
     }
