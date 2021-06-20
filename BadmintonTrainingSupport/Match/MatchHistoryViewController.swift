@@ -16,7 +16,7 @@ class MatchHistoryViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.title = "Match History"
-        matches.append(contentsOf: DummyData.dummyMatches)
+        matches.append(contentsOf: DummyData.history.dummyMatches.reversed())
         initTableView()
     }
     

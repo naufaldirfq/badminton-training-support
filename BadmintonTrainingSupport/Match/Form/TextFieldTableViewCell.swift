@@ -22,6 +22,7 @@ class TextFieldTableViewCell: UITableViewCell {
     
     static func nib() -> UINib {
         return UINib(nibName: "TextFieldTableViewCell", bundle: nil)
+        
     }
   
     
@@ -47,6 +48,8 @@ class TextFieldTableViewCell: UITableViewCell {
         super.awakeFromNib()
         textField.delegate = self
         textField.borderStyle = UITextField.BorderStyle.roundedRect
+        textField.autocorrectionType = .no
+        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -61,9 +64,14 @@ extension TextFieldTableViewCell: UITextFieldDelegate {
             delegate?.textField(with: text, didFinishEditingFor: field)
         }
     }
-    
+    override func resignFirstResponder() -> Bool {
+        if let text = textField.text, let field = self.field {
+            delegate?.textField(with: text, didFinishEditingFor: field)
+        }
+        return super.resignFirstResponder()
+    }
     func textFieldShouldReturn(_ textField: UITextField) -> Bool{
         textField.resignFirstResponder()
-        return true
+        return false
     }
 }

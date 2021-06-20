@@ -171,7 +171,10 @@ extension NewMatchViewController: SegmentedCtrlDelegate {
         form.type = .double
         if form.isValid {
             let match = Match(type: .double, with: Array(form.players[0...3]))
+            match.place = form.place
+            match.description = form.description
             let vc = MatchSessionViewController()
+            
             vc.match = match
             navigationController?.pushViewController(vc, animated: true)
         } else {

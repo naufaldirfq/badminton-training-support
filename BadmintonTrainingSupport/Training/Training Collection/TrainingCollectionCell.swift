@@ -47,7 +47,7 @@ class TrainingCollectionCell: UITableViewCell {
     public func configure(name: String, with trainings: [Training], width: CGFloat? = nil) {
         print(trainings)
         self.name = name
-        self.trainings.append(contentsOf: trainings)
+        self.trainings = trainings
         self.width = width ?? self.width
         loadView()
         collectionView.reloadData()

@@ -34,6 +34,9 @@ class MatchSummaryViewController: UIViewController {
     }
     
     @IBAction func didTapFinishButton(_ sender: UIButton) {
+        if let match = self.match{
+            DummyData.history.dummyMatches.append(match)
+        }
         navigationController?.popToRootViewController(animated: true)
     }
 }

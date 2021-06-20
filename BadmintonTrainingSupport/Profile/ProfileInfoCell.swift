@@ -25,7 +25,8 @@ class ProfileInfoCell: UITableViewCell{
     func configure(user: UserProfile) {
         self.user = user
         profileImage.image = user.photo
-        profileNameButton.setTitle(user.name, for: .normal) 
+        profileNameButton.setTitle(user.name, for: .normal)
+        profileImage.layer.cornerRadius = profileImage.frame.width/2
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {

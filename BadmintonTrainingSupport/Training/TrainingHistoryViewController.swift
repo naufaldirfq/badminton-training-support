@@ -8,7 +8,7 @@
 import UIKit
 
 class TrainingHistoryViewController: UIViewController {
-    let trainingHistory = DummyData.TrainingHistory
+    let trainingHistory : [TrainingSession]  = DummyData.history.TrainingHistory.reversed()
     @IBOutlet weak var trainingHistoryTableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
