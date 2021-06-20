@@ -11,12 +11,18 @@ import FirebaseAuth
 
 class ProfileViewController: UIViewController {
 
+    @IBOutlet weak var profileTableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        setupTableView()
         setupSignInButton()
     }
-
+    func setupTableView() {
+        profileTableView.delegate = self
+        profileTableView.dataSource = self
+        profileTableView.register(TrainingChartCell.nib(), forCellReuseIdentifier: TrainingChartCell.identifier)
+        profileTableView.register(ProfileInfoCell.nib(), forCellReuseIdentifier: ProfileInfoCell.identifier)
+    }
     func setupSignInButton() {
         let button = ASAuthorizationAppleIDButton()
         button.addTarget(self, action: #selector(handleSignInWithAppleTapped), for: .touchUpInside)
@@ -148,6 +154,43 @@ private func randomNonceString(length: Int = 32) -> String {
 
   return result
 }
+extension ProfileViewController: UITableViewDelegate, UITableViewDataSource{
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 6
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        switch indexPath.row {
+        case 0:
+            if let cell = tableView.dequeueReusableCell(withIdentifier: ProfileInfoCell.identifier, for: indexPath) as? ProfileInfoCell{
+                cell.configure(user: DummyData.Profile)
+                cell.delegate = self
+                    return cell
+            }
+        default:
+            if let cell = tableView.dequeueReusableCell(withIdentifier: TrainingChartCell.identifier, for: indexPath) as? TrainingChartCell{
+                
+                    return cell
+            }
+        }
+        
+        
+        return UITableViewCell()
+    }
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        switch indexPath.row {
+        case 0:
+            return Sizes.HomeProfile.ProfileInfoHeight
+        
+        default:
+            return Sizes.HomeProfile.ChartsHeight
+        }
+    }
+}
+    
+    
+    
+
 
 import CryptoKit
 
