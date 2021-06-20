@@ -17,10 +17,10 @@ class HomeViewController: UIViewController {
     
     private var trainingCategory: [TrainingCategory] = []
     private var trainings: [Training] = []
-    private var trainingHistory: [TrainingSession] = []
     private var trainingCategoryCollectionRef: CollectionReference!
     private var trainingsCollectionRef: CollectionReference!
     private var trainingHistoryCollectionRef: CollectionReference!
+    private var matchHistoryCollectionRef: CollectionReference!
     
     @IBOutlet var tableView: UITableView!
     
@@ -122,6 +122,7 @@ class HomeViewController: UIViewController {
         }
         
         trainingHistoryCollectionRef = FirestoreReferenceManager.db.collection("training_history")
+//        ORDER BY DATENYA BELOM
         self.trainingHistoryCollectionRef.getDocuments { (snapshot, error) in
             if let err = error {
                 debugPrint("Error fetching docs: \(err)")
@@ -138,7 +139,7 @@ class HomeViewController: UIViewController {
                     let repetition = data["repetition"] as! Int
                     let breakTime = data["breakTime"] as! Int
                     let newHistory = TrainingSession(name: name, date: date, time: time, pace: pace, distance: distance, set: set, repetition: repetition, breakTime: breakTime)
-                    self.trainingHistory.append(newHistory)
+                    Local.data.trainingHistory.append(newHistory)
                     DispatchQueue.main.async {
                         self.tableView.reloadData()
                     }
@@ -146,7 +147,34 @@ class HomeViewController: UIViewController {
             }
         }
         
-        
+        matchHistoryCollectionRef = FirestoreReferenceManager.db.collection("match")
+        self.matchHistoryCollectionRef.order(by: "date").getDocuments { (snapshot, error) in
+            if let err = error {
+                debugPrint("Error fetching docs: \(err)")
+            } else {
+                guard let snap = snapshot else { return }
+                for document in snap.documents {
+                    let data = document.data()
+                    let date = Date()
+                    let description = data["description"] as! String
+                    let durations = data["durations"] as! [Int]
+                    let isSingle = data["isSingle"] as! Bool
+                    let place = data["place"] as! String
+                    var teams: [Team] = []
+                    let teamsData = document.data()["team"] as! [[String:Any]]
+                    for team in teamsData  {
+                        let players = team["players"] as! [String]
+                        let scores = team["score"] as! [Int]
+                        teams.append(Team(players: players, teamScore: scores))
+                    }
+                    let newHistory = Match(date: date, description: description, durations: durations, isSingle: isSingle, place: place, team: teams)
+                    Local.data.matchHistory.append(newHistory)
+                    DispatchQueue.main.async {
+                        self.tableView.reloadData()
+                    }
+                }
+            }
+        }
     }
     
     @objc func userPhotoTapped() {
@@ -168,8 +196,16 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
             return Sizes.HomeProfile.Height
         case 1:
             return Sizes.TrainingCollection.Height
-        case 2...3:
-            return Sizes.Recents.Height
+        case 2:
+            var count = CGFloat(Local.data.trainingHistory.count)
+            count = count < 1 ? 1 : count
+            count = count > 3 ? 3 : count
+            return (Sizes.Recents.CellHeight * count) + Sizes.Recents.TableMargins
+        case 3:
+            var count = CGFloat(Local.data.matchHistory.count)
+            count = count < 1 ? 1 : count
+            count = count > 3 ? 3 : count
+            return (Sizes.Recents.CellHeight * count) + Sizes.Recents.TableMargins
         default:
             return 0
         }
@@ -193,13 +229,13 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
             }
         case 2:
             if let cell = tableView.dequeueReusableCell(withIdentifier: RecentsCell.identifier) as? RecentsCell {
-                cell.configure(type: .training, trainings: trainingHistory)
+                cell.configure(type: .training, trainings: Local.data.trainingHistory)
                 cell.delegate = self
                 return cell
             }
         case 3:
             if let cell = tableView.dequeueReusableCell(withIdentifier: RecentsCell.identifier) as? RecentsCell {
-                cell.configure(type: .match, trainings: trainingHistory)
+                cell.configure(type: .match, matches: Local.data.matchHistory)
                 cell.delegate = self
                 return cell
             }

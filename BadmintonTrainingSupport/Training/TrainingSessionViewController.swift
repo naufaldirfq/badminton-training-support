@@ -46,10 +46,10 @@ class TrainingSessionViewController: UIViewController {
     
     @IBAction func didTapStopButton(_ sender: UIButton) {
         delegate?.didTapStopButton()
+        self.navigationController?.popToRootViewController(animated: true)
     }
     
     func add(){
-//        let session = RunningSessionViewController(nibName: "RunningSessionViewController", bundle: nil)
         if let session = self.session {
             delegate = session as? TrainingSessionDelegate
             session.view.frame = trainingSessionView.frame

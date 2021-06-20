@@ -28,7 +28,8 @@ class RecentsCell: UITableViewCell {
     @IBOutlet var nameLabel: UILabel!
     @IBOutlet var viewAllButton: UIButton!
     @IBOutlet var tableView: UITableView!
-
+    @IBOutlet weak var emptyLabel: UILabel!
+    
     static let identifier = Identifiers.RecentsCell
     
     static func nib() -> UINib {
@@ -39,7 +40,6 @@ class RecentsCell: UITableViewCell {
         super.awakeFromNib()
         selectionStyle = .none
         setupTableView()
-        
        
     }
     
@@ -55,18 +55,20 @@ class RecentsCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
     }
     
-    public func configure(type: RecentsType, trainings: [TrainingSession]) {
+    public func configure(type: RecentsType, trainings: [TrainingSession] = [], matches: [Match] = []) {
         self.type = type
-        self.trainings = trainings
-        print(trainings)
-        loadView()
-        fetchData()
-        matches =  DummyData.history.dummyMatches
+        switch type {
+        case .match:
+            self.matches = matches
+            tableView.isHidden = matches.isEmpty ? true : false
+            emptyLabel.text = "There is no match yet!\nGo play some matches"
+        case .training:
+            self.trainings = trainings
+            tableView.isHidden = trainings.isEmpty ? true : false
+            emptyLabel.text = "There is no training yet!\nGo do some training!"
+        }
+        nameLabel.text = type.rawValue
         tableView.reloadData()
-    }
-    
-    func loadView() {
-        self.nameLabel.text = type?.rawValue ?? ""
     }
     
     @IBAction func didTapViewAll(_ sender: UIButton) {
@@ -81,10 +83,6 @@ class RecentsCell: UITableViewCell {
             break
         }
         delegate?.recentsView(didTapViewAllIn: self)
-    }
-    
-    func fetchData() {
-        
     }
 
 }
@@ -123,7 +121,7 @@ extension RecentsCell: UITableViewDelegate, UITableViewDataSource {
         case .match:
             let vc = MatchSummaryViewController()
             vc.disableButton = true
-            vc.match = matches[indexPath.row]
+            vc.match = matches[matches.count - 1 - indexPath.row]
             delegate?.navigationController?.pushViewController(vc, animated: true)
         default:
             break

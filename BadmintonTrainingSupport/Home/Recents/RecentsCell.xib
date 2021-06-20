@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -43,9 +44,25 @@
                             <constraint firstItem="iXc-gf-REk" firstAttribute="top" secondItem="hGx-Ji-f3A" secondAttribute="top" id="sjK-Jr-Vom"/>
                         </constraints>
                     </stackView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KYg-hx-Dpd">
+                        <rect key="frame" x="0.0" y="52.5" width="403" height="180"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Empty" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jAZ-30-wfI">
+                                <rect key="frame" x="177" y="80" width="49" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" systemColor="secondaryLabelColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="jAZ-30-wfI" firstAttribute="centerY" secondItem="KYg-hx-Dpd" secondAttribute="centerY" id="R4F-n3-BzO"/>
+                            <constraint firstItem="jAZ-30-wfI" firstAttribute="centerX" secondItem="KYg-hx-Dpd" secondAttribute="centerX" id="yHK-hP-ko5"/>
+                        </constraints>
+                    </view>
                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="vsj-P2-XCO">
                         <rect key="frame" x="0.0" y="52.5" width="403" height="180"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="180" id="GKs-mx-kxb"/>
                         </constraints>
@@ -55,14 +72,19 @@
                     <constraint firstItem="vsj-P2-XCO" firstAttribute="top" secondItem="hGx-Ji-f3A" secondAttribute="bottom" constant="16" id="1bk-kE-yJN"/>
                     <constraint firstAttribute="trailing" secondItem="hGx-Ji-f3A" secondAttribute="trailing" constant="16" id="EG3-hY-R6d"/>
                     <constraint firstItem="vsj-P2-XCO" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="EV7-JH-3zH"/>
+                    <constraint firstItem="KYg-hx-Dpd" firstAttribute="trailing" secondItem="vsj-P2-XCO" secondAttribute="trailing" id="H5Q-Bq-b7C"/>
+                    <constraint firstItem="KYg-hx-Dpd" firstAttribute="top" secondItem="vsj-P2-XCO" secondAttribute="top" id="P3r-ZV-RAl"/>
                     <constraint firstItem="hGx-Ji-f3A" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="XLh-ih-TS1"/>
                     <constraint firstItem="hGx-Ji-f3A" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="YGf-U2-kW0"/>
+                    <constraint firstItem="KYg-hx-Dpd" firstAttribute="leading" secondItem="vsj-P2-XCO" secondAttribute="leading" id="Zhb-iC-0Pe"/>
+                    <constraint firstItem="KYg-hx-Dpd" firstAttribute="bottom" secondItem="vsj-P2-XCO" secondAttribute="bottom" id="d1X-rb-fvD"/>
                     <constraint firstAttribute="bottom" secondItem="vsj-P2-XCO" secondAttribute="bottom" constant="16" id="dJw-IV-X0i"/>
                     <constraint firstAttribute="trailing" secondItem="vsj-P2-XCO" secondAttribute="trailing" id="m65-o7-Xds"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="emptyLabel" destination="jAZ-30-wfI" id="cpU-Um-4g8"/>
                 <outlet property="nameLabel" destination="iXc-gf-REk" id="Qfn-p9-nEa"/>
                 <outlet property="tableView" destination="vsj-P2-XCO" id="pbc-30-k0c"/>
                 <outlet property="viewAllButton" destination="oMi-sT-4dm" id="zId-3K-gFN"/>
@@ -70,4 +92,12 @@
             <point key="canvasLocation" x="84.782608695652186" y="108.14732142857143"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

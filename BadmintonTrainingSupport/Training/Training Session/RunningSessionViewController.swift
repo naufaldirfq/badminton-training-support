@@ -31,9 +31,7 @@ class RunningSessionViewController: UIViewController {
         if let future = df.date(from: "2022-06-14 15:07:39"), let diff = dcf.string(from: Date(), to: future) {
             print(diff)
         }
-        // Do any additional setup after loading the view.
     }
-
 }
 
 extension RunningSessionViewController: TrainingSessionDelegate {
@@ -50,15 +48,7 @@ extension RunningSessionViewController: TrainingSessionDelegate {
             "breakTime": 0,
             "set": 0,
             "repetition": 0,
-            
         ])
-        print("data added")
-        
-        DispatchQueue.main.async {
-            let vc = HomeViewController()
-            self.navigationController?.pushViewController(vc, animated: true)
-        }
-        
     }
     
     func didTapPauseButton() {
