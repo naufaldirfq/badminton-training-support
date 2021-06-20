@@ -6,23 +6,42 @@
 //
 
 import Foundation
+
+enum TrainingType : String {
+    case Running = "Running"
+    case Skipping = "Skipping"
+    case PushUp = "Push Up"
+    case ShadowBadminton = "Shadow Badminton"
+    case WallRally = "Wall Rally"
+    case Swing = "Swing"
+}
+
 struct TrainingSession {
-    var trainingName: String
-    var trainingDate: Date
-    var trainingResult: [String]
-    var trainingMeasurement: [String]
-    
-    init(trainingName : String, trainingDate: Date, trainingResult: [String], trainingMeasurement:[String]) {
-        self.trainingName = trainingName
-        self.trainingDate = trainingDate
-        self.trainingResult = trainingResult
-        self.trainingMeasurement = trainingMeasurement
+    var name: String
+    var date: Date
+    var time: Int
+    var pace: Int
+    var distance: Int
+    var set: Int
+    var repetition: Int
+    var breakTime: Int
+
+
+    init(name : String, date: Date, time: Int, pace: Int = 0, distance: Int = 0, set: Int = 0, repetition: Int = 0, breakTime: Int = 0) {
+        self.name = name
+        self.date = date
+        self.time = time
+        self.pace = pace
+        self.distance = distance
+        self.set = set
+        self.repetition = repetition
+        self.breakTime = breakTime
     }
     
     func getDateRelativity() -> String {
         let formatter = RelativeDateTimeFormatter()
         formatter.unitsStyle = .full
-        let relativeDate = formatter.localizedString(for: self.trainingDate, relativeTo: Date())
+        let relativeDate = formatter.localizedString(for: self.date, relativeTo: Date())
         
         
         return relativeDate

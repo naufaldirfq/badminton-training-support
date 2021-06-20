@@ -17,8 +17,10 @@ class HomeViewController: UIViewController {
     
     private var trainingCategory: [TrainingCategory] = []
     private var trainings: [Training] = []
+    private var trainingHistory: [TrainingSession] = []
     private var trainingCategoryCollectionRef: CollectionReference!
     private var trainingsCollectionRef: CollectionReference!
+    private var trainingHistoryCollectionRef: CollectionReference!
     
     @IBOutlet var tableView: UITableView!
     
@@ -118,6 +120,33 @@ class HomeViewController: UIViewController {
                 }
             }
         }
+        
+        trainingHistoryCollectionRef = FirestoreReferenceManager.db.collection("training_history")
+        self.trainingHistoryCollectionRef.getDocuments { (snapshot, error) in
+            if let err = error {
+                debugPrint("Error fetching docs: \(err)")
+            } else {
+                guard let snap = snapshot else { return }
+                for document in snap.documents {
+                    let data = document.data()
+                    let name = data["name"] as! String
+                    let date = Date().addingTimeInterval(-17000)
+                    let time = data["time"] as! Int
+                    let pace = data["pace"] as! Int
+                    let distance = data["distance"] as! Int
+                    let set = data["set"] as! Int
+                    let repetition = data["repetition"] as! Int
+                    let breakTime = data["breakTime"] as! Int
+                    let newHistory = TrainingSession(name: name, date: date, time: time, pace: pace, distance: distance, set: set, repetition: repetition, breakTime: breakTime)
+                    self.trainingHistory.append(newHistory)
+                    DispatchQueue.main.async {
+                        self.tableView.reloadData()
+                    }
+                }
+            }
+        }
+        
+        
     }
     
     @objc func userPhotoTapped() {
@@ -164,13 +193,13 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
             }
         case 2:
             if let cell = tableView.dequeueReusableCell(withIdentifier: RecentsCell.identifier) as? RecentsCell {
-                cell.configure(type: .training)
+                cell.configure(type: .training, trainings: trainingHistory)
                 cell.delegate = self
                 return cell
             }
         case 3:
             if let cell = tableView.dequeueReusableCell(withIdentifier: RecentsCell.identifier) as? RecentsCell {
-                cell.configure(type: .match)
+                cell.configure(type: .match, trainings: trainingHistory)
                 cell.delegate = self
                 return cell
             }

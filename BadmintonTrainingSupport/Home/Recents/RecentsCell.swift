@@ -55,12 +55,13 @@ class RecentsCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
     }
     
-    public func configure(type: RecentsType) {
+    public func configure(type: RecentsType, trainings: [TrainingSession]) {
         self.type = type
+        self.trainings = trainings
+        print(trainings)
         loadView()
         fetchData()
         matches =  DummyData.history.dummyMatches
-        trainings =  DummyData.history.TrainingHistory
         tableView.reloadData()
     }
     

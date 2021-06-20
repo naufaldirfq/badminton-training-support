@@ -20,12 +20,20 @@ class TrainingHistoryTableViewCell: UITableViewCell {
     static let identifier = Identifiers.TrainingHistoryCell
     
     public func configure(with training: TrainingSession) {
-        trainingNameLabel.text = training.trainingName
+        trainingNameLabel.text = training.name
         recentsLabel.text = training.getDateRelativity()
-        measurement1Label.text = training.trainingMeasurement[0]
-        measurement2Label.text = training.trainingMeasurement[1]
-        unit1Label.text = String(training.trainingResult[0])
-        unit2Label.text = String(training.trainingResult[1])
+        if training.name == "Running" {
+            measurement1Label.text = "Jarak"
+            measurement2Label.text = "Waktu"
+            unit1Label.text = String(training.distance)
+            unit2Label.text = String(training.time)
+        }
+        else {
+            measurement1Label.text = "Set"
+            measurement2Label.text = "Durasi"
+            unit1Label.text = String(training.set)
+            unit2Label.text = String(training.time)
+        }
         cardView.layer.borderWidth = 0.25
         cardView.layer.borderColor = UIColor.secondaryLabel.cgColor
         cardView.layer.cornerRadius = 10

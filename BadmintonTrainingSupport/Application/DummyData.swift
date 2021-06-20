@@ -38,17 +38,10 @@ struct DummyData {
         match.teams[1].teamScore = [21,13]
         match.durations = [1200,1200]
         dummyMatches.append(match)
-        TrainingHistory.append(contentsOf: [
-        TrainingSession(trainingName: "Skipping", trainingDate: Date().addingTimeInterval(-17000), trainingResult: ["6","80 sec"], trainingMeasurement: ["Sets","Duration"]),
-        TrainingSession(trainingName: "Wall Rally", trainingDate: Date().addingTimeInterval(-16000), trainingResult: ["5","3 min"], trainingMeasurement: ["Sets","Duration"]),
-        TrainingSession(trainingName: "Running", trainingDate: Date().addingTimeInterval(-15000), trainingResult: ["4 km","20 min"], trainingMeasurement: ["Distance","Time"])
-        ])
         
     }
     var dummyMatches: [Match] = []
-    
-    var TrainingHistory : [TrainingSession] = []
-    
+
     static let Profile = UserProfile(name: "Hanif Fauzi", photo: UIImage(named: "hanif")!)
     
     struct Recent {
