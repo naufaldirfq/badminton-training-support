@@ -22,7 +22,7 @@ class RecentsCell: UITableViewCell {
     weak var delegate: RecentsDelegate?
     var type: RecentsType?
     
-    var trainings: [TrainingSession] = DummyData.TrainingHistory
+    var trainings: [TrainingSession] = []
     var matches: [Match] = []
     
     @IBOutlet var nameLabel: UILabel!
@@ -55,10 +55,13 @@ class RecentsCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
     }
     
-    public func configure(type: RecentsType) {
+    public func configure(type: RecentsType, trainings: [TrainingSession]) {
         self.type = type
+        self.trainings = trainings
+        print(trainings)
         loadView()
         fetchData()
+        self.tableView.reloadData()
     }
     
     func loadView() {

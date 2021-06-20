@@ -25,8 +25,8 @@ struct TrainingSession {
     var set: Int
     var repetition: Int
     var breakTime: Int
-    
-    
+
+
     init(name : String, date: Date, time: Int, pace: Int = 0, distance: Int = 0, set: Int = 0, repetition: Int = 0, breakTime: Int = 0) {
         self.name = name
         self.date = date

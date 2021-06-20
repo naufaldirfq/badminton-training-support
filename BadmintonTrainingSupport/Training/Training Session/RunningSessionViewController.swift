@@ -34,17 +34,6 @@ class RunningSessionViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
 
 extension RunningSessionViewController: TrainingSessionDelegate {
@@ -54,12 +43,22 @@ extension RunningSessionViewController: TrainingSessionDelegate {
     
     func didTapStopButton() {
         FirestoreReferenceManager.db.collection("training_history").addDocument(data: [
-            "time": 10,
-            "distance": 100,
-            "pace": 10,
-            "training_name": FirestoreReferenceManager.db.document("training_category/physical/trainings/running")
+            "time": 30,
+            "distance": 200,
+            "pace": 20,
+            "name": "Running",
+            "breakTime": 0,
+            "set": 0,
+            "repetition": 0,
+            
         ])
         print("data added")
+        
+        DispatchQueue.main.async {
+            let vc = HomeViewController()
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
+        
     }
     
     func didTapPauseButton() {

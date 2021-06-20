@@ -18,10 +18,6 @@ struct DummyData {
         Training(name: "Serve", description: "Pros serve 100 shuttle every day", image: "")
     ]
     
-//    static let TrainingHistory = [TrainingSession(trainingName: "Larii", trainingDate: Date().addingTimeInterval(-15000)
-//, trainingResult: ["1 Km","20 min"], trainingMeasurement: ["Jarak","waktu"]),
-//                                  TrainingSession(trainingName: "Larii", trainingDate: Date().addingTimeInterval(-17000), trainingResult: ["1 m/s","2 Sets"], trainingMeasurement: ["Laju","Reps"]),
-//                                  TrainingSession(trainingName: "Larii", trainingDate: Date().addingTimeInterval(-20000), trainingResult: ["1 m/s","2 kilo"], trainingMeasurement: ["Laju","Jarak"])]
     static var dummyMatches: [Match] {
         var matches: [Match] = []
         for _ in 1...3 {
