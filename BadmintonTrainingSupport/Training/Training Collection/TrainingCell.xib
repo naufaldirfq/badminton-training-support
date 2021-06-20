@@ -33,7 +33,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Training description goes here..." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tNn-8V-ePl">
-                        <rect key="frame" x="0.0" y="214" width="280" height="14.5"/>
+                        <rect key="frame" x="0.0" y="214" width="280" height="18"/>
                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                         <color key="textColor" systemColor="secondaryLabelColor"/>
                         <nil key="highlightedColor"/>
@@ -51,6 +51,7 @@
                 <constraint firstItem="6v1-fz-H6Z" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="c7k-fx-BHW"/>
                 <constraint firstItem="tNn-8V-ePl" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="tRe-zo-aMq"/>
                 <constraint firstItem="iWB-2r-k60" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="v0t-Aw-buH"/>
+                <constraint firstAttribute="bottom" secondItem="tNn-8V-ePl" secondAttribute="bottom" constant="8" id="ymX-xf-Rpf"/>
                 <constraint firstAttribute="trailing" secondItem="iWB-2r-k60" secondAttribute="trailing" id="ywE-At-1sw"/>
             </constraints>
             <size key="customSize" width="215" height="262"/>

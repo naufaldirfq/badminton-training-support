@@ -153,14 +153,17 @@ extension NewMatchViewController: SegmentedCtrlDelegate {
     func singleMatch(with match: Match) {
         form.type = .single
         if form.isValid {
-            var match = Match(type: .single, with: Array(form.players[0...1]))
+            let match = Match(type: .single, with: Array(form.players[0...1]))
             match.place = form.place
             match.description = form.description
             let vc = MatchSessionViewController()
             vc.match = match
             navigationController?.pushViewController(vc, animated: true)
         } else {
-            print("nope, empty")
+            let alert = UIAlertController(title: "Players must be filled!", message: "", preferredStyle: .alert)
+            let ok = UIAlertAction(title: "OK", style: .default, handler: nil)
+            alert.addAction(ok)
+            self.present(alert, animated: true, completion: nil)
         }
     }
     
@@ -172,7 +175,10 @@ extension NewMatchViewController: SegmentedCtrlDelegate {
             vc.match = match
             navigationController?.pushViewController(vc, animated: true)
         } else {
-            print("nope, empty")
+            let alert = UIAlertController(title: "Players must be filled!", message: "", preferredStyle: .alert)
+            let ok = UIAlertAction(title: "OK", style: .default, handler: nil)
+            alert.addAction(ok)
+            self.present(alert, animated: true, completion: nil)
         }
     }
 }

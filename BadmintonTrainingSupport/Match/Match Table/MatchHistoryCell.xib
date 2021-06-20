@@ -9,61 +9,75 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="68" id="QTs-Dk-Ja1" customClass="MatchHistoryCell" customModule="BadmintonTrainingSupport" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="358" height="68"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="94" id="QTs-Dk-Ja1" customClass="MatchHistoryCell" customModule="BadmintonTrainingSupport" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="358" height="94"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="QTs-Dk-Ja1" id="J4n-GT-5ZQ">
-                <rect key="frame" x="0.0" y="0.0" width="358" height="68"/>
+                <rect key="frame" x="0.0" y="0.0" width="358" height="94"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Team A" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hBq-xq-RCt">
-                        <rect key="frame" x="16" y="0.0" width="107.5" height="68"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Team B" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9pT-cA-qBP">
-                        <rect key="frame" x="234.5" y="0.0" width="107.5" height="68"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RR5-ye-9qZ">
-                        <rect key="frame" x="150.5" y="0.0" width="57" height="68"/>
-                        <attributedString key="attributedText">
-                            <fragment content="W 2 Sets">
-                                <attributes>
-                                    <font key="NSFont" metaFont="system" size="15"/>
-                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                </attributes>
-                            </fragment>
-                        </attributedString>
-                        <nil key="highlightedColor"/>
-                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WI6-Fl-efc">
+                        <rect key="frame" x="16" y="4" width="326" height="86"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="zeb-Hb-ZtM">
+                                <rect key="frame" x="16" y="8" width="294" height="70"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Team A" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hBq-xq-RCt">
+                                        <rect key="frame" x="0.0" y="0.0" width="117.5" height="70"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RR5-ye-9qZ">
+                                        <rect key="frame" x="117.5" y="0.0" width="59" height="70"/>
+                                        <attributedString key="attributedText">
+                                            <fragment content="- 0 Sets">
+                                                <attributes>
+                                                    <font key="NSFont" metaFont="system" size="15"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Team B" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9pT-cA-qBP">
+                                        <rect key="frame" x="176.5" y="0.0" width="117.5" height="70"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="9pT-cA-qBP" firstAttribute="width" secondItem="zeb-Hb-ZtM" secondAttribute="width" multiplier="0.4" id="GtQ-XY-eKM"/>
+                                    <constraint firstItem="hBq-xq-RCt" firstAttribute="width" secondItem="zeb-Hb-ZtM" secondAttribute="width" multiplier="0.4" id="bTW-Qd-RoD"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="zeb-Hb-ZtM" secondAttribute="trailing" constant="16" id="1Tz-zP-vlY"/>
+                            <constraint firstItem="zeb-Hb-ZtM" firstAttribute="top" secondItem="WI6-Fl-efc" secondAttribute="top" constant="8" id="FaT-8Y-nEl"/>
+                            <constraint firstAttribute="bottom" secondItem="zeb-Hb-ZtM" secondAttribute="bottom" constant="8" id="HV5-kH-oaw"/>
+                            <constraint firstItem="zeb-Hb-ZtM" firstAttribute="leading" secondItem="WI6-Fl-efc" secondAttribute="leading" constant="16" id="bzE-VF-Ktk"/>
+                        </constraints>
+                    </view>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="bottom" secondItem="hBq-xq-RCt" secondAttribute="bottom" id="1r4-H5-Ecd"/>
-                    <constraint firstItem="RR5-ye-9qZ" firstAttribute="centerY" secondItem="J4n-GT-5ZQ" secondAttribute="centerY" id="2Vc-7e-mfy"/>
-                    <constraint firstItem="RR5-ye-9qZ" firstAttribute="centerX" secondItem="J4n-GT-5ZQ" secondAttribute="centerX" id="3z9-8C-TeR"/>
-                    <constraint firstItem="hBq-xq-RCt" firstAttribute="top" secondItem="J4n-GT-5ZQ" secondAttribute="top" id="4Rm-aH-TcL"/>
-                    <constraint firstItem="9pT-cA-qBP" firstAttribute="width" secondItem="J4n-GT-5ZQ" secondAttribute="width" multiplier="0.3" id="RJn-Om-Lv2"/>
-                    <constraint firstAttribute="bottom" secondItem="9pT-cA-qBP" secondAttribute="bottom" id="TON-a9-bLH"/>
-                    <constraint firstItem="9pT-cA-qBP" firstAttribute="top" secondItem="J4n-GT-5ZQ" secondAttribute="top" id="Ttt-dx-2Dw"/>
-                    <constraint firstAttribute="trailing" secondItem="9pT-cA-qBP" secondAttribute="trailing" constant="16" id="edo-Sc-iOR"/>
-                    <constraint firstItem="RR5-ye-9qZ" firstAttribute="top" secondItem="J4n-GT-5ZQ" secondAttribute="top" id="gGl-Q4-iJZ"/>
-                    <constraint firstAttribute="bottom" secondItem="RR5-ye-9qZ" secondAttribute="bottom" id="i0F-oY-29H"/>
-                    <constraint firstItem="RR5-ye-9qZ" firstAttribute="width" secondItem="J4n-GT-5ZQ" secondAttribute="width" multiplier="0.16" id="jHD-BQ-JER"/>
-                    <constraint firstItem="hBq-xq-RCt" firstAttribute="width" secondItem="J4n-GT-5ZQ" secondAttribute="width" multiplier="0.3" id="mv7-O2-nMD"/>
-                    <constraint firstItem="hBq-xq-RCt" firstAttribute="leading" secondItem="J4n-GT-5ZQ" secondAttribute="leading" constant="16" id="tdo-4t-6iS"/>
+                    <constraint firstItem="WI6-Fl-efc" firstAttribute="top" secondItem="J4n-GT-5ZQ" secondAttribute="top" constant="4" id="DBV-RZ-6Ff"/>
+                    <constraint firstItem="WI6-Fl-efc" firstAttribute="leading" secondItem="J4n-GT-5ZQ" secondAttribute="leading" constant="16" id="Ggi-st-ri8"/>
+                    <constraint firstAttribute="trailing" secondItem="WI6-Fl-efc" secondAttribute="trailing" constant="16" id="TbY-Um-kps"/>
+                    <constraint firstAttribute="bottom" secondItem="WI6-Fl-efc" secondAttribute="bottom" constant="4" id="bW0-M6-0VT"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="Uay-de-Wda"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <connections>
+                <outlet property="cardView" destination="WI6-Fl-efc" id="SgG-cz-Sqg"/>
                 <outlet property="matchSummaryLabel" destination="RR5-ye-9qZ" id="jms-7Q-K9x"/>
                 <outlet property="teamALabel" destination="hBq-xq-RCt" id="PfS-My-ekW"/>
                 <outlet property="teamBLabel" destination="9pT-cA-qBP" id="SDU-IB-uPM"/>
             </connections>
-            <point key="canvasLocation" x="137.68115942028987" y="145.98214285714286"/>
+            <point key="canvasLocation" x="137.68115942028987" y="110.49107142857143"/>
         </tableViewCell>
     </objects>
 </document>

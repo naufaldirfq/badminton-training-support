@@ -14,6 +14,8 @@ class MatchSummaryViewController: UIViewController {
     @IBOutlet weak var matchSummaryTableView: UITableView!
     @IBOutlet weak var finishButton: UIButton!
     
+    var disableButton = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.title = "Match Summary"
@@ -25,6 +27,10 @@ class MatchSummaryViewController: UIViewController {
         matchSummaryTableView.register(SummaryMainInfoTableViewCell.nib(), forCellReuseIdentifier: SummaryMainInfoTableViewCell.identifier)
         matchSummaryTableView.register(ScoreTableCell.nib(), forCellReuseIdentifier: ScoreTableCell.identifier)
         matchSummaryTableView.register(FinishMatchCell.nib(), forCellReuseIdentifier: FinishMatchCell.identifier)
+        
+        if disableButton {
+            finishButton.isHidden = true
+        }
     }
     
     @IBAction func didTapFinishButton(_ sender: UIButton) {

@@ -15,8 +15,10 @@ class TrainingHistoryTableViewCell: UITableViewCell {
     @IBOutlet weak var measurement2Label: UILabel!
     @IBOutlet weak var unit1Label: UILabel!
     @IBOutlet weak var unit2Label: UILabel!
+    @IBOutlet weak var cardView: UIView!
     
     static let identifier = Identifiers.TrainingHistoryCell
+    
     public func configure(with training: TrainingSession) {
         trainingNameLabel.text = training.trainingName
         recentsLabel.text = training.getDateRelativity()
@@ -24,8 +26,10 @@ class TrainingHistoryTableViewCell: UITableViewCell {
         measurement2Label.text = training.trainingMeasurement[1]
         unit1Label.text = String(training.trainingResult[0])
         unit2Label.text = String(training.trainingResult[1])
-        
-        
+        cardView.layer.borderWidth = 0.25
+        cardView.layer.borderColor = UIColor.secondaryLabel.cgColor
+        cardView.layer.cornerRadius = 10
+        selectionStyle = .none
     }
     static func nib() -> UINib {
         return UINib(nibName: Identifiers.TrainingHistoryCell, bundle: nil)

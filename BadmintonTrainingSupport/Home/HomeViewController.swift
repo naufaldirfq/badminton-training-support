@@ -16,7 +16,7 @@ class HomeViewController: UIViewController {
     var userData: UserProfile?
     
     private var trainingCategory: [TrainingCategory] = []
-    var trainings: [Training] = []
+    private var trainings: [Training] = []
     private var trainingCategoryCollectionRef: CollectionReference!
     private var trainingsCollectionRef: CollectionReference!
     
@@ -27,7 +27,7 @@ class HomeViewController: UIViewController {
         setupUserData()
         setupTableView()
         setupStickyButton()
-        initModel()
+        fetchData()
     }
     
     
@@ -80,7 +80,7 @@ class HomeViewController: UIViewController {
         }
     }
     
-    func initModel() {
+    func fetchData() {
         trainingCategoryCollectionRef = Firestore.firestore().collection("training_category")
         trainingCategoryCollectionRef.getDocuments { (snapshot, error) in
             if let err = error {
@@ -163,13 +163,13 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
             }
         case 2:
             if let cell = tableView.dequeueReusableCell(withIdentifier: RecentsCell.identifier) as? RecentsCell {
-                cell.configure(name: "Recent Trainings", with: DummyData.TrainingCell())
+                cell.configure(type: .training)
                 cell.delegate = self
                 return cell
             }
         case 3:
             if let cell = tableView.dequeueReusableCell(withIdentifier: RecentsCell.identifier) as? RecentsCell {
-                cell.configure(name: "Recent Matches", with: DummyData.TrainingCell())
+                cell.configure(type: .match)
                 cell.delegate = self
                 return cell
             }
@@ -191,15 +191,11 @@ extension HomeViewController: TrainingCollectionDelegate {
 extension HomeViewController: RecentsDelegate {
     
     func recentsView(didTapViewAllIn cell: RecentsCell) {
-        let vc = TrainingHistoryViewController()
-        navigationController?.pushViewController(vc, animated: true)
-        print("Pressed View All on \(cell.name)!")
+        print("Pressed View All on \(cell.type!.rawValue)!")
     }
     
     func recentsView(recent: UITableViewCell, index: Int, didTapRecentIn cell: RecentsCell) {
-        let vc = MatchHistoryViewController()
-        navigationController?.pushViewController(vc, animated: true)
-        print("Pressed Recent Number \(index+1) on \(cell.name)!")
+        print("Pressed Recent Number \(index+1) on \(cell.type!.rawValue)!")
     }
     
 }

@@ -9,6 +9,7 @@ import UIKit
 
 class MatchHistoryCell: UITableViewCell {
 
+    @IBOutlet weak var cardView: UIView!
     @IBOutlet weak var matchSummaryLabel: UILabel!
     @IBOutlet weak var teamBLabel: UILabel!
     @IBOutlet weak var teamALabel: UILabel!
@@ -24,6 +25,10 @@ class MatchHistoryCell: UITableViewCell {
         let numberOfSets = NSAttributedString(string: "\n\(match.numberOfSets) Sets")
         matchStatus.append(numberOfSets)
         matchSummaryLabel.attributedText = matchStatus
+        cardView.layer.borderWidth = 0.25
+        cardView.layer.borderColor = UIColor.secondaryLabel.cgColor
+        cardView.layer.cornerRadius = 10
+        selectionStyle = .none
     }
     
     static let identifier = Identifiers.MatchHistoryCell

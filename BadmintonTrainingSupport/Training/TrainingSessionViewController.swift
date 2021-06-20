@@ -24,11 +24,16 @@ class TrainingSessionViewController: UIViewController {
     weak var delegate: TrainingSessionDelegate?
     
     var session: UIViewController?
+    var disableButton = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
         add()
-        // Do any additional setup after loading the view.
+        if disableButton {
+            trainingPlayButton.isHidden = true
+            trainingStopButton.isHidden = true
+            trainingPauseButton.isHidden = true
+        }
     }
     
     @IBAction func didTapPlayButton(_ sender: UIButton) {
