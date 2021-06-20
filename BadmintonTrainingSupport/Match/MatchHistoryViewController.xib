@@ -19,8 +19,8 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="68" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="nyv-m5-cMq">
-                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="68" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="nyv-m5-cMq">
+                    <rect key="frame" x="0.0" y="52" width="414" height="810"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 </tableView>
             </subviews>
@@ -30,7 +30,7 @@
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="nyv-m5-cMq" secondAttribute="bottom" id="2N5-m8-jYR"/>
                 <constraint firstItem="nyv-m5-cMq" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="GA6-jp-x30"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="nyv-m5-cMq" secondAttribute="trailing" id="nhe-Ur-4gc"/>
-                <constraint firstItem="nyv-m5-cMq" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="qQD-Qf-ufB"/>
+                <constraint firstItem="nyv-m5-cMq" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="8" id="qQD-Qf-ufB"/>
             </constraints>
             <point key="canvasLocation" x="132" y="97"/>
         </view>

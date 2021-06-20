@@ -34,5 +34,10 @@ extension TrainingHistoryViewController: UITableViewDelegate,UITableViewDataSour
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let vc = TrainingSessionViewController()
+        vc.disableButton = true
+        navigationController?.pushViewController(vc, animated: true)
+    }
     
 }

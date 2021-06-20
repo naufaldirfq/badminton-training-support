@@ -94,6 +94,7 @@ class SegmentedCtrlTableViewCell: UITableViewCell {
     
     @IBAction func singleStartButton(_ sender: UIButton) {
         if let one = singleFieldOne.text, let two = singleFieldTwo.text {
+            confirmData(with: [singleFieldOne, singleFieldTwo])
             let players: [String] = [one, two]
             let match = Match(type: .single, with: players)
             delegate?.singleMatch(with: match)
@@ -102,39 +103,43 @@ class SegmentedCtrlTableViewCell: UITableViewCell {
     
     @IBAction func doubleStartButton(_ sender: UIButton) {
         if let one = doubleFieldOne.text, let two = doubleFieldTwo.text, let three = doubleFieldThree.text, let four = doubleFieldFour.text {
+            confirmData(with: [doubleFieldOne,doubleFieldTwo,doubleFieldThree,doubleFieldFour])
             let players: [String] = [one, two, three, four]
             let match = Match(type: .double, with: players)
             delegate?.doubleMatch(with: match)
         }
     }
-}
-
-extension SegmentedCtrlTableViewCell: UITextFieldDelegate {
-    func textFieldDidEndEditing(_ textField: UITextField) {
-        if let text = textField.text {
-            var playerField: MatchFormTextField? {
-                switch textField {
-                case singleFieldOne:
-                    return .playerA1
-                case singleFieldTwo:
-                    return .playerB1
-                case doubleFieldOne:
-                    return .playerA1
-                case doubleFieldTwo:
-                    return .playerA2
-                case doubleFieldThree:
-                    return .playerB1
-                case doubleFieldFour:
-                    return .playerB2
-                default:
-                    return nil
+    
+    func confirmData(with textFields: [UITextField]) {
+        for textField in textFields {
+            if let text = textField.text {
+                var playerField: MatchFormTextField? {
+                    switch textField {
+                    case singleFieldOne:
+                        return .playerA1
+                    case singleFieldTwo:
+                        return .playerB1
+                    case doubleFieldOne:
+                        return .playerA1
+                    case doubleFieldTwo:
+                        return .playerA2
+                    case doubleFieldThree:
+                        return .playerB1
+                    case doubleFieldFour:
+                        return .playerB2
+                    default:
+                        return nil
+                    }
                 }
-            }
-            if let field = playerField {
-                delegate?.segmentedCtrl(with: text, didFinishEditingFor: field)
+                if let field = playerField {
+                    delegate?.segmentedCtrl(with: text, didFinishEditingFor: field)
+                }
             }
         }
     }
+}
+
+extension SegmentedCtrlTableViewCell: UITextFieldDelegate {
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool{
         textField.resignFirstResponder()

@@ -66,6 +66,11 @@ class MatchSessionViewController: UIViewController {
             teamBLabel.text = match.teams[1].playerNames
             setLabel.text = "SET \(set)"
         }
+        
+        if set == 3 {
+            nextSetButton.isUserInteractionEnabled = false
+            nextSetButton.backgroundColor = .secondaryLabel
+        }
     }
     
     func setupInterface() {
