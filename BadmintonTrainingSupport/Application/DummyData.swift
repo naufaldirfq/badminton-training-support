@@ -22,6 +22,18 @@ struct DummyData {
 //, trainingResult: ["1 Km","20 min"], trainingMeasurement: ["Jarak","waktu"]),
 //                                  TrainingSession(trainingName: "Larii", trainingDate: Date().addingTimeInterval(-17000), trainingResult: ["1 m/s","2 Sets"], trainingMeasurement: ["Laju","Reps"]),
 //                                  TrainingSession(trainingName: "Larii", trainingDate: Date().addingTimeInterval(-20000), trainingResult: ["1 m/s","2 kilo"], trainingMeasurement: ["Laju","Jarak"])]
+    static var dummyMatches: [Match] {
+        var matches: [Match] = []
+        for _ in 1...3 {
+            let match = Match(type: .double, with: ["Joanda Febrian","Kevin Leon","Hanif Fauzi","Naufal Athallah"])
+            match.date = Date()
+            match.teams[0].teamScore = [14,16,21]
+            match.teams[1].teamScore = [21,21,19]
+            match.durations = [1200,1200,1200]
+            matches.append(match)
+        }
+        return matches
+    }
     
     static let Profile = UserProfile(name: "Hanif Fauzi")
     

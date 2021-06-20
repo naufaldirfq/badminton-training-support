@@ -47,8 +47,8 @@ class Match {
         for n in 0 ..< numberOfSets {
             if teams[0].teamScore[n] > teams[1].teamScore[n] {
                 matchWon += 1
-            }else{
-                matchWon += 1
+            } else if teams[0].teamScore[n] == teams[1].teamScore[n] {
+                matchWon += 0.5
             }
         }
         return matchWon

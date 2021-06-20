@@ -16,13 +16,15 @@ struct Sizes {
         static let EdgeInsets: UIEdgeInsets = UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 16)
     }
     struct Recents {
-        static let TableHeight: CGFloat = 180.0
-        static let CellHeight: CGFloat = 60.0
+        static let CellHeight: CGFloat = 72
+        static let TableHeight: CGFloat = CellHeight * 3
         static let Height: CGFloat = 52.5 + TableHeight + 16
         static let CornerRadius: CGFloat = 10.0
     }
     struct HomeProfile {
         static let Height: CGFloat = 82.0
+        static let ProfileInfoHeight: CGFloat = 130
+        static let ChartsHeight: CGFloat = 200
     }
     
     //MARK: Size for page "NewMatchVC"

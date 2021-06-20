@@ -7,6 +7,11 @@
 
 import UIKit
 
+enum RecentsType: String {
+    case training = "Recent Trainings"
+    case match = "Recent Matches"
+}
+
 protocol RecentsDelegate: UIViewController {
     func recentsView(didTapViewAllIn cell: RecentsCell)
     func recentsView(recent: UITableViewCell, index: Int, didTapRecentIn cell: RecentsCell)
@@ -15,8 +20,10 @@ protocol RecentsDelegate: UIViewController {
 class RecentsCell: UITableViewCell {
     
     weak var delegate: RecentsDelegate?
-    var name: String = "Recents Name"
-    var cells = [UITableViewCell]()
+    var type: RecentsType?
+    
+    var trainings: [TrainingSession] = DummyData.TrainingHistory
+    var matches: [Match] = []
     
     @IBOutlet var nameLabel: UILabel!
     @IBOutlet var viewAllButton: UIButton!
@@ -31,64 +38,92 @@ class RecentsCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         selectionStyle = .none
-        
         setupTableView()
+        
+        matches.append(contentsOf: DummyData.dummyMatches)
     }
     
     func setupTableView() {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.layer.cornerRadius = Sizes.Recents.CornerRadius
+        tableView.register(TrainingHistoryTableViewCell.nib(), forCellReuseIdentifier: TrainingHistoryTableViewCell.identifier)
+        tableView.register(MatchHistoryCell.nib(), forCellReuseIdentifier: MatchHistoryCell.identifier)
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
     }
     
-    public func configure(name: String, with cells: [UITableViewCell]) {
-        self.name = name
-        self.cells = cells
+    public func configure(type: RecentsType) {
+        self.type = type
         loadView()
+        fetchData()
     }
     
     func loadView() {
-        self.nameLabel.text = name
-        tableView.reloadData()
+        self.nameLabel.text = type?.rawValue ?? ""
     }
     
     @IBAction func didTapViewAll(_ sender: UIButton) {
+        switch type {
+        case .training:
+            let vc = TrainingHistoryViewController()
+            delegate?.navigationController?.pushViewController(vc, animated: true)
+        case .match:
+            let vc = MatchHistoryViewController()
+            delegate?.navigationController?.pushViewController(vc, animated: true)
+        default:
+            break
+        }
         delegate?.recentsView(didTapViewAllIn: self)
     }
     
-    
+    func fetchData() {
+        
+    }
+
 }
 
 extension RecentsCell: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if cells.count == 0 {
-            let emptyLabel = UILabel(frame: tableView.frame)
-            emptyLabel.text = "There is no history."
-            emptyLabel.textAlignment = .center
-            emptyLabel.textColor = .secondaryLabel
-            self.tableView.backgroundView = emptyLabel
-            return 0
-        }
-        self.tableView.backgroundView = nil
-        return cells.count
+        let count = type == .training ? trainings.count : matches.count
+        return count > 3 ? 3 : count
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 60
+        return Sizes.Recents.CellHeight
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = cells[indexPath.row]
-        cell.textLabel?.text = "Test"
-        cell.backgroundColor = .clear
-        return cell
+        switch type {
+        case .training:
+            let cell = tableView.dequeueReusableCell(withIdentifier: TrainingHistoryTableViewCell.identifier, for: indexPath) as! TrainingHistoryTableViewCell
+            cell.configure(with: trainings[indexPath.row])
+            return cell
+        case .match:
+            let cell = tableView.dequeueReusableCell(withIdentifier: MatchHistoryCell.identifier, for: indexPath) as! MatchHistoryCell
+            cell.configure(with: matches[indexPath.row])
+            return cell
+        default:
+            return UITableViewCell()
+        }
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        switch type {
+        case .training:
+            let vc = TrainingSessionViewController()
+            vc.disableButton = true
+            delegate?.navigationController?.pushViewController(vc, animated: true)
+        case .match:
+            let vc = MatchSummaryViewController()
+            vc.disableButton = true
+            vc.match = matches[indexPath.row]
+            delegate?.navigationController?.pushViewController(vc, animated: true)
+        default:
+            break
+        }
         if let cell = tableView.cellForRow(at: indexPath) {
             delegate?.recentsView(recent: cell, index: indexPath.row, didTapRecentIn: self)
         }
