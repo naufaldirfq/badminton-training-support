@@ -38,6 +38,7 @@ struct K {
     static let userID = "UserID"
     static let UserName = "UserName"
     static let PhotoURL = "PhotoURL"
+    static let AppleID = "AppleID"
 }
 
 struct Images {

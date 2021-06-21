@@ -20,6 +20,14 @@ struct UserProfile {
         return UserDefaults.standard.string(forKey: K.UserName)!
     }
     
+    static var appleID: String? {
+        return UserDefaults.standard.string(forKey: K.AppleID)
+    }
+    
+    static var photoURL: String {
+        return UserDefaults.standard.string(forKey: K.PhotoURL) ?? ""
+    }
+    
     static var photo: UIImage {
         if UserDefaults.exists(key: K.PhotoURL) {
             guard let photoURL = UserDefaults.standard.string(forKey: K.PhotoURL) else { return Images.defaultUser }

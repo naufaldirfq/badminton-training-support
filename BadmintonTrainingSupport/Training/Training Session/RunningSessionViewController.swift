@@ -26,13 +26,17 @@ class RunningSessionViewController: SessionViewController {
     }
     var distance: Double = 0
     var pace: Int {
-        return distance == 0 ? Int(distance) : Int(Double(totalTime) / distance)
+        return distance == 0 ? Int(Double(totalTime/60)) : Int(Double(totalTime/60) / (distance / 1000.0))
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         if let session = trainingSession {
             totalTime = Int(session.time) * 60
+            distance = Double(session.distance)
+            rightCounterLabel.text = timeToString(totalTime)
+            mainCounterLabel.text = "\(String(format: "%.1f", session.distanceInKM))"
+            leftCounterLabel.text = timeToString(pace)
         }
     }
     

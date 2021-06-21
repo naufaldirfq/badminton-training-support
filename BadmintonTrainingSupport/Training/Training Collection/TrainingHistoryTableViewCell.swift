@@ -25,7 +25,7 @@ class TrainingHistoryTableViewCell: UITableViewCell {
         if training.name == "Running" {
             measurement1Label.text = "Distance"
             measurement2Label.text = "Time"
-            unit1Label.text = "\(training.distance) km"
+            unit1Label.text = "\(String(format: "%.1f", training.distanceInKM)) km"
             unit2Label.text = "\(training.time) min"
         }
         else {

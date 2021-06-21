@@ -48,6 +48,11 @@ class ProfileInfoCell: UITableViewCell{
         let save = UIAlertAction(title: "Save", style: .default) { action in
             if let text = alert.textFields?.first?.text, text != "" {
                 UserDefaults.standard.setValue(text, forKey: K.UserName)
+                if let id = UserProfile.appleID {
+                    FirestoreReferenceManager.db.collection("users").document(id).updateData([
+                        "name" : UserProfile.name
+                    ])
+                }
                 self.profileNameButton.setTitle(text, for: .normal)
             }
             
@@ -70,6 +75,11 @@ extension ProfileInfoCell: UIImagePickerControllerDelegate & UINavigationControl
                 FirebaseStorageManager().uploadImageData(data: data, serverFileName: "\(UserProfile.uid).png") { (isSuccess, url) in
                     if let url = url {
                         UserDefaults.standard.setValue(url, forKey: K.PhotoURL)
+                        if let id = UserProfile.appleID {
+                            FirestoreReferenceManager.db.collection("users").document(id).updateData([
+                                "photoURL" : url
+                            ])
+                        }
                     }
                     print("Successfully uploaded profile picture")
                 }

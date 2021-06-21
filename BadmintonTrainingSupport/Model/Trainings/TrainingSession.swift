@@ -30,6 +30,10 @@ struct TrainingSession {
         let dist = distance > 0 ? distance : 1
         return (Double(time)/60.0) / (Double(dist)/1000.0)
     }
+    
+    var distanceInKM: Double {
+        return Double(distance) / 1000.0
+    }
 
 
     init(name : String, date: Date, time: Int, pace: Int = 0, distance: Int = 0, set: Int = 0, repetition: Int = 0, breakTime: Int = 0) {
