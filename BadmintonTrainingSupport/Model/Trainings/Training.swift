@@ -16,13 +16,21 @@ struct Training: Codable {
         return UIImage(named: image)
     }
     
+//    var trainings: [TrainingSession] {
+//        var temp: [TrainingSession] = []
+//        for session in Local.data.trainingHistory {
+//            if session.name == name {
+//
+//            }
+//        }
+//    }
+    
     var uiTarget: UIViewController? {
         switch name {
         case "Running":
             return RunningTargetViewController(nibName: "RunningTargetViewController", bundle: nil)
         default:
-            //TODO: tambah target view controller lain
-            return nil
+            return SetRepTargetViewController(nibName: "SetRepTargetViewController", bundle: nil)
         }
     }
     
@@ -31,8 +39,7 @@ struct Training: Codable {
         case "Running":
             return RunningSessionViewController(nibName: "RunningSessionViewController", bundle: nil)
         default:
-            //TODO: tambah target view controller lain
-            return nil
+            return SetRepSessionViewController(nibName: "SetRepSessionViewController", bundle: nil)
         }
     }
     

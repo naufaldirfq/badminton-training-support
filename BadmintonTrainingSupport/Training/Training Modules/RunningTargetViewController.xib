@@ -4,7 +4,6 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -20,18 +19,19 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="DlD-Rf-zLx">
-                    <rect key="frame" x="130" y="69" width="154" height="72"/>
+                    <rect key="frame" x="110" y="69" width="194" height="72"/>
                     <subviews>
-                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="56" textAlignment="natural" minimumFontSize="56" translatesAutoresizingMaskIntoConstraints="NO" id="ofh-cZ-PfX">
-                            <rect key="frame" x="0.0" y="0.0" width="68" height="72"/>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0" textAlignment="center" minimumFontSize="56" translatesAutoresizingMaskIntoConstraints="NO" id="ofh-cZ-PfX">
+                            <rect key="frame" x="0.0" y="0.0" width="108" height="72"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="72" id="xtY-QS-rcL"/>
+                                <constraint firstAttribute="width" constant="108" id="zdX-LF-lyo"/>
                             </constraints>
                             <fontDescription key="fontDescription" type="system" pointSize="56"/>
-                            <textInputTraits key="textInputTraits"/>
+                            <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                         </textField>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="minutes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4uJ-WP-Ra5">
-                            <rect key="frame" x="84" y="24" width="70" height="24"/>
+                            <rect key="frame" x="124" y="24" width="70" height="24"/>
                             <fontDescription key="fontDescription" type="system" pointSize="20"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
@@ -40,7 +40,7 @@
                 </stackView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="DlD-Rf-zLx" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="mF1-8I-39F"/>
                 <constraint firstItem="DlD-Rf-zLx" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="ybz-os-Wtj"/>
@@ -49,9 +49,4 @@
             <point key="canvasLocation" x="247.82608695652175" y="212.27678571428569"/>
         </view>
     </objects>
-    <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-    </resources>
 </document>

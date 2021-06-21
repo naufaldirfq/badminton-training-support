@@ -27,7 +27,7 @@
                             <action selector="changeProfileName:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="ba9-UW-gNN"/>
                         </connections>
                     </button>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tC3-h0-tgm">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tC3-h0-tgm">
                         <rect key="frame" x="96.5" y="16" width="72" height="72"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="72" id="aGd-9z-Yw6"/>

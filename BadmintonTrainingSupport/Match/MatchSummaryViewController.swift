@@ -51,7 +51,7 @@ class MatchSummaryViewController: UIViewController {
                 "isSingle": match.type == .single,
                 "durations": match.durations,
                 "team": FieldValue.arrayUnion(teams),
-                "user": ""
+                "user": UserDefaults.standard.string(forKey: K.userID)!
             ])
             Local.data.matchHistory.append(match)
         }

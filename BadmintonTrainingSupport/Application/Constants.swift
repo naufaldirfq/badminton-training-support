@@ -27,6 +27,17 @@ struct Formatter {
         formatter.dateFormat = "d MMM yyyy"
         return formatter
     }
+    static var shortDate: DateFormatter {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "d MMM"
+        return formatter
+    }
+}
+
+struct K {
+    static let userID = "UserID"
+    static let UserName = "UserName"
+    static let PhotoURL = "PhotoURL"
 }
 
 struct Images {
@@ -43,4 +54,12 @@ struct MSstore {
     static let Time = "00/00/00"
     static let ScoreTeammate = "0"
     static let ScoreOpponent = "0"
+}
+
+extension UserDefaults {
+
+    static func exists(key: String) -> Bool {
+        return UserDefaults.standard.object(forKey: key) != nil
+    }
+
 }

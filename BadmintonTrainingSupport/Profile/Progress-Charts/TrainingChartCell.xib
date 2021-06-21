@@ -46,6 +46,7 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="chartLabel" destination="io4-oM-Wjj" id="1cm-tb-z15"/>
                 <outlet property="trainingChart" destination="wpV-EZ-MI5" id="3nk-Z4-I63"/>
             </connections>
             <point key="canvasLocation" x="182.60869565217394" y="122.54464285714285"/>

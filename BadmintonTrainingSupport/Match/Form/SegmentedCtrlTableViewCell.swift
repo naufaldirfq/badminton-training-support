@@ -63,13 +63,13 @@ class SegmentedCtrlTableViewCell: UITableViewCell {
     
     func setupStyles() {
         singleView.layer.cornerRadius = 10.0
-        singleFieldOne.text = "\(DummyData.Profile.name) (You)"
+        singleFieldOne.text = "\(UserProfile.name) (You)"
         singleFieldOne.isUserInteractionEnabled = false
         singleFieldTwo.placeholder = "Your opponent name"
         
         doubleTeamOne.layer.cornerRadius = 10.0
         doubleTeamTwo.layer.cornerRadius = 10.0
-        doubleFieldOne.text = "\(DummyData.Profile.name) (You)"
+        doubleFieldOne.text = "\(UserProfile.name) (You)"
         doubleFieldOne.isUserInteractionEnabled = false
         doubleFieldTwo.placeholder = "Your teammate name"
         doubleFieldThree.placeholder = "Your opponent name"

@@ -25,9 +25,9 @@ class HomeProfileCell: UITableViewCell {
     
     }
     
-    func configure(with user: UserProfile) {
-        userNameLabel.text = user.name
-        userPhotoImageView.image = user.photo
+    func configure() {
+        userNameLabel.text = UserProfile.name
+        userPhotoImageView.image = UserProfile.photo
         userPhotoImageView.layer.cornerRadius = userPhotoImageView.frame.width/2
     }
 

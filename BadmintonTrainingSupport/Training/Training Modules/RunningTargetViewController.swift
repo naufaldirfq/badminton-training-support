@@ -7,7 +7,7 @@
 
 import UIKit
 
-class RunningTargetViewController: UIViewController {
+class RunningTargetViewController: TrainingTargetViewController {
 
     @IBOutlet weak var textField: UITextField!
     
@@ -22,6 +22,22 @@ class RunningTargetViewController: UIViewController {
         bottomLine.backgroundColor = UIColor.label.resolvedColor(with: view.traitCollection).cgColor
         textField.borderStyle = UITextField.BorderStyle.none
         textField.layer.addSublayer(bottomLine)
+        textField.delegate = self
     }
 
+}
+
+extension RunningTargetViewController: UITextFieldDelegate {
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        delegate?.session?.time = Int(textField.text ?? "0") ?? 0
+    }
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        let maxLength = 3
+        let currentString: NSString = (textField.text ?? "") as NSString
+        let newString: NSString =
+            currentString.replacingCharacters(in: range, with: string) as NSString
+        return newString.length <= maxLength
+    }
 }

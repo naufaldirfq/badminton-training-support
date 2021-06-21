@@ -116,7 +116,8 @@ extension RecentsCell: UITableViewDelegate, UITableViewDataSource {
         switch type {
         case .training:
             let vc = TrainingSessionViewController()
-            vc.disableButton = true
+            vc.isSummary = true
+            vc.session = trainings[trainings.count - 1 - indexPath.row]
             delegate?.navigationController?.pushViewController(vc, animated: true)
         case .match:
             let vc = MatchSummaryViewController()

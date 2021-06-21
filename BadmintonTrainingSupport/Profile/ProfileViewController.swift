@@ -72,7 +72,8 @@ extension ProfileViewController: ASAuthorizationControllerDelegate {
                     let vc = HomeViewController()
                     self.navigationController?.pushViewController(vc, animated: true)
                     print("Nice! You're now signed in as \(user.uid), email: \(user.email ?? "unknown"), name: \(appleIDCredential.fullName?.givenName ?? "unknown") \(appleIDCredential.fullName?.familyName ?? "")")
-                    vc.userData = UserProfile(name: "\(appleIDCredential.fullName?.givenName ?? "unknown") \(appleIDCredential.fullName?.familyName ?? "")")
+                    let fullName = "\(appleIDCredential.fullName?.givenName ?? "") \(appleIDCredential.fullName?.familyName ?? "")"
+                    UserDefaults.standard.setValue(fullName, forKey: "UserName")
                 }
             }
         }
@@ -148,14 +149,14 @@ private func randomNonceString(length: Int = 32) -> String {
 }
 extension ProfileViewController: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 6
+        return 2 + Local.data.trainingsWithValidData.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         switch indexPath.row {
         case 0:
             if let cell = tableView.dequeueReusableCell(withIdentifier: ProfileInfoCell.identifier, for: indexPath) as? ProfileInfoCell{
-                cell.configure(user: DummyData.Profile)
+                cell.configure()
                 cell.delegate = self
                     return cell
             }
@@ -165,15 +166,14 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource{
             button.addTarget(self, action: #selector(handleSignInWithAppleTapped), for: .touchUpInside)
             button.center = cell.contentView.center
             button.autoresizingMask = [.flexibleLeftMargin,.flexibleBottomMargin,.flexibleRightMargin,.flexibleTopMargin]
-            
             cell.addSubview(button)
             button.widthAnchor.constraint(equalToConstant: tableView.frame.width - 64).isActive = true
 
             return cell
         default:
             if let cell = tableView.dequeueReusableCell(withIdentifier: TrainingChartCell.identifier, for: indexPath) as? TrainingChartCell{
-                
-                    return cell
+                cell.configure(with: Local.data.trainingsWithValidData[indexPath.row-2])
+                return cell
             }
         }
         

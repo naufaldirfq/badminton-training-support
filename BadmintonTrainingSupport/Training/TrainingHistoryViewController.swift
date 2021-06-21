@@ -32,13 +32,17 @@ extension TrainingHistoryViewController: UITableViewDelegate,UITableViewDataSour
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: TrainingHistoryTableViewCell.identifier, for: indexPath) as! TrainingHistoryTableViewCell
-        cell.configure(with: Local.data.trainingHistory[indexPath.row])
+        let trainings = Local.data.trainingHistory
+        cell.configure(with: trainings[trainings.count - 1 - indexPath.row])
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let vc = TrainingSessionViewController()
-        vc.disableButton = true
+        vc.isSummary = true
+        let trainings = Local.data.trainingHistory
+        let training = trainings[trainings.count - 1 - indexPath.row]
+        vc.session = training
         navigationController?.pushViewController(vc, animated: true)
     }
     
