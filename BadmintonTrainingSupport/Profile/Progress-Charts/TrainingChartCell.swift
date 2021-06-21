@@ -29,6 +29,8 @@ class TrainingChartCell: UITableViewCell {
         trainingChart.xAxis.labelPosition = .bottom
         trainingChart.leftAxis.drawGridLinesEnabled = false
         trainingChart.isUserInteractionEnabled = false
+        
+//        trainingChart.leftAxis.setLabelCount(Int(7/interval) + 1, force: true)
     }
     
     func configure(with training: Training) {
@@ -38,13 +40,13 @@ class TrainingChartCell: UITableViewCell {
                 xdata.append(Formatter.shortDate.string(from: localTraining.date))
                 switch localTraining.name {
                 case "Running":
-                    ydata.append(localTraining.paceInKM)
+                    ydata.append(localTraining.speed)
                 default:
                     break
                 }
             }
         }
-        setChart(dataEntryX: xdata, dataEntryY: ydata, with: "minutes / km")
+        setChart(dataEntryX: xdata, dataEntryY: ydata, with: "m/s")
     }
     
     func setChart(dataEntryX forX:[String],dataEntryY forY: [Double], with unit: String) {
