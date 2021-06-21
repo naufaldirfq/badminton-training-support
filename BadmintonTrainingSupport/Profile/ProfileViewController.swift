@@ -72,15 +72,19 @@ extension ProfileViewController: ASAuthorizationControllerDelegate {
                     self.navigationController?.pushViewController(vc, animated: true)
                     print("Nice! You're now signed in as \(user.uid), email: \(user.email ?? "unknown"), name: \(appleIDCredential.fullName?.givenName ?? "unknown") \(appleIDCredential.fullName?.familyName ?? "")")
                     let fullName = "\(appleIDCredential.fullName?.givenName ?? "") \(appleIDCredential.fullName?.familyName ?? "")"
-                    UserDefaults.standard.setValue(fullName, forKey: "UserName")
-                    UserDefaults.standard.setValue(user.uid, forKey: "AppleID")
+                    UserDefaults.standard.setValue(fullName, forKey: K.UserName)
+                    UserDefaults.standard.setValue(user.uid, forKey: K.AppleID)
                     let ref = FirestoreReferenceManager.db.collection("users").document(user.uid)
                     ref.getDocument { document, error in
                         if let doc = document {
                             if doc.exists {
                                 if let data = doc.data() {
                                     let id = data["localID"] as! String
+                                    let name = data["name"] as! String
+                                    let photoURL = data["photoURL"] as! String
                                     UserDefaults.standard.setValue(id, forKey: K.userID)
+                                    UserDefaults.standard.setValue(name, forKey: K.UserName)
+                                    UserDefaults.standard.setValue(photoURL, forKey: K.PhotoURL)
                                 }
                             } else {
                                 FirestoreReferenceManager.db.collection("users").document(user.uid).setData([
