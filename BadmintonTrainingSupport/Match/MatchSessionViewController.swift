@@ -96,7 +96,7 @@ class MatchSessionViewController: UIViewController {
     
     func toggleTime() {
         if isPaused {
-            timerButton.setBackgroundImage(#imageLiteral(resourceName: "􀊘"), for: .normal)
+            timerButton.setBackgroundImage(UIImage(systemName: "pause.circle.fill")!, for: .normal)
             timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(timerCounter), userInfo: nil, repeats: true)
             RunLoop.main.add(timer!, forMode: RunLoop.Mode.common)
         } else {
