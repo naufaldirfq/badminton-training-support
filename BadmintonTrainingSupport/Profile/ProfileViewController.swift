@@ -14,6 +14,14 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var profileTableView: UITableView!
     weak var delegate: HomeViewController?
     
+    var semaphoreFetchRecents = 0 {
+        didSet {
+            if semaphoreFetchRecents == 2 {
+                navigationController?.popToRootViewController(animated: true)
+            }
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
@@ -51,6 +59,58 @@ class ProfileViewController: UIViewController {
         
         return request
     }
+    
+    func fetchRecents() {
+        FirestoreReferenceManager.db.collection("training_history").whereField("user", isEqualTo: UserProfile.uid).order(by: "date").getDocuments { (snapshot, error) in
+            if let err = error {
+                debugPrint("Error fetching docs: \(err)")
+            } else {
+                guard let snap = snapshot else { return }
+                for document in snap.documents {
+                    let data = document.data()
+                    let name = data["name"] as! String
+                    let timestamp = data["date"] as! Timestamp
+                    let date = timestamp.dateValue()
+                    let time = data["time"] as! Int
+                    let pace = data["pace"] as! Int
+                    let distance = data["distance"] as! Int
+                    let set = data["set"] as! Int
+                    let repetition = data["repetition"] as! Int
+                    let breakTime = data["breakTime"] as! Int
+                    let newHistory = TrainingSession(name: name, date: date, time: time, pace: pace, distance: distance, set: set, repetition: repetition, breakTime: breakTime)
+                    Local.data.trainingHistory.append(newHistory)
+                    self.semaphoreFetchRecents += 1
+                }
+            }
+        }
+        
+        FirestoreReferenceManager.db.collection("match").whereField("user", isEqualTo: UserProfile.uid).order(by: "date").getDocuments { (snapshot, error) in
+            if let err = error {
+                debugPrint("Error fetching docs: \(err)")
+            } else {
+                guard let snap = snapshot else { return }
+                for document in snap.documents {
+                    let data = document.data()
+                    let timestamp = data["date"] as! Timestamp
+                    let date = timestamp.dateValue()
+                    let description = data["description"] as! String
+                    let durations = data["durations"] as! [Int]
+                    let isSingle = data["isSingle"] as! Bool
+                    let place = data["place"] as! String
+                    var teams: [Team] = []
+                    let teamsData = document.data()["team"] as! [[String:Any]]
+                    for team in teamsData  {
+                        let players = team["players"] as! [String]
+                        let scores = team["score"] as! [Int]
+                        teams.append(Team(players: players, teamScore: scores))
+                    }
+                    let newHistory = Match(date: date, description: description, durations: durations, isSingle: isSingle, place: place, team: teams)
+                    Local.data.matchHistory.append(newHistory)
+                    self.semaphoreFetchRecents += 1
+                }
+            }
+        }
+    }
 }
 
 extension ProfileViewController: ASAuthorizationControllerDelegate {
@@ -72,8 +132,6 @@ extension ProfileViewController: ASAuthorizationControllerDelegate {
             
             Auth.auth().signIn(with: credential) { (AuthDataResult, Error) in
                 if let user = AuthDataResult?.user {
-                    let vc = HomeViewController()
-                    self.navigationController?.pushViewController(vc, animated: true)
                     print("Nice! You're now signed in as \(user.uid), email: \(user.email ?? "unknown"), name: \(appleIDCredential.fullName?.givenName ?? "unknown") \(appleIDCredential.fullName?.familyName ?? "")")
                     let fullName = "\(appleIDCredential.fullName?.givenName ?? "") \(appleIDCredential.fullName?.familyName ?? "")"
                     UserDefaults.standard.setValue(fullName, forKey: K.UserName)
@@ -89,9 +147,7 @@ extension ProfileViewController: ASAuthorizationControllerDelegate {
                                     UserDefaults.standard.setValue(id, forKey: K.userID)
                                     UserDefaults.standard.setValue(name, forKey: K.UserName)
                                     UserDefaults.standard.setValue(photoURL, forKey: K.PhotoURL)
-                                    DispatchQueue.main.async {
-                                        self.delegate?.fetchRecents()
-                                    }
+                                    self.fetchRecents()
                                 }
                             } else {
                                 FirestoreReferenceManager.db.collection("users").document(user.uid).setData([
@@ -99,6 +155,7 @@ extension ProfileViewController: ASAuthorizationControllerDelegate {
                                     "name" : UserProfile.name,
                                     "photoURL" : UserProfile.photoURL
                                 ])
+                                self.navigationController?.popToRootViewController(animated: true)
                             }
                         }
                     }
