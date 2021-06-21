@@ -79,8 +79,8 @@ class ProfileViewController: UIViewController {
                     let breakTime = data["breakTime"] as! Int
                     let newHistory = TrainingSession(name: name, date: date, time: time, pace: pace, distance: distance, set: set, repetition: repetition, breakTime: breakTime)
                     Local.data.trainingHistory.append(newHistory)
-                    self.semaphoreFetchRecents += 1
                 }
+                self.semaphoreFetchRecents += 1
             }
         }
         
@@ -106,8 +106,8 @@ class ProfileViewController: UIViewController {
                     }
                     let newHistory = Match(date: date, description: description, durations: durations, isSingle: isSingle, place: place, team: teams)
                     Local.data.matchHistory.append(newHistory)
-                    self.semaphoreFetchRecents += 1
                 }
+                self.semaphoreFetchRecents += 1
             }
         }
     }
