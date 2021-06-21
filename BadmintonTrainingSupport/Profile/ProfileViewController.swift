@@ -89,7 +89,9 @@ extension ProfileViewController: ASAuthorizationControllerDelegate {
                                     UserDefaults.standard.setValue(id, forKey: K.userID)
                                     UserDefaults.standard.setValue(name, forKey: K.UserName)
                                     UserDefaults.standard.setValue(photoURL, forKey: K.PhotoURL)
-                                    self.delegate?.fetchData()
+                                    DispatchQueue.main.async {
+                                        self.delegate?.fetchRecents()
+                                    }
                                 }
                             } else {
                                 FirestoreReferenceManager.db.collection("users").document(user.uid).setData([

@@ -35,6 +35,7 @@ class HomeViewController: UIViewController {
         setupTableView()
         setupStickyButton()
         fetchData()
+        fetchRecents()
     }
     
     
@@ -115,6 +116,9 @@ class HomeViewController: UIViewController {
                 }
             }
         }
+    }
+    
+    func fetchRecents() {
         
         trainingHistoryCollectionRef = FirestoreReferenceManager.db.collection("training_history")
         self.trainingHistoryCollectionRef.whereField("user", isEqualTo: self.userID).order(by: "date").getDocuments { (snapshot, error) in
