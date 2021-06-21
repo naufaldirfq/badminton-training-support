@@ -55,7 +55,7 @@ class SetRepSessionViewController: SessionViewController {
             currentTime -= 1
         } else {
             if setsLeft < 1 {
-                delegate?.toggleButton()
+                delegate?.finishButton()
                 timer?.invalidate()
                 isPaused = !isPaused
                 statusLabel.text = ""

@@ -23,7 +23,7 @@ struct Sizes {
     struct HomeProfile {
         static let Height: CGFloat = 82.0
         static let ProfileInfoHeight: CGFloat = 130
-        static let ChartsHeight: CGFloat = 200
+        static let ChartsHeight: CGFloat = 360
     }
     
     //MARK: Size for page "NewMatchVC"
@@ -38,6 +38,7 @@ struct Sizes {
     struct  MatchSession {
         static let Height: CGFloat = 666
     }
+    
     struct MatchSummary{
         static let ImageHeight: CGFloat = 140
         static let SummaryInfo: CGFloat = 80 //def: 80

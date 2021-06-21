@@ -224,12 +224,12 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource{
                 return UITableViewCell()
             }
             let cell = UITableViewCell()
-            let button = ASAuthorizationAppleIDButton()
+            let button = ASAuthorizationAppleIDButton(type: .signIn, style: .whiteOutline)
+            button.frame = CGRect(x: 32, y: 16, width: tableView.frame.width - 64, height: 40)
             button.addTarget(self, action: #selector(handleSignInWithAppleTapped), for: .touchUpInside)
             button.center = cell.contentView.center
             button.autoresizingMask = [.flexibleLeftMargin,.flexibleBottomMargin,.flexibleRightMargin,.flexibleTopMargin]
             cell.addSubview(button)
-            button.widthAnchor.constraint(equalToConstant: tableView.frame.width - 64).isActive = true
             return cell
         default:
             if let cell = tableView.dequeueReusableCell(withIdentifier: TrainingChartCell.identifier, for: indexPath) as? TrainingChartCell{

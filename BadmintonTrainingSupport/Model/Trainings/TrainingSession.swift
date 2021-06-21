@@ -26,9 +26,9 @@ struct TrainingSession {
     var repetition: Int
     var breakTime: Int
     
-    var paceInKM: Double {
+    var speed: Double {
         let dist = distance > 0 ? distance : 1
-        return (Double(time)/60.0) / (Double(dist)/1000.0)
+        return ((Double(dist)) / Double(time) * 60)
     }
     
     var distanceInKM: Double {

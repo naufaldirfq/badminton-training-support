@@ -44,7 +44,7 @@ class RunningSessionViewController: SessionViewController {
         if totalTime > 0 {
             totalTime -= 1
         } else {
-            delegate?.toggleButton()
+            delegate?.finishButton()
             timer?.invalidate()
             isPaused = !isPaused
         }

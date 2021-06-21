@@ -43,6 +43,13 @@ class TrainingSessionViewController: UIViewController {
         trainingStopButton.isHidden = !trainingStopButton.isHidden
     }
     
+    func finishButton() {
+        trainingPlayButton.isHidden = true
+        trainingPauseButton.isHidden = true
+        trainingStopButton.setImage(UIImage(systemName: "flag.circle.fill")!, for: .normal)
+        trainingStopButton.isHidden = false
+    }
+    
     @IBAction func didTapPlayButton(_ sender: UIButton) {
         toggleButton()
         delegate?.didTapPlayButton()
