@@ -12,16 +12,20 @@ import Firebase
 class ProfileViewController: UIViewController {
     
     @IBOutlet weak var profileTableView: UITableView!
+    weak var delegate: HomeViewController?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
     }
+    
     func setupTableView() {
         profileTableView.delegate = self
         profileTableView.dataSource = self
         profileTableView.register(TrainingChartCell.nib(), forCellReuseIdentifier: TrainingChartCell.identifier)
         profileTableView.register(ProfileInfoCell.nib(), forCellReuseIdentifier: ProfileInfoCell.identifier)
     }
+    
     @objc func handleSignInWithAppleTapped() {
         performSignIn()
     }
@@ -85,6 +89,7 @@ extension ProfileViewController: ASAuthorizationControllerDelegate {
                                     UserDefaults.standard.setValue(id, forKey: K.userID)
                                     UserDefaults.standard.setValue(name, forKey: K.UserName)
                                     UserDefaults.standard.setValue(photoURL, forKey: K.PhotoURL)
+                                    self.delegate?.fetchData()
                                 }
                             } else {
                                 FirestoreReferenceManager.db.collection("users").document(user.uid).setData([
@@ -156,6 +161,9 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource{
                 return cell
             }
         case 1:
+            if let _ = UserProfile.appleID {
+                return UITableViewCell()
+            }
             let cell = UITableViewCell()
             let button = ASAuthorizationAppleIDButton()
             button.addTarget(self, action: #selector(handleSignInWithAppleTapped), for: .touchUpInside)
@@ -179,7 +187,7 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource{
         case 0:
             return Sizes.HomeProfile.ProfileInfoHeight
         case 1:
-            if let appleId = UserProfile.appleID {
+            if let _ = UserProfile.appleID {
                 return 0
             }
             return 72

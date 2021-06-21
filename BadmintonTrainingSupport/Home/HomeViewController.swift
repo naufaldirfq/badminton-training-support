@@ -175,6 +175,7 @@ class HomeViewController: UIViewController {
     
     @objc func userPhotoTapped() {
         let vc = ProfileViewController()
+        vc.delegate = self
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
