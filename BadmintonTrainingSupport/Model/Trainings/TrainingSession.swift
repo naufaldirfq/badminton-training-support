@@ -25,6 +25,11 @@ struct TrainingSession {
     var set: Int
     var repetition: Int
     var breakTime: Int
+    
+    var paceInKM: Double {
+        let dist = distance > 0 ? distance : 1
+        return (Double(time)/60.0) / (Double(dist)/1000.0)
+    }
 
 
     init(name : String, date: Date, time: Int, pace: Int = 0, distance: Int = 0, set: Int = 0, repetition: Int = 0, breakTime: Int = 0) {
@@ -36,6 +41,15 @@ struct TrainingSession {
         self.set = set
         self.repetition = repetition
         self.breakTime = breakTime
+    }
+    
+    func isValid() -> Bool {
+        switch name {
+        case "Running":
+            return time > 0 ? true : false
+        default:
+            return set > 0 && repetition > 0 && breakTime > 0 ? true : false
+        }
     }
     
     func getDateRelativity() -> String {

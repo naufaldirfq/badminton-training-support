@@ -17,8 +17,7 @@ struct Sizes {
     }
     struct Recents {
         static let CellHeight: CGFloat = 72
-        static let TableHeight: CGFloat = CellHeight * 3
-        static let Height: CGFloat = 52.5 + TableHeight + 16
+        static let TableMargins: CGFloat = 52.5 + 16
         static let CornerRadius: CGFloat = 10.0
     }
     struct HomeProfile {

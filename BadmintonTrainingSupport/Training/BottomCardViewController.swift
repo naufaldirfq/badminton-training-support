@@ -8,7 +8,7 @@
 import UIKit
 
 protocol BottomCardViewDelegate: UITableViewCell {
-    func bottomCardView(didTappedStartFor training: Training)
+    func bottomCardView(didTappedStartFor training: Training, with session: TrainingSession)
 }
 
 class BottomCardViewController: UIViewController {
@@ -17,32 +17,44 @@ class BottomCardViewController: UIViewController {
     var hasSetPointOrigin = false
     var pointOrigin: CGPoint?
     var training: Training?
+    var session: TrainingSession?
     
     @IBOutlet weak var targetView: UIView!
     @IBOutlet weak var slideIndicator: UIView!
     @IBOutlet weak var startButton: UIButton!
+    @IBOutlet weak var recommendationLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         let panGesture = UIPanGestureRecognizer(target: self, action: #selector(panGestureRecognizerAction))
         view.addGestureRecognizer(panGesture)
-        
         slideIndicator.roundCorners(.allCorners, radius: 10)
         startButton.roundCorners(.allCorners, radius: 10)
+        if let training = self.training {
+            recommendationLabel.text = training.description
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
-        if let training = self.training, let targetVC = training.uiTarget {
+        if let training = self.training, let targetVC = training.uiTarget as? TrainingTargetViewController {
             targetVC.view.frame = targetView.frame
+            targetVC.delegate = self
             view.addSubview(targetVC.view)
             addChild(targetVC)
         }
     }
     
     @IBAction func didTapStartButton(_ sender: UIButton) {
-        if let training = self.training {
-            delegate?.bottomCardView(didTappedStartFor: training)
+        if let training = self.training, let session = self.session {
+            if session.isValid() {
+                delegate?.bottomCardView(didTappedStartFor: training, with: session)
+            } else {
+                let alert = UIAlertController(title: "All field must be filled!", message: "", preferredStyle: .alert)
+                let ok = UIAlertAction(title: "OK", style: .default, handler: nil)
+                alert.addAction(ok)
+                self.present(alert, animated: true, completion: nil)
+            }
         }
     }
     

@@ -11,6 +11,7 @@ protocol TrainingSessionDelegate: UIViewController {
     func didTapPlayButton()
     func didTapStopButton()
     func didTapPauseButton()
+    func setupSummaryView()
 }
 
 class TrainingSessionViewController: UIViewController {
@@ -22,52 +23,63 @@ class TrainingSessionViewController: UIViewController {
     @IBOutlet weak var trainingSessionView: UIView!
     
     weak var delegate: TrainingSessionDelegate?
-    
-    var session: UIViewController?
-    var disableButton = false
+    var session: TrainingSession?
+    var isSummary = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        add()
-        if disableButton {
+        setupSession()
+        trainingNameLabel.font = .italicSystemFont(ofSize: 32, weight: .bold)
+        trainingPauseButton.isHidden = true
+        if isSummary {
             trainingPlayButton.isHidden = true
             trainingStopButton.isHidden = true
-            trainingPauseButton.isHidden = true
         }
     }
     
+    func toggleButton() {
+        trainingPlayButton.isHidden = !trainingPlayButton.isHidden
+        trainingPauseButton.isHidden = !trainingPauseButton.isHidden
+        trainingStopButton.isHidden = !trainingStopButton.isHidden
+    }
+    
     @IBAction func didTapPlayButton(_ sender: UIButton) {
+        toggleButton()
         delegate?.didTapPlayButton()
     }
     
     @IBAction func didTapPauseButton(_ sender: UIButton) {
+        toggleButton()
         delegate?.didTapPauseButton()
     }
     
     @IBAction func didTapStopButton(_ sender: UIButton) {
         delegate?.didTapStopButton()
+        self.navigationController?.popToRootViewController(animated: true)
     }
     
-    func add(){
-//        let session = RunningSessionViewController(nibName: "RunningSessionViewController", bundle: nil)
-        if let session = self.session {
-            delegate = session as? TrainingSessionDelegate
+    func setupSession(){
+        guard let name = self.session?.name else { return }
+        var vc: UIViewController?
+        switch name {
+        case "Running":
+            vc = RunningSessionViewController(nibName: "RunningSessionViewController", bundle: nil)
+        default:
+            vc = SetRepSessionViewController(nibName: "SetRepSessionViewController", bundle: nil)
+        }
+        trainingBannerImageView.image = UIImage(named: name)
+        delegate = vc as? TrainingSessionDelegate
+        if let session = vc as? SessionViewController {
+            session.trainingSession = self.session
+            session.delegate = self
             session.view.frame = trainingSessionView.frame
             view.addSubview(session.view)
             addChild(session)
+            trainingNameLabel.text = self.session?.name.uppercased() ?? ""
+            if isSummary {
+                session.setupSummaryView()
+            }
         }
     }
-    
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

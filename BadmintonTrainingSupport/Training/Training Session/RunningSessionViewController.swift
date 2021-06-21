@@ -7,63 +7,42 @@
 
 import UIKit
 
-class RunningSessionViewController: UIViewController {
+class RunningSessionViewController: SessionViewController {
 
     @IBOutlet weak var mainMeasurementLabel: UILabel!
     @IBOutlet weak var mainUnitLabel: UILabel!
     @IBOutlet weak var mainCounterLabel: UILabel!
     @IBOutlet weak var leftMeasurementLabel: UILabel!
     @IBOutlet weak var leftCounterLabel: UILabel!
-    @IBOutlet weak var leftUnitLabel: UILabel!
     @IBOutlet weak var rightMeasurementLabel: UILabel!
     @IBOutlet weak var rightCounterLabel: UILabel!
-    @IBOutlet weak var rightUnitLabel: UILabel!
     
-    private var trainingSession: TrainingSession?
+    var totalTime = 0 {
+        didSet {
+            self.rightCounterLabel.text = timeToString(totalTime)
+            self.leftCounterLabel.text = timeToString(pace)
+            self.mainCounterLabel.text = "\(distance)"
+        }
+    }
+    var distance: Double = 0
+    var pace: Int {
+        return distance == 0 ? Int(distance) : Int(Double(totalTime) / distance)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let dcf = DateComponentsFormatter()
-        dcf.allowedUnits = [ .hour, .minute, .second]
-        dcf.unitsStyle = .full
-        let df = ISO8601DateFormatter()
-        df.formatOptions = [.withFullDate, .withDashSeparatorInDate]
-        if let future = df.date(from: "2022-06-14 15:07:39"), let diff = dcf.string(from: Date(), to: future) {
-            print(diff)
+        if let session = trainingSession {
+            totalTime = Int(session.time) * 60
         }
-        // Do any additional setup after loading the view.
-    }
-
-}
-
-extension RunningSessionViewController: TrainingSessionDelegate {
-    func didTapPlayButton() {
-        print("play")
     }
     
-    func didTapStopButton() {
-        FirestoreReferenceManager.db.collection("training_history").addDocument(data: [
-            "time": 30,
-            "distance": 200,
-            "pace": 20,
-            "name": "Running",
-            "breakTime": 0,
-            "set": 0,
-            "repetition": 0,
-            
-        ])
-        print("data added")
-        
-        DispatchQueue.main.async {
-            let vc = HomeViewController()
-            self.navigationController?.pushViewController(vc, animated: true)
+    @objc override func timerCounter() {
+        if totalTime > 0 {
+            totalTime -= 1
+        } else {
+            delegate?.toggleButton()
+            timer?.invalidate()
+            isPaused = !isPaused
         }
-        
     }
-    
-    func didTapPauseButton() {
-        print("pause")
-    }
-    
-    
 }

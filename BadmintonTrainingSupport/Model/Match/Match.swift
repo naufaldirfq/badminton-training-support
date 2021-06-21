@@ -82,4 +82,15 @@ class Match {
         self.place = place ?? ""
         self.description = description ?? ""
     }
+    
+    
+    
+    init(date: Date, description: String, durations: [Int], isSingle: Bool, place: String, team: [Team]) {
+        self.date = date
+        self.description = description
+        self.durations = durations
+        self.type = isSingle ? .single : .double
+        self.place = place
+        self.teams = team
+    }
 }

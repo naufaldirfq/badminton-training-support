@@ -6,11 +6,12 @@
 //
 
 import UIKit
+import FirebaseStorage
+
 class ProfileInfoCell: UITableViewCell{
     weak var delegate: UIViewController?
     @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var profileNameButton: UIButton!
-    var user : UserProfile?
     override func awakeFromNib() {
         super.awakeFromNib()
         
@@ -22,10 +23,9 @@ class ProfileInfoCell: UITableViewCell{
     static func nib() -> UINib {
         return UINib(nibName: identifier, bundle: nil)
     }
-    func configure(user: UserProfile) {
-        self.user = user
-        profileImage.image = user.photo
-        profileNameButton.setTitle(user.name, for: .normal)
+    func configure() {
+        profileImage.image = UserProfile.photo
+        profileNameButton.setTitle(UserProfile.name, for: .normal)
         profileImage.layer.cornerRadius = profileImage.frame.width/2
     }
     
@@ -47,9 +47,8 @@ class ProfileInfoCell: UITableViewCell{
         alert.addAction(cancel)
         let save = UIAlertAction(title: "Save", style: .default) { action in
             if let text = alert.textFields?.first?.text, text != "" {
-                self.user?.name = text
+                UserDefaults.standard.setValue(text, forKey: K.UserName)
                 self.profileNameButton.setTitle(text, for: .normal)
-                
             }
             
         }
@@ -57,7 +56,7 @@ class ProfileInfoCell: UITableViewCell{
         
         alert.addTextField { textField in
             textField.placeholder = "Enter Name"
-            textField.text = self.user?.name
+            textField.text = UserProfile.name
         }
         self.delegate?.present(alert, animated: true, completion: nil)
     }
@@ -67,6 +66,15 @@ extension ProfileInfoCell: UIImagePickerControllerDelegate & UINavigationControl
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if let image = info[UIImagePickerController.InfoKey(rawValue: "UIImagePickerControllerEditedImage")] as? UIImage{
             profileImage.image = image
+            if let data = image.pngData() {
+                FirebaseStorageManager().uploadImageData(data: data, serverFileName: "\(UserProfile.uid).png") { (isSuccess, url) in
+                    if let url = url {
+                        UserDefaults.standard.setValue(url, forKey: K.PhotoURL)
+                    }
+                    print("Successfully uploaded profile picture")
+                }
+            }
+            
         }
         picker.dismiss(animated: true, completion: nil)
     }

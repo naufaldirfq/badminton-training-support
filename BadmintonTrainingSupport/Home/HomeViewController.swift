@@ -14,19 +14,24 @@ class HomeViewController: UIViewController {
     let stickyButton = StickyButton(size: 60)
     
     var userData: UserProfile?
+    var userID = ""
     
     private var trainingCategory: [TrainingCategory] = []
     private var trainings: [Training] = []
-    private var trainingHistory: [TrainingSession] = []
     private var trainingCategoryCollectionRef: CollectionReference!
     private var trainingsCollectionRef: CollectionReference!
     private var trainingHistoryCollectionRef: CollectionReference!
+    private var matchHistoryCollectionRef: CollectionReference!
     
     @IBOutlet var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupUserData()
+        if !UserDefaults.exists(key: K.userID) {
+            UserDefaults.standard.setValue(UUID().uuidString, forKey: K.userID)
+        }
+        userID = UserDefaults.standard.string(forKey: K.userID)!
+        print(userID)
         setupTableView()
         setupStickyButton()
         fetchData()
@@ -43,15 +48,6 @@ class HomeViewController: UIViewController {
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         navigationController?.setNavigationBarHidden(false, animated: animated)
-    }
-    
-    func setupUserData() {
-        if userData == nil {
-            if let user = Auth.auth().currentUser {
-                userData = UserProfile(name: user.displayName ?? "jin")
-            }
-        }
-        
     }
     
     func setupTableView() {
@@ -102,27 +98,26 @@ class HomeViewController: UIViewController {
                                 let data = document.data()
                                 let trainingName = data["name"] as! String
                                 let trainingDesc = data["description"] as! String
-                                let trainingImg = data["image_url"] as! String
+                                let trainingImg = data["name"] as! String
                                 let newTrainings = Training(name: trainingName, description: trainingDesc, image: trainingImg)
                                 self.trainings.append(newTrainings)
-                                if self.trainings.count == 4 {
-                                    DispatchQueue.main.async {
-                                        self.tableView.reloadData()
-                                    }
+                                DispatchQueue.main.async {
+                                    self.tableView.reloadData()
                                 }
                             }
                         }
                         let category = data["name"] as! String
                         let newTrainingCategory = TrainingCategory(name: category, trainings: self.trainings)
                         self.trainingCategory.append(newTrainingCategory)
+                        Local.data.categories.append(newTrainingCategory)
+                        self.trainings = []
                     }
-                    
                 }
             }
         }
         
         trainingHistoryCollectionRef = FirestoreReferenceManager.db.collection("training_history")
-        self.trainingHistoryCollectionRef.getDocuments { (snapshot, error) in
+        self.trainingHistoryCollectionRef.whereField("user", isEqualTo: self.userID).order(by: "date").getDocuments { (snapshot, error) in
             if let err = error {
                 debugPrint("Error fetching docs: \(err)")
             } else {
@@ -130,7 +125,8 @@ class HomeViewController: UIViewController {
                 for document in snap.documents {
                     let data = document.data()
                     let name = data["name"] as! String
-                    let date = Date().addingTimeInterval(-17000)
+                    let timestamp = data["date"] as! Timestamp
+                    let date = timestamp.dateValue()
                     let time = data["time"] as! Int
                     let pace = data["pace"] as! Int
                     let distance = data["distance"] as! Int
@@ -138,7 +134,7 @@ class HomeViewController: UIViewController {
                     let repetition = data["repetition"] as! Int
                     let breakTime = data["breakTime"] as! Int
                     let newHistory = TrainingSession(name: name, date: date, time: time, pace: pace, distance: distance, set: set, repetition: repetition, breakTime: breakTime)
-                    self.trainingHistory.append(newHistory)
+                    Local.data.trainingHistory.append(newHistory)
                     DispatchQueue.main.async {
                         self.tableView.reloadData()
                     }
@@ -146,7 +142,35 @@ class HomeViewController: UIViewController {
             }
         }
         
-        
+        matchHistoryCollectionRef = FirestoreReferenceManager.db.collection("match")
+        self.matchHistoryCollectionRef.whereField("user", isEqualTo: self.userID).order(by: "date").getDocuments { (snapshot, error) in
+            if let err = error {
+                debugPrint("Error fetching docs: \(err)")
+            } else {
+                guard let snap = snapshot else { return }
+                for document in snap.documents {
+                    let data = document.data()
+                    let timestamp = data["date"] as! Timestamp
+                    let date = timestamp.dateValue()
+                    let description = data["description"] as! String
+                    let durations = data["durations"] as! [Int]
+                    let isSingle = data["isSingle"] as! Bool
+                    let place = data["place"] as! String
+                    var teams: [Team] = []
+                    let teamsData = document.data()["team"] as! [[String:Any]]
+                    for team in teamsData  {
+                        let players = team["players"] as! [String]
+                        let scores = team["score"] as! [Int]
+                        teams.append(Team(players: players, teamScore: scores))
+                    }
+                    let newHistory = Match(date: date, description: description, durations: durations, isSingle: isSingle, place: place, team: teams)
+                    Local.data.matchHistory.append(newHistory)
+                    DispatchQueue.main.async {
+                        self.tableView.reloadData()
+                    }
+                }
+            }
+        }
     }
     
     @objc func userPhotoTapped() {
@@ -168,8 +192,16 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
             return Sizes.HomeProfile.Height
         case 1:
             return Sizes.TrainingCollection.Height
-        case 2...3:
-            return Sizes.Recents.Height
+        case 2:
+            var count = CGFloat(Local.data.trainingHistory.count)
+            count = count < 1 ? 1 : count
+            count = count > 3 ? 3 : count
+            return (Sizes.Recents.CellHeight * count) + Sizes.Recents.TableMargins
+        case 3:
+            var count = CGFloat(Local.data.matchHistory.count)
+            count = count < 1 ? 1 : count
+            count = count > 3 ? 3 : count
+            return (Sizes.Recents.CellHeight * count) + Sizes.Recents.TableMargins
         default:
             return 0
         }
@@ -179,7 +211,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         switch indexPath.row {
         case 0:
             if let cell = tableView.dequeueReusableCell(withIdentifier: HomeProfileCell.identifier) as? HomeProfileCell {
-                cell.configure(with: userData ?? DummyData.Profile)
+                cell.configure()
                 let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.userPhotoTapped))
                 cell.userPhotoImageView.isUserInteractionEnabled = true
                 cell.userPhotoImageView.addGestureRecognizer(tapGestureRecognizer)
@@ -187,19 +219,19 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
             }
         case 1:
             if let cell = tableView.dequeueReusableCell(withIdentifier: TrainingCollectionCell.identifier) as? TrainingCollectionCell {
-                cell.configure(name: "Recommendation", with: self.trainings)
+                cell.configure(name: "Recommendation", with: Local.data.trainings)
                 cell.delegate = self
                 return cell
             }
         case 2:
             if let cell = tableView.dequeueReusableCell(withIdentifier: RecentsCell.identifier) as? RecentsCell {
-                cell.configure(type: .training, trainings: trainingHistory)
+                cell.configure(type: .training, trainings: Local.data.trainingHistory)
                 cell.delegate = self
                 return cell
             }
         case 3:
             if let cell = tableView.dequeueReusableCell(withIdentifier: RecentsCell.identifier) as? RecentsCell {
-                cell.configure(type: .match, trainings: trainingHistory)
+                cell.configure(type: .match, matches: Local.data.matchHistory)
                 cell.delegate = self
                 return cell
             }

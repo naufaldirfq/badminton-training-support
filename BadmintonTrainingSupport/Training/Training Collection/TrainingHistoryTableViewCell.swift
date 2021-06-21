@@ -23,16 +23,16 @@ class TrainingHistoryTableViewCell: UITableViewCell {
         trainingNameLabel.text = training.name
         recentsLabel.text = training.getDateRelativity()
         if training.name == "Running" {
-            measurement1Label.text = "Jarak"
-            measurement2Label.text = "Waktu"
-            unit1Label.text = String(training.distance)
-            unit2Label.text = String(training.time)
+            measurement1Label.text = "Distance"
+            measurement2Label.text = "Time"
+            unit1Label.text = "\(training.distance) km"
+            unit2Label.text = "\(training.time) min"
         }
         else {
             measurement1Label.text = "Set"
-            measurement2Label.text = "Durasi"
+            measurement2Label.text = "Time/Set"
             unit1Label.text = String(training.set)
-            unit2Label.text = String(training.time)
+            unit2Label.text = "\(training.repetition) sec"
         }
         cardView.layer.borderWidth = 0.25
         cardView.layer.borderColor = UIColor.secondaryLabel.cgColor

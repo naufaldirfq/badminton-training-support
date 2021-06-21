@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Firebase
 
 class MatchSummaryViewController: UIViewController {
     
@@ -35,9 +36,26 @@ class MatchSummaryViewController: UIViewController {
     
     @IBAction func didTapFinishButton(_ sender: UIButton) {
         if let match = self.match{
-            DummyData.history.dummyMatches.append(match)
+            var teams: [[String:Any]] = []
+            for team in match.teams {
+                let newTeam: [String:Any] = [
+                    "players": team.players,
+                    "score": team.teamScore
+                ]
+                teams.append(newTeam)
+            }
+            FirestoreReferenceManager.db.collection("match").addDocument(data: [
+                "date": match.date,
+                "description": match.description,
+                "place": match.place,
+                "isSingle": match.type == .single,
+                "durations": match.durations,
+                "team": FieldValue.arrayUnion(teams),
+                "user": UserDefaults.standard.string(forKey: K.userID)!
+            ])
+            Local.data.matchHistory.append(match)
         }
-        navigationController?.popToRootViewController(animated: true)
+        self.navigationController?.popToRootViewController(animated: true)
     }
 }
 extension MatchSummaryViewController: UITableViewDelegate, UITableViewDataSource{

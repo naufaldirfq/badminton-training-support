@@ -21,7 +21,7 @@ struct MatchForm {
     var place: String = ""
     var description: String = ""
     var type: MatchType = .single
-    var players = [DummyData.Profile.name,"","",""]
+    var players = [UserProfile.name,"","",""]
     var isValid: Bool {
         switch type {
         case .single:

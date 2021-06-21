@@ -14,8 +14,8 @@ struct Team{
     
     var playerNames: String {
         var playerNames = ""
-        for player in players {
-            if player == players[0] {
+        for (index, player) in players.enumerated() {
+            if index == 0 {
                 playerNames.append(player)
             } else {
                 playerNames.append("\n\(player)")

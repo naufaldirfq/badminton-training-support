@@ -45,7 +45,6 @@ class TrainingCollectionCell: UITableViewCell {
     }
     
     public func configure(name: String, with trainings: [Training], width: CGFloat? = nil) {
-        print(trainings)
         self.name = name
         self.trainings = trainings
         self.width = width ?? self.width
@@ -94,10 +93,10 @@ extension TrainingCollectionCell: UICollectionViewDelegate, UICollectionViewData
 
 extension TrainingCollectionCell: BottomCardViewDelegate, UIViewControllerTransitioningDelegate {
     
-    func bottomCardView(didTappedStartFor training: Training) {
+    func bottomCardView(didTappedStartFor training: Training, with session: TrainingSession) {
         self.delegate?.dismiss(animated: true, completion: nil)
         let vc = TrainingSessionViewController()
-        vc.session = training.uiSession
+        vc.session = session
         self.delegate?.navigationController?.pushViewController(vc, animated: true)
     }
     
@@ -106,6 +105,7 @@ extension TrainingCollectionCell: BottomCardViewDelegate, UIViewControllerTransi
         slideVC.modalPresentationStyle = .custom
         slideVC.transitioningDelegate = self
         slideVC.training = training
+        slideVC.session = TrainingSession(name: training.name, date: Date(), time: 0)
         slideVC.delegate = self
         self.delegate?.present(slideVC, animated: true, completion: nil)
     }
